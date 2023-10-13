@@ -1,8 +1,13 @@
 import styles from './navbar.module.css'
 import {AiOutlineSearch,AiOutlineHeart,AiOutlineShoppingCart} from 'react-icons/ai'
-import { IoIosMenu } from 'react-icons/io';
+import { IoIosMenu,IoMdCall } from 'react-icons/io';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logone from '../../../public/logo.jpeg'
+
+
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,40 +25,66 @@ const Navbar = () => {
     return(
         <div className={styles.main}>
            <div className={styles.textcont}>
-           <p className={styles.bold} id="animatedText">Skyline</p>
-            <div>
+            <div className={styles.imgcont}>
+            <Image src={logone} alt='logo-img' className={styles.img}/>
+            </div>
+           
+            <div className={styles.menucont}>
             <IoIosMenu className={styles.menuicon}
             onClick={handleMenuClick} />
             </div>
             </div>
+
+            {/* mobile */}
             
             {showMenuContent && (
           <div className={styles.mobilelistcont}>
           <ul className={styles.mobilelist}>
               <li className={styles.item}>
                 <Link href={`/`} className={styles.link}>
-                Home
+               Home
                 </Link>
                </li>
                <li className={styles.item}>
                 <Link href={`/contactus`} className={styles.link}>
-                Contact
+                Services
                 </Link>
                </li>
                <li className={styles.item}>
                 <Link href={`/aboutus`} className={styles.link}>
-                About
+               Our Properties
                 </Link>
                </li>
-              <li className={styles.item}>
+               <li className={styles.item}>
+                <Link href={`/aboutus`} className={styles.link}>
+             Career
+                </Link>
+               </li>
+               <li className={styles.item}>
+                <Link href={`/aboutus`} className={styles.link}>
+             Contact us
+                </Link>
+               </li>
+               <li className={styles.item}>
+                <Link href={`/aboutus`} className={styles.link}>
+            Blog
+                </Link>
+               </li>
+                <li className={styles.item}>
               <Link href={`/signup`} className={styles.link}>
-                Sign Up
+                <div className={styles.buttoncont}>
+                <button className={styles.button}>Sign Up/Log in</button>
+              
+                </div>
+              
                 </Link>
                 </li>
+                
           </ul>
          </div>
         )}
-          
+
+          {/* desktop */}
           
            <div className={styles.listcont}>
             <ul className={styles.list}>
@@ -64,37 +95,42 @@ const Navbar = () => {
                </li>
                <li className={styles.item}>
                 <Link href={`/contactus`} className={styles.link}>
-                Contact
+                Services
                 </Link>
                </li>
                <li className={styles.item}>
                 <Link href={`/aboutus`} className={styles.link}>
-                About
+                Our Properties
                 </Link>
                </li>
                <li className={styles.item}>
+                <Link href={`/aboutus`} className={styles.link}>
+             Career
+                </Link>
+               </li>
+               <li className={styles.item}>
+                <Link href={`/aboutus`} className={styles.link}>
+             Contact us
+                </Link>
+               </li>
+               <li className={styles.item}>
+                <Link href={`/aboutus`} className={styles.link}>
+            Blog
+                </Link>
+               </li>
+                <li className={styles.item}>
               <Link href={`/signup`} className={styles.link}>
-                Sign Up
+                <div className={styles.buttoncont}>
+                <button>Sign Up/Log in</button>
+              
+                </div>
+              
                 </Link>
                 </li>
             </ul>
            </div>
 
-           <div className={styles.lastcont}>
-            <div className={styles.searchcont}>
-                <input type="text"
-                placeholder='what are you looking for ?'
-                className={styles.inputcont} />
-                <AiOutlineSearch className={styles.icon} />
-            </div>
-            <div className={styles.sublast}>
-            <AiOutlineHeart className={styles.icon} />
-            <AiOutlineShoppingCart className={styles.icon} />
-
-            </div>
-          
-           </div>
-
+         
         </div>
     )
 }

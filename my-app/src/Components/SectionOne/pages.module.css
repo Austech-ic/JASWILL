@@ -1,0 +1,25 @@
+.main{
+    padding: 50px 30px;
+}
+
+
+
+@media (min-width:768px) {
+    .main{
+    padding: 80px 50px;
+}
+}
+
+
+@media (min-width:1024px) {
+    .main{
+    padding: 100px 120px;
+}
+}
+
+
+@media (min-width:1280px) {
+    .main{
+    padding: 100px 120px;
+}
+}

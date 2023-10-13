@@ -1,0 +1,47 @@
+.main{
+    /* background-color: #800000; */
+    /* color: #800000; */
+    color: gray;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    line-height: 1px;
+}
+.subone{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.subtwo{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+@media (min-width:768px) {
+    .main{
+       font-size: 1.2rem;
+    line-height: 1.2px;
+    gap: 20px;
+    }
+}
+
+@media (min-width:1024px) {
+    .main{
+       font-size: 0.9rem;
+    line-height: 1.0px;
+    }
+}
+@media (min-width:1280px) {
+    .main{
+       font-size: 1rem;
+    line-height: 1.0px;
+    }
+}
+

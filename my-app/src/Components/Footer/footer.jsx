@@ -1,8 +1,11 @@
 import styles from './footer.module.css'
 import Image from 'next/image'
-import Googleplay from '../../../../../public/img/googleplay.png'
-import Appstore from '../../../../../public/img/AppStore.png'
-import Bar from '../../../../../public/img/bar.jpeg'
+import Googleplay from '../../../public/googlenew.png'
+import Appplay from '../../../public/new.png'
+import aisen from '../../../public/aisen.png'
+import apen from '../../../public/apen.png'
+import iso from '../../../public/iso.png'
+import Bar from '../../../public/newscan.png'
 import {AiOutlineSend,AiOutlineInstagram} from 'react-icons/ai'
 import {TiSocialFacebook} from 'react-icons/ti'
 import {CiTwitter} from 'react-icons/ci'
@@ -19,52 +22,62 @@ const Footer = () => {
        <div className={styles.subone}>
         <p className={styles.label}>Subscribe</p>
         <div className={styles.subcont}>
-        <p>Get 10% off your first order</p>
-        <div className={styles.inputcont}>
-        <input type="text" 
-        placeholder='Enter your email' 
-        className={styles.input}/>
-        <AiOutlineSend className={styles.icon}/>
-        </div>
-       
+        <p>Jaswill leverages the best in-class teachers, media, and technology to create high-quality, affordable and accessible education for students.</p>   
         </div>
        
        </div>
        <div className={styles.subone}>
-        <p className={styles.label}>Support</p>
+        <p className={styles.label}>Company</p>
        <div className={styles.subcont}>
-       <p>Suite 11 Zee mall,News Engineering,Dawaki</p>
-        <p>skylinetech@gmail.com</p>
-        <p>+234-916-282-8400</p>
+       <Link href={`/`} className={styles.link}>
+        <p>Blog</p>
+        </Link>
        </div>
        </div>
        <div className={styles.subone}>
-        <p className={styles.label}>Account</p>
+        <p className={styles.label}>Socials</p>
         <div className={styles.subcont}>
-       <p>My Account</p>
-       <Link href={`/signup`} className={styles.link}>
-        <p>Login / Register</p>
+        <Link href={`/`} className={styles.link}>
+        <p>Linkedin</p>
         </Link>
-        <p>Cart</p>
-        <p>Wishlist</p>
-        <p>Shop</p>
-       </div>
-       </div>
-       <div className={styles.subone}>
-        <p className={styles.label}>Quick Link</p>
-        <div className={styles.subcont}>
-        <p>Privacy Policy</p>
-        <p>Terms Of Use</p>
-        <p>FAQ</p>
-        <Link href={`/contactus`} className={styles.link}>
-        <p>Contact</p>
+       <Link href={`/`} className={styles.link}>
+        <p>Youtube</p>
         </Link>
-        </div>
+        <Link href={`/`} className={styles.link}>
+        <p>Twitter</p>
+        </Link>
+        <Link href={`/`} className={styles.link}>
+        <p>Facebook</p>
+        </Link>
+        <Link href={`/`} className={styles.link}>
+        <p>Instragram</p>
+        </Link>
        </div>
+       </div>
+     
        <div className={styles.subone}>
         <p className={styles.label}>Download App</p>
         <div className={styles.subcont}>
-            <p className={styles.texts}>Save $3 with App New User Only</p>
+            <div className={styles.lastcont}>
+                <div className={styles.conts} >
+                    <div className={styles.barconts}>
+                        <p>Certifications</p>
+                    <Image src={iso} alt='bar-img'  className={styles.imgs} />
+                    </div>
+                   
+                    <div className={styles.googleconts}>
+                    <Image src={apen} alt='google-img' className={styles.imgs}/>
+                    <Image src={aisen} alt='bar-img'   className={styles.imgs}/>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+       </div>
+
+       <div className={styles.subone}>
+        <p className={styles.label}>Download App</p>
+        <div className={styles.subcont}>
             <div className={styles.lastcont}>
                 <div className={styles.cont} >
                     <div className={styles.barcont}>
@@ -73,15 +86,10 @@ const Footer = () => {
                    
                     <div className={styles.googlecont}>
                     <Image src={Googleplay} alt='google-img' className={styles.img}/>
-                    <Image src={Appstore} alt='bar-img'   className={styles.img}/>
+                    <Image src={Appplay} alt='bar-img'   className={styles.img}/>
                     </div>
                 </div>
-                <div className={styles.socialcont}>
-                    <TiSocialFacebook className={styles.icons}/>
-                    <CiTwitter className={styles.icons} />
-                    <AiOutlineInstagram className={styles.icons} />
-                    <LiaLinkedinIn className={styles.icons} />
-                </div>
+               
             </div>
         </div>
        </div>

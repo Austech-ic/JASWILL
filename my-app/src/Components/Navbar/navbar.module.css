@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
+    color: white;
+    background-color: #000080;
 }
 .textcont{
     flex: 1;
@@ -47,6 +49,8 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+    /* background-color: red; */
+    
 }
 
 .mobilelist{
@@ -56,7 +60,10 @@
     gap: 0px;
     font-size: 0.8rem;
     line-height: 1rem;
-    background-color: rgb(235, 229, 229);
+    background-color: white;
+    border-radius: 5px;
+    color: #800000;
+    font-weight: 500;
     /* background-color: red; */
     padding: 5px 0;
     position: absolute;
@@ -65,30 +72,12 @@
     filter: drop-shadow(0px 9px 4px rgba(0, 0, 0, 0.25));
 }
 .item{
-    padding: 8px 20px;
+    padding: 15px 20px;
     font-size: 0.8rem;
     line-height: 1rem;
 }
-.searchcont{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #F5F5F5;
-    padding: 5px 10px;
-    /* gap: 15px; */
-    border: none;
-    flex: 3;
-}
-.inputcont{
-    background-color: transparent;
-    color: gray;
-   outline: none;
-   font-size: 0.7rem;
-   line-height: 1rem;
-   border: none;
-   width: 80%;
-   border: none;
-}
+
+
 .icon{
     width:18px;
     height: 18px;
@@ -105,24 +94,52 @@
     display: flex;
 }
 .menuicon{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     display: block;
     /* color: gray; */
 }
 .link{
     text-decoration: none;
     list-style: none;
-    color: black;
+    /* color: black; */
 }
-.link:hover{
-   color: #8644DB;
+.item:hover{
+   color: gray;
+   background-color: rgb(237, 237, 243);
+   padding: 15px 20px;
     
 }
-/* .link:visited{
-    color: #c7bad7;
-     
- } */
+.callcont{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.buttoncont{
+    /* background-color: yellow; */
+    margin-top: -10px;
+}
+.button{
+border: 1px solid #800000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 35%;
+    padding: 7px 10px;
+}
+.imgcont{
+    /* flex: 1; */
+    width: 50%;
+    height: 10vh;
+    
+    
+}
+.img{
+    width:100%;
+    height: 100%;
+}
+.menucont{
+    /* flex: 1; */
+}
 
 
 
@@ -144,13 +161,7 @@
         gap: 0px;
         padding:0px 35px 20px 35px;
     }
-    .inputcont{
-       font-size:1.2rem;
-       line-height: 1rem;
-       border: none;
-       width: 80%;
-       padding: 10px;
-    }
+  
     .icon{
         width: 35px;
         height: 35px;
@@ -170,10 +181,37 @@
       
     }
     .item{
-        padding: 12px 30px;
+        padding: 20px 30px;
         font-size: 1.2rem;
         line-height: 1rem;
     }
+    .button{
+        border-radius: 20px;
+        width: 25%;
+        padding: 15px 20px;
+    }
+    .item:hover{
+        color: #800000;
+        background-color: rgb(237, 237, 243);
+        padding: 20px 30px;
+         
+     }
+     .buttoncont{
+        margin-top: -20px;
+     }
+     .imgcont{
+        /* flex: 1; */
+        width: 40%;
+        height: 10vh;
+    }
+
+    .menuicon{
+        width: 55px;
+        height: 55px;
+        display: block;
+        /* color: gray; */
+    }
+    
   
 }
 
@@ -181,11 +219,15 @@
 @media (min-width:1024px) {
     .main{
         padding:20px 100px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-       gap: 20px
+        width: 100%;
+        
     }
+    .item{
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    
     .bold{
         font-size: 1.5rem;
         line-height: 2rem;
@@ -196,9 +238,34 @@
         display: flex;
         /* justify-content: center; */
         align-items: center;
-        position: unset;
+        position: relative;
         padding: 0;
     }
+    .textcont{
+    flex: 1;
+    padding:1px 20px;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.mobilelist{
+    
+    padding: 20px 0;
+    position: absolute;
+    width: 30%;
+    z-index: 2;
+    /* color: black; */
+    border-radius: 5px;
+    filter: drop-shadow(0px 9px 4px rgba(0, 0, 0, 0.25));
+}
+.mobilelistcont{
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+}
     .icon{
         width: 25px;
         height: 25px;
@@ -212,14 +279,8 @@
         width: 20px;
         height: 20px;
     }
-    .listcont{
-        /* background-color: red; */
-        flex: 1;
-        display: block;
-    }
-    .menuicon{
-        display: none;
-    }
+  
+   
     .sublast{
         display: flex;
         justify-content: center;
@@ -233,42 +294,74 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        /* gap: 30px; */
+        /* background-color: red; */
+        /* padding: 0 40px; */
     }
     .listcont{
-        /* background-color: red; */
-    flex: 2.5;
-    }
+        flex: 2;
+        display: none;
+        }
     .lastcont{
         flex:2;
         padding:0px;
         /* background-color: red; */
-       
-       
     }
+
+.mobilelistcont{
+    /* background-color: yellow; */
+}
     .searchcont{
         /* background-color: green; */
         border: none;
     }
     .item{
-        padding: 12px 0px;
+        padding: 12px;
         font-size: 0.9rem;
         line-height: 1rem;
     }
+   .item:hover{
+    padding: 12px;
+   }
     .inputcont{
         width: 100%;
+    }
+    .button{
+       border: none;
+        width: 60%;
+        padding: 15px 20px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0;
+
+    }
+    .buttoncont{
+        margin-top: -30px;
+    }
+    .imgcont{
+        /* flex: 1; */
+        width: 30%;
+        height: 15vh; 
+    }
+    .menuicon{
+        width: 45px;
+        height: 45px;
+        display: block;
+        /* color: gray; */
     }
 
 }
 
 @media (min-width:1280px) {
-    .main{
+    /* .main{
         padding:20px 130px;
         display: flex;
         flex-direction: row;
         align-items: center;
        gap: 20px
-    }
+    } */
     .bold{
         font-size: 1.8rem;
         line-height: 2rem;
@@ -288,6 +381,7 @@
     }
     .listcont{
     flex: 2;
+    display: none;
     }
     .lastcont{
         flex:1.5;
@@ -296,7 +390,73 @@
     .item{
         font-size: 1rem;
         line-height: 1rem;
+        padding: 20px;
     }
+    .item:hover{
+        padding: 20px;
+    }
+    .mobilelist{
+        padding: 20px 0;
+        position: absolute;
+        width: 25%;
+        z-index: 2;
+        /* color: black; */
+        border-radius: 5px;
+        filter: drop-shadow(0px 9px 4px rgba(0, 0, 0, 0.25));
+    }
+    .buttoncont{
+        margin-top: -30px;
+        /* background-color: blue; */
+       
+    }
+    .imgcont{
+        /* flex: 1; */
+        width: 25%;
+        height: 13vh;
+        
+    }
+    .menuicon{
+        width: 55px;
+        height: 55px;
+        display: block;
+        /* color: gray; */
+    }
+
      
      
+}
+@media (min-width:1440px) {
+    .main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* background-color: red; */
+    }
+    .listcont{
+        display: block;
+        
+    }
+    .menuicon{
+        display: none;
+    }
+    .list {
+        font-size: 1.0rem;
+        line-height: 1rem;
+        gap: 0px;
+        /* background-color: rgb(0, 255, 72); */
+    }
+    .imgcont{
+        /* flex: 1; */
+        width: 60%;
+        height: 10vh;
+    }
+    .buttoncont{
+        margin-top: 0px;
+    
+     }
+     .button{
+        /* border: 1px solid red; */
+        /* border: unset; */
+ 
+     }
 }

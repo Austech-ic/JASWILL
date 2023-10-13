@@ -1,11 +1,11 @@
 .main{
-    background-color: black;
+    background-color: #000080;
     color: white;
     padding:30px;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr ;
-    gap: 10px;
+    gap: 20px;
    /* min-height: 40vh; */
 
    
@@ -16,7 +16,7 @@
     gap: 10px;
     font-size: 0.7rem;
     line-height: 1rem;
-    /* background-color: aliceblue; */
+    /* background-color: yellow; */
 }
 .label{
     font-size: 0.8rem;
@@ -58,6 +58,12 @@
     flex-direction: column;
     gap: 10px;
 }
+.lastconts{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .cont{
    /* background-color: yellow; */
@@ -66,12 +72,46 @@
    gap: 10px;
   
 }
+.conts{
+    /* background-color: yellow; */
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+ }
 .barcont{
     flex: 1;
 
 }
+.barconts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
 .googlecont{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.googleconts{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    gap: 10px;
+    /* background-color: red; */
+    width: 100%;
+}
+.imgs{
+    
+    width: 40%;
+    height: auto;
 }
 .img{
     width: 100%;
@@ -96,13 +136,13 @@
 
 @media (min-width:768px) {
     .main{
-        background-color: black;
+        /* background-color: black; */
         color: white;
         padding:30px;
         display: grid;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 2fr 2fr;
-        gap: 5px;
+        gap: 20px;
         /* min-height: 40vh; */
     }
     .icon{
@@ -121,19 +161,36 @@
         /* width: auto; */
         height: auto;
     }
+   .imgs{
+    width: 30%;
+    height: auto;
+   }
+   .subone{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    /* background-color: yellow; */
+}
+.label{
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+ 
     
 }
 
 @media (min-width:1024px) {
     .main{
-        background-color: black;
+        /* background-color: black; */
         color: white;
         padding:70px;
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
-        gap: 20px; 
-        max-height: 35vh;
+        gap: 30px; 
+        max-height: 50vh;
         /* min-height: 40vh; */
     }
     .inputcont{
@@ -158,19 +215,36 @@
         /* width: auto; */
         height: auto;
     }
+    .imgs{
+    
+        width: 40%;
+        height: auto;
+    }
+    .label{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .subone{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        /* background-color: yellow; */
+    }
     
 }
 
 @media (min-width:1280px) {
     .main{
-        background-color: black;
+        /* background-color: black; */
         color: white;
         padding:100px;
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
-        gap: 20px;    
-        min-height: 20vh;   
+        gap: 30px;    
+        min-height: 40vh;   
     }
 
     .inputcont{
@@ -190,6 +264,18 @@
         width: 100%;
         /* width: auto; */
         height: auto;
+    }
+    .label{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .subone{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        /* background-color: yellow; */
     }
 }
 @media (min-width:1440px) {
