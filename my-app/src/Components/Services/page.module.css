@@ -1,0 +1,129 @@
+.main{
+    background-color: #800000;
+    color: white;
+    padding: 30px 0;
+}
+
+.subcont{
+    background-color: white;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+    color: black;
+    padding: 30px ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 30vh;
+}
+.head{
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.label{
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.text{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+.carousel{
+    width: 100%;
+    height: auto;
+    padding: 20px 40px ;
+    /* padding: 20px 0; */
+   display: grid;
+   gap: 20px;
+   /* background-color: yellow; */
+}
+
+
+
+@media (min-width:768px) {
+    .cont{
+       width: 100%;
+       display: flex;
+       align-items: center;
+       /* padding: 20px 40px ; */
+     } 
+     .carousel{
+        width: 100%;
+        height: auto;
+        padding: 20px 80px ;
+        /* padding: 20px 0; */
+        display: grid;
+        grid-template-rows: 2fr ; 
+        grid-template-columns: 2fr ;
+       
+    }
+     .head{
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .label{
+        font-size: 1.0rem;
+        line-height: 2rem;
+    }
+    .text{
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+}
+
+
+@media (min-width:1024px) {
+    .main{
+        padding: 50px 120px;
+    }
+    .cont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* padding: 20px 40px ; */
+      }
+   
+    .carousel{
+        width: 100%;
+        height: auto;
+        padding: 20px 80px ;
+        /* padding: 20px 0; */
+        display: grid;
+       grid-template-rows: 3fr ;
+       grid-template-columns: 3fr;
+        gap: 20px;
+         /* padding: 40px 0; */
+    }
+    .subcont{
+        flex-direction: 1;
+        
+        
+    }
+    .head{
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .label{
+        font-size: 1.0rem;
+        line-height: 2rem;
+    }
+    .text{
+        font-size: 0.9rem;
+        line-height: 1.7rem;
+    }
+}
+
+@media (min-width:1280px) {
+    .label{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .text{
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        
+    }
+}
