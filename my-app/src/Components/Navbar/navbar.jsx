@@ -1,15 +1,19 @@
 import styles from './navbar.module.css'
 import {AiOutlineSearch,AiOutlineHeart,AiOutlineShoppingCart} from 'react-icons/ai'
 import { IoIosMenu,IoMdCall } from 'react-icons/io';
-import { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logone from '../../../public/logo.jpeg'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 
 
 const Navbar = () => {
+
+
+ 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showMenuContent, setShowMenuContent] = useState(false);
 
@@ -23,7 +27,10 @@ const Navbar = () => {
 
 
     return(
-        <div className={styles.main}>
+        <div className={styles.main} 
+        data-aos='fade-right'
+        data-aos-offset='100'
+        data-aos-easing='ease-in-sine'>
            <div className={styles.textcont}>
             <div className={styles.imgcont}>
             <Image src={logone} alt='logo-img' className={styles.img}/>
@@ -39,8 +46,8 @@ const Navbar = () => {
             
             {showMenuContent && (
           <div className={styles.mobilelistcont}>
-          <ul className={styles.mobilelist}>
-              <li className={styles.item}>
+          <ul className={styles.mobilelist} >
+              <li className={styles.item} >
                 <Link href={`/`} className={styles.link}>
                Home
                 </Link>

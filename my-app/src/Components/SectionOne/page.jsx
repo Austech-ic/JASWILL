@@ -1,19 +1,65 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './pages.module.css'
+import Image from 'next/image'
+import house from '../../../public/house.jpeg'
+import Link from 'next/link'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const page = () => {
+  const scrollTriggerRef = useRef(null);
+
+  useEffect(() => {
+      AOS.init();
+      const options = {
+          threshold: 0.9,
+      };
+      const observer = new IntersectionObserver(handleScroll, options);
+      observer.observe(scrollTriggerRef.current);
+
+      return () => {
+          observer.disconnect();
+      };
+  }, []);
+
+  const handleScroll = (entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              AOS.refresh();
+          }
+      });
+  };
+
   return (
-    <div className={styles.main}>
+    <div className={styles.main}
+    data-aos='zoom-in'
+    data-aos-duration='1000'
+    ref={scrollTriggerRef}>
         <div className={styles.submain}>
-            <div>
-                <p className={styles.text}>Your child can watch <br />unlimited video lessons without internet!</p>
-                <p>Get the Education Tab 2 for children in Primary and Secondary school.</p>
+            <div className={styles.subone}>
+                <p className={styles.text}>Unlock the Door <br className={styles.hide}/>to <span className={styles.spancolor}>Your Perfect Home.</span></p>
+              
+                
+                <p className={styles.subtext}>
+                Join us in the pursuit of exceptional living. <br className={styles.starthide} /> Start your <br className={styles.hides} /> property journey today!"
+                </p>
                 <div className={styles.buttoncont}>
-                    <button>Buy via Whatsapp</button>
-                    <button>Buy Online</button>
+                  <Link href={`/`}>
+                  <button className={styles.button}>Get Started</button>
+                  </Link>
+                  <Link href={`/`}>
+                    <button className={styles.buttons}>Patner With Us</button>
+                  </Link>
+                    
+                    
+                    
                 </div>
             </div>
-            <div></div>
+            <div className={styles.subtwo}>
+              <Image src={house} alt='house-img' className={styles.img} data-aos="zoom-in-up" data-aos-duration="1000"/>
+            </div>
 
         </div>
     </div>

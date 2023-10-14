@@ -6,6 +6,7 @@ import SectionOne from '../Components/SectionOne/page'
 import Footer from '@/Components/Footer/footer'
 import Socials from '../Components/Socials/page'
 import Contact from '../Components/Contact/page'
+import SectionTwo from '../Components/SectionTwo/page'
 
 
 
@@ -14,8 +15,9 @@ export default function Home() {
     <main>
       <Header />
       <Navbar />
-      {/* <SectionOne /> */}
+      <SectionOne />
       <Contact />
+      <SectionTwo />
       <Footer />
       <hr  className='text-maroon'/>
       <Socials />

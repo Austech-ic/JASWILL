@@ -1,0 +1,183 @@
+.main{
+    padding: 50px;
+    /* background-color: red; */
+}
+.label{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #351d1d;
+}
+.textwo{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 200;
+}
+.cont{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    padding: 30px 0;
+    /* background-color: red; */
+}
+.subcont{
+    border: 1px solid gray;
+    /* padding: 50px; */
+}
+.price{
+    padding:30px 10px 10px 10px;
+    color: #800000;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+}
+.bold{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.caption{
+    padding: 10px 0 30px 10px;
+    font-weight: 200;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.sub{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 10px;
+}
+.iconcont{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+.carouselcont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+
+
+
+@media (min-width:768px) {
+
+.label{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.textwo{
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 200;
+}
+.cont{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    padding: 50px 0;
+}
+.iconcont{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.sub{
+   
+    gap: 10px;
+   
+}
+.carouselcont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+}
+
+
+@media (min-width:1024px) {
+   .main{
+     padding: 50px 120px;
+}
+.label{
+    font-size: 1.7rem;
+    line-height: 2rem;
+    text-align: center;
+}
+.textwo{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 300;
+}
+.cont{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr;
+    gap: 20px;
+    padding: 50px 0;
+}
+.sub{
+   
+    gap: 5px;
+    
+}
+.iconcont{
+    
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+ 
+}
+
+@media (min-width:1280px) {
+    .main{
+     padding: 50px 130px;
+}
+.label{
+    font-size: 1.9rem;
+    line-height: 2rem;
+    text-align: center;
+}
+.textwo{
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 200;
+    
+}
+.cont{
+    
+    gap: 35px;
+    
+}
+.sub{
+   
+    gap: 20px;
+    
+}
+.iconcont{
+    
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+}
