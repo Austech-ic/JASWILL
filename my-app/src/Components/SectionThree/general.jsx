@@ -100,9 +100,7 @@ const General = () => {
                 <div className='mt-1 h-18 text-sm text-gray-700 text-left'>
                   <p>{datum.description}</p>
                 </div>
-                {/* <div className='mt-5'>
-                  {datum.review}
-                </div> */}
+               
               </div>
             </div>
           ))}
