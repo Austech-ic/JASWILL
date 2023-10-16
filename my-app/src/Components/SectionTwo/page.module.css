@@ -7,7 +7,7 @@
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
-    color: #351d1d;
+    color: white;
 }
 .textwo{
     font-size: 0.9rem;
@@ -25,10 +25,11 @@
     /* background-color: wheat; */
 }
 .subcont{
-    border: 1px solid gray;
+    border: 1px solid white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    /* background-color: yellow; */
+    background-color: white;
+    color: #800000;
     /* padding: 20px 0; */
     /* box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05); */
 }

@@ -19,35 +19,10 @@ import 'aos/dist/aos.css';
 
 
 const Footer = () => {
-    const scrollTriggerRef = useRef(null);
-
-    useEffect(() => {
-        AOS.init();
-        const options = {
-            threshold: 0.9,
-        };
-        const observer = new IntersectionObserver(handleScroll, options);
-        observer.observe(scrollTriggerRef.current);
   
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-  
-    const handleScroll = (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                AOS.refresh();
-            }
-        });
-    };
  
     return(
-        <div className={styles.main}
-        data-aos='fade-right'
-    data-aos-offset='100'
-    data-aos-easing='ease-in-sine'
-    ref={scrollTriggerRef}>
+        <div className={styles.main}>
        <div className={styles.subone}>
         <p className={styles.label}>Subscribe</p>
         <div className={styles.subcont}>

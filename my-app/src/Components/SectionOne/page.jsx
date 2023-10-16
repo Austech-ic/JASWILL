@@ -46,10 +46,10 @@ const page = () => {
                 Join us in the pursuit of exceptional living. <br className={styles.starthide} /> Start your <br className={styles.hides} /> property journey today!"
                 </p>
                 <div className={styles.buttoncont}>
-                  <Link href={`/`}>
+                  <Link href={`/signup`}>
                   <button className={styles.button}>Get Started</button>
                   </Link>
-                  <Link href={`/`}>
+                  <Link href={`/career`}>
                     <button className={styles.buttons}>Patner With Us</button>
                   </Link>
                     

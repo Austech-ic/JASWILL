@@ -128,8 +128,8 @@ border: 1px solid #800000;
 }
 .imgcont{
     /* flex: 1; */
-    width: 50%;
-    height: 10vh;
+    width: 40%;
+    height: 8vh;
     
     
 }
@@ -202,8 +202,8 @@ border: 1px solid #800000;
      }
      .imgcont{
         /* flex: 1; */
-        width: 40%;
-        height: 10vh;
+        width: 35%;
+        height: 8vh;
     }
 
     .menuicon{
@@ -344,7 +344,7 @@ border: 1px solid #800000;
     .imgcont{
         /* flex: 1; */
         width: 20%;
-        height: 8vh; 
+        height: 9vh; 
     }
     .menuicon{
         width: 45px;
@@ -412,8 +412,8 @@ border: 1px solid #800000;
     }
     .imgcont{
         /* flex: 1; */
-        width: 25%;
-        height: 13vh;
+        width: 20%;
+        height: 10vh;
         
     }
     .menuicon{
@@ -448,8 +448,8 @@ border: 1px solid #800000;
     }
     .imgcont{
         /* flex: 1; */
-        width: 60%;
-        height: 10vh;
+        width: 50%;
+        height: 8vh;
     }
     .buttoncont{
         margin-top: 0px;

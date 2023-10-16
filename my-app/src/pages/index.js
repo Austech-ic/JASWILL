@@ -8,8 +8,10 @@ import Socials from '../Components/Socials/page'
 import Contact from '../Components/Contact/page'
 import SectionTwo from '../Components/SectionTwo/page'
 import SectionThree from '../Components/SectionThree/page'
+import Testimonies from '../Components/Testimonies/page'
 import AboutUs from '../Components/AboutUs/page'
 import Services from '../Components/Services/page'
+import Career from '../Components/Career/page'
 
 
 
@@ -19,9 +21,15 @@ export default function Home() {
       <Header />
       <Navbar />
       <SectionOne />
-      <Services />
+      <div className='bg-maroon text-white'>
       <SectionTwo />
+      </div>
+     
+      <Services />
       <SectionThree />
+      < Testimonies  />
+     
+      <Career />
       <AboutUs />
       <Contact />
      

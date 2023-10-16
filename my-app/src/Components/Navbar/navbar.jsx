@@ -28,9 +28,7 @@ const Navbar = () => {
 
     return(
         <div className={styles.main} 
-        data-aos='fade-right'
-        data-aos-offset='100'
-        data-aos-easing='ease-in-sine'>
+        >
            <div className={styles.textcont}>
             <div className={styles.imgcont}>
             <Image src={logone} alt='logo-img' className={styles.img}/>
@@ -53,27 +51,27 @@ const Navbar = () => {
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/contactus`} className={styles.link}>
+                <Link href={`/services`} className={styles.link}>
                 Services
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/`} className={styles.link}>
                Our Properties
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/career`} className={styles.link}>
              Career
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/contact`} className={styles.link}>
              Contact us
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/blogpage`} className={styles.link}>
             Blog
                 </Link>
                </li>
@@ -101,27 +99,27 @@ const Navbar = () => {
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/contactus`} className={styles.link}>
+                <Link href={`/services`} className={styles.link}>
                 Services
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/`} className={styles.link}>
                 Our Properties
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/career`} className={styles.link}>
              Career
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/contact`} className={styles.link}>
              Contact us
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/aboutus`} className={styles.link}>
+                <Link href={`/blogpage`} className={styles.link}>
             Blog
                 </Link>
                </li>

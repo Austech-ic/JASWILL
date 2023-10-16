@@ -1,8 +1,13 @@
 import React from 'react'
 
+import Signin from '../Components/Auth/Signin/page'
+
+
 const signin = () => {
   return (
-    <div>signin</div>
+    <div>
+      <Signin />
+    </div>
   )
 }
 

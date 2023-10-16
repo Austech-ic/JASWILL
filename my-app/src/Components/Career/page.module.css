@@ -1,0 +1,123 @@
+.main{
+    padding: 30px;
+}
+.label{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.text{
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+    padding: 20px 0;
+}
+.button{
+    background-color:transparent;
+    border: 1px solid gray;
+    border-radius: 40px;
+    padding: 8px 40px;
+    font-size: 0.9rem;
+    /* line-height: 1.7rem; */
+}
+.buttoncont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .main{
+        padding: 50px 70px;
+    }
+    .label{
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .text{
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.7rem;
+        padding: 20px 0;
+    }
+    .button{
+        background-color:transparent;
+        /* border: 2px solid #800000; */
+        border-radius: 40px;
+        padding: 8px 50px;
+        font-size: 1.5rem;
+        /* line-height: 1.7rem; */
+    }
+    .buttoncont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width:1024px) {
+    .main{
+        padding: 50px 120px;
+    }
+    .label{
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .text{
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 2rem;
+        padding: 20px 0;
+    }
+    .button{
+        background-color:transparent;
+        /* border: 2px solid #800000; */
+        border-radius: 40px;
+        padding: 8px 50px;
+        font-size: 1.1rem;
+        /* line-height: 1.7rem; */
+    }
+    .buttoncont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width:1280px) {
+    .main{
+        padding: 50px 150px;
+    }
+    .label{
+        text-align: center;
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+    .text{
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 2.0rem;
+        padding: 20px 0;
+    }
+    .button{
+        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+        /* border: 1px solid gray; */
+        /* background-color: white; */
+        border-radius: 40px;
+        padding: 8px 50px;
+        font-size: 1.1rem;
+        /* line-height: 1.7rem; */
+    }
+    .button:hover{
+        /* background-color: rgb(221, 213, 213); */
+        color: white;
+        background-color: #800000;
+    }
+    .buttoncont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
