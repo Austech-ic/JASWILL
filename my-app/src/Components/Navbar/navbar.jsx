@@ -12,8 +12,6 @@ import 'aos/dist/aos.css'
 
 const Navbar = () => {
 
-
- 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showMenuContent, setShowMenuContent] = useState(false);
 
@@ -23,10 +21,8 @@ const Navbar = () => {
     }
 
 
-
-
-
     return(
+
         <div className={styles.main} 
         >
            <div className={styles.textcont}>

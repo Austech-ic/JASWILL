@@ -15,7 +15,6 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 const General = () => {
   const details = [
-  ,
     {
       id: 1,
       picture: one,
@@ -72,16 +71,14 @@ const General = () => {
               <div className='text-gray-700 cursor-pointer mt-2'>
                 <p className='text-lg lg:text-sm mt-3'>{datum.description}</p>
               </div>
-              {/* <div className='flex justify-start items-center cursor-pointer mt-3'>
-                {datum.review}
-              </div> */}
+              
             </div>
           </div>
         ))}
       </div>
       {/* Render the mobile view with carousel */}
       <div className='md:hidden'>
-        <Carousel showStatus={false} showThumbs={false} emulateTouch={true} showIndicators={true} interval={10000}>
+        {/* <Carousel showStatus={false} showThumbs={false} emulateTouch={true} showIndicators={true} interval={10000}>
           {details.map((datum) => (
             <div key={datum.id} className='p-5'>
               <div className='relative'>
@@ -91,9 +88,7 @@ const General = () => {
     
               </div>
               <div className='p-5 flex flex-col justify-between items-start bg-blue-100'>
-                <div className='mt-3 text-gray-700'>
-                  <p>{datum.categories}</p>
-                </div>
+               
                 <div className='text-md mt-0 font-bold hover:underline md:text-xl'>
                   <p>{datum.label}</p>
                 </div>
@@ -104,7 +99,7 @@ const General = () => {
               </div>
             </div>
           ))}
-        </Carousel>
+        </Carousel> */}
       </div>
     </section>
   );
