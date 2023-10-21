@@ -1,7 +1,8 @@
 import React,{ useState } from 'react'
 import styles from './page.module.css'
+import Image from 'next/image';
 
-const page = () => {
+const Page = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
   const handleFileUpload = (event) => {
@@ -14,11 +15,12 @@ const page = () => {
     if (selectedMedia) {
       return (
         <div className="mt-3">
-          <img
+          <Image
             src={selectedMedia}
             alt="Selected Thumbnail"
             className="w-full h-auto rounded-lg max-h-[100px] max-w-[30%]"
           />
+      
         </div>
       );
     }
@@ -98,4 +100,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

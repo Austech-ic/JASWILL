@@ -4,7 +4,7 @@ import Office from '../SectionThree/office'
 import General from '../SectionThree/general'
 
 
-const page = () => {
+const Page = () => {
     const [showAll, setShowAll] = useState(false);
     const [showAdventure, setShowAdventure] = useState(false);
     const [showArt, setShowArt] = useState(false);
@@ -184,4 +184,4 @@ const page = () => {
     );
   };
 
-export default page
+export default Page

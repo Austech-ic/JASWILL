@@ -11,7 +11,7 @@ import Review from '../SectionThree/Review'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
 
-const page = () => {
+const Page = () => {
 
     const defaultDetails = [
         {
@@ -126,4 +126,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

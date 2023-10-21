@@ -8,7 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-const page = () => {
+const Page = () => {
   const scrollTriggerRef = useRef(null);
 
   useEffect(() => {
@@ -70,4 +70,4 @@ ref={scrollTriggerRef}
   )
 }
 
-export default page
+export default Page;

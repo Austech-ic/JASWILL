@@ -14,7 +14,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BsArrowLeft, BsArrowRight, BsDot } from 'react-icons/bs';
 
-const page = () => {
+const Page = () => {
     const [currentItem, setCurrentItem] = useState(0);
     const [displayedItems, setDisplayedItems] = useState([]);
 
@@ -75,11 +75,10 @@ const page = () => {
     ]
 
     const [details, setDetails] = useState([])
-    useEffect(()=>{
-        setDetails(defaultDetails)
-    },[])
+    
 
     useEffect(() => {
+        
         const handleResize = () => {
           if (window.innerWidth < 768) {
             // For mobile view, display only one item
@@ -87,17 +86,16 @@ const page = () => {
           } else {
             // For desktop view, display three items
             setDisplayedItems([
-              defaultDetails[currentItem],
-              defaultDetails[(currentItem + 1) % defaultDetails.length],
-              defaultDetails[(currentItem + 2) % defaultDetails.length],
-            ]);
-          }
-        };
-
+                defaultDetails[currentItem],
+                defaultDetails[(currentItem + 1) % defaultDetails.length],
+                defaultDetails[(currentItem + 2) % defaultDetails.length],
+              ]);
+            }
+          };
         handleResize(); // Initial handle resize
 
         window.addEventListener('resize', handleResize);
-
+        setDetails(defaultDetails)
         // Cleanup the event listener
         return () => {
           window.removeEventListener('resize', handleResize);
@@ -164,4 +162,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 
 
-const page = () => {
+const Page = () => {
   const scrollTriggerRef = useRef(null);
 
   useEffect(() => {
@@ -42,8 +42,7 @@ const page = () => {
                 <p className={styles.text}>Unlock the Door <br className={styles.hide}/>to <span className={styles.spancolor}>Your Perfect Home.</span></p>
               
                 
-                <p className={styles.subtext}>
-                Join us in the pursuit of exceptional living. <br className={styles.starthide} /> Start your <br className={styles.hides} /> property journey today!"
+                <p className={styles.subtext}>Join us in the pursuit of exceptional living. <br className={styles.starthide} /> Start your <br className={styles.hides} /> property journey today!
                 </p>
                 <div className={styles.buttoncont}>
                   <Link href={`/signup`}>
@@ -66,4 +65,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
