@@ -143,6 +143,7 @@ const Page = () => {
                                     <div className={styles.iconcont}>
                                         <p>{datum.iconthree}</p>
                                         <p>{datum.typethree}</p>
+                                        {/* <p>{datum.review}</p> */}
 
                                     </div>
                                 </div>
