@@ -144,6 +144,7 @@ const Page = () => {
                                         <p>{datum.iconthree}</p>
                                         <p>{datum.typethree}</p>
                                         {/* <p>{datum.review}</p> */}
+                                        {/* <p>jgjjjjg</p> */}
 
                                     </div>
                                 </div>
