@@ -55,10 +55,7 @@ const Page = () => {
         },
     ]
 
-    const [details, setDetails] = useState([])
-    useEffect(()=>{
-        setDetails(defaultDetails)
-    },[])
+  
     return (
         <div className={styles.main}>
         <div>
