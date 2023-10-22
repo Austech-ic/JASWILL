@@ -19,73 +19,40 @@ const Page = () => {
             pic: female,
             label: "Miss Joy",
             text: "This app makes house hunting so easy, for me it's so understabdable.",
-            // review:<Review />
+           
         },
         {
             id: 2,
             pic: female,
             label: "Mr Ben",
             text: "This app makes house hunting so easy, for me it's so understabdable.",
-            // review: () => (<div className='flex'>
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiOutlineStar size={25} className='text-maroon' />
-            // </div>),
+            
         },
         {
             id: 3,
             pic: female,
             label: "Miss Taiwo",
             text: "Our business encompasses different stages of the real estate development matrix, but focuses more on land development, building development, and building operations.",
-            // review: () => (<div className='flex'>
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            //     <AiFillStar size={25} className='text-maroon' />
-            // </div>),
+            
         },
-        // {
-        //     id: 4,
-        //     pic: female,
-        //     label: "Mrs Johnson",
-        //     text: "This app makes house hunting so easy, for me it's so understabdable.",
-        //     review: () => (<div className='flex'>
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //     </div>),
-        // },
-        // {
-        //     id: 5,
-        //     pic: female,
-        //     label: "Mr Olu",
-        //     text: "This app makes house hunting so easy, for me it's so understabdable.",
-        //     review: () => (<div className='flex'>
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //     </div>),
-        // },
-        // {
-        //     id: 6,
-        //     pic: female,
-        //     label: "Mr John",
-        //     text: "This app makes house hunting so easy, for me it's so understabdable.", text: "This app makes house hunting so easy, for me it's so understabdable.",
-        //     review: () => (<div className='flex'>
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiFillStar size={25} className='text-maroon' />
-        //         <AiOutlineStar size={25} className='text-maroon' />
-        //     </div>),
-        // },
+        {
+            id: 4,
+            pic: female,
+            label: "Mrs Johnson",
+            text: "This app makes house hunting so easy, for me it's so understabdable.",
+        },
+        {
+            id: 5,
+            pic: female,
+            label: "Mr Olu",
+            text: "This app makes house hunting so easy, for me it's so understabdable.",
+        },
+        {
+            id: 6,
+            pic: female,
+            label: "Mr John",
+            text: "This app makes house hunting so easy, for me it's so understabdable.", text: "This app makes house hunting so easy, for me it's so understabdable.",
+        },
     ]
 
     const [details, setDetails] = useState([])
