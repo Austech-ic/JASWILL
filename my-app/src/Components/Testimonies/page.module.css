@@ -17,11 +17,11 @@
     gap: 10px;
     height: 50vh;
 }
-.cont{
+/* .cont{
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+} */
 .head{
     text-align: center;
     font-size: 1rem;
@@ -159,7 +159,7 @@ border-radius: 100%;
     .text{
         font-size: 1.3rem;
         line-height: 2.5rem;
-        width: 70%;
+        /* width: 70%; */
         
     }
     .subcont{
@@ -176,7 +176,7 @@ border-radius: 100%;
         
     }
 }
-@media (min-width:1280px) {
+/* @media (min-width:1280px) {
    
     .subcont{
         flex-direction: 1;
@@ -194,4 +194,4 @@ border-radius: 100%;
         
     }
     
-}
+} */
