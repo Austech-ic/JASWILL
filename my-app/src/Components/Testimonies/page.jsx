@@ -82,7 +82,7 @@ const Page = () => {
                         <p className={styles.label}>{datum.label}</p>
                         <p className={styles.text}>{datum.text}</p>
                         </div>
-                        <div className='flex'>
+                        <div className='flex flex-row'>
     <AiFillStar size={25} className='text-maroon' />
     <AiFillStar size={25} className='text-maroon' />
     <AiFillStar size={25} className='text-maroon' />
