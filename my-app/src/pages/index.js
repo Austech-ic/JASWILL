@@ -12,6 +12,7 @@ import Testimonies from '../Components/Testimonies/page'
 import AboutUs from '../Components/AboutUs/page'
 import Services from '../Components/Services/page'
 import Career from '../Components/Career/page'
+import Carosel from '../Components/Carosel/page'
 
 
 
@@ -23,10 +24,11 @@ export default function Home() {
       <SectionOne />
       <div className='bg-maroon text-white'>
       <SectionTwo />
+      {/* <Carosel /> */}
       </div>
       <Services />
       <SectionThree />
-      < Testimonies  />
+      {/* < Testimonies  /> */}
       <Career />
       <AboutUs />
       <Contact />

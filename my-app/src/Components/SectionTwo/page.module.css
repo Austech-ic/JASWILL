@@ -94,7 +94,7 @@
 .cont{
     display: grid;
     grid-template-columns: 2fr 2fr ;
-    grid-template-rows: 2fr 2fr ;
+    grid-template-rows: 2fr ;
     padding: 50px 0;
 }
 .iconcont{
