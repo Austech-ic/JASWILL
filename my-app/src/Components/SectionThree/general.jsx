@@ -1,5 +1,4 @@
 import React from 'react';
-import Review from './Review'
 import one from '../../../public/one.webp'
 import two from '../../../public/two.webp'
 import three from '../../../public/three.webp'
@@ -21,7 +20,7 @@ const General = () => {
     //   categories: "Mini Work Space",
       label: 'Apartment',
       description: "See city spectacles on a memorable helicopter ride",
-      review: <Review />
+      // review: <Review />
     },
     {
       id: 2,
@@ -29,7 +28,7 @@ const General = () => {
     //   categories: "Small Office",
       label: 'Vila',
       description: "Visit the spot for mountain scenery and kayaking",
-      review: <Review />
+      // review: <Review />
     },
     {
       id: 3,
@@ -37,7 +36,7 @@ const General = () => {
     //   categories: "Big Workspace",
       label: 'Studio',
       description: "See city spectacles on a memorable helicopter ride",
-      review: <Review />
+      // review: <Review />
     },
     {
         id: 4,
@@ -45,7 +44,7 @@ const General = () => {
       //   categories: 'Conference Room',
         label: 'Office',
         description: "A range of ready-to-use, fully-equipped offices with everything you need to get started.",
-        review: <Review />
+        // review: <Review />
       },
      
   ];

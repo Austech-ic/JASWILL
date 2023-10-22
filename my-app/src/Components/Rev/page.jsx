@@ -4,7 +4,15 @@ import { AiFillStar, AiOutlineStar} from 'react-icons/ai'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <div className='flex'>
+    <AiFillStar size={25} className='text-maroon' />
+    <AiFillStar size={25} className='text-maroon' />
+    <AiFillStar size={25} className='text-maroon' />
+    <AiFillStar size={25} className='text-maroon' />
+    <AiFillStar size={25} className='text-maroon' />
+</div>
+</div>
   )
 }
 

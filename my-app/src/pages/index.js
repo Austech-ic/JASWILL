@@ -24,11 +24,10 @@ export default function Home() {
       <SectionOne />
       <div className='bg-maroon text-white'>
       <SectionTwo />
-      {/* <Carosel /> */}
       </div>
       <Services />
       <SectionThree />
-      {/* < Testimonies  /> */}
+      < Testimonies  />
       <Career />
       <AboutUs />
       <Contact />

@@ -1,5 +1,4 @@
 import React from 'react';
-import Review from './Review'
 import three from '../../../public/three.webp'
 import officeone from '../../../public/officeone.webp'
 import officetwo from '../../../public/officetwo.webp'
@@ -19,7 +18,7 @@ const Office = () => {
       label: 'Custom Offices',
       description: "When off-the-shelf simply isn’t enough. Customise all aspects of your space, including furniture and branding.",
       categories: 'NGN 103,900 per person per month',
-      review: <Review />
+      // review: <Review />
     },
     {
       id: 2,
@@ -28,7 +27,7 @@ const Office = () => {
       label: 'Day Offices',
       description: "A professional on-demand office space. Perfect when you need to get your head down and do your best work.",
       categories: 'NGN 103,900 per person per month',
-      review: <Review />
+      // review: <Review />
     },
     {
       id: 3,
@@ -37,7 +36,7 @@ const Office = () => {
       label: 'Private Offices',
       description: "A range of ready-to-use, fully-equipped offices with everything you need to get started.",
       categories: 'NGN 103,900 per person per month',
-      review: <Review />
+      // review: <Review />
     },
     {
       id: 4,
@@ -46,7 +45,7 @@ const Office = () => {
       label: ' Membership',
       description: "Flexible access to Day Offices where and when you choose, at thousands of locations worldwide.",
       categories: 'NGN 103,900 per person per month',
-      review: <Review />
+      // review: <Review />
     },
   ];
 
