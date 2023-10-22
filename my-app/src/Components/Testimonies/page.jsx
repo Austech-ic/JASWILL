@@ -132,7 +132,7 @@ const Page = () => {
                                     <span>{item.icon}</span>
                                 ))} */}
                                 {datum?.rate?.map((item) => (
-                                    <p key={item.id}>{item.icon}</p>
+                                    <p key={item.id} className='flex flex-row'>{item.icon}</p>
                                 ))}
                             </div>
                             
