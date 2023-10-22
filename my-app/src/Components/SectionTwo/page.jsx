@@ -95,7 +95,7 @@ const Page = () => {
           setVisibleCards(1); // Mobile view, show one card
         } else if (window.innerWidth <= 820) {
           setVisibleCards(2); // Desktop view (768 to 1000), show two cards
-        }  else if (window.innerWidth <= 1280) {
+        }  else if (window.innerWidth <= 1500) {
             setVisibleCards(3); // Desktop view (768 to 1000), show two cards
            
         }
