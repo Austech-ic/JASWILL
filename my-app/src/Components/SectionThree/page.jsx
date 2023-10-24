@@ -67,7 +67,7 @@ const Page = () => {
     };
   
     return (
-      <section className='px-5 md:p-10 '>
+      <section className='px-5 md:p-10' id='properties'>
         <div>
           <div className='mt-5'>
             <p className='text-center py-2 text-2xl md:text-3xl lg:text-3xl xl:text-4xl'>Explore By Property Type</p>

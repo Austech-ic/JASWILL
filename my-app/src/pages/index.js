@@ -13,6 +13,7 @@ import AboutUs from '../Components/AboutUs/page'
 import Services from '../Components/Services/page'
 import Career from '../Components/Career/page'
 import Carosel from '../Components/Carosel/page'
+import Blog from '../Components/Blog/page'
 
 
 
@@ -28,6 +29,7 @@ export default function Home() {
       <Services />
       <SectionThree />
       < Testimonies  />
+      <Blog />
       <Career />
       <AboutUs />
       <Contact />

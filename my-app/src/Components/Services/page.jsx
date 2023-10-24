@@ -57,7 +57,7 @@ const page = () => {
     },
 ]
   return (
-    <div className={styles.main}>
+    <div className={styles.main} id='services'>
       <p className={styles.headtext}>Our Services</p>
       <div className='grid gap-6 md:grid-cols-2 md:gap-10 lg:grid-cols-3'>
            

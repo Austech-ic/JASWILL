@@ -47,22 +47,22 @@ const Navbar = () => {
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/services`} className={styles.link}>
+                <Link href='#services' className={styles.link}>
                 Services
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/`} className={styles.link}>
+                <Link href='#properties' className={styles.link}>
                 Properties
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/contact`} className={styles.link}>
+                <Link href='#contact' className={styles.link}>
              Contact us
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/blogpage`} className={styles.link}>
+                <Link href='#blogpost' className={styles.link}>
             Blog
                 </Link>
                </li>
@@ -99,22 +99,22 @@ const Navbar = () => {
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/services`} className={styles.link}>
+                <Link href='#services' className={styles.link}>
                 Services
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/`} className={styles.link}>
+                <Link href='#properties' className={styles.link}>
               Properties
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/contact`} className={styles.link}>
+                <Link href='#contact' className={styles.link}>
              Contact us
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href={`/blogpage`} className={styles.link}>
+                <Link href='#blogpost' className={styles.link}>
             Blog
                 </Link>
                </li>

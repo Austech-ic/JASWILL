@@ -39,7 +39,7 @@ const Page = () => {
 data-aos-duration='2000'
 ref={scrollTriggerRef}
     >
-        <div className={styles.cont}>
+        <div className={styles.cont} id='contact'>
             <div className={styles.subone}>
                 <Image src={contact} alt='contact-img' className={styles.img} />
             </div>
