@@ -2,6 +2,7 @@ import { useState }  from 'react'
 import styles from './page.module.css'
 import Office from '../SectionThree/office'
 import General from '../SectionThree/general'
+import Apartment from './apartment'
 
 
 const Page = () => {
@@ -146,7 +147,7 @@ const Page = () => {
           {showAdventure && (
             <div>
               {/* Render the card component for "Adventures" option here */}
-              <Office />
+              <Apartment  />
             </div>
           )}
           {showArt && (

@@ -8,6 +8,7 @@ import {AiOutlineHeart,AiTwotoneHeart,AiFillStar,AiOutlineStar} from 'react-icon
 import {FaComment} from 'react-icons/fa'
 import { BiComment, BiHeart } from 'react-icons/bi'
 import { BsStar, BsStarFill } from 'react-icons/bs'
+import Blogreview from '../Blog/Blogreview/page'
 
 const page = () => {
   const details = [
