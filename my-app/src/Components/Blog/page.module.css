@@ -20,7 +20,7 @@
    
     background-image: url(../../../public//blog.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
 }
 .subred{
     border: 1px solid red;
-    width: 97%;
+    width: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: white;
