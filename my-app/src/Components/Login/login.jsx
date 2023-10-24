@@ -3,12 +3,15 @@ import styles from './login.module.css'
 import { FcGoogle } from 'react-icons/fc';
 import { BsFillEyeSlashFill } from 'react-icons/bs';
 import Link from 'next/link';
+import Navbar from '../Navbar/navbar';
 
 
 
 const Login = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.head}>
+      <Navbar/>
+    <div className={styles.container}>
       <div className={styles.subcontainer}>
         <div className={styles.cont}>
          
@@ -73,6 +76,7 @@ const Login = () => {
         </div>
 
       </div>
+    </div>
     </section>
   )
 }

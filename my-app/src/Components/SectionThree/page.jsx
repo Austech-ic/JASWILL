@@ -67,7 +67,7 @@ const Page = () => {
     };
   
     return (
-      <section className='px-5 max-h-[150vh] md:p-10 lg:h-[120vh] xl:h-[90vh] '>
+      <section className='px-5 md:p-10 '>
         <div>
           <div className='mt-5'>
             <p className='text-center py-2 text-2xl md:text-3xl lg:text-3xl xl:text-4xl'>Explore By Property Type</p>
@@ -117,7 +117,7 @@ const Page = () => {
       <div className='flex-grow-1'>
         <p
           className={`p-2 w-24 text-center md:w-24 hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
-            showSpa ? 'bg-green-600 text-white' : ''
+            showSpa ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleSpaWellnessClick}
         >

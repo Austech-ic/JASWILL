@@ -2,17 +2,16 @@
     padding: 30px;
 }
 .iconcont{
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    background-color: #800000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 10%;
+    height: auto;
+    
+}
+.pic:hover{
+color: white;
 }
 .pic{
-    width: 50%;
-    color: white;
+    width: 100%;
+    /* color: white; */
 }
 
 .icon{
@@ -30,60 +29,68 @@
     padding: 20px 0;
 }
 .label{
-    text-align: center;
     font-size: 1.2rem;
     line-height: 2rem;
     font-weight: bold;
 }
+
 .text{
-    text-align: center;
-    font-size: 0.9rem;
-    line-height: 1.8rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
 }
 .subcont{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap:10px;
-    padding: 10px;
+    padding: 20px 10px;
+    border: 2px solid #800000;
+    border-radius: 10px;
 }
 .subcont:hover{
     box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
     background-color: #800000;
-    padding: 10px;
+    padding: 20px 10px;
     border-radius: 10px;
     color: white;
 }
+.headtext{
+    font-size:1.3rem;
+    font-weight: bolder;
+}
+
 @media (min-width:768px) {
     .main{
         padding: 30px 50px;
     }
+    .label{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: bold;
+        text-align: start;
+    }
+    
+    .text{
+        /* text-align: center; */
+        font-size: 1.2rem;
+        line-height: 2rem;
+        width: 100%;
+        /* background-color: yellow; */
+    }
+    
     .iconcont{
-        height: 100px;
-        width: 100px;
-        border-radius: 100%;
-        background-color: #800000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 20%;
+        height: auto;
+        
     }
-    .pic{
-        width: 70%;
-        color: white;
-    }
+   
     .subcont{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap:20px;
-        padding: 20px 10px;
+        padding: 30px 20px;
+        /* width: 100%; */
     }
     .subcont:hover{
-        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-        /* background-color: white; */
-        padding:20px 10px;
-        border-radius: 10px;
-        /* color: #800000; */
+        padding: 30px 20px;
     }
     .headtext{
         text-align: center;
@@ -91,50 +98,18 @@
         line-height: 2rem;
         padding: 30px 0;
     }
-    .label{
-        text-align: center;
-        font-size: 1.7rem;
-        line-height: 2rem;
-    }
-    .text{
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: 2rem;
-        width: 70%;
-    }
+   
+   
 }
 
 @media (min-width:1024px) {
     .main{
         padding: 50px 120px;
     }
-    .iconcont{
-        height: 100px;
-        width: 100px;
-        border-radius: 100%;
-        background-color: #800000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .pic{
-        width: 70%;
-        color: white;
-    }
-    .subcont{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap:20px;
-        padding: 40px 10px;
-    }
-    .subcont:hover{
-        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-        /* background-color: white; */
-        padding:40px 10px;
-        border-radius: 10px;
-        /* color: #800000; */
-    }
+ .iconcont{
+    width: 20%;
+ }
+ 
     .headtext{
         text-align: center;
         font-size: 1.5rem;
@@ -142,52 +117,45 @@
         padding: 30px 0;
     }
     .label{
-        text-align: center;
-        font-size: 1.1rem;
+       
+        font-size: 1.3rem;
         line-height: 2rem;
     }
     .text{
-        text-align: center;
-        font-size: 0.9rem;
-        line-height: 2rem;
-        width: 70%;
+      
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        width: 100%;
     }
+    .subcont{
+        padding:30px 20px;
+    }
+ 
 }
 
-@media (min-width:1024px) {
+@media (min-width:1280px) {
     .main{
-        padding: 50px 150px;
-    }
-
-    .subcont{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap:20px;
-        padding: 40px 10px;
-    }
-    .subcont:hover{
-        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-        /* background-color: white; */
-        padding:40px 10px;
-        border-radius: 10px;
-        /* color: #800000; */
-    }
-    .headtext{
-        text-align: center;
-        font-size: 1.8rem;
-        line-height: 2rem;
-        padding: 30px 0;
+        padding: 50px 180px;
     }
     .label{
-        text-align: center;
+       
         font-size: 1.5rem;
         line-height: 2rem;
     }
     .text{
-        text-align: center;
-        font-size: 1.1rem;
-        line-height: 2rem;
-        width: 60%;
+      
+        font-size: 1rem;
+        line-height: 1.7rem;
+        width: 100%;
     }
+    .subcont{
+        padding:30px 20px;
+    }
+    .headtext{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+   
+   
 }

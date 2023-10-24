@@ -4,7 +4,7 @@ import { IoIosMenu,IoMdCall } from 'react-icons/io';
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logone from '../../../public/logo.jpeg'
+import logone from '../../../public/bg.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 
@@ -53,12 +53,7 @@ const Navbar = () => {
                </li>
                <li className={styles.item}>
                 <Link href={`/`} className={styles.link}>
-               Our Properties
-                </Link>
-               </li>
-               <li className={styles.item}>
-                <Link href={`/career`} className={styles.link}>
-             Career
+                Properties
                 </Link>
                </li>
                <li className={styles.item}>
@@ -71,10 +66,19 @@ const Navbar = () => {
             Blog
                 </Link>
                </li>
-                <li className={styles.item}>
+                <li className={styles.items}>
               <Link href={`/signup`} className={styles.link}>
                 <div className={styles.buttoncont}>
-                <button className={styles.button}>Sign Up/Log in</button>
+                <button className={styles.button}>Sign Up</button>
+              
+                </div>
+              
+                </Link>
+                </li>
+                <li className={styles.items}>
+              <Link href={`/signin`} className={styles.link}>
+                <div className={styles.buttoncont}>
+                <button className={styles.buttontwo}>Sign in</button>
               
                 </div>
               
@@ -101,12 +105,7 @@ const Navbar = () => {
                </li>
                <li className={styles.item}>
                 <Link href={`/`} className={styles.link}>
-                Our Properties
-                </Link>
-               </li>
-               <li className={styles.item}>
-                <Link href={`/career`} className={styles.link}>
-             Career
+              Properties
                 </Link>
                </li>
                <li className={styles.item}>
@@ -119,17 +118,26 @@ const Navbar = () => {
             Blog
                 </Link>
                </li>
-                <li className={styles.item}>
-              <Link href={`/signup`} className={styles.link}>
-                <div className={styles.buttoncont}>
-                <button>Sign Up/Log in</button>
-              
-                </div>
-              
-                </Link>
-                </li>
+                
             </ul>
+            <div className={styles.lastcontainer}>
+           
+           <Link href={`/signup`} className={styles.link}>
+             <div>
+             <button className={styles.signupbutt}>Sign Up</button>
+             </div>
+             </Link>
+         
+           <Link href={`/signin`} className={styles.link}>
+             <div>
+             <button className={styles.signinbutt}>Sign in</button>
+           
+             </div>
+           
+             </Link>
+        </div>
            </div>
+          
 
          
         </div>

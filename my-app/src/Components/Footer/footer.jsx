@@ -1,104 +1,156 @@
 import styles from './footer.module.css'
-import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image'
-import Googleplay from '../../../public/googlenew.png'
-import Appplay from '../../../public/new.png'
-import aisen from '../../../public/aisen.png'
-import apen from '../../../public/apen.png'
-import iso from '../../../public/iso.png'
-import Bar from '../../../public/newscan.png'
-import {AiOutlineSend,AiOutlineInstagram} from 'react-icons/ai'
-import {TiSocialFacebook} from 'react-icons/ti'
-import {CiTwitter} from 'react-icons/ci'
-import {LiaLinkedinIn} from 'react-icons/lia'
-import Link from 'next/link'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+import { FaFacebookF, FaGooglePlusG } from 'react-icons/fa'
+import { BsInstagram } from 'react-icons/bs'
+import {IoIosArrowForward} from 'react-icons/io'
+import { AiOutlineGooglePlus } from 'react-icons/ai'
+import { GrLinkedinOption } from 'react-icons/gr'
+import bg from '../../../public/bg.png'
 
 
 
 const Footer = () => {
-  
- 
-    return(
-        <div className={styles.main}>
-       <div className={styles.subone}>
-        <p className={styles.label}>Subscribe</p>
-        <div className={styles.subcont}>
-        <p>Jaswill leverages the best in-class teachers, media, and technology to create high-quality, affordable and accessible education for students.</p>   
-        </div>
-       
-       </div>
-       <div className={styles.subone}>
-        <p className={styles.label}>Company</p>
-       <div className={styles.subcont}>
-       <Link href={`/`} className={styles.link}>
-        <p>Blog</p>
-        </Link>
-       </div>
-       </div>
-       <div className={styles.subone}>
-        <p className={styles.label}>Socials</p>
-        <div className={styles.subcont}>
-        <Link href={`/`} className={styles.link}>
-        <p>Linkedin</p>
-        </Link>
-       <Link href={`/`} className={styles.link}>
-        <p>Youtube</p>
-        </Link>
-        <Link href={`/`} className={styles.link}>
-        <p>Twitter</p>
-        </Link>
-        <Link href={`/`} className={styles.link}>
-        <p>Facebook</p>
-        </Link>
-        <Link href={`/`} className={styles.link}>
-        <p>Instragram</p>
-        </Link>
-       </div>
-       </div>
-     
-       <div className={styles.subone}>
-        <p className={styles.label}>Download App</p>
-        <div className={styles.subcont}>
-            <div className={styles.lastcont}>
-                <div className={styles.conts} >
-                    <div className={styles.barconts}>
-                        <p>Certifications</p>
-                    <Image src={iso} alt='bar-img'  className={styles.imgs} />
-                    </div>
-                   
-                    <div className={styles.googleconts}>
-                    <Image src={apen} alt='google-img' className={styles.imgs}/>
-                    <Image src={aisen} alt='bar-img'   className={styles.imgs}/>
-                    </div>
-                </div>
-             
-            </div>
-        </div>
-       </div>
+    const details = [
+        {
+            id: 1,
+            icon: <BsInstagram className={styles.icon} />,
+        },
+        {
+            id: 2,
+            icon: <FaGooglePlusG className={styles.icon} />,
+        },
+        {
+            id: 3,
+            icon: <GrLinkedinOption className={styles.icon} />,
+        },
+        {
+            id: 4,
+            icon: <FaFacebookF className={styles.icon} />,
+        },
+    ]
+    const about = [
+        {
+            id:1,
+            text:"About us",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        },
+        {
+            id:2,
+            text:"Our Mission",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        },
+        {
+            id:3,
+            text:"Our Services",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        },
+        {
+            id:4,
+            text:"FAQ",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        }
+    ]
+    const legal = [
+        {
+            id:1,
+            text:"Terms",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        },
+        {
+            id:2,
+            text:"Privacy",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        },
+        {
+            id:3,
+            text:"Settings",
+             icons: <IoIosArrowForward className={styles.iconew} />
+        }
+    ]
+    return (
+        <div className={styles.container}>
+            <div className={styles.main}>
+                <div className={styles.cont}>
+                    <div className={styles.divone}>
+                        <div className={styles.imgcont}>
+                        <Image src={bg} alt='footer-img' className={styles.footer} />
+                        </div>
+                        
+                        <div className={styles.abtcont}>
+                            <p className={styles.texts}>Jaswill is a platform platform
+                                which breaks barriers to accessing
+                                professional mental wellness support
+                                by seamlessly integrating it into your
+                                organizational workflow.</p>
+                               
+                        </div>
 
-       <div className={styles.subone}>
-        <p className={styles.label}>Download App</p>
-        <div className={styles.subcont}>
-            <div className={styles.lastcont}>
-                <div className={styles.cont} >
-                    <div className={styles.barcont}>
-                    <Image src={Bar} alt='bar-img'  className={styles.img} />
                     </div>
-                   
-                    <div className={styles.googlecont}>
-                    <Image src={Googleplay} alt='google-img' className={styles.img}/>
-                    <Image src={Appplay} alt='bar-img'   className={styles.img}/>
+                    <div className={styles.divtwo}>
+                        <p className={styles.label}>Quick Links</p>
+                        <div className={styles.abtcont}>
+
+                            {
+                                about.map((items) => (
+                                    <div key={items.id} className={styles.conticon}>
+                                 <p>{items.icons}</p>
+                                <p className={styles.text}>{items.text}</p>
+                                </div>
+                                ))
+                            }
+                            
+                          
+                          
+                        </div>
+                    </div>
+                    <div className={styles.divthree}>
+                        <p className={styles.label}>Legal</p>
+                        <div className={styles.abtcont}>
+                        {
+                                legal.map((content) => (
+                                    <div key={content.id} className={styles.conticon}>
+                                 <p>{content.icons}</p>
+                                <p className={styles.text}>{content.text}</p>
+                                </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <div className={styles.divfour}>
+                        <p className={styles.label}>Contact</p>
+                        <div className={styles.abtcont}>
+                            <div className={styles.conticon}>
+                            <IoIosArrowForward className={styles.iconew} /> 
+                            <p className={styles.text}>Our Services</p>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
-               
+                <div className={styles.subcont}>
+                    {
+                        details.map((datum) => (
+                            <div key={datum.id}
+                                className={styles.white}>
+                                <p>{datum.icon}</p>
+                            </div>
+                        ))
+                    }
+
+                </div>
             </div>
-        </div>
-       </div>
+            <div className={styles.linecont}>
+                <hr className={styles.line} />
+            </div>
+            <div className={styles.lastcont}>
+                <p className={styles.lasttxt}>Copyright © 2023 By Jaswill. All Rights Reserved</p>
+            </div>
+
+
 
         </div>
     )
 }
+
+
 export default Footer;

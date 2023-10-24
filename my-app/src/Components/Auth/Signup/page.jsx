@@ -8,8 +8,8 @@ import SignUp from '@/Components/SignUp/signup'
 const page = () => {
   return (
     <div>
-      <Header />
-      <Navbar />
+      {/* <Header />
+      <Navbar /> */}
       <SignUp />
       <Footer />
     </div>

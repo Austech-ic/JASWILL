@@ -3,48 +3,54 @@ import styles from './page.module.css'
 import {MdRealEstateAgent} from 'react-icons/md'
 import { FaHouseUser } from 'react-icons/fa'
 import Image from 'next/image'
+import iconthree from '../../../public/iconthree.jpeg'
+import icontwo from '../../../public/icontwo.jpeg'
+import iconone from '../../../public/iconone.jpeg'
+import iconfour from '../../../public/iconfour.jpeg'
+import iconfive from '../../../public/iconfive.jpeg'
+import iconsix from '../../../public/iconsix.jpeg'
 import house from '../../../public/download.png'
 
 const page = () => {
   const details =[
     {
         id:1,
-       pic:house,
+       pic:iconthree,
         label:"Property Sale",
         text:"If you want to buy land or a house in the FCT, go no further than Jaswill Properties. Our team's professionals work to match you with a home that suits your needs.",
     
     },
     {
         id:2,
-        pic:house,
+        pic:iconone,
         label:"Estate Management",
         text:"We assess, market, and manage estate lots, commercial lots, home buildings, and merchant buildings.",
   
     },
     {
         id:3,
-        pic:house,
+        pic:iconfour,
         label:"Estate Development",
         text:"Our business encompasses different stages of the real estate development matrix, but focuses more on land development, building development, and building operations.",
       
     },
     {
         id:4,
-        pic:house,
+        pic:iconfive,
         label:"Architecture/Interior Design",
         text:"We pay attention to the design of a building and also the planning and finishing of its interior spaces..",
     
     },
     {
         id:5,
-        pic:house,
+        pic:iconsix,
         label:"Construction",
         text:"For the estates we manage, our engineering team creates, plans, and builds in accordance with government-approved prototypes.",
     
     },
     {
         id:6,
-        pic:house,
+        pic:icontwo,
         label:"Facility Management",
         text:"Our support services include the planning, organizing, and maintaining of estate facilities to a predefined standard over a prolonged duration.",
      
@@ -52,8 +58,8 @@ const page = () => {
 ]
   return (
     <div className={styles.main}>
-      <p className={styles.headtext}>Services</p>
-      <div className={styles.cont}>
+      <p className={styles.headtext}>Our Services</p>
+      <div className='grid gap-6 md:grid-cols-2 md:gap-10 lg:grid-cols-3'>
            
             {
                 details.map((datum) => (

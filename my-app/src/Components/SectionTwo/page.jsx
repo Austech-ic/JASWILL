@@ -95,6 +95,8 @@ const Page = () => {
           setVisibleCards(1); // Mobile view, show one card
         } else if (window.innerWidth <= 820) {
           setVisibleCards(2); // Desktop view (768 to 1000), show two cards
+        } else if (window.innerWidth <= 1024) {
+          setVisibleCards(2); // Desktop view (768 to 1000), show two cards
         }  else if (window.innerWidth <= 1500) {
             setVisibleCards(3); // Desktop view (768 to 1000), show two cards
            
@@ -135,11 +137,11 @@ const Page = () => {
         <div className={styles.cont}>
           {defaultDetails.slice(offset, offset + visibleCards).map((datum) => (
             <div key={datum.id} className={styles.subcont}>
-            <Image src={datum.pic} alt='pic-img' className={styles.img} />
-            <p className={styles.price}>{datum.price}</p>
+            {/* <Image src={datum.pic} alt='pic-img' className={styles.img} /> */}
+            {/* <p className={styles.price}>{datum.price}</p> */}
             <p className={styles.bold}>{datum.label}</p>
             <p className={styles.caption}>{datum.caption}</p>
-            <hr />
+            {/* <hr /> */}
             <div className={styles.sub}>
                 <div className={styles.iconcont}>
                     <p>{datum.icon}</p>

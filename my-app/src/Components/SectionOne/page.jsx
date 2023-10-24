@@ -5,24 +5,14 @@ import house from '../../../public/house.jpeg'
 import Link from 'next/link'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Navbar from '../Navbar/navbar';
 
 
 
 const Page = () => {
   const scrollTriggerRef = useRef(null);
 
-  useEffect(() => {
-      AOS.init();
-      const options = {
-          threshold: 0.9,
-      };
-      const observer = new IntersectionObserver(handleScroll, options);
-      observer.observe(scrollTriggerRef.current);
-
-      return () => {
-          observer.disconnect();
-      };
-  }, []);
+  
 
   const handleScroll = (entries) => {
       entries.forEach((entry) => {
@@ -33,10 +23,10 @@ const Page = () => {
   };
 
   return (
+    <div className={styles.head}>
+      <Navbar />
     <div className={styles.main}
-    data-aos='zoom-in'
-    data-aos-duration='1000'
-    ref={scrollTriggerRef}>
+    >
         <div className={styles.submain}>
             <div className={styles.subone}>
                 <p className={styles.text}>Unlock the Door <br className={styles.hide}/>to <span className={styles.spancolor}>Your Perfect Home.</span></p>
@@ -56,11 +46,12 @@ const Page = () => {
                     
                 </div>
             </div>
-            <div className={styles.subtwo}>
+            {/* <div className={styles.subtwo}>
               <Image src={house} alt='house-img' className={styles.img} data-aos="zoom-in-up" data-aos-duration="1000"/>
-            </div>
+            </div> */}
 
         </div>
+    </div>
     </div>
   )
 }

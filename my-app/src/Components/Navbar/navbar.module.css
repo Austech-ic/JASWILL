@@ -1,11 +1,11 @@
 .main{
     /* padding:15px 20px; */
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     display: flex;
     flex-direction: column;
     gap: 0px;
-    color: white;
-    background-color: #000080;
+    /* color: white; */
+    /* background-color: white; */
 }
 .textcont{
     flex: 1;
@@ -72,10 +72,14 @@
     filter: drop-shadow(0px 9px 4px rgba(0, 0, 0, 0.25));
 }
 .item{
-    padding: 15px 20px;
+    padding: 8px 20px;
     font-size: 0.8rem;
     line-height: 1rem;
+    color: black;
 /* background-color: red; */
+}
+.items{
+    padding: 0px 20px 12px 20px;
 }
 
 
@@ -98,7 +102,7 @@
     width: 35px;
     height: 35px;
     display: block;
-    /* color: gray; */
+    color: #000080;
 }
 .link{
     text-decoration: none;
@@ -106,8 +110,8 @@
     /* color: black; */
 }
 .item:hover{
-   color: gray;
-   background-color: rgb(237, 237, 243);
+   color: #800000;
+   /* background-color: rgb(237, 237, 243); */
    padding: 15px 20px;
     
 }
@@ -118,19 +122,32 @@
 }
 .buttoncont{
     /* background-color: yellow; */
-    margin-top: -10px;
+
+    /* margin-top: -10px; */
 }
 .button{
-border: 1px solid #800000;
+/* border: 1px solid #800000; */
+background-color: #800000;
+color: white;
     padding: 5px 10px;
     border-radius: 20px;
     width: 35%;
     padding: 7px 10px;
 }
+.buttontwo{
+    /* border: 1px solid #800000; */
+    background-color: #000080;
+    color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        width: 35%;
+        padding: 7px 10px;
+    }
 .imgcont{
     /* flex: 1; */
-    width: 40%;
-    height: 8vh;
+    width: 50%;
+    height: 10vh;
+    /* background-color: red; */
     
     
 }
@@ -141,7 +158,9 @@ border: 1px solid #800000;
 .menucont{
     /* flex: 1; */
 }
-
+.lastcontainer{
+    display: none;
+}
 
 
 
@@ -183,28 +202,37 @@ border: 1px solid #800000;
       
     }
     .item{
-        padding: 20px 30px;
+        padding: 10px 30px;
         font-size: 1.2rem;
         line-height: 1rem;
     }
+    .items{
+        padding: 0px 20px 15px 20px;
+    }
+    .buttontwo{
+        border-radius: 20px;
+        width: 20%;
+        padding: 15px 10px;
+    }
     .button{
         border-radius: 20px;
-        width: 25%;
-        padding: 15px 20px;
+        width: 20%;
+        padding: 15px 10px;
     }
+
     .item:hover{
         color: #800000;
-        background-color: rgb(237, 237, 243);
-        padding: 20px 30px;
+        padding: 10px 30px;
          
      }
      .buttoncont{
-        margin-top: -20px;
+        padding: 0;
+        /* margin-top: -20px; */
      }
      .imgcont{
         /* flex: 1; */
-        width: 35%;
-        height: 8vh;
+        width: 40%;
+        height: 10vh;
     }
 
     .menuicon{
@@ -224,11 +252,7 @@ border: 1px solid #800000;
         width: 100%;
         
     }
-    .item{
-        padding: 8px 20px;
-        font-size: 0.8rem;
-        line-height: 1rem;
-    }
+  
     
     .bold{
         font-size: 1.5rem;
@@ -318,34 +342,51 @@ border: 1px solid #800000;
         border: none;
     }
     .item{
-        padding: 12px;
-        font-size: 0.9rem;
+        padding:5px 20px;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    
+    .items{
+        padding: 30px 20px 5px 20px;
+        font-size: 0.8rem;
         line-height: 1rem;
     }
    .item:hover{
-    padding: 12px;
+    padding: 5px 20px;
    }
     .inputcont{
         width: 100%;
     }
     .button{
        border: none;
-        width: 60%;
-        padding: 15px 20px;
-        margin-top: 10px;
+        width: 40%;
+        padding: 8px 20px;
+        /* margin-top: 10px; */
         display: flex;
-        justify-content: flex-start;
+        justify-content:center;
         align-items: center;
-        padding: 10px 0;
+        /* padding: 10px 0; */
 
     }
+    .buttontwo{
+        border: none;
+         width: 40%;
+         padding: 8px 20px;
+         /* margin-top: 10px; */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         /* padding: 10px 0; */
+ 
+     }
     .buttoncont{
         margin-top: -30px;
     }
     .imgcont{
         /* flex: 1; */
-        width: 20%;
-        height: 9vh; 
+        width: 30%;
+        height: 15vh; 
     }
     .menuicon{
         width: 45px;
@@ -392,7 +433,8 @@ border: 1px solid #800000;
     .item{
         font-size: 1rem;
         line-height: 1rem;
-        padding: 20px;
+        padding: 10px 20px;
+        
     }
     .item:hover{
         padding: 20px;
@@ -407,14 +449,14 @@ border: 1px solid #800000;
         filter: drop-shadow(0px 9px 4px rgba(0, 0, 0, 0.25));
     }
     .buttoncont{
-        margin-top: -30px;
+        /* margin-top: -30px; */
         /* background-color: blue; */
        
     }
     .imgcont{
         /* flex: 1; */
-        width: 20%;
-        height: 10vh;
+        width: 30%;
+        height: 12vh;
         
     }
     .menuicon{
@@ -423,7 +465,28 @@ border: 1px solid #800000;
         display: block;
         /* color: gray; */
     }
-
+    .button{
+        border: none;
+         width: 50%;
+         padding: 15px 20px;
+         /* margin-top: 10px; */
+         display: flex;
+         justify-content:center;
+         align-items: center;
+         padding: 10px 0;
+ 
+     }
+     .buttontwo{
+         border: none;
+          width: 50%;
+          padding: 15px 20px;
+          /* margin-top: 10px; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 0;
+  
+      }
      
      
 }
@@ -435,7 +498,21 @@ border: 1px solid #800000;
         /* background-color: red; */
     }
     .listcont{
-        display: block;
+        /* display: block; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        /* background-color: green; */
+        
+        
+    }
+    .lastcontainer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        line-height: 1rem;
         
     }
     .menuicon{
@@ -446,19 +523,50 @@ border: 1px solid #800000;
         line-height: 1rem;
         gap: 0px;
         /* background-color: rgb(0, 255, 72); */
+        /* display: flex; */
     }
     .imgcont{
         /* flex: 1; */
         width: 50%;
-        height: 8vh;
+        height: 12vh;
     }
+    .button{
+        background-color: #800000;
+        color: white;
+        width: 100%;
+        padding: 10px 40px;
+        /* font-size: 0.8rem; */
+       
+    }
+    .item{
+        font-size: 0.9rem;
+        line-height: 1rem;
+        /* background-color: yellow; */
+       
+    }
+  
+    /* .buttontwo{
+        background-color: #000080;
+        color: white;
+        width: 100%;
+        padding: 10px 40px;
+        font-size: 0.9rem;
+       
+    } */
     .buttoncont{
-        margin-top: 0px;
-    
-     }
-     .button{
-        /* border: 1px solid red; */
-        /* border: unset; */
- 
-     }
+        margin-top: 0;
+    }
+    .lastcont{
+        display: block;
+    }
+  .signupbutt{
+background-color: #800000;
+padding:8px 20px;
+border-radius: 20px;
+  }
+  .signinbutt{
+    background-color: #000080;
+    padding:8px 20px;
+    border-radius: 20px;
+      }
 }

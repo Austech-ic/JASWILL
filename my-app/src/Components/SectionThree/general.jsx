@@ -50,25 +50,23 @@ const General = () => {
   ];
 
   return (
-    <section>
-      <div className='hidden md:grid grid-cols-2 lg:grid-cols-4'>
+    <section className='pb-10 pt-5 md:pt-10 '>
+      <div className='grid shadow-2xl md:grid-cols-2 lg:grid-cols-4'>
         {details.map((datum) => (
-          <div key={datum.id} className='p-5 w-full'>
-            <div className='relative'>
+          <div key={datum.id} className='p-5 w-full '>
+            <div className='relative bg-red-700'>
               <div className='h-48 w-full'>
                 <Image src={datum.picture} alt='pic' className='h-full w-full object-cover' />
               </div>
               
             </div>
-            <div className=' py-5 px-2 flex flex-col justify-between items-start'>
-              <div className=' mt-3 h-14 w-full'>
-                <p className='text-gray-700'>{datum.categories}</p>
-              </div>
-              <div className='h-18 text-xl cursor-pointer font-bold hover:underline md:text-3xl'>
+            <div className=' py-1 px-2 flex flex-col justify-between items-start'>
+             
+              <div className='h-18 text-xl mt-2 cursor-pointer font-bold md:text-2xl'>
                 <p>{datum.label}</p>
               </div>
-              <div className='text-gray-700 cursor-pointer mt-2'>
-                <p className='text-lg lg:text-sm mt-3'>{datum.description}</p>
+              <div className='text-gray-700 cursor-pointer'>
+                <p className='text-xs lg:text-sm mt-3'>{datum.description}</p>
               </div>
               
             </div>

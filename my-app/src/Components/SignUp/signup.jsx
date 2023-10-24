@@ -3,11 +3,14 @@ import styles from './signup.module.css'
 import { FcGoogle } from 'react-icons/fc';
 import { BsFillEyeSlashFill } from 'react-icons/bs';
 import Link from 'next/link';
+import Navbar from '../Navbar/navbar';
 
 
 const SignIn = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.head}>
+      <Navbar />
+    <div className={styles.container}>
       <div className={styles.subcontainer}>
         <div className={styles.cont}>
           <div className={styles.signcont}>
@@ -20,10 +23,10 @@ const SignIn = () => {
           <form className={styles.classform}>
 
             <div className={styles.div}>
-              <label className={styles.label}>Phone number:</label>
+              <label className={styles.label}>Username:</label>
               <input
                 className={styles.input}
-                placeholder='+234'
+                placeholder='John Doe'
                 type='tel'
               />
             </div>
@@ -43,6 +46,15 @@ const SignIn = () => {
               <input
               className={styles.classinput}
                 placeholder='Enter Password' />
+                <BsFillEyeSlashFill size={15} className={styles.eye}/>
+                </div>
+            </div>
+            <div className={styles.div}>
+              <label className={styles.label}>Confirm Password:</label>
+              <div  className={styles.inputs}>
+              <input
+              className={styles.classinput}
+                placeholder='Confirm Password' />
                 <BsFillEyeSlashFill size={15} className={styles.eye}/>
                 </div>
             </div>
@@ -78,6 +90,7 @@ const SignIn = () => {
         </div>
 
       </div>
+    </div>
     </section>
   )
 }

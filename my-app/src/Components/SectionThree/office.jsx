@@ -50,8 +50,8 @@ const Office = () => {
   ];
 
   return (
-    <section>
-      <div className='hidden md:grid grid-cols-2 lg:grid-cols-4'>
+    <section className='pb-10 pt-5 md:pt-10 '>
+      <div className='shadow-2xl grid md:grid-cols-2 lg:grid-cols-4'>
         {details.map((datum) => (
           <div key={datum.id} className='p-5 w-full'>
             <div className='relative'>
@@ -60,16 +60,16 @@ const Office = () => {
               </div>
               
             </div>
-            <div className=' py-5 px-2 flex flex-col justify-between items-start'>
+            <div className=' py-3 px-2 flex flex-col justify-between items-start'>
               
               <div className='h-18 text-xl cursor-pointer font-bold hover:text-maroon md:text-md'>
                 <p>{datum.label}</p>
               </div>
-              <div className=' h-[120px] text-gray-700 cursor-pointer mt-4'>
-                <p className='text-sm'>{datum.description}</p>
+              <div className='h-[60px] md:h-[120px] text-gray-700 cursor-pointer mt-4'>
+                <p className='text-xs md:text-base lg:text-sm'>{datum.description}</p>
               </div>
               <div className=' mt-1  h-14 w-full'>
-                <p className='text-maroon text-sm font-bold '>{datum.categories}</p>
+                <p className='text-maroon text-xs md:text-sm font-bold '>{datum.categories}</p>
               </div>
               {/* <div className='flex justify-start items-center cursor-pointer mt-3'>
                 {datum.review}

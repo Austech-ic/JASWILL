@@ -7,7 +7,7 @@
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
-    color: white;
+    color: black;
 }
 .textwo{
     font-size: 0.9rem;
@@ -22,14 +22,21 @@
     grid-template-rows: 1fr;
     gap: 10px;
     padding: 30px 0;
+   
     /* background-color: wheat; */
 }
 .subcont{
-    border: 1px solid white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: white;
-    color: #800000;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    /* background-color: white; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../../../public/one.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
     /* padding: 20px 0; */
     /* box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05); */
 }
@@ -41,21 +48,22 @@
     font-weight: bold;
 }
 .bold{
-    padding: 10px;
+    padding: 0 10px;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2rem;
 }
 .caption{
-    padding: 10px 0 10px 10px;
+    padding:  0 10px;
     font-weight: 200;
     font-size: 0.9rem;
     line-height: 1.5rem;
+    /* background-color: yellow; */
 }
 .sub{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 1px;
     padding: 10px 10px;
 }
 .iconcont{
@@ -78,6 +86,11 @@
 
 
 @media (min-width:768px) {
+    .main{
+        padding: 80px 30px 50px 30px;
+        /* background-color: #000080; */
+        /* background-color: red; */
+    }
 
 .label{
     font-size: 2rem;
@@ -95,18 +108,35 @@
     display: grid;
     grid-template-columns: 2fr 2fr ;
     grid-template-rows: 2fr ;
+    gap: 30px;
     padding: 50px 0;
+}
+.subcont{
+    min-height: 45vh;
 }
 .iconcont{
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.bold{
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+.caption{
+    padding:  0 10px;
+    font-weight: 200;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    /* background-color: yellow; */
 }
 .sub{
    
-    gap: 10px;
+    gap: 8px;
    
 }
 .carouselcont{
@@ -120,7 +150,7 @@
 
 @media (min-width:1024px) {
    .main{
-     padding: 50px 120px;
+     padding: 80px 120px 50px 120px;
 }
 .label{
     font-size: 1.7rem;
@@ -136,10 +166,13 @@
 }
 .cont{
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    grid-template-rows: 3fr;
+    grid-template-columns:2fr 2fr ;
+    grid-template-rows: 2fr;
     gap: 20px;
     padding: 50px 0;
+}
+.subcont{
+    min-height: 70vh;
 }
 .sub{
    
@@ -148,15 +181,28 @@
 }
 .iconcont{
     
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1rem;
+}
+.bold{
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+.caption{
+    padding:  0 10px;
+    font-weight: 200;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    /* background-color: yellow; */
 }
  
 }
 
 @media (min-width:1280px) {
     .main{
-     padding: 50px 130px;
+     padding: 90px 130px 50px 130px;
 }
 .label{
     font-size: 1.9rem;
@@ -172,14 +218,32 @@
     
 }
 .cont{
-    
+    grid-template-columns:3fr 3fr 3fr ;
+    grid-template-rows: 3fr;
+    gap: 20px;
     gap: 35px;
     
 }
+.bold{
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.8rem;
+}
+.caption{
+    padding:  0 10px;
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 2rem;
+    /* background-color: yellow; */
+}
 .sub{
    
-    gap: 20px;
+    gap: 10px;
     
+}
+.subcont{
+    min-height: 60vh;
 }
 .iconcont{
     

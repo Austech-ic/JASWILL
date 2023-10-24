@@ -5,6 +5,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+.head{
+    background-image: url(../../../public//Mak.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+   /* background-size: 50%; */
+    color: white;
 }
 .cont{
     width: 80%;
@@ -20,9 +28,9 @@
     align-items: center;
     padding: 10px 0;
 }
-.subcontainer:hover {
+/* .subcontainer:hover {
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
-  }
+  } */
 .classform{
     /* background-color: red; */
     width: 100%;
@@ -54,29 +62,48 @@
     border-radius: 10px;
     outline: none;
     border: 1px solid #000080;
-    padding: 10px 5px;
+    padding: 7px 5px;
     background-color: transparent;
     margin-top: 5px;
-    font-size: small;
+    font-size:0.7rem;
+    line-height: 1rem;
+    color: black;
 }
-.inputs {
+.input:focus-visible{
+    background-color: #f0c3c3;
+    padding: 7px 5px;
+    border-radius: 10px;
+    color: gray;
+    border: none;
+}
+.inputs{
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
     border: 1px solid #000080;
-    padding: 10px 5px;
+    padding: 7px 5px;
     background-color: transparent;
     margin-top: 5px;
-    font-size: small;
+    font-size:0.7rem;
+    line-height: 1rem;
     display: flex;
     align-items: center;
+    color: black;
+}
+.inputs:focus-within{
+    background-color: #f0c3c3;
+    padding: 7px 5px;
+    border-radius: 10px;
+    color: gray;
+    
+    border: none;
 }
 .classinput{
     width: 90%;
     border: none;
     outline: none;
     background-color: transparent;
-    font-size: small;
+    
 }
 .up{
     font-weight: 500;
@@ -84,13 +111,13 @@
 }
 
 .button{
-    background-color: #000080;
+    background-color: #800000;
     border: none;
     width: 100%;
     border-radius: 10px;
     color: white;
     font-size: small;
-    padding: 8px 5px;
+    padding: 5px 5px;
 }
 
 .authcont{
@@ -104,6 +131,7 @@
     gap: 10px;
     padding: 8px 0;
     font-weight: 500;
+    color: black;
 
 }
 .last{
@@ -130,6 +158,7 @@
     font-size: medium;
     text-align: center;
     padding: 5px 0;
+    color: black;
    
 
 }
@@ -143,6 +172,7 @@
 .label{
     font-size: small;
     font-weight: 500;
+    color: black;
 }
 .per{
     color: #000080;
@@ -215,18 +245,30 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 2px solid #000080;
-    padding: 12px 5px;
+    border: 1px solid #000080;
+    padding: 12px 10px;
     background-color: transparent;
     margin-top: 5px;
-    font-size: medium;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+.input:focus-within{
+    background-color: #f0c3c3;
+    padding: 12px 10px;
+    border-radius: 10px;
+    color: gray;
+    
+    border: none;
+}
+.inputs:focus-within{
+    padding: 12px 10px;
 }
 .inputs {
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 2px solid #000080;
-    padding: 12px 5px;
+    border: 1px solid #000080;
+    padding: 12px 10px;
     background-color: transparent;
     margin-top: 5px;
     display: flex;
@@ -240,7 +282,7 @@
     background-color: transparent;
 }
 .button{
-    background-color: #000080;
+    /* background-color: #000080; */
     border: none;
     width: 100%;
     border-radius: 10px;
@@ -248,7 +290,7 @@
     font-weight: bolder;
     font-size: larger;
 
-    padding: 15px 5px;
+    padding: 10px 5px;
 }
 .authcont{
     background-color: transparent;
@@ -293,7 +335,8 @@
     text-align: center;
 }
 .label{
-    font-size: medium;
+    font-size:1.2rem;
+    line-height: 2rem;
     font-weight: 500;
 }
 
@@ -309,16 +352,28 @@
     min-height: 100vh;
     width: 100vw;  
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* justify-content: center; */
     align-items: center;
     padding:40px 30px;
   
     
 }
+.head{
+    background-image: url(../../../public//Mak.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+   /* background-position: right; */
+   background-position-x: right;
+   background-position-y: top;
+   background-size: 40%;
+    
+}
 .cont{
-    width: 80%;
+    width: 100%;
 }
 .subcontainer{
+    background-color: transparent;
     /* background-color: antiquewhite; */
     border-radius: 20px;
     width: 50%;
@@ -326,6 +381,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 70px;
     
 }
 .classform{
@@ -361,32 +417,44 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 2px solid #000080;
-    padding: 12px 5px;
+    border: 1px solid #000080;
+    padding: 12px 10px;
     background-color: transparent;
     margin-top: 5px;
-    font-size: large;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    color: black;
+}
+.input:focus-within{
+    padding: 12px 5px;
+}
+.inputs:focus-within{
+    padding: 12px 5px;
 }
 .inputs {
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 2px solid #000080;
-    padding: 12px 5px;
+    border: 1px solid #000080;
+    padding: 12px 10px;
     background-color: transparent;
     margin-top: 5px;
     display: flex;
     align-items: center;
+    color: black;
+    font-size: 0.9rem;
+    line-height: 1rem;
 }
 .classinput{
     width: 90%;
     border: none;
     outline: none;
-    font-size: large;
+    font-size: 0.9rem;
+    line-height: 1rem;
     background-color: transparent;
 }
 .button{
-    background-color: #000080;
+    /* background-color: #000080; */
     border: none;
     width: 100%;
     /* height: 4vh; */
@@ -394,7 +462,7 @@
     font-weight: bold;
     color: white;
     font-size: large;
-    padding: 15px 5px;
+    padding: 8px 5px;
 }
 .authcont{
     background-color: transparent;
@@ -453,13 +521,13 @@
         min-height: 100vh;
         width: 100vw;  
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        padding:10px 0px;
+        padding:10px 80px;
         
     }
     .cont{
-        width: 80%;
+        width: 100%;
     }
     .subcontainer{
         /* background-color: antiquewhite; */
@@ -504,18 +572,19 @@
         /* height: 3vh; */
         border-radius: 10px;
         outline: none;
-        border: 2px solid #000080;
-        padding: 12px 5px;
+        border: 1px solid #000080;
+        padding: 12px 10px;
         background-color: transparent;
         margin-top: 5px;
+        
         font-size: large;
     }
     .inputs {
         /* height: 3vh; */
         border-radius: 10px;
         outline: none;
-        border: 2px solid #000080;
-        padding: 12px 5px;
+        border: 1px solid #000080;
+        padding: 12px 10px;
         background-color: transparent;
         margin-top: 5px;
         display: flex;
@@ -525,11 +594,12 @@
         width: 90%;
         border: none;
         outline: none;
-        font-size: large;
+        font-size: 0.9rem;
+    line-height: 1rem;
         background-color: transparent;
     }
     .button{
-        background-color: #000080;
+        /* background-color: #000080; */
         border: none;
         width: 100%;
         /* height: 4vh; */
@@ -537,7 +607,7 @@
         font-weight: bold;
         color: white;
         font-size: large;
-        padding: 15px 5px;
+        padding: 10px 5px;
         margin-top: -5px;
     }
    
