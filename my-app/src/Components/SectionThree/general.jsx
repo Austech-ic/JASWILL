@@ -51,7 +51,7 @@ const General = () => {
 
   return (
     <section className='pb-10 pt-5 md:pt-10 '>
-      <div className='grid shadow-2xl md:grid-cols-2 lg:grid-cols-4'>
+      <div className='w-full grid shadow-2xl md:grid-cols-2 lg:grid-cols-4'>
         {details.map((datum) => (
           <div key={datum.id} className='p-5 w-full '>
             <div className='relative bg-red-700'>
@@ -73,31 +73,7 @@ const General = () => {
           </div>
         ))}
       </div>
-      {/* Render the mobile view with carousel */}
-      <div className='md:hidden'>
-        {/* <Carousel showStatus={false} showThumbs={false} emulateTouch={true} showIndicators={true} interval={10000}>
-          {details.map((datum) => (
-            <div key={datum.id} className='p-5'>
-              <div className='relative'>
-                <div className='w-full' style={{ display: 'flex', aspectRatio: '1/1' }} data-aos="zoom-in" data-aos-duration="1000">
-                  <Image src={datum.picture} alt='pic' className='h-full w-full object-cover' />
-                </div>
-    
-              </div>
-              <div className='p-5 flex flex-col justify-between items-start bg-blue-100'>
-               
-                <div className='text-md mt-0 font-bold hover:underline md:text-xl'>
-                  <p>{datum.label}</p>
-                </div>
-                <div className='mt-1 h-18 text-sm text-gray-700 text-left'>
-                  <p>{datum.description}</p>
-                </div>
-               
-              </div>
-            </div>
-          ))}
-        </Carousel> */}
-      </div>
+      
     </section>
   );
 }
