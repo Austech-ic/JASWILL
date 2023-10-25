@@ -192,6 +192,7 @@
     }
     .label{
         padding:30px ;
+      
         text-align: center;
         font-size: 1.8rem;
         line-height: 2;
@@ -220,6 +221,7 @@
        
     }
     .text{
+        width: 90%;
         font-size: 1.3rem;
         line-height: 1.9rem;
         font: bold;
@@ -227,5 +229,13 @@
     .textone{
         font-size: 0.8rem;
         line-height: 2rem;
+    }
+}
+@media (min-width:1440px) {
+    .text{
+        width: 85%;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        font: bold;
     }
 }

@@ -7,7 +7,7 @@ import Footer from '@/Components/Footer/footer'
 const career = () => {
   return (
     <div>
-        <Navbar />
+        <Navbar className='text-white' />
         <Patner/>
         <Footer />
     </div>
