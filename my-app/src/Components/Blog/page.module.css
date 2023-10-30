@@ -46,7 +46,8 @@
 }
 .subred{
     border: 1px solid red;
-    width: 100%;
+    width: 99.8%;
+    margin-left: 1px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: white;
@@ -167,7 +168,7 @@
     }
     .subred{
         border: 1px solid red;
-        width: 97%;
+        width: 96.6%;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         background-color: white;
@@ -197,6 +198,11 @@
         font-size: 1.8rem;
         line-height: 2;
         /* font-weight: bold; */
+    }
+    .subred{
+        border: 1px solid red;
+        width: 96.4%;
+        margin-left: 3px;
     } 
     .cont{
         display: grid;
@@ -237,5 +243,11 @@
         font-size: 1.3rem;
         line-height: 1.9rem;
         font: bold;
+    }
+    .subred{
+        border: 1px solid red;
+        width: 96.5%;
+        margin-left: 3px;
+       
     }
 }
