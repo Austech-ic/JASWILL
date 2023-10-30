@@ -156,7 +156,7 @@ const Page = () => {
         if (window.innerWidth <= 760) {
           setVisibleCards(1);
           clearInterval(autoSlideInterval); // Clear the previous interval
-          setAutoSlideInterval(2000); // Set a different interval for mobile
+          setAutoSlideInterval(7000); // Set a different interval for mobile
         } else if (window.innerWidth <= 820) {
           setVisibleCards(2);
           clearInterval(autoSlideInterval); // Clear the previous interval
@@ -171,7 +171,7 @@ const Page = () => {
           setAutoSlideInterval(8000); // Set a different interval for desktop
         }
       };
-// jfvn
+
     
       let autoSlideInterval;
 
