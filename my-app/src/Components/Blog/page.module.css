@@ -14,7 +14,7 @@
     text-align: center;
     font-size: 1.3rem;
     line-height: 2;
-    font-weight: bold;
+    font-weight: 600;
 }
 .subcont{
    
@@ -82,7 +82,7 @@
         text-align: center;
         font-size: 1.8rem;
         line-height: 2;
-        font-weight: bold;
+        /* font-weight: bold; */
     } 
     .cont{
         display: grid;
@@ -143,7 +143,7 @@
         text-align: center;
         font-size: 1.5rem;
         line-height: 2;
-        font-weight: bold;
+        /* font-weight: bold; */
     } 
     .subcont{
         padding: 0px 0;
@@ -196,7 +196,7 @@
         text-align: center;
         font-size: 1.8rem;
         line-height: 2;
-        font-weight: bold;
+        /* font-weight: bold; */
     } 
     .cont{
         display: grid;

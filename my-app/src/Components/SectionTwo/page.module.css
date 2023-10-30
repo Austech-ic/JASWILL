@@ -2,11 +2,13 @@
     padding: 50px 30px;
     /* background-color: #000080; */
     /* background-color: red; */
+    font-family: Poppins;
 }
 .label{
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
+    font-weight: 600;
     color: black;
 }
 .textwo{
@@ -14,7 +16,7 @@
     line-height: 1.2rem;
     text-align: center;
     padding: 10px 0;
-    font-weight: 200;
+    font-weight: 400;
 }
 .cont{
     display: grid;
@@ -33,12 +35,42 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* min-height: 50vh; */
+    /* padding: 20px 0; */
+    /* box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05); */
+}
+
+.subcont.one {
     background-image: url(../../../public/one.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 50vh;
-    /* padding: 20px 0; */
-    /* box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05); */
+    min-height: 60vh;
+}
+.subcont.two {
+    background-image: url(../../../public/two.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+}
+.subcont.three {
+    background-image: url(../../../public/officetwo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+}
+.subcont.four {
+    background-image: url(../../../public/house.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+}
+.subcont.five {
+    background-image: url(../../../public/one.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
 }
 .price{
     padding:30px 10px 10px 10px;
@@ -102,7 +134,7 @@
     line-height: 1.9rem;
     text-align: center;
     padding: 15px 0;
-    font-weight: 200;
+    /* font-weight: 200; */
 }
 .cont{
     display: grid;
@@ -112,6 +144,9 @@
     padding: 50px 0;
 }
 .subcont{
+    /* min-height: 45vh; */
+}
+.subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 45vh;
 }
 .iconcont{
@@ -162,7 +197,7 @@
     line-height: 1.7rem;
     text-align: center;
     padding: 15px 0;
-    font-weight: 300;
+    /* font-weight: 300; */
 }
 .cont{
     display: grid;
@@ -172,6 +207,9 @@
     padding: 50px 0;
 }
 .subcont{
+    min-height: 70vh;
+}
+.subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 70vh;
 }
 .sub{
@@ -214,7 +252,7 @@
     line-height: 1.7rem;
     text-align: center;
     padding: 15px 0;
-    font-weight: 200;
+    /* font-weight: 200; */
     
 }
 .cont{
@@ -245,6 +283,10 @@
 .subcont{
     min-height: 60vh;
 }
+.subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
+    min-height: 60vh;
+}
+
 .iconcont{
     
     font-size: 0.9rem;

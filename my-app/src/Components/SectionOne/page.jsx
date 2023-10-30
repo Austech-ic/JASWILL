@@ -23,7 +23,10 @@ const Page = () => {
   };
 
   return (
-    <div className={styles.head}>
+    <div className={styles.head}  data-aos='flip-left'
+    data-aos-easing='ease-out-cubic'
+data-aos-duration='6000'
+ref={scrollTriggerRef}>
       <Navbar />
     <div className={styles.main}
     >

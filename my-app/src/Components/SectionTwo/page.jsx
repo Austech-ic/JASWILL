@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import styles from './page.module.css'
 import one from '../../../public/one.webp'
 import two from '../../../public/two.webp'
-import three from '../../../public/three.webp'
-import four from '../../../public/four.webp'
+import three from '../../../public/officetwo.webp'
+import four from '../../../public/blog.png'
 import Image from 'next/image'
 import { FaBed, FaShower } from 'react-icons/fa'
 import { FcDebian } from 'react-icons/fc'
@@ -21,6 +21,7 @@ const Page = () => {
         {
             id: 1,
             pic: one,
+            backgroundImgClass: 'one',
             price: "$ 623",
             label: "Apartment",
             caption: "3 Bedroom Penthouse & BQ",
@@ -34,6 +35,7 @@ const Page = () => {
         {
             id: 2,
             pic: two,
+            backgroundImgClass: 'two',
             price: "$ 623",
             label: "Office",
             caption: "3 Bedroom Penthouse & BQ",
@@ -47,6 +49,7 @@ const Page = () => {
         {
             id: 3,
             pic: four,
+            backgroundImgClass: 'three',
             price: "$ 623",
             label: "Classic Home",
             caption: "3 Bedroom Penthouse & BQ",
@@ -60,6 +63,7 @@ const Page = () => {
         {
             id: 4,
             pic: four,
+            backgroundImgClass: 'four',
             price: "$ 623",
             label: "Work Space",
             caption: "3 Bedroom Penthouse & BQ",
@@ -72,7 +76,8 @@ const Page = () => {
         },
         {
             id: 5,
-            pic: four,
+            pic: one,
+            backgroundImgClass: 'one',
             price: "$ 623",
             label: "Gym",
             caption: "3 Bedroom Penthouse & BQ",
@@ -124,7 +129,7 @@ const Page = () => {
   };
 
     return (
-        <div className={styles.main}>
+        <div className={styles.main} data-aos="flip-right">
 
             <div className={styles.submain}>
                 <p className={styles.label}>Display Latest & Featured Properties</p>
@@ -136,7 +141,9 @@ const Page = () => {
         </div>
         <div className={styles.cont}>
           {defaultDetails.slice(offset, offset + visibleCards).map((datum) => (
-            <div key={datum.id} className={styles.subcont}>
+            <div key={datum.id} className={`${styles.subcont} ${styles[datum.backgroundImgClass]}`}>
+              {/* {s} */}
+            {/* <div key={datum.id} style={{background: 'red'}} className={styles.subcont}> */}
             {/* <Image src={datum.pic} alt='pic-img' className={styles.img} /> */}
             {/* <p className={styles.price}>{datum.price}</p> */}
             <p className={styles.bold}>{datum.label}</p>

@@ -1,10 +1,16 @@
+
 .main{
-    padding: 30px;
+    padding:50px  30px;
+    background-image: url(../../../public/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 .label{
     text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
+    font-weight: 600;
 }
 .text{
     text-align: center;
@@ -13,11 +19,13 @@
     padding: 20px 0;
 }
 .button{
-    background-color:transparent;
+    background-color:white;
+    color: #800000;
     border: 1px solid gray;
     border-radius: 40px;
     padding: 8px 40px;
     font-size: 0.9rem;
+    font-weight: bold;
     /* line-height: 1.7rem; */
 }
 .buttoncont{
@@ -42,12 +50,11 @@
         padding: 20px 0;
     }
     .button{
-        background-color:transparent;
-        /* border: 2px solid #800000; */
+       
         border-radius: 40px;
         padding: 8px 50px;
         font-size: 1.5rem;
-        /* line-height: 1.7rem; */
+        line-height: 2rem;
     }
     .buttoncont{
         display: flex;
@@ -72,11 +79,10 @@
         padding: 20px 0;
     }
     .button{
-        background-color:transparent;
-        /* border: 2px solid #800000; */
+       
         border-radius: 40px;
-        padding: 8px 50px;
-        font-size: 1.1rem;
+        padding: 5px 40px;
+        font-size: 0.9rem;
         /* line-height: 1.7rem; */
     }
     .buttoncont{
@@ -108,7 +114,7 @@
         border-radius: 40px;
         padding: 8px 50px;
         font-size: 1.1rem;
-        /* line-height: 1.7rem; */
+        line-height: 1.7rem;
     }
     .button:hover{
         /* background-color: rgb(221, 213, 213); */

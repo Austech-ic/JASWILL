@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const page = () => {
   return (
-    <div className={styles.main}>
+    <div className={styles.main} data-aos="flip-left">
       <p className={styles.label}>Career</p>
       <div>
         <p className={styles.text}>Are you passionate about the real estate industry? Do you have what it takes to succeed in the enriching world of Jaswill Properties Limited, send your qualification/CV to info@jaswillproperties.com</p>

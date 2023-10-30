@@ -28,10 +28,10 @@ export default function Home() {
       </div>
       <Services />
       <SectionThree />
+      <AboutUs />
+      <Career />
       < Testimonies  />
       <Blog />
-      <Career />
-      <AboutUs />
       <Contact />
       <Footer />
       <hr  className='text-maroon'/>

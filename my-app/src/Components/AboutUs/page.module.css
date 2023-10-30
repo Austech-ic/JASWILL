@@ -1,36 +1,64 @@
 .main{
-   
-    background-color: #000080;
+   /* background-color: red; */
+    /* background-color: #000080; */
     /* border-radius: 10px; */
-    color: white;
-    padding: 30px;
+    /* color: white; */
+    padding:30px 30px 60px 30px;
    
+}
+.head{
+    text-align: center;
+    color: black;
+    /* font-weight: bold; */
+    padding: 10px 0 20px 0;
+}
+.headtext{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
 }
 .submain{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
 }
 .subone{
     padding:20px 30px;
+    border: 1px solid #BBCAFF;
+    background-color: #F6F8FF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.picont{
+width: 10%;
+}
+.picimg{
+    width: 100%;
+    height: auto;
+}
+.img{
+    width: 100%;
+    height: auto;
 }
 .subtwo{
-    padding:20px 30px;
+    
+    padding:20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+.contone{
+    border: 1px solid #BBCAFF;
+    background-color: #F6F8FF;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-.subone:hover{
-    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-    background-color: white;
-    color: #351d1d;
-    border-radius: 10px;
-}
-.subtwo:hover{
-    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-    background-color: white;
-    color: #351d1d;
-    border-radius: 10px;
+    padding:20px 30px;
 }
 .label{
     font-size: 1.2;
@@ -39,6 +67,11 @@
 .text{
     font-size: 0.8rem;
     line-height: 1.4rem;
+    font-weight: 300;
+}
+.labelhead{
+    font-weight: bold;
+    line-height: 1.5rem;
 }
 .labels{
     font-size: 1.2;
@@ -47,12 +80,20 @@
 .texts{
     font-size: 0.8rem;
     line-height: 1.4rem;
+    font-weight: 300;
 }
 
 
 @media (min-width:768px) {
     .main{
-        padding: 50px 40px 80px 40px;
+        padding: 30px 80px 30px 80px;
+    }
+    .headtext{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .head{
+        padding: 10px 0 40px 0;
     }
     .submain{
         gap: 20px;
@@ -65,24 +106,68 @@
         font-size: 1.2rem;
         line-height:2.2rem;
     }
-    .labels{
+  
+    .labelhead{
+        font-weight: bold;
         font-size: 1.5rem;
-        line-height:2.8rem;
+        line-height:2rem;
     }
+    .picont{
+        width: 7%;
+        }
     .texts{
-        font-size: 1.2rem;
-        line-height:2.2rem;
+        font-size: 1.3rem;
+        line-height:2.5rem;
     }
     .subtwo{
+        padding:20px 40px;
+        gap: 30px;
+    }
+    .subone{
+        padding:50px 30px;
+        /* background-color: #BBCAFF; */
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 20px; */
+    }
+    .imgcont{
+     flex: 1;
+     /* background-color: yellow; */
+    }
+    .textcont{
+        flex: 1;
+        /* background-color: red; */
+    }
+    .img{
+        width: 100%;
+        height: auto;
+    }
+    .contone{
         
-        gap: 20px;
+        padding:40px 30px;
     }
 }
 
 
 @media (min-width:1024px) {
+    .main{
+        padding: 30px 100px 80px 100px;
+    }
      .submain{
         gap: 40px;
+    }
+    .head{
+        
+        text-align: center;
+       
+        padding: 10px 0 30px 0;
+    }
+    .headtext{
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
     .subone{
         padding: 60px 30px;
@@ -90,7 +175,7 @@
         border-radius: 10px;
     }
     .subtwo{
-        padding:40px 30px;
+        /* padding:40px 30px; */
         display: flex;
         flex-direction: row;
         /* align-items: center; */
@@ -98,8 +183,12 @@
         border: 1px solid white;
         border-radius: 10px;
     }
+    .picont{
+        width: 15%;
+        }
     .contone{
         flex: 1;
+        /* background-color: re; */
        
     }
     .contwo{
@@ -110,18 +199,58 @@
         font-size: 1.2;
         line-height: 2.5rem;
     }
+    .labelhead{
+        font-weight: bold;
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
     .text{
         font-size: 1rem;
-        line-height: 1.8rem;
+        line-height: 2rem;
         
     }
-    .labels{
-        font-size: 1.2;
+   
+    .texts{
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        /* width: 70%; */
+    }
+}
+
+@media (min-width:1280px) {
+    .main{
+        padding: 60px 100px 100px 100px;
+    }
+    .text{
+        font-size: 1rem;
         line-height: 2.5rem;
+        
     }
     .texts{
         font-size: 1rem;
-        line-height: 1.8rem;
-        width: 70%;
+        line-height: 2.1rem;
+        /* width: 70%; */
     }
+    .labelhead{
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .head{
+        text-align: center;
+        padding: 10px 0 30px 0;
+    }
+    .headtext{
+        font-size: 2.0rem;
+        line-height: 2rem;
+    }
+    .picont{
+        width: 12%;
+        }
+}
+
+@media (min-width:1440px) {
+    .picont{
+        width: 9%;
+        }
 }

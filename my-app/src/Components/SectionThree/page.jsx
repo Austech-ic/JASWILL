@@ -68,16 +68,16 @@ const Page = () => {
     };
   
     return (
-      <section className='px-5 md:p-10' id='properties'>
+      <section className='px-10 md:py-10 md:px-20 lg:px-20 xl:px-24' id='properties' data-aos="flip-down">
         <div>
           <div className='mt-5'>
-            <p className='text-center py-2 text-2xl md:text-3xl lg:text-3xl xl:text-4xl'>Explore By Property Type</p>
+            <p className='text-center py-2 text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-medium'>Explore By Property Type</p>
           </div>
           <div className='overflow-x-auto'>
     <div className='flex justify-between items-center cursor-pointer p-5'>
       <div className='flex-grow-1'>
         <p
-          className={`p-2 w-24 text-center md:w-24  hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
+          className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base  hover:text-white transition duration-300 ${
             showAll ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleAllClick}
@@ -87,7 +87,7 @@ const Page = () => {
       </div>
       <div className='flex-grow-1'>
         <p
-          className={`p-2 w-24 text-center md:w-24 hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
+          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
             showAdventure ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleAdventureClick}
@@ -97,7 +97,7 @@ const Page = () => {
       </div>
       <div className='flex-grow-1'>
         <p
-          className={`p-2 w-24 text-center md:w-24 hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
+          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
             showArt ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleArtClick}
@@ -107,7 +107,7 @@ const Page = () => {
       </div>
       <div className='flex-grow-1'>
         <p
-          className={`p-2 w-24 text-center md:w-24 hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
+          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
             showFood ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleFoodDrinkClick}
@@ -117,7 +117,7 @@ const Page = () => {
       </div>
       <div className='flex-grow-1'>
         <p
-          className={`p-2 w-24 text-center md:w-24 hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
+          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
             showSpa ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleSpaWellnessClick}
@@ -127,7 +127,7 @@ const Page = () => {
       </div>
       <div className='flex-grow-1'>
         <p
-          className={`p-2 w-24 text-center md:w-24 hover:bg-maroon rounded-sm hover:text-white transition duration-300 ${
+          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
             showSight ? 'bg-maroon text-white' : ''
           }`}
           onClick={handleSightAttractionClick}
