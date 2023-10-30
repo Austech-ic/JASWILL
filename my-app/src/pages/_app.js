@@ -22,9 +22,9 @@ return (
   <div>
     <React.Fragment>
       <Head>
-      <link rel="icon" sizes="192x192" href="/public/img/brand/favicon.ico" />
-          <link rel="icon" type="image/png" href="/public/img/brand/favicon.ico" />
-          <link rel="icon" sizes="128x128" href="/public/img/brand/favicon.ico" />
+      <link rel="icon" sizes="192x192" href="/public/img/brand/bg.png" />
+          <link rel="icon" type="image/png" href="/public/img/brand/bg.png" />
+          <link rel="icon" sizes="128x128" href="/public/img/brand/bg.png" />
         
         <title>{title}</title>
       </Head>

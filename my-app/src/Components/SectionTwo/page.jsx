@@ -157,6 +157,7 @@ const Page = () => {
             <p className={styles.bold}>{datum.label}</p>
             <p className={styles.caption}>{datum.caption}</p>
             {/* <hr /> */}
+            {/* <p>ndejedj</p> */}
             <div className={styles.sub}>
                 <div className={styles.iconcont}>
                     <p>{datum.icon}</p>
