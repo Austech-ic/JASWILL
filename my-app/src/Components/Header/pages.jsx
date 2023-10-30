@@ -7,11 +7,13 @@ import Link from 'next/link';
 const pages = () => {
   return (
     <div className={styles.main}>
+     <Link href="tel:+2347012488242" className={styles.link}>
       <div className={styles.subone}>
         <IoMdCall />
         <p>Call +234-7012-488-242</p>
       </div>
-      <Link href={`/career`}>
+      </Link>
+      <Link href="https://wa.me/message/J3AEV6SQGELOJ1" className={styles.link}>
       <div className={styles.subtwo}>
       <FaWhatsappSquare color='#25D366' />
       <p>Whatsapp Us</p>

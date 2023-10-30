@@ -51,6 +51,11 @@
 .text{
   color: #800000;
 }
+.link{
+    text-decoration: none;
+    list-style: none;
+}
+
 
 @media (min-width:768px) {
     .main{

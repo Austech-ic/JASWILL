@@ -49,7 +49,7 @@ ref={scrollTriggerRef}
                 <p className={styles.subtext}>Do you have questions or in need of further clarification? Call or send a direct message to us.</p>
                 <div className={styles.mobilecont}> 
                 <p className={styles.text}>Call Us:</p>
-                <Link href="tel:+2347012488242">
+                <Link href="tel:+2347012488242" className={styles.link}>
                 <div className={styles.subcont}>
                 <IoMdCall />
                 <p> +234 7012 488 242</p>
@@ -59,10 +59,12 @@ ref={scrollTriggerRef}
                 </div>
                 <div className={styles.mobilecont}>
                 <p className={styles.text}>Whatsapp:</p>
+                <Link href="https://wa.me/message/J3AEV6SQGELOJ1" className={styles.link}>
                 <div className={styles.subcont}>
                 <FaWhatsappSquare color='#25D366' />
-                <p> +234 7034 483 518</p>
+                <p>Send a direct message</p>
                 </div>
+                </Link>
                 
                 </div>
                 
