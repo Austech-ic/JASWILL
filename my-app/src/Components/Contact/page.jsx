@@ -4,6 +4,7 @@ import styles from './pages.module.css'
 import contact from '../../../public/contact-us.webp'
 import { IoIosMenu,IoMdCall } from 'react-icons/io';
 import {FaWhatsappSquare} from 'react-icons/fa'
+import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -48,10 +49,12 @@ ref={scrollTriggerRef}
                 <p className={styles.subtext}>Do you have questions or in need of further clarification? Call or send a direct message to us.</p>
                 <div className={styles.mobilecont}> 
                 <p className={styles.text}>Call Us:</p>
+                <Link href="tel:+2347012488242">
                 <div className={styles.subcont}>
                 <IoMdCall />
                 <p> +234 7012 488 242</p>
                 </div>
+                </Link>
                
                 </div>
                 <div className={styles.mobilecont}>

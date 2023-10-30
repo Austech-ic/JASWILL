@@ -44,7 +44,7 @@ background-image: url(../../../public/house.png);
     display:none;
 }
 .button{
-    border:2px solid #800000;
+    border:1px solid #800000;
     color: #800000;
     padding: 5px 50px;
     border-radius: 50px;
