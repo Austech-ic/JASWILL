@@ -17,6 +17,7 @@ import Blog from '../Components/Blog/page'
 
 
 
+
 export default function Home() {
   return (
     <main>

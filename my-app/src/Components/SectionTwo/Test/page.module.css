@@ -1,0 +1,21 @@
+.cardSlider {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .card.active {
+    transform: scale(1.1); /* Increase size for the active card */
+  }
+  

@@ -2,7 +2,7 @@
     padding: 50px 30px;
     /* background-color: #000080; */
     /* background-color: red; */
-    font-family: Poppins;
+    
 }
 .label{
     font-size: 1.5rem;
@@ -109,9 +109,12 @@
 .carouselcont{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
 }
+/* .carouselcont{
+    visibility: hidden;
+} */
 
 
 
@@ -177,8 +180,9 @@
 .carouselcont{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
+    /* visibility: visible; */
 }
 }
 
