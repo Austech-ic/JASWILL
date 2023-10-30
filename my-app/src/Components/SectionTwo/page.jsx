@@ -171,7 +171,7 @@ const Page = () => {
           setAutoSlideInterval(8000); // Set a different interval for desktop
         }
       };
-
+// jfvn
     
       let autoSlideInterval;
 
