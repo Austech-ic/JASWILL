@@ -4,8 +4,9 @@ import officeone from '../../../public/officeone.webp'
 import officetwo from '../../../public/officetwo.webp'
 import officethree from '../../../public/officethree.webp'
 import four from '../../../public/four.webp'
-import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineDoubleRight, AiOutlineHeart } from 'react-icons/ai';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
@@ -88,20 +89,24 @@ const Apartment = () => {
               </div>
               
             </div>
-            <div className=' py-3 px-2 flex flex-col justify-between items-start'>
+            <div className=' py-3 px-2 flex flex-col justify-between items-start '>
               
-              <div className='h-18 text-xl cursor-pointer font-bold hover:text-maroon md:text-md'>
-                <p>{datum.label}</p>
+              <div className='h-8 md:h-10 w-full lg:h-[65px]  cursor-pointer font-bold '>
+                <p className='text-base md:text-xl lg:text-lg xl:text-xl'>{datum.label}</p>
               </div>
-              <div className='h-[60px] md:h-[120px] text-gray-700 cursor-pointer mt-4'>
-                <p className='text-xs md:text-base lg:text-sm'>{datum.description}</p>
+              <div className='h-[60px] md:h-[120px] lg:h-[90px] xl:h-[130px] text-gray-700 cursor-pointer mt-4'>
+                <p className='text-xs md:text-base lg:text-xs xl:text-base'>{datum.description}</p>
               </div>
-              <div className=' mt-1  h-14 w-full'>
-                <p className='text-maroon text-xs md:text-sm font-bold '>{datum.categories}</p>
+              <div className='mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
+                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{datum.categories}</p>
               </div>
-              {/* <div className='flex justify-start items-center cursor-pointer mt-3'>
-                {datum.review}
-              </div> */}
+              <Link href={'/propertypage'}>
+              <div className='text-red-700 cursor-pointer flex justify-between items-center gap-2'>
+                <p className='text-xs md:text-base lg:text-xs xl:text-sm  '>See More Details</p>
+                <AiOutlineDoubleRight className='w-3 h-3 md:w-4 md:h-4 lg:w-3 lg:h-3' />
+              </div>
+              </Link>
+              
             </div>
           </div>
         ))}

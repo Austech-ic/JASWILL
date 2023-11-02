@@ -12,6 +12,7 @@ import { BsStar, BsStarFill } from 'react-icons/bs'
 import Blogreview from '../Blog/Blogreview/page'
 
 const page = () => {
+  
   const [details, setDetails] = useState([
     {
       id:1,
@@ -21,6 +22,7 @@ const page = () => {
       textwo:"1",
       texthree:"2",
       iconClicked: false, // Initial clicked state,
+      starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
       icontwo:<BsStarFill className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
@@ -33,6 +35,7 @@ const page = () => {
       textwo:"5",
       texthree:"2",
       iconClicked: false, // Initial clicked state,
+      starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
       icontwo:<BsStarFill className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
@@ -45,6 +48,7 @@ const page = () => {
       textwo:"10",
       texthree:"2",
       iconClicked: false, // Initial clicked state,
+      starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
       icontwo:<BsStarFill className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
@@ -57,6 +61,7 @@ const page = () => {
       textwo:"12",
       texthree:"2",
       iconClicked: false, // Initial clicked state,
+      starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
       icontwo:<BsStarFill className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
@@ -69,6 +74,7 @@ const page = () => {
       textwo:"5",
       texthree:"2",
       iconClicked: false, // Initial clicked state,
+      starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
       icontwo:<BsStarFill className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
@@ -81,6 +87,7 @@ const page = () => {
       textwo:"12",
       texthree:"2",
       iconClicked: false, // Initial clicked state,
+      starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
       icontwo:<BsStarFill className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />

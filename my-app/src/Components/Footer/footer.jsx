@@ -2,10 +2,10 @@ import styles from './footer.module.css'
 import Image from 'next/image'
 import { FaFacebookF, FaGooglePlusG } from 'react-icons/fa'
 import { BsInstagram } from 'react-icons/bs'
-import {IoIosArrowForward} from 'react-icons/io'
+import { IoIosArrowForward } from 'react-icons/io'
 import { AiOutlineGooglePlus } from 'react-icons/ai'
 import { GrLinkedinOption } from 'react-icons/gr'
-import bg from '../../../public/bg.png'
+import bg from '../../../public/twojas.png'
 
 
 
@@ -30,41 +30,41 @@ const Footer = () => {
     ]
     const about = [
         {
-            id:1,
-            text:"About us",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 1,
+            text: "About us",
+            icons: <IoIosArrowForward className={styles.iconew} />
         },
         {
-            id:2,
-            text:"Our Mission",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 2,
+            text: "Our Mission",
+            icons: <IoIosArrowForward className={styles.iconew} />
         },
         {
-            id:3,
-            text:"Our Services",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 3,
+            text: "Our Services",
+            icons: <IoIosArrowForward className={styles.iconew} />
         },
         {
-            id:4,
-            text:"FAQ",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 4,
+            text: "FAQ",
+            icons: <IoIosArrowForward className={styles.iconew} />
         }
     ]
     const legal = [
         {
-            id:1,
-            text:"Terms",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 1,
+            text: "Terms",
+            icons: <IoIosArrowForward className={styles.iconew} />
         },
         {
-            id:2,
-            text:"Privacy",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 2,
+            text: "Privacy",
+            icons: <IoIosArrowForward className={styles.iconew} />
         },
         {
-            id:3,
-            text:"Settings",
-             icons: <IoIosArrowForward className={styles.iconew} />
+            id: 3,
+            text: "Settings",
+            icons: <IoIosArrowForward className={styles.iconew} />
         }
     ]
     return (
@@ -73,16 +73,16 @@ const Footer = () => {
                 <div className={styles.cont}>
                     <div className={styles.divone}>
                         <div className={styles.imgcont}>
-                        <Image src={bg} alt='footer-img' className={styles.footer} />
+                            <Image src={bg} alt='footer-img' className={styles.footer} />
                         </div>
-                        
+
                         <div className={styles.abtcont}>
-                            <p className={styles.texts}>Jaswill is a platform platform
-                                which breaks barriers to accessing
-                                professional mental wellness support
-                                by seamlessly integrating it into your
-                                organizational workflow.</p>
-                               
+                            <p className={styles.texts}>Jaswill is  a fully functional real estate
+                                company in Nigeria that is leading the
+                                way in the purchasing and/or
+                                selling of properties.
+                            </p>
+
                         </div>
 
                     </div>
@@ -93,25 +93,25 @@ const Footer = () => {
                             {
                                 about.map((items) => (
                                     <div key={items.id} className={styles.conticon}>
-                                 <p>{items.icons}</p>
-                                <p className={styles.text}>{items.text}</p>
-                                </div>
+                                        <p>{items.icons}</p>
+                                        <p className={styles.text}>{items.text}</p>
+                                    </div>
                                 ))
                             }
-                            
-                          
-                          
+
+
+
                         </div>
                     </div>
                     <div className={styles.divthree}>
                         <p className={styles.label}>Legal</p>
                         <div className={styles.abtcont}>
-                        {
+                            {
                                 legal.map((content) => (
                                     <div key={content.id} className={styles.conticon}>
-                                 <p>{content.icons}</p>
-                                <p className={styles.text}>{content.text}</p>
-                                </div>
+                                        <p>{content.icons}</p>
+                                        <p className={styles.text}>{content.text}</p>
+                                    </div>
                                 ))
                             }
                         </div>
@@ -120,10 +120,10 @@ const Footer = () => {
                         <p className={styles.label}>Contact</p>
                         <div className={styles.abtcont}>
                             <div className={styles.conticon}>
-                            <IoIosArrowForward className={styles.iconew} /> 
-                            <p className={styles.text}>Our Services</p>
+                                <IoIosArrowForward className={styles.iconew} />
+                                <p className={styles.text}>Our Services</p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

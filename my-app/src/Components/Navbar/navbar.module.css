@@ -386,7 +386,7 @@ color: white;
     }
     .imgcont{
         /* flex: 1; */
-        width: 30%;
+        width: 25%;
         height: 15vh; 
     }
     .menuicon{
@@ -456,7 +456,7 @@ color: white;
     }
     .imgcont{
         /* flex: 1; */
-        width: 30%;
+        width: 20%;
         height: 12vh;
         
     }
@@ -564,10 +564,12 @@ color: white;
 background-color: #800000;
 padding:8px 20px;
 border-radius: 20px;
+color: white;
   }
   .signinbutt{
     background-color: #000080;
     padding:8px 20px;
     border-radius: 20px;
+    color: white;
       }
 }

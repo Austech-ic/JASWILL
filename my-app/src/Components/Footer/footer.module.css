@@ -19,11 +19,12 @@
 .divtwo{
     /* background-color: yellow; */
 }
-/* .imgcont{
-    width: 30%;
-} */
+.imgcont{
+    width: 50%;
+    /* background-color: red; */
+}
 .footer{
-   width: 50%;
+   width: 100%;
    height: auto;
 }
 .abtcont{
@@ -114,10 +115,10 @@
        font-size: 1.5rem;
        line-height: 1.8rem;
    }
-   .footer{
-       width: 30%;
-       height: auto;
-   }
+   .imgcont{
+    width: 50%;
+    
+}
    .cont{
        display: flex;
        flex-direction: column;
@@ -199,10 +200,10 @@
        flex: 2;
       
    }
-   .footer{
-       width: 100%;
-       height: auto;
-   }
+   .imgcont{
+    width: 60%;
+    
+}
    .text{
        font-size: 0.8rem;
        line-height: 1.5rem;
