@@ -1,0 +1,445 @@
+.main {
+    padding: 60px 20px 60px 20px;
+    /* background-color: red; */
+}
+
+
+.link {
+    list-style: none;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.link:hover {
+    color: black;
+    opacity: 0.9;
+}
+
+.subone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: #ABABAB;
+}
+.contwo{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #514D4D;
+}
+.conthree{
+    padding: 10px 0;
+}
+.searchcont{
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding:8px 10px;
+}
+.searchtwo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 30%;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+.imgcont{
+    flex: 1;
+}
+.textcont{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    /* background-color: red; */
+}
+.img{
+    width: 100%;
+    height: auto;
+}
+.maincontfour{
+    border-radius: 19.636px;
+    background: linear-gradient(270deg, rgba(3, 71, 88, 0.07) 0%, rgba(255, 255, 255, 0.00) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    
+}
+.contfour{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+}
+
+.contimg{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: aqua; */
+}
+.upload{
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    /* line-height: 1rem; */
+    gap: 2px;
+    /* border: 1px solid red; */
+   
+}
+.price{
+    font-weight: 400;
+}
+.roomdiv{
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+}
+.avacont{
+    padding:5px 0
+}
+.textava{
+    font-size: 0.6rem;
+    line-height: 0.5rem;
+}
+.icons{
+    width: 15px;
+    height: 15px;
+}
+.locatecont{
+    flex: 1;
+    /* background-color: red; */
+}
+.locont{
+    
+    width: 50%;
+    height: auto;
+  
+}
+.citycont{
+    flex: 9;
+    /* background-color: rgb(112, 99, 99); */
+}
+.locationimg, .bedimg{
+    width: 100%;
+    height: auto;
+}
+.bedcont{
+    width: 20%;
+}
+.bedcontainer{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.lastcont{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #514D4D;
+font-size:1.5rem;
+line-height: 2rem;
+}
+.subfive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* background-color: red; */
+    padding: 80px 0 0 0;
+}
+.iconcont{
+    border: 1px solid black;
+    padding: 5px;
+}
+.iconcont:hover{
+background-color: #800000;
+color: white;
+border: none;
+padding: 5px;
+}
+
+
+@media (min-width:768px) {
+    .main {
+        padding: 60px 40px 60px 40px;
+    }
+    .subone {
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+    }
+    .contwo{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .conthree{
+        padding: 30px 0;
+    }
+    .searchcont{
+        font-size: 1.1rem;
+        line-height: 2rem;
+        padding: 10px;
+    }
+    .searchtwo{
+        padding: 3px 10px;
+        width: 30%;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+    .label{
+
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        /* background-color: red; */
+    }
+    .textcont{
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+    .textava{
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    .avacont{
+        padding:10px 0
+    }
+    .price{
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+    .upload{
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        /* line-height: 1rem; */
+        gap: 2px;
+        /* border: 1px solid red; */
+       
+    }
+    .icons{
+        width: 25px;
+        height: 25px;
+    }
+    .lastcont{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    font-size:2rem;
+    line-height: 2rem;
+    }
+    .subfive{
+        padding: 120px 0 0 0;
+        gap: 20px;
+    }
+   
+    
+  
+    
+}
+
+@media (min-width:1024px) {
+    .main {
+        padding: 50px 100px 50px 100px;
+    }
+    .subone {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+    .contwo{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .searchcont{
+        font-size: 0.8rem;
+        line-height: 1rem;
+        padding:8px 10px;
+    }
+    .searchtwo{
+        padding: 10px 10px;
+        width: 30%;
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+    }
+    .maincontfour{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+       
+       
+    }
+    .label{
+
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+        /* background-color: red; */
+    }
+   
+    .lastcont{
+        background-color: transparent;
+        /* background-color: red; */
+       justify-content: flex-end;
+       padding-right: 40px;
+    font-size:1.2rem;
+    line-height: 2rem;
+    /* border: 1px solid blue; */
+    flex: 1;
+  
+    }
+    .bedcont{
+        width: 20%;
+    }
+    .bedcontainer{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+    .upload{
+        display: flex;
+        align-items: center;
+        font-size: 0.6rem;
+        /* line-height: 1rem; */
+        gap: 2px;
+        width: 100%;
+        /* border: 1px solid red; */
+       
+    }
+    .roomdiv{
+        display: flex;
+        align-items: center;
+        font-size: 0.7rem;
+        /* background-color: yellow; */
+        width: 100%;
+    }
+    .contimg{
+      flex: 1.5;
+        /* border: 1px solid green; */
+    }
+    .avacont{
+        padding:5px 0
+    }
+    .textava{
+        font-size: 0.6rem;
+        line-height: 0.5rem;
+    }
+    .price{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .textcont{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        flex: 1;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        /* background-color: red; */
+    }
+    .icons{
+        width: 15px;
+        height: 15px;
+    }
+    .subfive{
+        padding: 150px 0 0 0;
+    }
+   
+   
+}
+
+
+@media (min-width:1280px) {
+    .main {
+        padding: 70px 130px 70px 130px;
+    }
+    .subone {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .contwo{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .searchcont{
+        font-size: 1rem;
+        line-height: 1rem;
+        padding:13px 10px;
+    }
+    .searchtwo{
+        padding: 10px 10px;
+        width: 30%;
+    }
+    .icon{
+        width: 25px;
+        height: 25px;
+    }
+    .roomdiv{
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        /* background-color: yellow; */
+        width: 100%;
+        /* gap: 10px; */
+    }
+    .label{
+
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        /* background-color: red; */
+    }
+    .textava{
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+    }
+    .price{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .upload{
+        
+        font-size: 0.8rem;
+        /* line-height: 1rem; */
+       
+       
+    }
+    .icons{
+        width: 20px;
+        height: 20px;
+    }
+   
+   
+    
+}

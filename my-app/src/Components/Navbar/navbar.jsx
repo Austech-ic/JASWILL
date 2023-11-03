@@ -52,7 +52,7 @@ const Navbar = () => {
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href='#properties' className={styles.link}>
+                <Link href={`/propertypage`} className={styles.link}>
                 Properties
                 </Link>
                </li>
@@ -104,7 +104,7 @@ const Navbar = () => {
                 </Link>
                </li>
                <li className={styles.item}>
-                <Link href='#properties' className={styles.link}>
+                <Link href={`/propertypage`} className={styles.link}>
               Properties
                 </Link>
                </li>

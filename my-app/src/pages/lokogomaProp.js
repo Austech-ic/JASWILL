@@ -1,23 +1,22 @@
-import Navbar from '@/Components/Navbar/navbar'
 import React from 'react'
+import Navbar from '@/Components/Navbar/navbar'
 import PropertySectionOne from '../Components/PropetySectionOne/page'
 import Propertytwo from '../Components/Propertytwo/page'
-import PropertyThree from '../Components/Propertythree/page'
 import Footer from '@/Components/Footer/footer'
 import Numb from '../Components/Numb/page'
+import ProperPurchaseOne from '../Components/ProperPurchaseOne/page'
 
-
-const propertypage = () => {
+const LokogomaProp = () => {
   return (
-    <div>
-     <Navbar />
-     <PropertySectionOne />
+    <div> 
+      <Navbar />
+      <PropertySectionOne />
      <Propertytwo />
-     <PropertyThree />
-     <Numb />
+      <ProperPurchaseOne  />
+      <Numb />
    <Footer />
-      </div>
+    </div>
   )
 }
 
-export default propertypage
+export default LokogomaProp
