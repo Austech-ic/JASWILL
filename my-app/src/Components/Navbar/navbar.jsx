@@ -66,7 +66,7 @@ const Navbar = () => {
             Blog
                 </Link>
                </li>
-                <li className={styles.items}>
+                {/* <li className={styles.items}>
               <Link href={`/signup`} className={styles.link}>
                 <div className={styles.buttoncont}>
                 <button className={styles.button}>Sign Up</button>
@@ -83,7 +83,7 @@ const Navbar = () => {
                 </div>
               
                 </Link>
-                </li>
+                </li> */}
                 
           </ul>
          </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
                </li>
                 
             </ul>
-            <div className={styles.lastcontainer}>
+            {/* <div className={styles.lastcontainer}>
            
            <Link href={`/signup`} className={styles.link}>
              <div>
@@ -135,7 +135,7 @@ const Navbar = () => {
              </div>
            
              </Link>
-        </div>
+        </div> */}
            </div>
           
 
