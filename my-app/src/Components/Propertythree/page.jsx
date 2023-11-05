@@ -120,7 +120,7 @@ const Page = () => {
          {
           details.map((datum) => (
             <Link href={datum.path}>
-            <div className={styles.maincontfour}>
+            <div key={datum.id} className={styles.maincontfour}>
             <div className={styles.contimg}>
               <div className={styles.imgcont}>
                 <Image src={datum.pic} alt='fade-img' className={styles.img} />

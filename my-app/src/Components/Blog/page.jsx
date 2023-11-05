@@ -11,7 +11,7 @@ import { BiComment, BiHeart } from 'react-icons/bi'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import Blogreview from '../Blog/Blogreview/page'
 
-const page = () => {
+const Page = () => {
   
   const [details, setDetails] = useState([
     {
@@ -147,4 +147,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
