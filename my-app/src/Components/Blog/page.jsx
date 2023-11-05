@@ -137,6 +137,7 @@ const Page = () => {
               </div>
             </div>
             <div>
+            {/* <p>{item.icontwo}</p> */}
               <p>{item.icontwo}</p>
             </div>
           </div>
