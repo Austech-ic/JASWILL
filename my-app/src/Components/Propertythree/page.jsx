@@ -6,7 +6,7 @@ import {PiNumberOne,PiNumberTwo,PiNumberThree,PiNumberFour,PiDotsThreeBold} from
 import {BiSolidCloudUpload} from 'react-icons/bi'
 import {HiLocationMarker} from 'react-icons/hi'
 import styles from './page.module.css'
-import Inside from '../../../public/inside.png'
+import Inside from '../../../public/Inside.png'
 import Fade from '../../../public/fade.png'
 import show from '../../../public/Grouptwo.png'
 import Location from '../../../public/Location.png'
