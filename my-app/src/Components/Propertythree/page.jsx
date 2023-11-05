@@ -119,7 +119,7 @@ const Page = () => {
         <div className={styles.contfour}>
          {
           details.map((datum) => (
-            <Link href={datum.path}>
+            <Link href={datum.path} key={datum.id}>
             <div key={datum.id} className={styles.maincontfour}>
             <div className={styles.contimg}>
               <div className={styles.imgcont}>
