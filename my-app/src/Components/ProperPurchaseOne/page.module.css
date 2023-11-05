@@ -23,7 +23,104 @@
     line-height: 1.5rem;
     color: #ABABAB;
 }
+.divcont{
+    font-size:0.7rem;
+    line-height: 1.2rem;
+}
+.label{
+    font-size:0.8rem;
+    line-height: 1.2rem; 
+}
+.divone{
+    background-color:#020830;
+    color:white;
+    display: flex;
+    flex-direction: column;
+   gap: 20px;
+    padding:20px 10px;
+}
+.imgcont{
+    /* background-color: red; */
+}
+.img{
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+.contone{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    padding:10px 0;
+    gap: 5px;
+ }
+ .contwo{
+    background-color: #D9D9D9;
+    border: 1px solid #034758;
+    border-radius: 10px;
+    padding: 20px 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
+ }
+ .list{
+    list-style: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+ }
+ .text{
+    font-weight: 600;
+    font-size:0.9rem;
+    line-height: 1rem;
+}
+.listsub{
+    font-weight: 300;
+    font-size:0.7rem;
+    line-height: 1.2rem;
+}
+.view{
+    text-decoration: underline;
+    font-size:600;
+}
+.view{
+    text-decoration: underline;
+    font-size:600;
+}
+.cont{
+    border-radius: 5px;
+}
+.cont:hover{
+    border: 2px solid #034758;
+    border-radius: 5px;
+}
+.imgs{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.contextone{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 400;
+   
+}
+.textcont{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.textone{
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+.bold{
+    font-weight: 600;
+}
 @media (min-width:768px) {
     .main {
         padding: 60px 40px 60px 40px;
@@ -37,6 +134,76 @@
     .link{
         padding: 20px 0;
     }
+    .divone{
+        background-color:#020830;
+        color:white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    .divcont{
+        font-size:1.2rem;
+        line-height: 1.7rem;
+    }
+    .label{
+        font-size:1.5rem;
+        line-height: 2.4rem; 
+    }
+   
+    .contone{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:30px 10px;
+        gap: 10px;
+     }
+     .contwo{
+        background-color: #D9D9D9;
+        border: 1px solid #034758;
+        border-radius: 10px;
+        padding: 50px 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+     }
+     .list{
+        list-style: circle;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+     }
+     .text{
+        font-weight: 600;
+        font-size:1.3rem;
+        line-height: 1rem;
+    }
+    .listsub{
+        font-weight: 300;
+        font-size:1.1rem;
+        line-height: 1.7rem;
+    }
+    .contextone{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+       
+    }
+    .textcont{
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .textone{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+   
+    
      
 }
 
@@ -48,7 +215,35 @@
         font-size: 0.9rem;
         line-height: 1.4rem;
     }
-   
+    .text{
+        font-weight: 600;
+        font-size:1rem;
+        line-height: 1rem;
+    }
+    .listsub{
+        font-weight: 300;
+        font-size:0.9rem;
+        line-height: 1.3rem;
+    }
+    .divcont{
+        font-size:0.8rem;
+        line-height: 1.3rem;
+    }
+    .label{
+        font-size:1rem;
+        line-height: 2rem; 
+    }
+    .contextone{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+       
+    }
+    .textone{
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
 }
 
 
@@ -59,6 +254,36 @@
     .subone {
         font-size: 1rem;
         line-height: 1.5rem;
+    }
+    .text{
+        font-weight: 600;
+        font-size:1.2rem;
+        line-height: 1rem;
+    }
+    .listsub{
+        font-weight: 300;
+        font-size:1rem;
+        line-height: 1.5rem;
+    }
+    .divcont{
+        font-size:0.9rem;
+        line-height: 1.4rem;
+    }
+    .label{
+        font-size:1.1rem;
+        line-height: 2rem; 
+    }
+    .contextone{
+        font-size: 1rem;
+        line-height: 1.6rem;
+        font-weight: 400;
+       
+    }
+    
+    .textone{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: 600;
     }
 
 }
