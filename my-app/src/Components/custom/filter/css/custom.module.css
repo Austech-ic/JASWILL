@@ -1,0 +1,286 @@
+.mains{
+    background-color: #A30000;
+    color:white;
+    padding: 10px;
+    font-weight: 700;
+}
+.submains{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contones{
+    flex: 1;
+    display: none;
+    
+}
+.contwos{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    gap: 10px;
+    
+}
+.conthrees{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background-color: rgb(0, 85, 255); */
+    
+   
+}
+.texts{
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+.userconts{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    
+}
+
+.logoutconts{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.main{
+    background-color: #4B0404;
+    color: white;
+    padding: 30px 10px;
+}
+.submain{
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+}
+.contone, .contwo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.iconcont{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    background-color: white;
+    color: black;
+    padding: 5px ;
+    
+    /* width: 15%; */
+   
+}
+.iconconts{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    background-color: white;
+    color: black;
+    padding: 5px ;
+    width: 80%;
+    
+    /* width: 15%; */
+   
+}
+.icon{
+    width: 15px;
+    height: 15px;
+}
+.locationcont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 2.5;
+    
+}
+.carticon{
+    width: 20px;
+    height: 20px;
+}
+.input{
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+}
+
+
+
+@media (min-width:768px) {
+    .mains{
+        background-color: #A30000;
+        color:white;
+        padding: 10px;
+    }
+  
+    .contwos{
+        gap: 40px;
+       
+    }
+    .texts{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .conthrees{
+        gap: 40px;
+    }  
+    .iconcont{
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        
+        /* width: 15%; */
+       
+    } 
+    .icon{
+        width: 25px;
+        height: 25px;
+    }
+    .iconconts{
+       
+        font-size: 1.1rem;
+        line-height: 1rem;
+        padding: 5px ;
+        width: 80%;
+        
+        /* width: 15%; */
+       
+    }
+    .carticon{
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+@media (min-width:1024px) {
+    .mains{
+        background-color: #A30000;
+        color:white;
+        padding: 10px;
+    }
+   
+    .contones{
+        flex: 1;
+        display: block;
+    }
+    .contwos{
+        gap: 40px;
+       
+    }
+    .texts{
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+    .conthrees{
+        gap: 40px;
+        
+    }  
+    .userconts{
+        gap: 10px;
+    }
+    
+    .logoutconts{
+        gap: 10px;
+    }
+    .main{
+        padding: 30px 80px;
+    }
+      .submain{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }  
+    .contone{
+        gap: 10px;
+        flex: 3;
+    }
+    .contwo{
+        flex: 1.5;
+        gap: 10px;
+    }
+    .iconcont{
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        
+        
+        /* width: 15%; */
+       
+    } 
+    .icon{
+        width: 15px;
+        height: 15px;
+    }
+    .iconconts{
+       
+        font-size: 0.8rem;
+        line-height: 1rem;
+        padding: 5px ;
+        width: 100%;
+       
+    }
+    .carticon{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+    .texts{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .iconcont{
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        
+        /* width: 15%; */
+       
+    }
+       .icon{
+        width: 20px;
+        height: 20px;
+    } 
+    .iconconts{
+         font-size: 0.9rem;
+        line-height: 1rem;
+    }
+    .carticon{
+        width: 25px;
+        height: 25px;
+    }
+   
+}

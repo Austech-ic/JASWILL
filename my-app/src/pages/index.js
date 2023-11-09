@@ -14,6 +14,7 @@ import Services from '../Components/Services/page'
 import Career from '../Components/Career/page'
 import Carosel from '../Components/Carosel/page'
 import Blog from '../Components/Blog/page'
+import Message from '../Components/MessageComp/page'
 
 
 
@@ -33,6 +34,7 @@ export default function Home() {
       <Career />
       < Testimonies  />
       <Blog />
+      <Message />
       <Contact />
       <Footer />
       <hr  className='text-maroon'/>

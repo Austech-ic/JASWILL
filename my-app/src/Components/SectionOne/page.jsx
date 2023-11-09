@@ -38,7 +38,7 @@ ref={scrollTriggerRef}>
                 <p className={styles.subtext}>Join us in the pursuit of exceptional living. <br className={styles.starthide} /> Start your <br className={styles.hides} /> property journey today!
                 </p>
                 <div className={styles.buttoncont}>
-                  <Link href="#properties">
+                  <Link href={`/properties`}>
                   <button className={styles.button}>Get Started</button>
                   </Link>
                   <Link href={`/career`}>

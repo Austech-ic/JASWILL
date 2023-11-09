@@ -1,15 +1,16 @@
-import React from 'react'
-import styles from './page.module.css'
+import React, {Fragment} from 'react'
+import styles from './propertydetails.module.css'
 import { RxSlash } from 'react-icons/rx'
 import Image from 'next/image'
 import {MdLocationPin} from 'react-icons/md'
 import Link from 'next/link'
-import Location from '../../../public/Location.png'
-import Inside from '../../../public/Insidetwo.png'
+import Location from '../../../../public/Location.png'
+import Inside from '../../../../public/Insidetwo.png'
+import CustomFilter from '../../custom/filter/customFilter'
 
 
 
-const page = () => {
+const PropertyDetails = () => {
     const details = [
         {
             id: 1,
@@ -33,17 +34,19 @@ const page = () => {
         }
     ]
     return (
+        <Fragment>
+             <CustomFilter />
         <div className={styles.main}>
             <div className={styles.subone}>
                 <Link href={`/`} className={styles.link}>
                     <p>Home</p>
                 </Link>
                 <RxSlash />
-                <Link href={`/propertypage`} className={styles.link}>
+                <Link href={`/properties`} className={styles.link}>
                     <p>Property for sale in Abuja</p>
                 </Link>
                 <RxSlash />
-                <Link href={`/lokogomaProp`} className={styles.link}>
+                <Link href={`/properties/detailsId`} className={styles.link}>
                     <p>Property for sale in Lokogoma</p>
                 </Link>
             </div>
@@ -125,7 +128,8 @@ const page = () => {
 
             </div>
         </div>
+        </Fragment>
     )
 }
 
-export default page
+export default PropertyDetails

@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{Fragment} from 'react'
+
 import { AiOutlineSearch } from 'react-icons/ai'
 import { BiCart } from 'react-icons/bi'
 import { MdKeyboardArrowDown,MdLocationPin,MdOutlineKeyboardDoubleArrowLeft,MdOutlineKeyboardDoubleArrowRight ,MdLooksOne} from 'react-icons/md'
@@ -17,9 +18,20 @@ import bath from '../../../public/bath.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { RxSlash } from 'react-icons/rx'
+import CustomFilter from '../custom/filter/customFilter'
+import {useRouter} from "next/router";
+import Numb from '../Numb/page'
 
 
-const Page = () => {
+
+const Property = () => {
+  const router = useRouter();
+
+  const handleView = (detailsId) => {
+    router.push(`/properties/${detailsId}`);
+};
+
+
   const details = [
     {
       id:1,
@@ -39,17 +51,13 @@ const Page = () => {
       imageThree:toilet,
       textsix:"6 Toilets",
       textSeven:"Premium",
-      link: "/lokogomaProp",
-      path: "/lokogomaProp",
-
-
        },
        {
         id:2,
         label:"4 BEDROOM HOUSE FOR SALE",
         pic:Fade,
         location:Location,
-        textone:"Lokogma, Abuja",
+        textone:"Lugbe, Abuja",
         textwo:"1,669 kilometers",
         texthree:"Available",
         price:"#50,000",
@@ -62,16 +70,13 @@ const Page = () => {
         imageThree:toilet,
         textsix:"6 Toilets",
         textSeven:"Sponsored",
-        link: "/dashboard",
-        path: "/dashboard",
-  
          },
          {
           id:3,
           label:"4 BEDROOM HOUSE FOR SALE",
           pic:show,
           location:Location,
-          textone:"Lokogma, Abuja",
+          textone:"Maitaima, Abuja",
           textwo:"1,669 kilometers",
           texthree:"Available",
           price:"#50,000",
@@ -84,19 +89,37 @@ const Page = () => {
           imageThree:toilet,
           textsix:"6 Toilets",
           textSeven:"Premium",
-          link: "/dashboard",
-          path: "/dashboard",
-    
-           }
+           },
+           {
+            id:4,
+            label:"4 BEDROOM HOUSE FOR SALE",
+            pic:show,
+            location:Location,
+            textone:"Kubwa, Abuja",
+            textwo:"1,669 kilometers",
+            texthree:"Available",
+            price:"#50,000",
+            icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+            textfive:"Uploaded 16 Oct 2022",
+            imageOne:bed,
+            textFour:"5 Beds",
+            imageTwo:bath,
+            textFive:"6 Baths",
+            imageThree:toilet,
+            textsix:"6 Toilets",
+            textSeven:"Premium",
+             }
   ]
   return (
+    <Fragment>
+      <CustomFilter />
     <div className={styles.main}>
        <div className={styles.subone}>
         <Link href={`/`} className={styles.link}>
           <p>Home</p>
         </Link>
         <RxSlash />
-        <Link href={`/propertypage`} className={styles.link}>
+        <Link href={`/properties`} className={styles.link}>
           <p>Property for sale</p>
         </Link>
       </div>
@@ -119,8 +142,8 @@ const Page = () => {
         <div className={styles.contfour}>
          {
           details.map((datum) => (
-            <Link href={datum.path} key={datum.id}>
-            <div key={datum.id} className={styles.maincontfour}>
+            <div onClick={handleView} id={datum.id} key={datum.id}>
+            <div  className={styles.maincontfour}>
             <div className={styles.contimg}>
               <div className={styles.imgcont}>
                 <Image src={datum.pic} alt='fade-img' className={styles.img} />
@@ -189,11 +212,12 @@ const Page = () => {
               <p>{datum.textSeven}</p>
             </div>
           </div>
-          </Link>
+          </div>
 
           ))
          }
         </div>
+        <Numb />
        
 
 
@@ -204,7 +228,8 @@ const Page = () => {
 
 
     </div>
+    </Fragment>
   )
 }
 
-export default Page
+export default Property
