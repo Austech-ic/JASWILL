@@ -3,24 +3,27 @@ import styles from './page.module.css'
 import Image from 'next/image';
 
 const Page = () => {
+
+
   const [selectedMedia, setSelectedMedia] = useState(null);
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    setSelectedMedia(URL.createObjectURL(file));
+    setSelectedMedia(file); // Update state with the selected file
   };
 
   const showMediaInGallery = () => {
-    // Show the selected image inside the div when the "Upload Video" label is clicked
+    // Show the selected image inside the div when the "Choose File" label is clicked
     if (selectedMedia) {
       return (
         <div className="mt-3">
           <Image
-            src={selectedMedia}
+          width={200}
+          height={200}
+            src={URL.createObjectURL(selectedMedia)}
             alt="Selected Thumbnail"
-            className="w-full h-auto rounded-lg max-h-[100px] max-w-[30%]"
+            className={styles.image}
           />
-      
         </div>
       );
     }
@@ -72,19 +75,20 @@ const Page = () => {
                 <div className={styles.divconts}>
                  
                   <div className="">
-                    <input
-                      type="file"
-                      onChange={handleFileUpload}
-                      accept=""
-                      style={{ display: 'none' }}
-                      id="file-upload"
-                    />
-                    <label
+                  {showMediaInGallery()}
+          <input
+            type="file"
+            onChange={handleFileUpload}
+            accept=""
+            style={{ display: 'block' }}
+            id="file-upload"
+          />
+                    {/* <label
                       htmlFor="file-upload"
                       className="flex justify-center items-center gap-6 bg-transparent text-gray-700 rounded-xl h-20 w-40 text-sm md:text-max outline-dotted outline-gray-400"
                     >
                       Upload Video
-                    </label>
+                    </label> */}
                   </div>
                 </div>
                 </div>
