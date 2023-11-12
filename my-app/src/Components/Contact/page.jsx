@@ -55,6 +55,13 @@ ref={scrollTriggerRef}
                 <p> +234 7012 488 242</p>
                 </div>
                 </Link>
+
+                <Link href="tel:+2348025706191" className={styles.link}>
+                <div className={styles.subcont}>
+                <IoMdCall />
+                <p> +234 8025 706 191</p>
+                </div>
+                </Link>
                
                 </div>
                 <div className={styles.mobilecont}>
@@ -62,7 +69,7 @@ ref={scrollTriggerRef}
                 <Link href="https://wa.me/message/J3AEV6SQGELOJ1" className={styles.link}>
                 <div className={styles.subcont}>
                 <FaWhatsappSquare color='#25D366' />
-                <p>Send a direct message</p>
+                
                 </div>
                 </Link>
                 

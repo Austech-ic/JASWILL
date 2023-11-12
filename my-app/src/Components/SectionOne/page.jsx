@@ -42,7 +42,7 @@ ref={scrollTriggerRef}>
                   <button className={styles.button}>Get Started</button>
                   </Link>
                   <Link href={`/career`}>
-                    <button className={styles.buttons}>Patner With Us</button>
+                    <button className={styles.buttons}>Partner With Us</button>
                   </Link>
                     
                     

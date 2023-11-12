@@ -28,7 +28,7 @@ const page = () => {
             id: 3,
             pic:pyr,
             label: "UNIQUE VALUE PROPOSITION",
-            type: "We provide top-shelf realty services, encourage action on only budget-friendly, worry-free, and profitable properties, and, thereby, bring each client dream(s) to life."
+            type: "We provide top-shelf realty services, encourage action on only budget-friendly, worry-free, and profitable properties, and, thereby, bring each client's dreams to life."
         },
     ]
     return (
