@@ -4,7 +4,7 @@ import back from '../../../public/back.png'
 import styles from './page.module.css'
 import { FaWhatsapp } from 'react-icons/fa'
 
-const page = () => {
+const Page = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -94,4 +94,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
