@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown,MdLocationPin,MdOutlineKeyboardDoubleArrowLeft,MdOu
 import {PiNumberOne,PiNumberTwo,PiNumberThree,PiNumberFour,PiDotsThreeBold} from 'react-icons/pi'
 import {BiSolidCloudUpload} from 'react-icons/bi'
 import {HiLocationMarker} from 'react-icons/hi'
-import styles from './page.module.css'
+import styles from './property.module.css'
 import Inside from '../../../public/Inside.png'
 import Fade from '../../../public/fade.png'
 import show from '../../../public/Grouptwo.png'
