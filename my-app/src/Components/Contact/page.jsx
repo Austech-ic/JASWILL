@@ -66,7 +66,7 @@ ref={scrollTriggerRef}
                 </div>
                 <div className={styles.mobilecont}>
                 <p className={styles.text}>Whatsapp:</p>
-                <Link href="https://wa.me/message/J3AEV6SQGELOJ1" className={styles.link}>
+                <Link href="https://wa.me/message/R3XZ3HBLHXWMG1" className={styles.link}>
                 <div className={styles.subcont}>
                 <FaWhatsappSquare color='#25D366' />
                 

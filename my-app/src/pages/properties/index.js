@@ -1,7 +1,7 @@
 import Navbar from '@/Components/Navbar/navbar'
 import React from 'react'
 import Footer from '@/Components/Footer/footer'
-import Property from '../../Components/Property/property'
+import Property from '../../Components/property/property'
 
 const PropertiesLanding = () => {
   return (

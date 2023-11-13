@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import styles from './propertydetails.module.css'
+import styles from './page.module.css'
 import { RxSlash } from 'react-icons/rx'
 import Image from 'next/image'
 import {MdLocationPin} from 'react-icons/md'
@@ -7,10 +7,17 @@ import Link from 'next/link'
 import Location from '../../../../public/Location.png'
 import Inside from '../../../../public/Insidetwo.png'
 import CustomFilter from '../../custom/filter/customFilter'
+import { items } from "./data"
+import { isNotFoundError } from 'next/dist/client/components/not-found'
+import { useRouter } from 'next/router';
 
 
 
-const PropertyDetails = () => {
+
+
+  const Category = ({ params }) => {
+
+
     const details = [
         {
             id: 1,
@@ -50,9 +57,10 @@ const PropertyDetails = () => {
                     <p>Property for sale in Lokogoma</p>
                 </Link>
             </div>
+            
             <div className={styles.subtwo}>
-
-                <div className={styles.divcont}>
+           
+            <div className={styles.divcont}>
                     <div className={styles.divone}>
                         <div className={styles.innerdivone}>
                             <p className={styles.label}>4 BEDROOM HOUSE FOR SALE</p>
@@ -77,6 +85,7 @@ const PropertyDetails = () => {
                         }
                     </div>
                 </div>
+               
 
                 <div className={styles.contwo}>
                     <p className={styles.text}>Safety Tips</p>
@@ -132,4 +141,4 @@ const PropertyDetails = () => {
     )
 }
 
-export default PropertyDetails
+export default Category;

@@ -27,9 +27,7 @@ import Numb from '../Numb/page'
 const Property = () => {
   const router = useRouter();
 
-  const handleView = (detailsId) => {
-    router.push(`/properties/${detailsId}`);
-};
+
 
 
   const details = [
@@ -139,10 +137,11 @@ const Property = () => {
          </div>
         </div>
 
-        <div className={styles.contfour}>
+       <Link href={`/properties/detailsId`}>
+       <div className={styles.contfour}>
          {
           details.map((datum) => (
-            <div onClick={handleView} id={datum.id} key={datum.id}>
+            <div  id={datum.id} key={datum.id}>
             <div  className={styles.maincontfour}>
             <div className={styles.contimg}>
               <div className={styles.imgcont}>
@@ -217,6 +216,7 @@ const Property = () => {
           ))
          }
         </div>
+        </Link>
         <Numb />
        
 
