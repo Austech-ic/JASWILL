@@ -6,7 +6,7 @@ import PropertyDetails from '@/Components/PropertyComp/[category]/page'
 const PropertiesDetails = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <PropertyDetails />
       <Footer />
     </div>
