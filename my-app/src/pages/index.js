@@ -34,7 +34,7 @@ export default function Home() {
       <Blog />
       <Message />
       <Contact />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   )
 }
