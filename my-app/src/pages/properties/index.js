@@ -6,7 +6,7 @@ import Property from '../../Components/PropertyComp/property'
 const PropertiesLanding = () => {
   return (
     <div>
-    <Navbar />
+    {/* <Navbar /> */}
     <Property  />
   <Footer />
      </div>
