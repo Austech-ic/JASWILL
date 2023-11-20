@@ -17,6 +17,13 @@ import { useRouter } from 'next/router';
 
   const Category = ({ params }) => {
 
+    const Description =[
+        {
+            id:1,
+            
+        }
+    ]
+
 
     const details = [
         {
@@ -113,7 +120,7 @@ import { useRouter } from 'next/router';
 
                         <div className={styles.textcont}>
                             <p>4 bedroom Flat / Apartment for sale Lokogoma Abuja for ₦50,000,000.</p>
-                            <Link href="https://wa.me/message/J3AEV6SQGELOJ1" className={styles.link}>
+                            <Link href="https://wa.me/message/R3XZ3HBLHXWMG1" className={styles.link}>
                             <p className={styles.view} >Contact now for quick details on 2 bedroom flat</p>
                             </Link>
                         </div>

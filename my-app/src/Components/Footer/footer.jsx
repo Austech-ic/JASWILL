@@ -6,6 +6,7 @@ import { IoIosArrowForward } from 'react-icons/io'
 import { AiOutlineGooglePlus } from 'react-icons/ai'
 import { GrLinkedinOption } from 'react-icons/gr'
 import bg from '../../../public/twojas.png'
+import Socials from '../Socials/page'
 
 
 
@@ -145,6 +146,8 @@ const Footer = () => {
             <div className={styles.lastcont}>
                 <p className={styles.lasttxt}>Copyright © 2023 By Jaswill. All Rights Reserved</p>
             </div>
+
+            <Socials />
 
 
 

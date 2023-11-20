@@ -8,7 +8,6 @@ const PropertiesDetails = () => {
     <div>
       <Navbar />
       <PropertyDetails />
-      
       <Footer />
     </div>
   )

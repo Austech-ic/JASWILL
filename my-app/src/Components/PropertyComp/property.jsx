@@ -27,6 +27,12 @@ import Numb from '../Numb/page'
 const Property = () => {
   const router = useRouter();
 
+  const HandleView = (id) => {
+    router.push(`/properties/${id}`)
+    // console.log('testing id');
+
+    // router.push(`/properties/detailsId`)
+  }
 
 
 
@@ -136,98 +142,96 @@ const Property = () => {
           </div>
          </div>
         </div>
-
+{/* 
        <Link href={`/properties/detailsId`}>
-       <div className={styles.contfour}>
-         {
-          details.map((datum) => (
-            <div  id={datum.id} key={datum.id}>
-            <div  className={styles.maincontfour}>
-            <div className={styles.contimg}>
-              <div className={styles.imgcont}>
-                <Image src={datum.pic} alt='fade-img' className={styles.img} />
-              </div>
-              <div className={styles.textcont}>
-                <p className={styles.label}>{datum.label}</p>
-                <div className={styles.location}>
-                
-                  <div className={styles.locatecont}>
-                  <div className={styles.locont}>
-                  <Image src={datum.location} alt='location-img' className={styles.locationimg} />
-
-                  </div>
-                  </div>
-               
-                  <div className={styles.citycont}>
-                  <p>{datum.textone}</p>
-                  </div>
-                 
-                
-                </div>
-                <p>{datum.textwo}</p>
-                <div className={styles.avacont}>
-                  <p className={styles.textava}>{datum.texthree}</p>
-                  <p className={styles.price}>{datum.price}</p>
-                </div>
-                <div className={styles.upload}>
-                <p>{datum.icon}</p>
-                  <p>{datum.textfive}</p>
-                  
-                </div>
-                <div className={styles.roomdiv}>
-                <div className={styles.bedcontainer}>
-                  
-                  <div className={styles.bedcont}>
-                    <Image src={datum.imageOne} alt='bed-img' className={styles.bedimg} />
-                  </div>
-                  <p>{datum.textFour}</p>
-                </div>
-                <div className={styles.bedcontainer}>
-               
-                <div className={styles.bedcont}>
-                    <Image src={datum.imageTwo} alt='bed-img' className={styles.bedimg} />
-                  </div>
-                  <p>{datum.textFive}</p>
-                </div>
-                <div className={styles.bedcontainer}>
-                
-                <div className={styles.bedcont}>
-                    <Image src={datum.imageThree} alt='bed-img' className={styles.bedimg} />
-                  </div>
-                  <p>{datum.textsix}</p>
-                </div>
-                  
-                </div>
-                <div>
-
-                </div>
-              </div>
-            </div>
+       </Link> */}
+    
+        <div className={styles.contfour}>
+                {
+                  details.map((datum) => (
 
 
+                      <div  id={datum.id} key={datum.id} onClick={() => HandleView (datum.id)} style={{cursor:"pointer"}}>
+                    <div  className={styles.maincontfour}>
+                    <div className={styles.contimg}>
+                      <div className={styles.imgcont}>
+                        <Image src={datum.pic} alt='fade-img' className={styles.img} />
+                      </div>
+                      <div className={styles.textcont}>
+                        <p className={styles.label}>{datum.label}</p>
+                        <div className={styles.location}>
+                        
+                          <div className={styles.locatecont}>
+                          <div className={styles.locont}>
+                          <Image src={datum.location} alt='location-img' className={styles.locationimg} />
 
-            
-            <div className={styles.lastcont}>
-              <p>{datum.textSeven}</p>
-            </div>
-          </div>
-          </div>
+                          </div>
+                          </div>
+                      
+                          <div className={styles.citycont}>
+                          <p>{datum.textone}</p>
+                          </div>
+                        
+                        
+                        </div>
+                        <p>{datum.textwo}</p>
+                        <div className={styles.avacont}>
+                          <p className={styles.textava}>{datum.texthree}</p>
+                          <p className={styles.price}>{datum.price}</p>
+                        </div>
+                        <div className={styles.upload}>
+                        <p>{datum.icon}</p>
+                          <p>{datum.textfive}</p>
+                          
+                        </div>
+                        <div className={styles.roomdiv}>
+                        <div className={styles.bedcontainer}>
+                          
+                          <div className={styles.bedcont}>
+                            <Image src={datum.imageOne} alt='bed-img' className={styles.bedimg} />
+                          </div>
+                          <p>{datum.textFour}</p>
+                        </div>
+                        <div className={styles.bedcontainer}>
+                      
+                        <div className={styles.bedcont}>
+                            <Image src={datum.imageTwo} alt='bed-img' className={styles.bedimg} />
+                          </div>
+                          <p>{datum.textFive}</p>
+                        </div>
+                        <div className={styles.bedcontainer}>
+                        
+                        <div className={styles.bedcont}>
+                            <Image src={datum.imageThree} alt='bed-img' className={styles.bedimg} />
+                          </div>
+                          <p>{datum.textsix}</p>
+                        </div>
+                          
+                        </div>
+                        <div>
 
-          ))
-         }
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    
+                    <div className={styles.lastcont}>
+                      <p>{datum.textSeven}</p>
+                    </div>
+                  </div>
+                     </div>
+
+
+                  ))
+                }
+                </div>
         </div>
-        </Link>
+ 
         <Numb />
        
 
-
-
-
-
-
-
-
-    </div>
     </Fragment>
   )
 }
