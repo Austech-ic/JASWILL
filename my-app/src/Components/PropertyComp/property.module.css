@@ -1,6 +1,10 @@
 .main {
     padding: 60px 20px 60px 20px;
     /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 70vh;
 }
 
 
@@ -182,7 +186,38 @@ color: white;
 border: none;
 padding: 5px;
 }
-
+.subfive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* background-color: rgb(107, 100, 100); */
+    padding: 40px 0 40px 0;
+}
+.iconcont{
+    border: 1px solid black;
+    padding: 5px;
+}
+.iconcont:hover{
+background-color: #800000;
+color: white;
+border: 1px solid white;
+/* border: none; */
+padding: 5px;
+}
+.icons{
+    width: 15px;
+    height: 15px;
+}
+.paginationButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.activePage{
+    color:  #800000;
+}
 
 @media (min-width:768px) {
     .main {

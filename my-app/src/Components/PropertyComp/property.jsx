@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React, { Fragment, useState } from 'react';
 
 import { AiOutlineSearch } from 'react-icons/ai'
 import { BiCart } from 'react-icons/bi'
@@ -24,8 +24,13 @@ import Numb from '../Numb/page'
 
 
 
+
 const Property = () => {
   const router = useRouter();
+
+  const ITEMS_PER_PAGE = 4;
+
+  const [currentPage, setCurrentPage] = useState(1);
 
   const HandleView = (id) => {
     router.push(`/properties/${id}`)
@@ -112,126 +117,233 @@ const Property = () => {
             imageThree:toilet,
             textsix:"6 Toilets",
             textSeven:"Premium",
-             }
+             },
+             {
+              id:5,
+              label:"4 BEDROOM HOUSE FOR SALE",
+              pic:show,
+              location:Location,
+              textone:"Apo, Abuja",
+              textwo:"1,669 kilometers",
+              texthree:"Available",
+              price:"#50,000",
+              icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+              textfive:"Uploaded 16 Oct 2022",
+              imageOne:bed,
+              textFour:"5 Beds",
+              imageTwo:bath,
+              textFive:"6 Baths",
+              imageThree:toilet,
+              textsix:"6 Toilets",
+              textSeven:"Premium",
+               }, 
+               {
+                id:6,
+                label:"4 BEDROOM HOUSE FOR SALE",
+                pic:show,
+                location:Location,
+                textone:"Dutse, Abuja",
+                textwo:"1,669 kilometers",
+                texthree:"Available",
+                price:"#50,000",
+                icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+                textfive:"Uploaded 16 Oct 2022",
+                imageOne:bed,
+                textFour:"5 Beds",
+                imageTwo:bath,
+                textFive:"6 Baths",
+                imageThree:toilet,
+                textsix:"6 Toilets",
+                textSeven:"Premium",
+                 },
+                 {
+                  id:7,
+                  label:"4 BEDROOM HOUSE FOR SALE",
+                  pic:show,
+                  location:Location,
+                  textone:"Buari, Abuja",
+                  textwo:"1,669 kilometers",
+                  texthree:"Available",
+                  price:"#50,000",
+                  icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+                  textfive:"Uploaded 16 Oct 2022",
+                  imageOne:bed,
+                  textFour:"5 Beds",
+                  imageTwo:bath,
+                  textFive:"6 Baths",
+                  imageThree:toilet,
+                  textsix:"6 Toilets",
+                  textSeven:"Premium",
+                   },
+                   {
+                    id:8,
+                    label:"4 BEDROOM HOUSE FOR SALE",
+                    pic:show,
+                    location:Location,
+                    textone:"Zuba, Abuja",
+                    textwo:"1,669 kilometers",
+                    texthree:"Available",
+                    price:"#50,000",
+                    icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+                    textfive:"Uploaded 16 Oct 2022",
+                    imageOne:bed,
+                    textFour:"5 Beds",
+                    imageTwo:bath,
+                    textFive:"6 Baths",
+                    imageThree:toilet,
+                    textsix:"6 Toilets",
+                    textSeven:"Premium",
+                     },
+                     {
+                      id:9,
+                      label:"4 BEDROOM HOUSE FOR SALE",
+                      pic:show,
+                      location:Location,
+                      textone:"Central Area, Abuja",
+                      textwo:"1,669 kilometers",
+                      texthree:"Available",
+                      price:"#50,000",
+                      icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+                      textfive:"Uploaded 16 Oct 2022",
+                      imageOne:bed,
+                      textFour:"5 Beds",
+                      imageTwo:bath,
+                      textFive:"6 Baths",
+                      imageThree:toilet,
+                      textsix:"6 Toilets",
+                      textSeven:"Premium",
+                       },
+                       {
+                        id:10,
+                        label:"4 BEDROOM HOUSE FOR SALE",
+                        pic:show,
+                        location:Location,
+                        textone:"Karu, Abuja",
+                        textwo:"1,669 kilometers",
+                        texthree:"Available",
+                        price:"#50,000",
+                        icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
+                        textfive:"Uploaded 16 Oct 2022",
+                        imageOne:bed,
+                        textFour:"5 Beds",
+                        imageTwo:bath,
+                        textFive:"6 Baths",
+                        imageThree:toilet,
+                        textsix:"6 Toilets",
+                        textSeven:"Premium",
+                         }
   ]
+
+
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedDetails = details.slice(startIndex, endIndex);
+
   return (
     <Fragment>
       <CustomFilter />
-    <div className={styles.main}>
-       <div className={styles.subone}>
-        <Link href={`/`} className={styles.link}>
-          <p>Home</p>
-        </Link>
-        <RxSlash />
-        <Link href={`/properties`} className={styles.link}>
-          <p>Property for sale</p>
-        </Link>
+      <div className={styles.main}>
+      {paginatedDetails.map((datum) => (
+  <div key={datum.id} onClick={() => HandleView(datum.id)} style={{ cursor: 'pointer' }} className={styles.propertyItem}>
+    <div className={styles.maincontfour}>
+      <div className={styles.contimg}>
+        <div className={styles.imgcont}>
+          <Image src={datum.pic} alt='fade-img' className={styles.img} />
+        </div>
+        <div className={styles.textcont}>
+          <p className={styles.label}>{datum.label}</p>
+          <div className={styles.location}>
+            <div className={styles.locatecont}>
+              <div className={styles.locont}>
+                <Image src={datum.location} alt='location-img' className={styles.locationimg} />
+              </div>
+            </div>
+            <div className={styles.citycont}>
+              <p>{datum.textone}</p>
+            </div>
+          </div>
+          <p>{datum.textwo}</p>
+          <div className={styles.avacont}>
+            <p className={styles.textava}>{datum.texthree}</p>
+            <p className={styles.price}>{datum.price}</p>
+          </div>
+          <div className={styles.upload}>
+            <p>{datum.icon}</p>
+            <p>{datum.textfive}</p>
+          </div>
+          <div className={styles.roomdiv}>
+            <div className={styles.bedcontainer}>
+              <div className={styles.bedcont}>
+                <Image src={datum.imageOne} alt='bed-img' className={styles.bedimg} />
+              </div>
+              <p>{datum.textFour}</p>
+            </div>
+            <div className={styles.bedcontainer}>
+              <div className={styles.bedcont}>
+                <Image src={datum.imageTwo} alt='bed-img' className={styles.bedimg} />
+              </div>
+              <p>{datum.textFive}</p>
+            </div>
+            <div className={styles.bedcontainer}>
+              <div className={styles.bedcont}>
+                <Image src={datum.imageThree} alt='bed-img' className={styles.bedimg} />
+              </div>
+              <p>{datum.textsix}</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className={styles.contwo}>
-        <p>Property for sale</p>
-        </div>
-        <div className={styles.conthree}>
-         <div className={styles.searchcont}>
-          <div className={styles.searchone}>
-            <p className={styles.text}>Result 1 - 20 of 197038</p>
-          </div>
-          <div className={styles.searchtwo}>
-            <p className={styles.text}>Sort By</p>
-            <MdKeyboardArrowDown className={styles.icon} />
-            
-          </div>
-         </div>
-        </div>
-{/* 
-       <Link href={`/properties/detailsId`}>
-       </Link> */}
-    
+      <div className={styles.lastcont}>
+        <p>{datum.textSeven}</p>
+      </div>
+    </div>
+  </div>
+))}
+
         <div className={styles.contfour}>
-                {
-                  details.map((datum) => (
-
-
-                      <div  id={datum.id} key={datum.id} onClick={() => HandleView (datum.id)} style={{cursor:"pointer"}}>
-                    <div  className={styles.maincontfour}>
-                    <div className={styles.contimg}>
-                      <div className={styles.imgcont}>
-                        <Image src={datum.pic} alt='fade-img' className={styles.img} />
-                      </div>
-                      <div className={styles.textcont}>
-                        <p className={styles.label}>{datum.label}</p>
-                        <div className={styles.location}>
-                        
-                          <div className={styles.locatecont}>
-                          <div className={styles.locont}>
-                          <Image src={datum.location} alt='location-img' className={styles.locationimg} />
-
-                          </div>
-                          </div>
-                      
-                          <div className={styles.citycont}>
-                          <p>{datum.textone}</p>
-                          </div>
-                        
-                        
-                        </div>
-                        <p>{datum.textwo}</p>
-                        <div className={styles.avacont}>
-                          <p className={styles.textava}>{datum.texthree}</p>
-                          <p className={styles.price}>{datum.price}</p>
-                        </div>
-                        <div className={styles.upload}>
-                        <p>{datum.icon}</p>
-                          <p>{datum.textfive}</p>
-                          
-                        </div>
-                        <div className={styles.roomdiv}>
-                        <div className={styles.bedcontainer}>
-                          
-                          <div className={styles.bedcont}>
-                            <Image src={datum.imageOne} alt='bed-img' className={styles.bedimg} />
-                          </div>
-                          <p>{datum.textFour}</p>
-                        </div>
-                        <div className={styles.bedcontainer}>
-                      
-                        <div className={styles.bedcont}>
-                            <Image src={datum.imageTwo} alt='bed-img' className={styles.bedimg} />
-                          </div>
-                          <p>{datum.textFive}</p>
-                        </div>
-                        <div className={styles.bedcontainer}>
-                        
-                        <div className={styles.bedcont}>
-                            <Image src={datum.imageThree} alt='bed-img' className={styles.bedimg} />
-                          </div>
-                          <p>{datum.textsix}</p>
-                        </div>
-                          
-                        </div>
-                        <div>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-
-                    
-                    <div className={styles.lastcont}>
-                      <p>{datum.textSeven}</p>
-                    </div>
-                  </div>
-                     </div>
-
-
-                  ))
-                }
-                </div>
+          {paginatedDetails.map((datum) => (
+            <div key={datum.id} onClick={() => HandleView(datum.id)} style={{ cursor: 'pointer' }}>
+              {/* Your existing code for rendering property details */}
+            </div>
+          ))}
         </div>
- 
-        <Numb />
-       
 
+        <div className={styles.subfive}>
+          <p>Page {currentPage}</p>
+          {details.length > ITEMS_PER_PAGE && (
+            <div className={styles.paginationButtons}>
+              
+              <div className={styles.iconcont}>
+            <MdOutlineKeyboardDoubleArrowLeft
+            onClick={() => setCurrentPage((prevPage) => Math.max(prevPage - 1, 1))}
+            disabled={currentPage === 1}
+             className={styles.icons} />
+          </div>
+              {Array.from({ length: Math.ceil(details.length / ITEMS_PER_PAGE) }, (_, index) => index + 1).map(
+                (pageNumber) => (
+                  <button
+                    key={pageNumber}
+                    onClick={() => setCurrentPage(pageNumber)}
+                    className={pageNumber === currentPage ? styles.activePage : ''}
+                  >
+                    {pageNumber}
+                  </button>
+                )
+              )}
+               <div className={styles.iconcont}>
+            <MdOutlineKeyboardDoubleArrowRight
+            onClick={() => setCurrentPage((prevPage) => Math.min(prevPage + 1, Math.ceil(details.length / ITEMS_PER_PAGE)))}
+            disabled={currentPage === Math.ceil(details.length / ITEMS_PER_PAGE)}
+             className={styles.icons}  />
+          </div>
+            
+            </div>
+          )}
+        </div>
+      
+        
+      </div>
+     
     </Fragment>
   )
 }
