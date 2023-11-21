@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Navbar from '@/Components/Navbar/navbar'
+import Loading from '../Components/loading'; 
 import Header from '../Components/Header/pages'
 import SectionOne from '../Components/SectionOne/page'
 import Footer from '@/Components/Footer/footer'
@@ -19,25 +21,51 @@ import LayoutContainer from "../../src/Components/util/layout"
 
 
 
-export default function Home() {
+const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate an API call or data fetching
+    const fetchData = async () => {
+      // Your actual data fetching logic goes here
+      // For demonstration purposes, let's use a timeout
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <main>
-      <Header />
-      {/* <Navbar /> */}
-      <SectionOne />
-      <SectionTwo />
-      <Services />
-      <SectionThree />
-      <AboutUs />
-      <Career />
-      < Testimonies  />
-      <Blog />
-      <Message />
-      <Contact />
-      <Footer />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+        <Header />
+          {/* <Navbar /> */}
+          <SectionOne />
+          <SectionTwo />
+          <Services />
+          <SectionThree />
+          <AboutUs />
+          <Career />
+          <Testimonies />
+          <Blog />
+          <Message />
+          <Contact />
+          <Footer />
+        </>
+        // <LayoutContainer>
+          
+        // </LayoutContainer>
+      )}
     </main>
-  )
-}
+  );
+};
+
+export default Home;
 
 
 // Home.Container = LayoutContainer
