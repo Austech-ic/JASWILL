@@ -243,6 +243,16 @@ const Property = () => {
     <Fragment>
       <CustomFilter />
       <div className={styles.main}>
+      <div className={styles.subone}>
+                <Link href={`/`} className={styles.link}>
+                    <p>Home</p>
+                </Link>
+                <RxSlash />
+                <Link href={`/properties`} className={styles.link}>
+                    <p>Property for sale in Abuja</p>
+                </Link>
+               
+            </div>
       {paginatedDetails.map((datum) => (
   <div key={datum.id} onClick={() => HandleView(datum.id)} style={{ cursor: 'pointer' }} className={styles.propertyItem}>
     <div className={styles.maincontfour}>
