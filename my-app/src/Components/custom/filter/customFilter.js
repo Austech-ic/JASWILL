@@ -1,11 +1,40 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { BiCart } from 'react-icons/bi'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import {IoIosLocate} from 'react-icons/io'
 import styles from '../filter/css/custom.module.css'
+import Future from '../../Future/future'
 
 const customFilter = () => {
+  const [showFuture, setShowFuture] = useState(false);
+  const [saleOption, setSaleOption] = useState('Sale'); 
+  const [rentOption, setRentOption] = useState('Rent'); // New state for sale option
+  const [shortOption, setShortOption] = useState('Short Let'); // New state for sale option
+
+  const handleOpenFuture = () => {
+    setShowFuture(true);
+  };
+
+  const handleCloseFuture = () => {
+    setShowFuture(false);
+  };
+
+  const handleSaleClick = () => {
+    setSaleOption('Coming Soon');
+    handleOpenFuture(); // Show the "Coming Soon" modal
+  };
+
+  const handleRentClick = () => {
+    setRentOption('Coming Soon');
+    handleOpenFuture(); // Show the "Coming Soon" modal
+  };
+  const handleShortClick = () => {
+    setShortOption('Coming Soon');
+    handleOpenFuture(); // Show the "Coming Soon" modal
+  };
+
+
   return (
     <Fragment>
           <div className={styles.mains}>
@@ -14,10 +43,14 @@ const customFilter = () => {
 
             </div>
             <div className={styles.contwos}>
-                <p className={styles.texts}>Sale</p>
-                <p className={styles.texts}>Rent</p>
-                <p className={styles.texts}>Short let</p>
+                
+              <p onClick={handleSaleClick}>{saleOption}</p>
+                <p onClick={handleRentClick} className={styles.texts}>{rentOption}</p>
+                <p onClick={handleShortClick} className={styles.texts}>{shortOption}</p>
             </div>
+            <div>
+        
+      </div>
            
         </div>
     </div>
@@ -60,7 +93,9 @@ const customFilter = () => {
        </div>
       </div>
     </div>
+    {/* <Future show={showFuture} handleClose={handleCloseFuture} /> */}
     </Fragment>
+    
   )
 }
 
