@@ -6,7 +6,7 @@ import {IoIosLocate} from 'react-icons/io'
 import styles from '../filter/css/custom.module.css'
 import Future from '../../Future/future'
 
-const customFilter = () => {
+const CustomFilter = () => {
   const [showFuture, setShowFuture] = useState(false);
   const [saleOption, setSaleOption] = useState('Sale'); 
   const [rentOption, setRentOption] = useState('Rent'); // New state for sale option
@@ -99,4 +99,4 @@ const customFilter = () => {
   )
 }
 
-export default customFilter
+export default CustomFilter
