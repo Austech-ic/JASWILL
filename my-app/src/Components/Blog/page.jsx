@@ -10,6 +10,7 @@ import {FcLike} from 'react-icons/fc'
 import { BiComment, BiHeart } from 'react-icons/bi'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import Blogreview from '../Blog/Blogreview/page'
+import { IoMdSend } from "react-icons/io";
 
 const Page = () => {
   
@@ -24,7 +25,7 @@ const Page = () => {
       iconClicked: false, // Initial clicked state,
       starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStarFill className={styles.icon} />,
+      icontwo:<BsStar className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
     },
     {
@@ -37,7 +38,7 @@ const Page = () => {
       iconClicked: false, // Initial clicked state,
       starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStarFill className={styles.icon} />,
+      icontwo:<BsStar className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
     },
     {
@@ -50,7 +51,7 @@ const Page = () => {
       iconClicked: false, // Initial clicked state,
       starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStarFill className={styles.icon} />,
+      icontwo:<BsStar className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
     },
     {
@@ -63,7 +64,7 @@ const Page = () => {
       iconClicked: false, // Initial clicked state,
       starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStarFill className={styles.icon} />,
+      icontwo:<BsStar className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
     },
     {
@@ -76,7 +77,7 @@ const Page = () => {
       iconClicked: false, // Initial clicked state,
       starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStarFill className={styles.icon} />,
+      icontwo:<BsStar className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
     },
     {
@@ -89,10 +90,13 @@ const Page = () => {
       iconClicked: false, // Initial clicked state,
       starClicked: false,
       iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStarFill className={styles.icon} />,
+      icontwo:<BsStar className={styles.icon} />,
       iconthree:<FaComment className={styles.icon} />
     },
   ])
+
+  const [newComment, setNewComment] = useState('');
+  const [activeCommentId, setActiveCommentId] = useState(null);
 
   const handleHeartClick = (item) => {
     // Create a new copy of the details array
@@ -107,9 +111,50 @@ const Page = () => {
       updatedDetails[index].textwo++;
     }
 
+    
+
     updatedDetails[index].iconClicked = !updatedDetails[index].iconClicked;
     setDetails(updatedDetails);
   };
+
+  const handleStarClick = (item) => {
+    const updatedDetails = [...details];
+    const index = updatedDetails.findIndex((detail) => detail.id === item.id);
+  
+    if (updatedDetails[index].starClicked) {
+      updatedDetails[index].icontwo = <BsStar className={styles.icon} />;
+    } else {
+      updatedDetails[index].icontwo = <BsStarFill color='yellow' className={`${styles.icon} ${styles.yellow}`} />;
+    }
+  
+    updatedDetails[index].starClicked = !updatedDetails[index].starClicked;
+  
+    setDetails(updatedDetails);
+  };
+
+  const handleCommentClick = (itemId) => {
+    setActiveCommentId(itemId === activeCommentId ? null : itemId);
+  };
+
+  const handleCommentChange = (event) => {
+    setNewComment(event.target.value);
+  };
+
+  const handleCommentSubmit = (item) => {
+    const updatedDetails = [...details];
+    const index = updatedDetails.findIndex((detail) => detail.id === item.id);
+
+    // Add the new comment to the comments array
+    updatedDetails[index].comments = updatedDetails[index].comments || [];
+    updatedDetails[index].comments.push(newComment);
+
+    // Clear the input field after submitting the comment
+    setNewComment('');
+
+    setDetails(updatedDetails);
+    setActiveCommentId(null); // Close the input field after submitting the comment
+  };
+  
 
 
   return (
@@ -131,12 +176,28 @@ const Page = () => {
                 <p>{item.iconone}</p>
                 <p className={styles.num}>{item.textwo}</p>
               </div>
-              <div className={styles.one}>
+
+              <div className={styles.one} onClick={() => handleCommentClick(item.id)}>
                 <p>{item.iconthree}</p>
-                <p className={styles.num}>{item.texthree}</p>
+                <p className={styles.num}>{item.comments ? item.comments.length : 0}</p>
               </div>
+
             </div>
-            <div>
+            {activeCommentId === item.id && (
+              <div className={styles.comment}>
+                <input
+                  type="text"
+                  value={newComment}
+                  onChange={handleCommentChange}
+                  placeholder="Type your comment..."
+                 className={styles.input}
+
+                />
+                 <IoMdSend color='red'  onClick={() => handleCommentSubmit(item)}/>
+               
+              </div>
+            )}
+            <div className={styles.one} onClick={() => handleStarClick(item)}>
             {/* <p>{item.icontwo}</p> */}
               <p>{item.icontwo}</p>
             </div>

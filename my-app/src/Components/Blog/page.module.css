@@ -75,7 +75,24 @@
     gap: 5px;
     align-items: center;
 }
-
+.yellow {
+    color: yellow;
+  }
+  .comment{
+    color: black;
+    border: 1px solid gray;
+   
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .input{
+    outline: none;
+  }
+  
 
 @media (min-width:768px) {
     .label{
@@ -133,7 +150,17 @@
         width: 20px;
         height: 20px;
     }
-
+    .comment{
+        color: black;
+        border: 1px solid gray;
+       
+        font-size:0.9rem;
+        line-height: 1rem;
+        padding: 5px 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+      }
 }
 @media (min-width:1024px) {
     .main{
@@ -186,6 +213,11 @@
         font-size: 0.8rem;
         line-height: 1.5rem;
     }
+    .comment{
+        
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
 }
 @media (min-width:1280px) {
     .main{
