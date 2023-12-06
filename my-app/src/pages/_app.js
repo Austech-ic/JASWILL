@@ -1,36 +1,20 @@
 import '@/styles/globals.css'
 import React from 'react'
+import MainLayout from '../Components/Layouts/MainLayout/MainLayout'
+import AdminLayout from '@/Components/Layouts/AdminLayout/AdminLayout';
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
-  const title = "JASWILL_WEB";
-  if (Component.Container) {
-    return(
-      <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <Component.Container>
-        <Component {...pageProps} />
-      </Component.Container>
-      </>
-    )
-  }
+  const isAdminPage = Component.name.startsWith('Admin');
+
+  const Layout = isAdminPage ? AdminLayout : MainLayout;
+
 
 
 return (
-  <div>
-    <React.Fragment>
-      <Head>
-      <link rel="icon" sizes="192x192" href="/public/img/brand/bg.png" />
-          <link rel="icon" type="image/png" href="/public/img/brand/bg.png" />
-          <link rel="icon" sizes="128x128" href="/public/img/brand/bg.png" />
-        
-        <title>{title}</title>
-      </Head>
-        <Component {...pageProps} />
-    </React.Fragment>
-  </div>
+  <Layout>
+  <Component {...pageProps} />
+</Layout>
 )
 }
 

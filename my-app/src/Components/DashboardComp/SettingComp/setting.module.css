@@ -1,0 +1,390 @@
+.main{
+    padding: 30px 30px 60px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #F2F4FE;
+    color: #08156F;
+  }
+  .home{
+    background-color: white;
+   display: flex;
+        justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+     border-radius: 5px;
+      font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .divcont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .divconts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .label{
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .input{
+    border: 1px solid #08156F;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+  .inputs{
+    border: 1px solid #08156F;
+    border-radius: 10px;
+    padding: 6px;
+    outline: none;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    width: 100%;
+  }
+  .contput{
+    background-color: #F2F4FE;
+    color: #08156F;
+    border: 1px solid #08156F;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .subcont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subconts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+  .contone{
+    
+      font-size: 0.8rem;
+    line-height: 1rem;
+    color: #08156F;
+    padding: 10px;
+    font-weight: lighter;
+  }
+  .contwo{
+    background-color: white;
+    border-radius: 10px;
+      font-size: 0.8rem;
+    line-height: 1rem;
+    color: #08156F;
+    padding: 20px;
+  }
+  .contones{
+  padding: 0;
+  font-weight: lighter;
+}
+  .contwo{
+    /* background-color: white; */
+    border-radius: 10px;
+      font-size: 0.8rem;
+    line-height: 1rem;
+    color: #08156F;
+    /* padding: 20px; */
+  }
+  .labels{
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+  }
+  .upload{
+    border: 1px dotted #08156F;
+    padding:10px 30px;
+    text-align: center;
+  }
+  .radio{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #08156F;
+  }
+  .radiocont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.7rem;
+    line-height: 2rem;
+  }
+  .buttoncont{
+    background-color: #08156F;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding:10px 0;
+    border-radius: 10px;
+    
+  }
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    line-height: 1rem;   
+  }
+ 
+
+
+
+  
+  @media (min-width:768px) {
+    .main{
+    padding: 30px 50px 100px 50px;
+  }
+    .home{
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+     font-size: 1.1rem;
+    line-height: 1rem;
+    padding: 20px;
+    
+  }
+  .label{
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .input{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .subcont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .subconts{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    /* padding: 20px 0; */
+  }
+  .contone{
+    color: #08156F;
+    padding: 10px;
+    flex: 1.5;
+    font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+  }
+  .contones{
+    color: #08156F;
+    padding: 10px;
+    flex: 1.5;
+    font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+  }
+ 
+.labels{
+  font-size: 1.3rem;
+  line-height: 3.5rem;
+  font-weight: bold;
+}
+  .contwo{
+    background-color: white;
+    border-radius: 10px;
+      font-size: 0.8rem;
+    line-height: 1rem;
+    color: #08156F;
+    padding: 30px;
+    flex: 2;
+    
+  }
+  .contwos{
+    /*  */
+      font-size: 0.8rem;
+    line-height: 1rem;
+    color: #08156F;
+    flex: 2.3;
+  }
+  .divconts{
+    display: flex;
+    /* flex-direction: row;
+    align-items: center; */
+    gap: 10px;
+    padding: 10px 0;
+    /* background-color: red; */
+    
+  }
+  .upload{
+    border: 1px dotted #08156F;
+    padding:30px 30px;
+    text-align: center;
+  }
+  .radiocont{
+    font-size: 1.3rem;
+    line-height: 2rem;
+
+  }
+  .inputs{
+    padding: 10px;
+    outline: none;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    width: 100%;
+  }
+  .contput{
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .button{
+    font-size: 1.3rem;
+    line-height: 2rem; 
+  }
+  }
+  
+  
+  
+  @media (min-width:1024px) {
+    .main{
+      padding: 30px 30px 100px 30px;
+    }
+    .home{
+      width: 50%;
+       font-size: 0.8rem;
+      line-height: 1rem;
+      padding: 10px;
+       justify-content: flex-start;
+    }
+    .label{
+        font-size: 0.9rem;
+        line-height: 1rem;
+      }
+      .input{
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
+      .divcont{
+        gap: 15px;
+        
+      }
+      .contwo{
+        color: #08156F;
+        padding: 40px;
+      }
+      .contwos{
+        color: #08156F;
+        flex: 2.4;
+        /* padding: 40px; */
+      }
+      .subcont{
+        padding: 40px 0;
+      }
+      .subconts{
+        /* padding: 40px 0; */
+      }
+      .contone{
+        
+        font-size: 0.8rem;
+      line-height: 1.3rem;
+      font-weight: lighter;
+      }
+     
+    .labels{
+      font-size: 1.0rem;
+      line-height: 3rem;
+      font-weight: bold;
+    }
+    .radiocont{
+        font-size: 0.8rem;
+        line-height: 2rem;
+      }
+      .inputs{
+        padding: 8px;
+        outline: none;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        width: 100%;
+      }
+      .contput{
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .button{
+        font-size: 0.8rem;
+    line-height: 1rem;
+      }
+  }
+  
+  
+  @media (min-width:1280px) {
+    .main{
+      padding: 30px 70px 100px 70px;
+    }
+    .home{
+      width: 50%;
+      font-size: 1rem;
+      line-height: 1rem;
+      padding: 20px;
+      
+    }
+    .label{
+        font-size: 1.0rem;
+        line-height: 1rem;
+      }
+      .input{
+        font-size: 0.8rem;
+        line-height: 1rem;
+      }
+      .contwo{
+        color: #08156F;
+        padding: 50px;
+      }
+      .contone{
+        
+        font-size: 0.9rem;
+      line-height: 1.5rem;
+      font-weight: lighter;
+      }
+     
+    .labels{
+      font-size: 1.2rem;
+      line-height: 3.5rem;
+      font-weight: bold;
+    }
+    .radiocont{
+        font-size: 0.9rem;
+        line-height: 2rem;
+      }
+      .inputs{
+        padding: 8px;
+        outline: none;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        width: 100%;
+      }
+      .button{
+        font-size: 0.9rem;
+    line-height: 1.3rem;
+      }
+      
+  }

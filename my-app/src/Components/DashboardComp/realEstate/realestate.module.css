@@ -1,0 +1,407 @@
+.main{
+  padding: 30px 30px 70px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #F2F4FE;
+}
+.home{
+  background-color: white;
+ display: flex;
+      justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+   border-radius: 5px;
+    font-size: 0.8rem;
+  line-height: 1rem;
+}
+.subcont{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ 
+}
+.contone{
+  background-color: white;
+  border-radius: 10px;
+    font-size: 0.8rem;
+  line-height: 1rem;
+  color: #08156F;
+  padding: 10px;
+}
+.contwo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+padding: 10px 0
+}
+.divconts{
+  background-color: white;
+  border-radius: 10px;
+  font-size: 0.8rem;
+line-height: 1rem;
+color: #08156F;
+padding:20px 10px;
+display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.divcont{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+.label{
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.input{
+  border: 1px solid #08156F;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.textarea{
+  border: 1px solid #08156F;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  height: 15vh;
+  color: gray;
+}
+.textareas{
+  border: 1px solid #08156F;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  height: 25vh;
+  color: gray;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ background-color: #08156F;
+ color: white;
+ padding: 10px 20px;
+ border-radius: 10px; 
+ font-size: 0.7rem;
+ line-height: 1rem;
+}
+.buttoncont{
+  display: flex;
+  flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 0;
+
+}
+
+.buttonconts{
+  display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+ gap: 30px;
+ align-items: center;
+ padding: 10px 0;
+
+}
+.buttonone{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ background-color: #08156F;
+ color: white;
+ padding: 10px 15px;
+ border-radius: 10px; 
+ font-size: 0.7rem;
+ line-height: 1rem;
+}
+.buttontwo{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ background-color: #034333;
+ color: white;
+ padding: 10px 15px;
+ border-radius: 10px; 
+ font-size: 0.7rem;
+ line-height: 1rem;
+}
+.radiocont{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  
+}
+.twocont{
+  display: flex;
+  flex-direction: column;
+}
+.upload{
+  border: 1px dotted #08156F;
+  padding: 60px;
+  text-align: center;
+}
+.image{
+ width: fit-content;
+ height: auto;
+}
+
+
+@media (min-width:768px) {
+  .main{
+  padding: 30px 50px 100px 50px;
+}
+  .home{
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+   font-size: 1.1rem;
+  line-height: 1rem;
+  padding: 20px;
+  
+}
+.label{
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+.input, .textarea{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.button{
+ gap: 5px;
+ background-color: #08156F;
+ color: white;
+ padding: 15px 30px;
+ border-radius: 10px; 
+ font-size: 1.2rem;
+ line-height: 1rem;
+}
+.buttoncont{
+ padding: 20px 0;
+
+}
+.buttonconts{
+  padding: 20px 0;
+ 
+ }
+.buttonone{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ background-color: #08156F;
+ color: white;
+ padding: 15px 20px;
+ border-radius: 10px; 
+ font-size: 1.2rem;
+ line-height: 1rem;
+}
+.buttontwo{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ background-color: #034333;
+ color: white;
+ padding: 15px 20px;
+ font-size: 1.2rem;
+ line-height: 1rem;
+}
+.contwo{
+  padding: 20px 0;
+}
+.contone{
+  padding: 20px;
+}
+.divconts{
+  padding:30px 10px;
+  /* background-color: #08156F; */
+}
+.radiocont{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  
+}
+.twocont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+
+}
+
+
+
+
+@media (min-width:1024px) {
+.main{
+  padding: 30px 30px 100px 30px;
+}
+.home{
+  width: 50%;
+   font-size: 0.8rem;
+  line-height: 1rem;
+  padding: 10px;
+   justify-content: flex-start;
+}
+.subcont{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.label{
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.input, .textarea{
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.divcont{
+  gap: 15px;
+  
+}
+.divconts{
+  font-size: 0.8rem;
+line-height: 1rem;
+color: #08156F;
+padding:15px  10px;
+height: 20vh;
+/* background-color: blueviolet; */
+
+}
+
+.contone{
+  padding: 20px;
+  flex: 2;
+}
+.button{ 
+ font-size: 0.8rem;
+ line-height: 1rem;
+}
+.contwo{
+  flex: 1.5;
+  padding: 0;
+}
+.buttonconts{
+  display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+ gap: 20px;
+ align-items: center;
+ padding: 10px 0;
+
+}
+.buttonone{
+ padding: 10px 15px;
+ border-radius: 10px; 
+ font-size: 0.8rem;
+ line-height: 1rem;
+}
+.buttontwo{
+ padding: 10px 15px;
+ font-size: 0.8rem;
+ line-height: 1rem;
+}
+.divconts{
+  
+height: 18vh;
+}
+.radiocont{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  
+}
+
+
+
+
+
+}
+
+@media (min-width:1280px) {
+.main{
+  padding: 30px 70px 100px 70px;
+}
+.home{
+  width: 50%;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 20px;
+  
+}
+.label{
+  font-size: 1.0rem;
+  line-height: 1rem;
+}
+.input, .textarea{
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+.button{ 
+  font-size: 0.9rem;
+  line-height: 1rem;
+ }
+ .contone{
+  flex: 2.5;
+}
+.contwo{
+  flex: 1.5;
+}
+.buttonone{
+  padding: 10px 15px;
+  border-radius: 10px; 
+  font-size: 0.9rem;
+  line-height: 1rem;
+ }
+ .buttontwo{
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  line-height: 1rem;
+ }
+ .divconts{
+  font-size: 0.8rem;
+line-height: 1rem;
+color: #08156F;
+padding:20px  10px;
+height: 15vh;
+}
+.radiocont{
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  
+}
+}

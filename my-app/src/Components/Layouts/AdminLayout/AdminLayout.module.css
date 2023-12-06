@@ -1,0 +1,163 @@
+.maincont {
+    min-width: 100vw;
+    display: flex;
+    /* border: 1px solid red; */
+    flex-direction: column;
+    transition: all 0.9s ease;
+    background-color: #08156F;
+    color: #000000;
+  }
+  
+  .subcont{
+     /* border-bottom: 1px solid red; */
+      display: flex;
+      flex-direction: row;
+      margin-top: 40px;
+      /* max-height: 80vh; /* */
+  }
+  .subcontone{
+    display: none;
+  flex: 1;
+  background-color: #0B113C;
+  /* min-height: 100vh; */
+  }
+  .subcontwo {
+    width: 100%; 
+    background-color:#F2F4FF;
+    /* min-height: 100vh; */
+  }
+  
+  .menu{
+    display: block;
+    padding: 10px 0;
+  
+  }
+  .menuOpen.maincont{
+    height: 70vh;
+  }
+  .menuOpen.subcont {
+    max-height: 80vh; 
+  }
+  .menuOpen .subcontone {
+    width: 100%;
+    display: block;
+   /* background-color: yellow; */
+  }
+  .menuOpen .subcontwo {
+    width: 0; 
+    overflow: hidden;
+   
+  }
+  .button{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #F2F4FF;
+    color: #0B113e;
+    border-radius: 3px;
+    gap: 10px;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .mapmaincont{
+    background-color: red;
+  }
+  .cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container{
+    border: 1px solid gray;
+  }
+  .subcontone{
+    /* background-color: green; */
+    /* height: 20vh; */
+  }
+  .icon{
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  
+  @media (min-width:768px) {
+    .menuOpen .subcontone {
+      width: 100%;
+      display: block;
+    }
+    .menuOpen .subcontwo {
+      width: 0; 
+      overflow: hidden;
+     
+    }
+    .icon{
+      width: 30px;
+      height: 30px;
+    }
+    .button{
+      font-size: 1.3rem;
+      line-height: 1rem;
+    }
+    .subcont{
+      margin-top: 50px;
+    }
+    .menuOpen.maincont{
+      height: 50vh;
+    }
+    .menuOpen.subcont {
+      max-height: 50vh; 
+    }
+  
+    
+  }
+  
+  
+  @media (min-width:1024px) {
+    .maincont{
+     min-height: 200vh;
+    }
+    .subcontone{
+      display: block;
+    flex: 1;
+    /* border-right:  0.5px solid gray; */
+    /* height: 100vh; */
+    /* background-color: red; */
+    }
+    
+    .menuOpen.maincont{
+      height: 0;
+    }
+    .menuOpen.subcont {
+      max-height: 100vh; 
+    }
+    
+    
+    
+    .menu{
+      display: none;
+  }
+  .subcontwo{
+    flex: 3;
+    /* border: 1px solid gray; */
+    /* background-color: blue; */
+    /* min-height: 100vh; */
+    }
+    .subcont{
+      margin-top: 30px;
+      min-height: 100vh;
+     
+    }
+  
+  }
+  
+  
+  
+  @media (min-width:1280px) {
+    .subcontone{
+    flex: 0.92;
+   
+    
+    
+    }
+  }

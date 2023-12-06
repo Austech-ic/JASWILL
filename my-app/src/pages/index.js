@@ -21,6 +21,7 @@ import LayoutContainer from "../../src/Components/util/layout"
 
 
 
+
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
@@ -38,7 +39,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main>
+    <main className=' overflow-x-auto'>
       {loading ? (
         <Loading />
       ) : (

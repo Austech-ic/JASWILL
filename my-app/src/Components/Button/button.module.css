@@ -1,0 +1,62 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+.subcont{
+    background-color: #0A1564;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+} 
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    gap: 10px;
+   
+}
+.icon{
+    color: white;
+}
+
+@media (min-width:768px) {
+    .button{
+        font-size: 1.3rem;
+        line-height: 2rem;
+        gap: 10px;
+       
+    }
+}
+
+@media (min-width:1024px) {
+  
+    .subcont{
+        padding: 10px;
+        border-radius: 5px;
+        width: 15%;
+    } 
+    .button{
+        font-size: 0.8rem;
+        line-height: 1rem;
+        gap: 10px;
+    }
+}
+
+
+@media (min-width:1280px) {
+    .button{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        gap: 10px;
+    } 
+}
