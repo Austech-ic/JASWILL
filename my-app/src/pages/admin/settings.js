@@ -7,6 +7,7 @@ const Page = () => {
   return (
     <AdminLayout>
    <Setting />
+   {/* <p>add</p> */}
     </AdminLayout>
   )
 }
