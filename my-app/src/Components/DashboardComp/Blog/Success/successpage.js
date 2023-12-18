@@ -10,7 +10,7 @@ const Successpage = () => {
   const router = useRouter();
   const { id, title, description, image } = router.query;
 
-
+ 
   return (
     <div className={styles.main}>
       <Button />

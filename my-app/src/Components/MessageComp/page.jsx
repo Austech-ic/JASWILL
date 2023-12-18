@@ -47,8 +47,9 @@ const Page = () => {
     <div className={styles.main}>
         <div>
             <Image src={back} alt='back-img' className={styles.img}/>
+            <div className={styles.center}>
             <p className={styles.text}>Get in Touch</p>
-            <form onSubmit={handleWhatsAppSubmit}>
+            <form className={styles.headcont} onSubmit={handleWhatsAppSubmit}>
                 <div className={styles.cont}>
                 <label htmlFor="" className={styles.label}>Name</label>
                 <input type="text"
@@ -89,6 +90,7 @@ const Page = () => {
                 </div>
                 </div>
             </form>
+            </div>
         </div>
     </div>
   )

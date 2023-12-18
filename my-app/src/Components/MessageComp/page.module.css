@@ -1,11 +1,13 @@
 .main{
     padding: 30px;
+    /* background-color: red; */
 }
 .cont{
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 10px 0;
+    /* background-color: red; */
 }
 .label{
     width: 100%;
@@ -15,6 +17,7 @@
 .input{
     border: 1px solid gray;
     outline: none;
+    width: 100%;
     border-radius: 5px;
     height: 5vh;
      font-size: 0.8rem;
@@ -22,11 +25,13 @@
     padding: 10px ;
 }
 .text{
-    padding: 20px 0;
+    padding: 30px 0 0px 0;
     font-weight: 600;
     font-size: 1.1rem;
     line-height: 1rem;
+    text-align: center;
 }
+
 .conts{
 background-color: green;
 color: white;
@@ -48,7 +53,11 @@ line-height: 1rem;
     
     padding: 20px 0;
 }
-
+/* .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
 
 
 @media (min-width:768px) {
@@ -75,7 +84,7 @@ line-height: 1rem;
     padding: 20px ;
 }
 .text{
-    padding: 40px 0;
+    padding: 60px 0 0 0;
     font-weight: 600;
     font-size: 2rem;
     line-height: 2rem;
@@ -117,7 +126,7 @@ line-height: 1rem;
 .label{
     font-size: 0.9rem;
     line-height: 2rem;
-    width: 50%;
+    width: 100%;
 }
 .input{
     border: 1px solid gray;
@@ -127,11 +136,11 @@ line-height: 1rem;
      font-size: 0.8rem;
     line-height: 1rem;
     padding: 10px ;
-      width: 50%;
+      width: 100%;
     
 }
 .text{
-    padding: 20px 0;
+    padding: 60px 0 10px 0; 
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.7rem;
@@ -139,7 +148,7 @@ line-height: 1rem;
 
 .conts{
 
-width: 28%;
+width: 50%;
 padding: 10px;
 border-radius: 5px;
 display: flex;
@@ -152,6 +161,9 @@ line-height: 1rem;
 .icon{
     width: 30px;
     height: 30px;
+}
+.center{
+    padding: 30px 120px;
 }
 
 }
@@ -181,16 +193,26 @@ line-height: 1rem;
      font-size: 1rem;
     line-height: 1rem;
     padding: 10px ;
-      width: 50%;
+      width: 100%;
     
 }
 .label{
     font-size: 1.2rem;
     line-height: 2rem;
+    width: 100%;
     
 }
 .contbutton{
     
     padding: 40px 0;
+}
+.center{
+    padding: 30px 300px;
+}
+.conts{
+    width: 50%;
+}
+.text{
+    padding:50px 0 20px 0;
 }
 }
