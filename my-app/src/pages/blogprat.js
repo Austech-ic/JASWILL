@@ -1,7 +1,7 @@
 
 import React, {useEffect} from 'react'
 
-const blogprat = () => {
+const Blogprat = () => {
     useEffect(() => {
 
     },)
@@ -10,4 +10,4 @@ const blogprat = () => {
   )
 }
 
-export default blogprat
+export default Blogprat

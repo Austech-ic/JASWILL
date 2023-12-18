@@ -199,7 +199,7 @@ const Login = () => {
               </div>
 
               <div className={styles.last}>
-                <p className={styles.acc}>Don't have an account?</p>
+                <p className={styles.acc}>Dont have an account?</p>
                 <Link href={`/signup`} className={styles.link}>
                   <p className={styles.sign}>Sign up</p>
                 </Link>
