@@ -110,6 +110,12 @@ background-image: url(../../../public/house.png);
     flex-direction: row;
     gap: 20px;
 }
+.buttons{
+    background-color: #800000;
+    color: white;
+    padding: 5px 40px;
+    border-radius: 50px;
+}
 }
 
 
