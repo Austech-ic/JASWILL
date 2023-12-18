@@ -31,14 +31,36 @@ const Login = () => {
 
   const [errors, setErrors] = useState({
     email: 'Enter correct Email',
-    password: 'Password should include at least 6 characters',
+    password: 'Password should be at least 6 characters',
   });
   
 
   const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    // Clear the specific error message based on the input field
+    let error = '';
+    switch (name) {
+      case 'email':
+        error = /^\S+@\S+$/.test(value) ? '' : 'Enter a valid email';
+        break;
+      case 'password':
+        error = value.length >= 6 ? '' : 'Password should be at least 6 characters';
+        break;
+      default:
+        break;
+    }
+
+    // Update the specific error state
+    setErrors({
+      ...errors,
+      [name]: error,
+    });
+
+    // Update the form data
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -50,7 +72,7 @@ const Login = () => {
     // Validation logic
     const emailError = /^\S+@\S+$/.test(formData.email) ? '' : 'Enter Correct email';
     const passwordError =
-      formData.password.length >= 6 ? '' : 'Password should include at least 6 characters';
+      formData.password.length >= 6 ? '' : 'Password should be at least 6 characters';
   
     setErrors({
       email: emailError,
@@ -136,7 +158,7 @@ const Login = () => {
                   onChange={handleInputChange}
                   placeholder="Email"
                 />
-                {errors.email && <p className="text-red-500">{errors.email}</p>}
+                {errors.email && <p className=" text-red-500 text-xs md:text-lg lg:text-sm xl:text-base mt-1 md:mt-2">{errors.email}</p>}
               </div>
 
               <div className={styles.div}>
@@ -151,10 +173,10 @@ const Login = () => {
                     onChange={handleInputChange}
                   />
                   <div className={styles.eye} onClick={togglePasswordVisibility}>
-                    {showPassword ? <BsFillEyeSlashFill size={15} /> : <BsFillEyeFill size={15} />}
+                    {showPassword ? <BsFillEyeFill className={styles.icon} /> : <BsFillEyeSlashFill className={styles.icon} />}
                   </div>
                 </div>
-                {errors.password && <p className="text-red-500">{errors.password}</p>}
+                {errors.password && <p className=" text-red-500 text-xs md:text-lg lg:text-sm xl:text-base mt-1 md:mt-2">{errors.password}</p>}
               </div>
 
               <div className={styles.rem}>
@@ -182,7 +204,7 @@ const Login = () => {
       isSubmitButtonDisabled
         ? 'bg-blue cursor-not-allowed'
         : 'bg-maroon text-white'
-    }  disabled:bg-gray-300 px-4 py-2 rounded`}
+    }  disabled:bg-gray-300 px-4 py-[6px] md:py-[10px] lg:py-[5px] xl:py-[8px] rounded-xl text-sm md:text-xl lg:text-lg xl:text-xl`}
     type="submit"
     disabled={isSubmitButtonDisabled}
     onClick={handleSubmit}
@@ -193,10 +215,10 @@ const Login = () => {
 
 
 
-              <div className={styles.authcont}>
+              {/* <div className={styles.authcont}>
                 <FcGoogle />
                 <p className={styles.up}>Login with Google</p>
-              </div>
+              </div> */}
 
               <div className={styles.last}>
                 <p className={styles.acc}>Dont have an account?</p>

@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
     
 }
 .head{
@@ -26,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 /* .subcontainer:hover {
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
@@ -55,14 +56,15 @@
     justify-content:flex-start;
     align-items: center;
     gap: 50px;
-    height: 4vh;
+    /* background-color: red; */
+    height: 5vh;
 }
 .input {
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
     border: 1px solid #000080;
-    padding: 7px 5px;
+    padding: 7px 10px;
     background-color: transparent;
     margin-top: 5px;
     font-size:0.7rem;
@@ -70,8 +72,8 @@
     color: black;
 }
 .input:focus-visible{
-    background-color: #f0c3c3;
-    padding: 7px 5px;
+    background-color: rgb(232, 226, 226);
+    padding: 7px 10px;
     border-radius: 10px;
     color: gray;
     border: none;
@@ -81,7 +83,7 @@
     border-radius: 10px;
     outline: none;
     border: 1px solid #000080;
-    padding: 7px 5px;
+    padding: 7px 10px;
     background-color: transparent;
     margin-top: 5px;
     font-size:0.7rem;
@@ -90,14 +92,14 @@
     align-items: center;
     color: black;
 }
-.inputs:focus-within{
-    background-color: #f0c3c3;
-    padding: 7px 5px;
+.inputs:focus-visible{
+    background-color:yellow;
+    padding: 7px 10px;
     border-radius: 10px;
     color: gray;
-    
     border: none;
 }
+
 .classinput{
     width: 90%;
     border: none;
@@ -116,7 +118,8 @@
     width: 100%;
     border-radius: 10px;
     color: white;
-    font-size: small;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     padding: 5px 5px;
 }
 
@@ -139,6 +142,8 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-size: 0.7rem;
+    line-height: 1rem;
 }
 .acc{
     color: gray; 
@@ -155,7 +160,8 @@
 }
 .first{
     font-weight: bold;
-    font-size: medium;
+    font-size: 1rem;
+    line-height: 1rem;
     text-align: center;
     padding: 5px 0;
     color: black;
@@ -164,10 +170,11 @@
 }
 .second{
     color: gray; 
-    font-size: small;
+    font-size: 0.7rem;
     text-align: center;
     margin-top: -10px;
     padding: 10px 0;
+    line-height: 1rem;
 }
 .label{
     font-size: small;
@@ -181,6 +188,11 @@
 .eye{
     color: #000080;
 }
+.icon{
+    width: 12px;
+    height: 12px;
+}
+
 
 
 
@@ -237,7 +249,7 @@
     align-items: center;
     gap: 50px;
     /* background-color: red; */
-    height: 4vh;
+    /* height: 6vh; */
     /* background-color: red; */
     margin-top: -10px;
 }
@@ -245,15 +257,13 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
     padding: 12px 10px;
-    background-color: transparent;
     margin-top: 5px;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 .input:focus-within{
-    background-color: #f0c3c3;
+    /* background-color: #f0c3c3; */
     padding: 12px 10px;
     border-radius: 10px;
     color: gray;
@@ -267,9 +277,9 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
     padding: 12px 10px;
-    background-color: transparent;
+    font-size: 1.4rem;
+    line-height: 2rem;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -278,18 +288,19 @@
     width: 90%;
     border: none;
     outline: none;
-    font-size: large;
+     font-size: 1.4rem;
+    line-height: 2rem;
     background-color: transparent;
+    
 }
 .button{
     /* background-color: #000080; */
     border: none;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     color: white;
-    font-weight: bolder;
-    font-size: larger;
-
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     padding: 10px 5px;
 }
 .authcont{
@@ -315,31 +326,40 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .acc{
     color: gray; 
-    font-size: large;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .sign{
    color: #000080; 
-   font-size: large;
+   font-size: 1.3rem;
+   line-height: 2rem;
 }
 .first{
-    font-weight: bold;
-    font-size: x-large;
+    font-size: 1.7rem;
+    line-height: 2rem;
     text-align: center;
 }
 .second{
     color: gray; 
     font-size: large;
     text-align: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .label{
     font-size:1.2rem;
     line-height: 2rem;
     font-weight: 500;
 }
-
+.icon{
+    width: 20px;
+    height: 20px;
+}
 
  }
 
@@ -409,7 +429,7 @@
     align-items: center;
     gap: 50px;
     /* background-color: red; */
-    height: 4vh;
+    /* height: 6vh; */
     /* background-color: red; */
     /* margin-top: -10px; */
 }
@@ -417,13 +437,12 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
+   
     padding: 12px 10px;
-    background-color: transparent;
+    
     margin-top: 5px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1rem;
-    color: black;
 }
 .input:focus-within{
     padding: 12px 5px;
@@ -435,21 +454,19 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
     padding: 12px 10px;
-    background-color: transparent;
     margin-top: 5px;
     display: flex;
     align-items: center;
     color: black;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1rem;
 }
 .classinput{
     width: 90%;
     border: none;
     outline: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1rem;
     background-color: transparent;
 }
@@ -459,9 +476,9 @@
     width: 100%;
     /* height: 4vh; */
     border-radius: 10px;
-    font-weight: bold;
     color: white;
-    font-size: large;
+    font-size: 1rem;
+    line-height: 1.5rem;
     padding: 8px 5px;
 }
 .authcont{
@@ -496,8 +513,8 @@
    font-size: medium;
 }
 .first{
-    font-weight: bold;
-    font-size: x-large;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     text-align: center;
 }
 .second{
@@ -509,6 +526,10 @@
 .label{
     font-size: medium;
     font-weight: 500;
+}
+.icon{
+    width: 15px;
+    height: 15px;
 }
 
  }
@@ -564,7 +585,7 @@
         align-items: center;
         gap: 50px;
         /* background-color: red; */
-        height: 4vh;
+        /* height: 4vh; */
         /* background-color: red; */
         margin-top: -10px;
     }
@@ -576,8 +597,8 @@
         padding: 12px 10px;
         background-color: transparent;
         margin-top: 5px;
-        
-        font-size: large;
+        font-size: 1rem;
+        line-height: 1rem;
     }
     .inputs {
         /* height: 3vh; */
@@ -588,13 +609,15 @@
         background-color: transparent;
         margin-top: 5px;
         display: flex;
+        font-size: 1rem;
+    line-height: 1rem;
         align-items: center;
     }
     .classinput{
         width: 90%;
         border: none;
         outline: none;
-        font-size: 0.9rem;
+        font-size: 1rem;
     line-height: 1rem;
         background-color: transparent;
     }
@@ -604,9 +627,9 @@
         width: 100%;
         /* height: 4vh; */
         border-radius: 10px;
-        font-weight: bold;
         color: white;
-        font-size: large;
+        font-size: 1.2rem;
+    line-height: 1.5rem;
         padding: 10px 5px;
         margin-top: -5px;
     }
@@ -626,9 +649,8 @@
        font-size: medium;
     }
     .first{
-        font-weight: bolder;
-        font-size: x-large;
-        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.3rem;
     }
     .second{
         color: gray; 
@@ -652,6 +674,11 @@
         gap: 10px;
     
     }
+    .icon{
+        width: 18px;
+        height: 18px;
+    }
+    
     
      }
 

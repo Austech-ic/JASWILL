@@ -41,6 +41,7 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
+    /* background-color: red; */
 }
 .subrem{
     display: flex;
@@ -61,7 +62,7 @@
     border-radius: 10px;
     outline: none;
     border: 1px solid #000080;
-    padding: 7px 5px;
+    padding: 7px 10px;
     background-color: transparent;
     margin-top: 5px;
     font-size:0.7rem;
@@ -69,18 +70,19 @@
     color: black;
 }
 .input:focus-visible{
-    background-color: #f0c3c3;
-    padding: 7px 5px;
+    background-color: rgb(232, 226, 226);
+    padding: 7px 10px;
     border-radius: 10px;
-    color: gray;
+    color: black;
     border: none;
 }
+
 .inputs{
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
     border: 1px solid #000080;
-    padding: 7px 5px;
+    padding: 7px 10px;
     background-color: transparent;
     margin-top: 5px;
     font-size:0.7rem;
@@ -90,10 +92,10 @@
     color: black;
 }
 .inputs:focus-within{
-    background-color: #f0c3c3;
-    padding: 7px 5px;
+    background-color: rgb(232, 226, 226);
+    padding: 7px 10px;
     border-radius: 10px;
-    color: gray;
+    color: black;
     
     border: none;
 }
@@ -116,7 +118,8 @@
     /* height: 4vh; */
     border-radius: 10px;
     color: white;
-    font-size: small;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
     padding: 5px 5px;
     /* margin-top: -5px; */
 }
@@ -152,14 +155,15 @@
 }
 .first{
     font-weight: bold;
-    font-size: medium;
+    font-size: 1rem;
+    line-height: 1.3rem;
     text-align: center;
     padding: 2px 0;
     color: black;
 }
 .second{
     color: gray; 
-    font-size: x-small;
+    font-size: 0.7rem;
     text-align: center;
 }
 .label{
@@ -176,6 +180,10 @@
     font-weight: bolder;
     font-size: x-small;
     color: black;
+}
+.icon{
+    width: 12px;
+    height: 12px;
 }
 
 
@@ -197,7 +205,7 @@
     /* background-color: antiquewhite; */
     border-radius: 20px;
     width: 70%;
-    /* height: 80vh; */
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,8 +226,7 @@
 .div{
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    
+    gap: 8px;
 }
 .subrem{
     display: flex;
@@ -245,19 +252,19 @@
     padding: 12px 10px;
     background-color: transparent;
     margin-top: 5px;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 .input:focus-within{
-    background-color: #f0c3c3;
-    padding: 12px 10px;
+    /* background-color: #f0c3c3; */
+    padding: 15px 10px;
     border-radius: 10px;
-    color: gray;
+    /* color: gray; */
     
     border: none;
 }
 .inputs:focus-within{
-    padding: 12px 10px;
+    padding: 15px 10px;
 }
 .inputs {
     /* height: 3vh; */
@@ -269,12 +276,15 @@
     margin-top: 5px;
     display: flex;
     align-items: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 .classinput{
     width: 90%;
     border: none;
     outline: none;
-    font-size: large;
+    font-size: 1.4rem;
+    line-height: 2rem;
     background-color: transparent;
 }
 .button{
@@ -312,30 +322,40 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .acc{
     color: gray; 
-    font-size: large;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .sign{
    color: #000080; 
-   font-size: large;
+   font-size: 1.3rem;
+    line-height: 2rem;
 }
 .first{
-    font-weight: bold;
-    font-size: x-large;
-    text-align: center;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
 }
 .second{
     color: gray; 
     font-size: medium;
     text-align: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 .label{
-    font-size:1.2rem;
+    font-size:1.5rem;
     line-height: 2rem;
     font-weight: 500;
 }
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
 
 
  }
@@ -416,15 +436,15 @@
     padding: 12px 10px;
     background-color: transparent;
     margin-top: 5px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1rem;
     color: black;
 }
 .input:focus-within{
-    padding: 12px 5px;
+    padding: 12px 10px;
 }
 .inputs:focus-within{
-    padding: 12px 5px;
+    padding: 12px 10px;
 }
 .inputs {
     /* height: 3vh; */
@@ -437,14 +457,15 @@
     display: flex;
     align-items: center;
     color: black;
-    font-size: 0.9rem;
-    line-height: 1rem;
+    font-size: 0.8rem;
+    line-height: 2rem;
 }
 .classinput{
     width: 90%;
     border: none;
     outline: none;
-    font-size: large;
+    font-size: 0.8rem;
+    line-height: 1rem;
     background-color: transparent;
 }
 .button{
@@ -488,9 +509,8 @@
    font-size: small;
 }
 .first{
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
 }
 .second{
     color: gray; 
@@ -507,6 +527,10 @@
 }
 .authcont{
     font-weight: 500;
+}
+.icon{
+    width: 15px;
+    height: 15px;
 }
 
  }
@@ -570,27 +594,37 @@
         border-radius: 10px;
         outline: none;
         border: 1px solid #000080;
-        padding: 12px 5px;
+        padding: 12px 10px;
         background-color: transparent;
         margin-top: 5px;
-        font-size: large;
+        font-size: 1rem;
+        line-height: 1rem;
     }
     .inputs {
         /* height: 3vh; */
         border-radius: 10px;
         outline: none;
         border: 1px solid #000080;
-        padding: 12px 5px;
+        padding: 12px 10px;
         background-color: transparent;
         margin-top: 5px;
         display: flex;
         align-items: center;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .input:focus-within{
+        padding: 12px 10px;
+    }
+    .inputs:focus-within{
+        padding: 12px 10px;
     }
     .classinput{
         width: 90%;
         border: none;
         outline: none;
-        font-size: large;
+        font-size: 1rem;
+        line-height: 1rem;
         background-color: transparent;
     }
     .button{
@@ -634,9 +668,8 @@
        font-size: medium;
     }
     .first{
-        font-weight: bold;
-        font-size: x-large;
-        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
     }
     .second{
         color: gray; 
@@ -646,6 +679,10 @@
     .label{
         font-size: medium;
         font-weight: 500;
+    }
+    .icon{
+        width: 18px;
+        height: 18px;
     }
     
      }

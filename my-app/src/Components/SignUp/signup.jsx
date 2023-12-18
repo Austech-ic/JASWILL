@@ -37,13 +37,41 @@ const SignUpcomp = () => {
     username: 'Username is required',
     email: 'Email is required',
     phoneNumber: "Phone Number is required",
-    password: 'Password should include at least 6 characters',
+    password: 'Password should be at least 6 characters',
   });
 
   const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    // Clear the specific error message based on the input field
+    let error = '';
+    switch (name) {
+      case 'username':
+        error = /^[a-zA-Z0-9_]{3,20}$/.test(value) ? '' : 'Username is invalid';
+        break;
+      case 'email':
+        error = /^\S+@\S+$/.test(value) ? '' : 'Enter a valid email';
+        break;
+      case 'phoneNumber':
+        error = value.length >= 11 ? '' : 'Phone number should include at least 11 characters';
+        break;
+      case 'password':
+        error = value.length >= 6 ? '' : 'Password should be at least 6 characters';
+        break;
+      default:
+        break;
+    }
+
+    // Update the specific error state
+    setErrors({
+      ...errors,
+      [name]: error,
+    });
+
+    // Update the form data
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -64,7 +92,7 @@ const SignUpcomp = () => {
     const phoneNumberError =
       formData.phoneNumber.length >= 11 ? '' : 'Phone number should include at least 11 characters';
     const passwordError =
-      formData.password.length >= 6 ? '' : 'Password should include at least 6 characters';
+      formData.password.length >= 6 ? '' : 'Password should be least 6 characters';
 
 
     setErrors({
@@ -156,7 +184,7 @@ const SignUpcomp = () => {
                   value={formData.username}
                   onChange={handleInputChange}
                 />
-                {errors.username && <p className="text-red-500">{errors.username}</p>}
+                {errors.username && <p className=" text-red-500 text-xs md:text-lg lg:text-sm xl:text-base mt-1 md:mt-2">{errors.username}</p>}
               </div>
 
               <div className={styles.div}>
@@ -169,7 +197,7 @@ const SignUpcomp = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                 />
-                {errors.email && <p className="text-red-500">{errors.email}</p>}
+                {errors.email && <p className=" text-red-500 text-xs md:text-lg lg:text-sm xl:text-base mt-1 md:mt-2">{errors.email}</p>}
               </div>
 
               <div className={styles.div}>
@@ -182,7 +210,7 @@ const SignUpcomp = () => {
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
                 />
-                {errors.phoneNumber && <p className="text-red-500">{errors.phoneNumber}</p>}
+                {errors.phoneNumber && <p className=" text-red-500 text-xs md:text-lg lg:text-sm xl:text-base mt-1 md:mt-2">{errors.phoneNumber}</p>}
               </div>
 
               <div className={styles.div}>
@@ -197,10 +225,10 @@ const SignUpcomp = () => {
                     onChange={handleInputChange}
                   />
                   <div className={styles.eye} onClick={togglePasswordVisibility}>
-                    {showPassword ? <BsFillEyeSlashFill size={15} /> : <BsFillEyeFill size={15} />}
+                    {showPassword ? <BsFillEyeFill className={styles.icon} /> : <BsFillEyeSlashFill className={styles.icon} />}
                   </div>
                 </div>
-                {errors.password && <p className="text-red-500">{errors.password}</p>}
+                {errors.password && <p className=" text-red-500 text-xs md:text-lg lg:text-sm xl:text-base mt-1 md:mt-2">{errors.password}</p>}
               </div>
 
               <div className={styles.rem}>
@@ -215,10 +243,10 @@ const SignUpcomp = () => {
                 <button className={styles.button} onClick={handleSubmit}>Sign up</button>
               </div>
 
-              <div className={styles.authcont}>
+              {/* <div className={styles.authcont}>
                 <FcGoogle />
                 <p className={styles.up}>Sign up with google</p>
-              </div>
+              </div> */}
 
               <div className={styles.last}>
                 <p className={styles.acc}>Already have an account?</p>
