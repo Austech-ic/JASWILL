@@ -140,7 +140,7 @@ const Login = () => {
 
   return (
     <section className={styles.head}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles.container}>
         <div className={styles.subcontainer}>
           <div className={styles.cont}>

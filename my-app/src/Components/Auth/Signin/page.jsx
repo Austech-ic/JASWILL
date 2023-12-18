@@ -11,7 +11,7 @@ const page = () => {
       {/* <Header />
       <Navbar /> */}
       <Login />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
