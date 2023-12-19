@@ -73,11 +73,11 @@ const Successpage = () => {
     //   </div>
 
     // </div>
-<div className='bg-white py-[50px]'>
+<div className='bg-white px-[30px] py-[50px]'>
   <table className='table-auto w-full'>
-    <thead className='bg-red-400 mb-[4rem] '>
-      <tr>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+    <thead className='h-[10vh] '>
+      <tr className='py-[70px]'>
+        <th className='w-[0.5]'> {/* Adjust the width as needed */}
           <input type="checkbox" />
         </th>
         <th className='w-1/5'> {/* Adjust the width as needed */}
@@ -88,6 +88,9 @@ const Successpage = () => {
         </th>
         <th className='w-1/5'> {/* Adjust the width as needed */}
           <p className='text-center'>Name</p>
+        </th>
+        <th className='w-1/5'> {/* Adjust the width as needed */}
+          <p className='text-center'>Author</p>
         </th>
         <th className='w-1/5'> {/* Adjust the width as needed */}
           <p className='text-center'>Operation</p>
@@ -110,6 +113,9 @@ const Successpage = () => {
         </td>
         <td className='text-center'>
           <p>Lugbe House</p>
+        </td>
+        <td className='text-center'>
+          <p>Admin</p>
         </td>
         <td className='text-center mx-auto'>
   {/* Assuming you're using React Icons for the delete icon */}
