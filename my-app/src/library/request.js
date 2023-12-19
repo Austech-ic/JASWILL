@@ -1,13 +1,27 @@
 import axios from "axios";
 
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL
+axios.defaults.baseURL = "https://jaswillrealestate.onrender.com/api/"
 
 
 
-export const createBlogPost = async (payload) => {
-    const response = await axios.post("Blog/CreateBlog",payload)
+
+export const createBlogPost = async (url,payload) => {
+    
+    const response = await axios.post(url,payload, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        }} )
     return response.data
-    console.log(process.env.NEXT_PUBLIC_BASE_URL)
+
+    // console.log(process.env.NEXT_PUBLIC_BASE_URL)
+}
+
+export const getRequest = async(url)=>{
+return await axios.get(url).data
+}
+
+export const postRequest = async (url, payload)=>{
+    return await axios.post(url, payload).data
 }
 
 

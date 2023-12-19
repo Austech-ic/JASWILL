@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './blog.module.css';
 import { HiHome } from 'react-icons/hi';
 import Button from '../../Button/button';
+import Success from './Success/successpage'
 import Modal from '../../Modal/modal';
 
 const Blog = () => {
@@ -25,6 +26,8 @@ const Blog = () => {
       <div>
         <Modal show={showModal} handleClose={handleCloseModal}/>
       </div>
+      <Success />
+      
     </div>
   );
 };

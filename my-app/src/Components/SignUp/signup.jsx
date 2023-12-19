@@ -87,7 +87,7 @@ const SignUpcomp = () => {
     e.preventDefault();
 
     // Validation logic
-    const usernameError = /^[a-zA-Z0-9_]{3,20}$/.test(formData.username) ? '' : '';
+    const usernameError = /^[a-zA-Z0-9_]{3,20}$/.test(formData.username) ? '' : 'Enter Your Username';
     const emailError = /^\S+@\S+$/.test(formData.email) ? '' : 'Enter Correct email';
     const phoneNumberError =
       formData.phoneNumber.length >= 11 ? '' : 'Phone number should include at least 11 characters';

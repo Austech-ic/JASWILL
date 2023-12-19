@@ -5,6 +5,9 @@ import { useRouter } from 'next/router';
 import { v4 as uuidv4 } from 'uuid';
 import Image from 'next/image';
 import { createBlogPost } from '@/library/request';
+import { postRequest } from '@/library/request'
+import { useToast } from '@chakra-ui/react';
+import axios from "axios"
 
 
 
@@ -12,10 +15,13 @@ const Modal = ({ handleClose, show, children }) => {
   
   const [idCounter, setIdCounter] = useState(1);
 
+
   const router = useRouter()
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
 
-  const [imageUrl, setImageUrl] = useState(null);
+  const [ImageUrl, setImageUrl] = useState(null);
+  const [image, setImage] = useState(null);
+
 
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -38,11 +44,12 @@ const Modal = ({ handleClose, show, children }) => {
   
    const handleImageUpload = (e) => {
     const file = e.target.files?.[0];
-    console.log(file)
+    setImageUrl (file)
+
     if(file) {
       const reader = new FileReader();
       reader.onloadend =() => {
-        setImageUrl(reader.result);
+        setImage(reader.result);
 
       };
       reader.readAsDataURL(file);
@@ -53,49 +60,55 @@ const Modal = ({ handleClose, show, children }) => {
    }
 
 
+
   const handleSave = (e) => {
     // Check if the form data is empty
     e.preventDefault();
     // if (!formData.title || !formData.contentName || !imageUrl) {
-    if (!formData.title ||  !imageUrl) {
+    if (!formData.title ||  !ImageUrl) {
       setErrorMessage('Please fill in all fields and upload an image.');
       return;
     }
     setErrorMessage('');
 
-    // const reader = new FileReader();
-    // reader.onload = () => {
-    //   const id = idCounter; // Use the current counter value as the ID
-    //   setIdCounter((prevCounter) => prevCounter + 1); // Increment the counter for the next ID
-
-    //   router.push({
-    //     pathname: '/admin/dashboard/success',
-    //     query: { ...formData, image: reader.result, id },
-    //   });
-    // };
-    // reader.readAsDataURL(formData.image);
-   const payload = {
-    title:formData.title,
-    imageUrl,
     
-   }
+  const formValues = new FormData();
+  formValues.append('ImageUrl', ImageUrl);
+  formValues.append('Title', formData.title);
 
-   co
+    try {
+    createBlogPost("Blog/CreateBlog",formValues).then((response) => {
+      toast({
+        title: 'Blog Created Successful',
+        description: 'You a blog.',
+        status: 'success',
+        position: 'top',
+        duration: 5000,
+        isClosable: true,
+      });
+      router.push('/success');
+    }).catch((error) => console.log(error));
 
-console.log(payload)
-createBlogPost(payload).then((data)=>console.log(data)).catch((err)=>console.log(err))
+      // Handle success
+    } catch (error) {
+      // Handle error
+      console.error('Upload failed!', error);
+    }
+
+   
+// postReq/uest("Blog/CreateBlog", payload).then((data)=>console.log(data)).catch((err)=>console.log(err))
   };
 
 
   const showMediaInGallery = () => {
     // Show the selected image inside the div when the "Choose File" label is clicked
-    if (imageUrl) {
+    if (ImageUrl) {
       return (
         <div className="mt-3">
           <Image
             width={50}
             height={50}
-            src={imageUrl || ""}
+            src={image || ""}
             alt="Selected Thumbnail"
             className={styles.image}
           />
