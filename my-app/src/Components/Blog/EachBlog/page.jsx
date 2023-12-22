@@ -5,7 +5,7 @@ import styles from './page.module.css'
 import { getRequest } from '@/library/request'
 import Image from 'next/image'
 
-const page = () => {
+const Page = () => {
     const [blog, setBlog] = useState([]);
     useEffect(() => {
         getRequest("Blog/GetBlog/${id}").then((data) => setBlog(data.data.data)).catch((err) => console.log(err))
@@ -42,4 +42,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -120,7 +120,7 @@ getRequest("Blog/GetAllBlogsAsync").then((data)=> setBlog(data.data.data)).catch
     </thead>
     <tbody >
     {blog.map((item) => (
-  <tr className='h-[10vh]'>
+  <tr key={item.id} className='h-[10vh]'>
   <td className='text-center'>
     <p>{item.id}</p>
   </td>
