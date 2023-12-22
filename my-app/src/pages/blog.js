@@ -1,12 +1,15 @@
 
 import React, {useEffect} from 'react'
+import EachBlog from '../Components/Blog/EachBlog/page'
 
 const Blogprat = () => {
     useEffect(() => {
 
     },)
   return (
-    <div>blogprat</div>
+    <div>
+      <EachBlog />
+    </div>
   )
 }
 

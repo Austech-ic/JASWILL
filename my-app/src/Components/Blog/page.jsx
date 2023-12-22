@@ -1,97 +1,101 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../Header/pages'
 import Navbar from '../Navbar/navbar'
 import Footer from '../Footer/footer'
 import styles from './page.module.css'
 import blog from '../../../public/blog.png'
-import {AiOutlineHeart,AiTwotoneHeart,AiFillStar,AiOutlineStar} from 'react-icons/ai'
-import {FaComment} from 'react-icons/fa'
-import {FcLike} from 'react-icons/fc'
+import { AiOutlineHeart, AiTwotoneHeart, AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { FaComment } from 'react-icons/fa'
+import { FcLike } from 'react-icons/fc'
 import { BiComment, BiHeart } from 'react-icons/bi'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import Blogreview from '../Blog/Blogreview/page'
 import { IoMdSend } from "react-icons/io";
+import { getRequest } from '@/library/request'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Page = () => {
-  
+  const [blog, setBlog] = useState([]);
+
   const [details, setDetails] = useState([
     {
-      id:1,
-      backimage:blog,
-      text:"Partnering with Engineers for Innovation & Development",
-      textone:"May 6, 2022 ",
-      textwo:"1",
-      texthree:"2",
+      id: 1,
+      backimage: blog,
+      text: "Partnering with Engineers for Innovation & Development",
+      textone: "May 6, 2022 ",
+      textwo: "1",
+      texthree: "2",
       iconClicked: false, // Initial clicked state,
       starClicked: false,
-      iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStar className={styles.icon} />,
-      iconthree:<FaComment className={styles.icon} />
+      iconone: <AiOutlineHeart className={styles.icon} />,
+      icontwo: <BsStar className={styles.icon} />,
+      iconthree: <FaComment className={styles.icon} />
     },
     {
-      id:2,
-      backimage:blog,
-      text:"Partnering with Engineers for Innovation & Development",
-      textone:"May 6, 2022 ",
-      textwo:"5",
-      texthree:"2",
+      id: 2,
+      backimage: blog,
+      text: "Partnering with Engineers for Innovation & Development",
+      textone: "May 6, 2022 ",
+      textwo: "5",
+      texthree: "2",
       iconClicked: false, // Initial clicked state,
       starClicked: false,
-      iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStar className={styles.icon} />,
-      iconthree:<FaComment className={styles.icon} />
+      iconone: <AiOutlineHeart className={styles.icon} />,
+      icontwo: <BsStar className={styles.icon} />,
+      iconthree: <FaComment className={styles.icon} />
     },
     {
-      id:3,
-      backimage:blog,
-      text:"Partnering with Engineers for Innovation & Development",
-      textone:"May 6, 2022 ",
-      textwo:"10",
-      texthree:"2",
+      id: 3,
+      backimage: blog,
+      text: "Partnering with Engineers for Innovation & Development",
+      textone: "May 6, 2022 ",
+      textwo: "10",
+      texthree: "2",
       iconClicked: false, // Initial clicked state,
       starClicked: false,
-      iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStar className={styles.icon} />,
-      iconthree:<FaComment className={styles.icon} />
+      iconone: <AiOutlineHeart className={styles.icon} />,
+      icontwo: <BsStar className={styles.icon} />,
+      iconthree: <FaComment className={styles.icon} />
     },
     {
-      id:4,
-      backimage:blog,
-      text:"Partnering with Engineers for Innovation & Development",
-      textone:"May 6, 2022 ",
-      textwo:"12",
-      texthree:"2",
+      id: 4,
+      backimage: blog,
+      text: "Partnering with Engineers for Innovation & Development",
+      textone: "May 6, 2022 ",
+      textwo: "12",
+      texthree: "2",
       iconClicked: false, // Initial clicked state,
       starClicked: false,
-      iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStar className={styles.icon} />,
-      iconthree:<FaComment className={styles.icon} />
+      iconone: <AiOutlineHeart className={styles.icon} />,
+      icontwo: <BsStar className={styles.icon} />,
+      iconthree: <FaComment className={styles.icon} />
     },
     {
-      id:5,
-      backimage:blog,
-      text:"Partnering with Engineers for Innovation & Development",
-      textone:"May 6, 2022 ",
-      textwo:"5",
-      texthree:"2",
+      id: 5,
+      backimage: blog,
+      text: "Partnering with Engineers for Innovation & Development",
+      textone: "May 6, 2022 ",
+      textwo: "5",
+      texthree: "2",
       iconClicked: false, // Initial clicked state,
       starClicked: false,
-      iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStar className={styles.icon} />,
-      iconthree:<FaComment className={styles.icon} />
+      iconone: <AiOutlineHeart className={styles.icon} />,
+      icontwo: <BsStar className={styles.icon} />,
+      iconthree: <FaComment className={styles.icon} />
     },
     {
-      id:6,
-      backimage:blog,
-      text:"Partnering with Engineers for Innovation & Development",
-      textone:"May 6, 2022 ",
-      textwo:"12",
-      texthree:"2",
+      id: 6,
+      backimage: blog,
+      text: "Partnering with Engineers for Innovation & Development",
+      textone: "May 6, 2022 ",
+      textwo: "12",
+      texthree: "2",
       iconClicked: false, // Initial clicked state,
       starClicked: false,
-      iconone:<AiOutlineHeart className={styles.icon}/>,
-      icontwo:<BsStar className={styles.icon} />,
-      iconthree:<FaComment className={styles.icon} />
+      iconone: <AiOutlineHeart className={styles.icon} />,
+      icontwo: <BsStar className={styles.icon} />,
+      iconthree: <FaComment className={styles.icon} />
     },
   ])
 
@@ -111,7 +115,7 @@ const Page = () => {
       updatedDetails[index].textwo++;
     }
 
-    
+
 
     updatedDetails[index].iconClicked = !updatedDetails[index].iconClicked;
     setDetails(updatedDetails);
@@ -120,15 +124,15 @@ const Page = () => {
   const handleStarClick = (item) => {
     const updatedDetails = [...details];
     const index = updatedDetails.findIndex((detail) => detail.id === item.id);
-  
+
     if (updatedDetails[index].starClicked) {
       updatedDetails[index].icontwo = <BsStar className={styles.icon} />;
     } else {
       updatedDetails[index].icontwo = <BsStarFill color='yellow' className={`${styles.icon} ${styles.yellow}`} />;
     }
-  
+
     updatedDetails[index].starClicked = !updatedDetails[index].starClicked;
-  
+
     setDetails(updatedDetails);
   };
 
@@ -154,58 +158,51 @@ const Page = () => {
     setDetails(updatedDetails);
     setActiveCommentId(null); // Close the input field after submitting the comment
   };
-  
 
+  useEffect(() => {
+    getRequest("Blog/GetAllBlogsAsync").then((data) => setBlog(data.data.data.slice(0, 7))).catch((err) => console.log(err))
+  }, [])
+  console.log(blog)
+
+  function truncateDescription(description, maxLength) {
+    // Check if the description is longer than the maximum length
+    if (description.length > maxLength) {
+      // Truncate the description and add an ellipsis
+      return `${description.substring(0, maxLength)}...`;
+    } else {
+      // If the description is already shorter, return it as is
+      return description;
+    }
+  }
 
   return (
     <div className={styles.main} id='blogpost'>
-    <div className={styles.label}>
-      <p>Blog Post</p>
-    </div>
-    <div className={styles.cont}>
-      {details.map((item) => (
-        <div key={item.id} className={styles.subcont}>
-          <div className={styles.picont}>
-            <p>{item.pic}</p>
-            <p className={styles.text}>{item.text}</p>
-            <p className={styles.textone}>{item.textone}</p>
-          </div>
-          <div className={styles.subred}>
-            <div className={styles.icondiv}>
-              <div className={styles.one} onClick={() => handleHeartClick(item)}>
-                <p>{item.iconone}</p>
-                <p className={styles.num}>{item.textwo}</p>
-              </div>
+      <div className={styles.label}>
+        <p>Blog Post</p>
+      </div>
+      <div className={styles.cont}>
+        {blog.map((item) => (
+          <div key={item.id} className={styles.subcont}>
 
-              <div className={styles.one} onClick={() => handleCommentClick(item.id)}>
-                <p>{item.iconthree}</p>
-                <p className={styles.num}>{item.comments ? item.comments.length : 0}</p>
+            <div className={styles.blog}>
+              <div className={styles.textdiv}>
+                <p className={styles.text}>{item.title}</p>
+                <p className={styles.textone}>{truncateDescription(item.desccription, 200)}</p>
+                <p className={styles.textone}>{item.createdOn}</p>
+                <Link href={`/blog`}>
+                  <p className={styles.textsee}>see more</p>
+                  </Link>
+                
               </div>
-
+              <div className={styles.imgdiv}>
+                <Image src={item.imageUrl} width={500} height={500} alt="pic" />
+              </div>
             </div>
-            {activeCommentId === item.id && (
-              <div className={styles.comment}>
-                <input
-                  type="text"
-                  value={newComment}
-                  onChange={handleCommentChange}
-                  placeholder="Type your comment..."
-                 className={styles.input}
-
-                />
-                 <IoMdSend color='red'  onClick={() => handleCommentSubmit(item)}/>
-               
-              </div>
-            )}
-            <div className={styles.one} onClick={() => handleStarClick(item)}>
-            {/* <p>{item.icontwo}</p> */}
-              <p>{item.icontwo}</p>
-            </div>
+            
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
   )
 }
 

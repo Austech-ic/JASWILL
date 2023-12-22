@@ -56,7 +56,7 @@
 }
 .text{
     font-size: 1.3rem;
-    line-height: 1.5rem;
+    line-height: 1.3rem;
     font: bold;
     color: black;
 }
@@ -69,10 +69,6 @@
     font-size: 0.8rem;
     line-height: 1rem;
     padding: 10px 0;
-    color: #800000;
-}
-.textsee:hover{
-    text-decoration: underline;
 }
 .subred{
     border: 1px solid red;
@@ -159,7 +155,7 @@
     }
     .text{
         font-size: 2rem;
-        line-height: 2.8rem;
+        line-height: 2rem;
         font: bold;
     }
     .textone{

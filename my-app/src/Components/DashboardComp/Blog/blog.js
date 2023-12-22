@@ -8,6 +8,8 @@ import Modal from '../../Modal/modal';
 const Blog = () => {
   const [showModal, setShowModal] = useState(false);
 
+  const [counter, setCounter] = useState(1)
+
   const handleOpenModal = () => {
     setShowModal(true);
   };
@@ -24,9 +26,9 @@ const Blog = () => {
       </div>
       <Button onClick={handleOpenModal} />
       <div>
-        <Modal show={showModal} handleClose={handleCloseModal}/>
+        <Modal setCounter={setCounter} show={showModal} handleClose={handleCloseModal}/>
       </div>
-      <Success />
+      <Success counter={counter} />
       
     </div>
   );
