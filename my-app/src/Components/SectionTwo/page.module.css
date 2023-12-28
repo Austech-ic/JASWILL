@@ -35,6 +35,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    /* border: 1px solid red; */
+    color: white;
+     /* color: #800000; */
     background-repeat: no-repeat;
     background-size: cover;
     /* min-height: 50vh; */
@@ -71,6 +74,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 60vh;
+     /* color: #800000; */
 }
 .price{
     padding:30px 10px 10px 10px;
@@ -84,6 +88,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2rem;
+     /* color: #800000; */
 }
 .caption{
     padding:  0 10px;

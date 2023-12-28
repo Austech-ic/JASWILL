@@ -16,9 +16,12 @@ import Slider from 'react-slick'; // Import the Slider component
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { BsArrowLeft, BsArrowRight, BsDot } from 'react-icons/bs';
+import { getRequest } from '@/library/request'
+
+
 
 const Page = () => {
-   
+  const [property, setProperty] = useState([]);
 
     const defaultDetails = [
         {
@@ -129,6 +132,11 @@ const Page = () => {
     };
   }, []);
 
+  useEffect(() => {
+    getRequest("RealEstate/GetAllRealEstatesAsync").then((data) => setProperty(data.data.data.slice(0, 7))).catch((err) => console.log(err))
+  }, [])
+  console.log(property)
+
 
   const handleSlide = (direction) => {
     const newOffset = offset + (direction === 'left' ? -1 : 1);
@@ -137,6 +145,8 @@ const Page = () => {
     if (newOffset >= 0 && newOffset <= defaultDetails.length - visibleCards) {
       setOffset(newOffset);
     }
+
+   
   };
 
     return (
@@ -151,11 +161,16 @@ const Page = () => {
           <BsArrowLeft />
         </div>
         <div className={styles.cont}>
-          {defaultDetails.slice(offset, offset + visibleCards).map((datum) => (
-            <div key={datum.id} className={`${styles.subcont} ${styles[datum.backgroundImgClass]}`}>
-            
-            <p className={styles.bold}>{datum.label}</p>
-            <p className={styles.caption}>{datum.caption}</p>
+          {property.slice(offset, offset + visibleCards).map((datum) => (
+           <div
+           key={datum.id}
+           className={`${styles.subcont} ${styles[datum.backgroundImgClass]}`}
+           style={{ backgroundImage: `url(${datum.imageUrl})` }}
+         >
+            {/* <Image src={datum.imageUrl} alt='pic-img'  /> */}
+            <p className={styles.bold}>{datum.title}</p>
+            <p className={styles.caption}>{datum.type}</p>
+            <p className={styles.caption}>{datum.description}</p>
             {/* <hr /> */}
         
             <div className={styles.sub}>
