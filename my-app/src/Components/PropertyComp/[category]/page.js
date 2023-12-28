@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import styles from './page.module.css'
 import { RxSlash } from 'react-icons/rx'
 import Image from 'next/image'
@@ -10,12 +10,14 @@ import CustomFilter from '../../custom/filter/customFilter'
 import { items } from "./data"
 import { isNotFoundError } from 'next/dist/client/components/not-found'
 import { useRouter } from 'next/router';
-
+import { getRequest } from '@/library/request'
 
 
 
 
   const Category = ({ params }) => {
+
+    const [property, setProperty] = useState([]);
 
     const Description =[
         {
@@ -47,6 +49,9 @@ import { useRouter } from 'next/router';
             pic: Inside,
         }
     ]
+
+
+    
     return (
         <Fragment>
              <CustomFilter />

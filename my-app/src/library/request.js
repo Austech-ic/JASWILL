@@ -28,6 +28,14 @@ export const postRequest = async (url, payload)=>{
 export const deleteRequest = async(url)=>{
     return await axios.delete(url)
     }
+
+    export const createRealEstate = async (url,payload) => {
+        const response = await axios.post(url,payload, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            }} )
+        return response.data
+    }
   
 
 

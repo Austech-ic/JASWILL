@@ -183,23 +183,22 @@ const Page = () => {
       <div className={styles.cont}>
         {blog.map((item) => (
           <div key={item.id} className={styles.subcont}>
-
-            <div className={styles.blog}>
-              <div className={styles.textdiv}>
-                <p className={styles.text}>{item.title}</p>
-                <p className={styles.textone}>{truncateDescription(item.desccription, 200)}</p>
-                <p className={styles.textone}>{item.createdOn}</p>
-                <Link href={`/blog`}>
-                  <p className={styles.textsee}>see more</p>
-                  </Link>
-                
+          <Link href={`/blog/${item.id}`}>
+              <div className={styles.blog}>
+                <div className={styles.textdiv}>
+                  <p className={styles.text}>{item.title}</p>
+                  <p className={styles.textone}>{truncateDescription(item.desccription, 200)}</p>
+                  <p className={styles.textone}>{item.createdOn}</p>
+                  <p className={styles.textsee}>See more</p>
+                </div>
+                <div className={styles.imgdiv}>
+                  <Image src={item.imageUrl} width={500} height={500} alt="pic" />
+                </div>
               </div>
-              <div className={styles.imgdiv}>
-                <Image src={item.imageUrl} width={500} height={500} alt="pic" />
-              </div>
-            </div>
-            
+          </Link>
           </div>
+
+
         ))}
       </div>
     </div>

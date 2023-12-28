@@ -83,6 +83,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    padding: 40px 20px;
+    /* background-color: blue; */
     
 }
 .contfour{
@@ -96,12 +98,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    /* background-color: #800000; */
 }
 .location{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     /* background-color: aqua; */
+    font-size: 0.7rem;
+    line-height: 1rem;
+    gap: 5px;
 }
 .upload{
     display: flex;
@@ -112,37 +119,39 @@
     /* border: 1px solid red; */
    
 }
-.price{
-    font-weight: 400;
-}
+
 .roomdiv{
     display: flex;
     align-items: center;
+    gap: 10px;
     font-size: 0.6rem;
+    /* background-color: red; */
 }
-.avacont{
-    padding:5px 0
-}
-.textava{
-    font-size: 0.6rem;
-    line-height: 0.5rem;
+
+.textava, .price{
+    font-size: 0.7rem;
+    line-height: 1rem;
+    font-weight: 400;
 }
 .icons{
     width: 15px;
     height: 15px;
 }
 .locatecont{
-    flex: 1;
+    flex: 0.5;
     /* background-color: red; */
 }
 .locont{
     
-    width: 50%;
+    width: 100%;
     height: auto;
   
 }
 .citycont{
     flex: 9;
+    display: flex;
+    gap:2px;
+    
     /* background-color: rgb(112, 99, 99); */
 }
 .locationimg, .bedimg{
@@ -150,12 +159,19 @@
     height: auto;
 }
 .bedcont{
-    width: 20%;
+    width: 100%;
+    height: 3vh;
+    /* background-color: red; */
+}
+.room{
+    width: 50%;
+    /* background-color: red; */
 }
 .bedcontainer{
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
+    /* background-color: red; */
 }
 .lastcont{
     width: 100%;
@@ -219,6 +235,22 @@ padding: 5px;
     color:  #800000;
 }
 
+.label{
+
+    font-size: 0.8rem;
+    line-height: 1.rem;
+    font-weight: 600;
+    /* background-color: red; */
+}
+.labeltext{
+    font-size: 0.7rem;
+    line-height: 1.0rem;
+    font-weight: 400;
+}
+.icom{
+    width: 15px;
+    height: 15px;
+}
 @media (min-width:768px) {
     .main {
         padding: 60px 40px 60px 40px;
@@ -247,12 +279,33 @@ padding: 5px;
         width: 30px;
         height: 30px;
     }
+    .maincontfour{
+   
+    padding: 70px 20px;
+    /* background-color: blue; */
+    
+}
+.bedcont{
+    width: 100%;
+    height: 3vh;
+    /* background-color: red; */
+}
+.room{
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+}
     .label{
 
-        font-size: 1.2rem;
+        font-size:1.5rem;
         line-height: 1.5rem;
-        font-weight: 400;
+        font-weight: 600;
         /* background-color: red; */
+    }
+    .labeltext{
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+        font-weight: 400;
     }
     .textcont{
         font-size: 1.1rem;
@@ -262,8 +315,13 @@ padding: 5px;
         font-size: 1rem;
         line-height: 1.3rem;
     }
+    .textava, .price{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
     .avacont{
-        padding:10px 0
+        padding: 5px 0;
     }
     .price{
         font-size: 1.2rem;
@@ -277,6 +335,11 @@ padding: 5px;
         gap: 2px;
         /* border: 1px solid red; */
        
+    }
+    .location{
+        font-size: 1.3rem;
+        line-height: 2rem;
+        gap: 10px;
     }
     .icons{
         width: 25px;
@@ -295,7 +358,19 @@ padding: 5px;
         padding: 120px 0 0 0;
         gap: 20px;
     }
-   
+    .roomdiv{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        /* background-color: yellow; */
+        width: 100%;
+    }
+    .icom{
+        width: 35px;
+        height: 35px;
+    }
     
   
     
@@ -332,15 +407,21 @@ padding: 5px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 40px 20px;
        
        
     }
     .label{
 
-        font-size: 0.8rem;
-        line-height: 1.2rem;
+        font-size:1.2rem;
+        line-height: 1.5rem;
         font-weight: 400;
         /* background-color: red; */
+    }
+    .labeltext{
+        font-size: 0.9rem;
+        line-height: 1.0rem;
+        font-weight: 400;
     }
    
     .lastcont{
@@ -376,19 +457,25 @@ padding: 5px;
         display: flex;
         align-items: center;
         font-size: 0.7rem;
+        gap: 20px;
         /* background-color: yellow; */
         width: 100%;
+    }
+    .icom{
+        width: 20px;
+        height: 20px;
     }
     .contimg{
       flex: 1.5;
         /* border: 1px solid green; */
     }
     .avacont{
-        padding:5px 0
+        padding:0px 0
     }
-    .textava{
-        font-size: 0.6rem;
-        line-height: 0.5rem;
+    .textava, .price{
+        font-size: 0.7rem;
+        line-height: 1rem;
+        font-weight: 400;
     }
     .price{
         font-size: 0.8rem;
@@ -410,6 +497,16 @@ padding: 5px;
     .subfive{
         padding: 150px 0 0 0;
     }
+    .locationimg, .bedimg{
+        width: 50%;
+        height: auto;
+    }
+    .location{
+        font-size: 0.8rem;
+        line-height: 2rem;
+        gap: 0;
+    }
+   
    
    
 }
@@ -448,28 +545,27 @@ padding: 5px;
         width: 100%;
         /* gap: 10px; */
     }
-    .label{
-
+    .labeltext{
         font-size: 1rem;
         line-height: 1.5rem;
         font-weight: 400;
-        /* background-color: red; */
     }
-    .textava{
-        font-size: 0.7rem;
-        line-height: 0.9rem;
-    }
-    .price{
-        font-size: 1rem;
-        line-height: 1rem;
+    .textava, .price{
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        font-weight: 400;
     }
     .upload{
-        
         font-size: 0.8rem;
         /* line-height: 1rem; */
        
        
     }
+    .location{
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+   
     .icons{
         width: 20px;
         height: 20px;

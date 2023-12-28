@@ -5,12 +5,17 @@ import styles from './page.module.css'
 import { getRequest } from '@/library/request'
 import Image from 'next/image'
 
-const Page = () => {
+
+const Page = ({id}) => {
     const [blog, setBlog] = useState([]);
+    
     useEffect(() => {
-        getRequest("Blog/GetBlog/${id}").then((data) => setBlog(data.data.data)).catch((err) => console.log(err))
-      }, [])
-      console.log(blog)
+      getRequest(`Blog/GetBlog/${id}`)
+        .then((response) => setBlog(response.data.data))
+        .catch((error) => console.log(error));
+    }, [id]);
+  
+    console.log(blog);
 
   return (
      <div className={styles.main} id='blogpost'>

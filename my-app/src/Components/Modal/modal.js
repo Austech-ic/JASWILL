@@ -16,7 +16,10 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
 
   const [ImageUrl, setImageUrl] = useState(null);
   const [image, setImage] = useState(null);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [titleError, setTitleError] = useState('');
+  const [imageError, setImageError] = useState('');
+  const [descriptionError, setDescriptionError] = useState('');
+
 
   const [formData, setFormData] = useState({
     title: '',
@@ -48,11 +51,27 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
 
   const handleSave = (e) => {
     e.preventDefault();
+    setTitleError('');
+    setImageError('');
+    setDescriptionError('');
+      
+    if (!formData.title) {
+      setTitleError('Please enter a title.');
+    }
+
+    if (!ImageUrl) {
+      setImageError('Please upload an image.');
+    }
+
+    if (!formData.desccription) {
+      setDescriptionError('Please enter a description.');
+    }
+
+    // If any of the requirements is not met, return without saving
     if (!formData.title || !ImageUrl || !formData.desccription) {
-      setErrorMessage('Please fill in all fields and upload an image.');
       return;
     }
-    setErrorMessage('');
+    
 
     const formValues = new FormData();
     formValues.append('ImageUrl', ImageUrl);
@@ -102,7 +121,7 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
           <div className={styles.contone}>
             <div className={styles.divcont}>
               <label className={styles.label}>Title*</label>
-              {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
+              {titleError && <div className={styles.errorMessage}>{titleError}</div>}
               <input
                 placeholder='Title'
                 className={styles.input}
@@ -114,7 +133,7 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
 
             <div className={styles.divcont}>
               <label className={styles.label}>Comment/Description*</label>
-              {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
+              {descriptionError && <div className={styles.errorMessage}>{descriptionError}</div>}
               <textarea
                 rows="4"
                 cols="50"
@@ -136,7 +155,7 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
                   id="file-upload"
                 />
               </label>
-              {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
+              {imageError && <div className={styles.errorMessage}>{imageError}</div>}
             </div>
 
             <div className={styles.buttonconts}>

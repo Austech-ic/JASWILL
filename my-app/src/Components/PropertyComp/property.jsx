@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 import { AiOutlineSearch } from 'react-icons/ai'
 import { BiCart } from 'react-icons/bi'
@@ -21,11 +21,18 @@ import { RxSlash } from 'react-icons/rx'
 import CustomFilter from '../custom/filter/customFilter'
 import {useRouter} from "next/router";
 import Numb from '../Numb/page'
+import axios from 'axios';
+import { getRequest } from '@/library/request'
+import { PiBedBold } from "react-icons/pi";
+import { FaBath } from "react-icons/fa6";
+import { BiBath } from "react-icons/bi";
 
 
 
 
 const Property = () => {
+  const [property, setProperty] = useState([]);
+ 
   const router = useRouter();
 
   const ITEMS_PER_PAGE = 4;
@@ -38,6 +45,11 @@ const Property = () => {
 
     // router.push(`/properties/detailsId`)
   }
+
+  useEffect(() => {
+    getRequest("RealEstate/GetAllRealEstatesAsync").then((data) => setProperty(data.data.data.slice(0, 7))).catch((err) => console.log(err))
+  }, [])
+  console.log(property)
 
 
 
@@ -253,29 +265,32 @@ const Property = () => {
                 </Link>
                
             </div>
-      {paginatedDetails.map((datum) => (
+      {property.map((datum) => (
   <div key={datum.id} onClick={() => HandleView(datum.id)} style={{ cursor: 'pointer' }} className={styles.propertyItem}>
     <div className={styles.maincontfour}>
       <div className={styles.contimg}>
         <div className={styles.imgcont}>
-          <Image src={datum.pic} alt='fade-img' className={styles.img} />
+          <Image src={datum.imageUrl} width={100} height={100} alt='fade-img' className={styles.img} />
         </div>
         <div className={styles.textcont}>
-          <p className={styles.label}>{datum.label}</p>
+          <p className={styles.label}>{datum.title}</p>
+          <p className={styles.labeltext}>{datum.description}</p>
           <div className={styles.location}>
             <div className={styles.locatecont}>
               <div className={styles.locont}>
-                <Image src={datum.location} alt='location-img' className={styles.locationimg} />
+                <Image src={Location} alt='location-img' className={styles.locationimg} />
               </div>
             </div>
             <div className={styles.citycont}>
-              <p>{datum.textone}</p>
+              <p className=''>{datum.propertylocation}</p>
+              <p className=''>,</p>
+              <p>{datum.city}</p>
             </div>
           </div>
           <p>{datum.textwo}</p>
           <div className={styles.avacont}>
-            <p className={styles.textava}>{datum.texthree}</p>
-            <p className={styles.price}>{datum.price}</p>
+            <p className={styles.textava}>Availabe</p>
+            <p className={styles.price}>#50,000</p>
           </div>
           <div className={styles.upload}>
             <p>{datum.icon}</p>
@@ -283,29 +298,29 @@ const Property = () => {
           </div>
           <div className={styles.roomdiv}>
             <div className={styles.bedcontainer}>
-              <div className={styles.bedcont}>
-                <Image src={datum.imageOne} alt='bed-img' className={styles.bedimg} />
-              </div>
-              <p>{datum.textFour}</p>
+            <p>{datum.numberOfBedrooms}</p>
+             
+              <PiBedBold className={styles.icom} />
+            
             </div>
             <div className={styles.bedcontainer}>
-              <div className={styles.bedcont}>
-                <Image src={datum.imageTwo} alt='bed-img' className={styles.bedimg} />
-              </div>
-              <p>{datum.textFive}</p>
+            <p>{datum.numberOfBathrooms}</p>
+            <BiBath className={styles.icom} />
+              
             </div>
-            <div className={styles.bedcontainer}>
+            {/* <div className={styles.bedcontainer}>
+            <p>{datum.numberOfFloors}</p>
               <div className={styles.bedcont}>
-                <Image src={datum.imageThree} alt='bed-img' className={styles.bedimg} />
+                <Image src={toilet} alt='bed-img' className={styles.room} />
               </div>
-              <p>{datum.textsix}</p>
-            </div>
+             
+            </div> */}
           </div>
         </div>
       </div>
-      <div className={styles.lastcont}>
+      {/* <div className={styles.lastcont}>
         <p>{datum.textSeven}</p>
-      </div>
+      </div> */}
     </div>
   </div>
 ))}
