@@ -485,7 +485,7 @@ padding: 5px;
         display: flex;
         flex-direction: column;
         gap: 3px;
-        flex: 1;
+        flex: 2;
         font-size: 0.7rem;
         line-height: 1rem;
         /* background-color: red; */
@@ -498,7 +498,7 @@ padding: 5px;
         padding: 150px 0 0 0;
     }
     .locationimg, .bedimg{
-        width: 50%;
+        width: 40%;
         height: auto;
     }
     .location{
@@ -506,6 +506,10 @@ padding: 5px;
         line-height: 2rem;
         gap: 0;
     }
+    .img{
+    width: 80%;
+    height: auto;
+}
    
    
    
@@ -565,12 +569,22 @@ padding: 5px;
         font-size: 0.9rem;
         line-height: 2rem;
     }
-   
+    .locationimg, .bedimg{
+        width: 30%;
+        height: auto;
+    }
     .icons{
         width: 20px;
         height: 20px;
     }
-   
+        .img{
+    width: 80%;
+    height: auto;
+}
+   .textcont{
+       
+        flex: 2;
+    }
    
     
 }

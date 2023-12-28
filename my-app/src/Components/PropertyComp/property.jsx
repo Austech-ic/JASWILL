@@ -283,7 +283,7 @@ const Property = () => {
             </div>
             <div className={styles.citycont}>
               <p className=''>{datum.propertylocation}</p>
-              <p className=''>,</p>
+               <p>,</p>
               <p>{datum.city}</p>
             </div>
           </div>
