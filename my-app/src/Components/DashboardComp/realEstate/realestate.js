@@ -25,6 +25,7 @@ const RealEstate = () => {
   const [descriptionError, setDescriptionError] = useState('');
   const [contentError, setContentError] = useState('');
   const [cityError, setCityError] = useState('');
+  const [priceError, setPriceError] = useState('');
   const [typeError, setTypeError] = useState('');
   const [locationError, setLocationError] = useState('');
   const [bedroomError, setBedroomError] = useState('');
@@ -39,6 +40,7 @@ const RealEstate = () => {
     content:'',
     type: '',
     city: '',
+    price: '',
     propertylocation: '',
     numberofbedrooms: '',
     numberofbathrooms: '',
@@ -75,6 +77,7 @@ const RealEstate = () => {
     setDescriptionError('');
     setContentError(''),
     setCityError(''),
+    setPriceError(''),
     setTypeError(''),
     setLocationError(''),
     setBedroomError(''),
@@ -100,6 +103,9 @@ const RealEstate = () => {
     if (!formData.city) {
       setCityError('Please enter city.');
     }
+    if (!formData.price) {
+      setPriceError('Please enter price.');
+    }
     if (!formData.propertylocation) {
       setLocationError('Please enter a location.');
     }
@@ -122,6 +128,7 @@ const RealEstate = () => {
        !formData.description ||
        !formData.content ||
        !formData.city ||
+       !formData.price ||
        !formData.propertylocation ||
        !formData.numberofbedrooms ||
        !formData.numberofbathrooms ||
@@ -137,6 +144,7 @@ const RealEstate = () => {
     formValues.append('Description', formData.description);
     formValues.append('Content', formData.content);
     formValues.append('City', formData.city);
+    formValues.append('Price', formData.price);
     formValues.append('PropertyLocation', formData.propertylocation);
     formValues.append('NumberOfBedrooms', formData.numberofbedrooms);
     formValues.append('NumberOfBathrooms', formData.numberofbathrooms);
@@ -260,6 +268,8 @@ const RealEstate = () => {
             />
          </div>
 
+         
+
          <div className={styles.divcont}>
           <label className={styles.label}>Property Location*</label>
           {locationError && <div className={styles.errorMessage}>{locationError}</div>}
@@ -269,6 +279,16 @@ const RealEstate = () => {
            value={formData.propertylocation}
            required
            onChange={(e) => setFormData({ ...formData, propertylocation: e.target.value })}
+            />
+         </div>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Price*</label>
+          {priceError && <div className={styles.errorMessage}>{priceError}</div>}
+          <input placeholder='price'
+           className={styles.input}
+           value={formData.price}
+           required
+           onChange={(e) => setFormData({ ...formData, price: e.target.value })}
             />
          </div>
 

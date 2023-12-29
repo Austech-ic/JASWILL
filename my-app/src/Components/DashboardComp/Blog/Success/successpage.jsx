@@ -70,17 +70,18 @@ const Successpage = ({counter}) => {
   
 
   const handleDelete = async (id) => {
-    try {
+   
       // Delete the item from the server
-      await deleteRequest(`Blog/DeleteBlog?id=${id}`);
+       deleteRequest(`Blog/DeleteBlog?id=${id}`).then((data) => {
+        setBlog((prevBlog) => prevBlog.filter((item) => item.id !== id));
+        console.log(data);
+       }).catch((err) => console.log(err));
   
       // Update the state to remove the deleted item from the array
-      setBlog((prevBlog) => prevBlog.filter((item) => item.id !== id));
+     
   
-      console.log(`Item with ID ${id} deleted successfully.`);
-    } catch (error) {
-      console.error(`Error deleting item with ID ${id}.`, error);
-    }
+    
+  
   };
   
 useEffect(() => {

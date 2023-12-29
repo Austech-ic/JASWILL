@@ -1,6 +1,6 @@
 
 import React, {useEffect} from 'react'
-import EachBlog from '../Components/Blog/EachBlog/page'
+import EachBlog from '../../Components/Blog/EachBlog/page'
 
 const Blogprat = () => {
     useEffect(() => {

@@ -290,7 +290,7 @@ const Property = () => {
           <p>{datum.textwo}</p>
           <div className={styles.avacont}>
             <p className={styles.textava}>Availabe</p>
-            <p className={styles.price}>#50,000</p>
+            <p className={styles.price}>{datum.price}</p>
           </div>
           <div className={styles.upload}>
             <p>{datum.icon}</p>
