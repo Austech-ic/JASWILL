@@ -15,7 +15,7 @@ import { getRequest } from '@/library/request'
 
 
 
-  const Category = ({ params }) => {
+  const Category = ({id}) => {
 
     const [property, setProperty] = useState([]);
 
@@ -51,7 +51,15 @@ import { getRequest } from '@/library/request'
     ]
 
 
+    useEffect(() => {
+        getRequest(`RealEstate/GetRealEstateById/${id}`)
+          .then((response) => setProperty(response.data.data))
+          .catch((error) => console.log(error));
+      }, [id]);
     
+      console.log(property);
+
+
     return (
         <Fragment>
              <CustomFilter />
@@ -62,11 +70,11 @@ import { getRequest } from '@/library/request'
                 </Link>
                 <RxSlash />
                 <Link href={`/properties`} className={styles.link}>
-                    <p>Property for sale in Abuja</p>
+                    <p>Property for sale in {property.city}</p>
                 </Link>
                 <RxSlash />
                 <Link href={`/properties/detailsId`} className={styles.link}>
-                    <p>Property for sale in Lokogoma</p>
+                    <p>Property for sale in {property.propertylocation}</p>
                 </Link>
             </div>
             
@@ -75,23 +83,28 @@ import { getRequest } from '@/library/request'
             <div className={styles.divcont}>
                     <div className={styles.divone}>
                         <div className={styles.innerdivone}>
-                            <p className={styles.label}>4 BEDROOM HOUSE FOR SALE</p>
-                            <p>Lokogma, Abuja</p>
-                            <p>1,669 kilometers</p>
-                            <p className={styles.view}>view similar properties in this area</p>
+                            <p className={styles.label}>{property.description}</p>
+                            <p className={styles.label}>{property.title}</p>
+                            <div className='flex items-center'>
+                                <p>{property.propertylocation}</p>
+                                <p>,</p>
+                            <p>{property.city}</p>
+                            </div>
+                            {/* <p>1,669 kilometers</p>
+                            <p className={styles.view}>view similar properties in this area</p> */}
                         </div>
                         <div className={styles.innerdivtwo}>
-                            <p className={styles.label}>N50, 000, 000</p>
+                            <p className={styles.label}>{property.price}</p>
                         </div>
                     </div>
                     <div className={styles.imgcont}>
-                        <Image src={Inside} className={styles.img} alt='inside-img' />
+                        <Image src={property.imageUrl} width={1000} height={1000} className={styles.img} alt='inside-img' />
                     </div>
                     <div className={styles.contone}>
                         {
                             details.map((datum => (
                                 <div key={datum.id} className={styles.cont} >
-                                    <Image src={datum.pic} className={styles.imgs} alt='cont-img' />
+                                    <Image src={property.imageUrl} width={1000} height={1000} className={styles.imgs} alt='cont-img' />
                                 </div>
                             )))
                         }
@@ -114,9 +127,11 @@ import { getRequest } from '@/library/request'
                         <p className={styles.textone}>Key Features</p>
 
                         <div className={styles.textcont}>
-                            <p>icon 2 Bedrooms</p>
-                            <p>icon Serviced</p>
-                            <p>icon Updated 16 Oct 2022, Added 12 Oct 2022</p>
+                            <p>{property.numberOfBedrooms} Bedroom(s)</p>
+                            <p>{property.numberOfBathrooms} Toilet(s)</p>
+                            <p>{property.numberOfFloors} Floors(s)</p>
+                            <p>Property {property.type}</p>
+                            <p>Updated 16 Oct 2022, Added 12 Oct 2022</p>
                         </div>
                     </div>
 
@@ -124,7 +139,7 @@ import { getRequest } from '@/library/request'
                         <p className={styles.textone}>Full Description</p>
 
                         <div className={styles.textcont}>
-                            <p>4 bedroom Flat / Apartment for sale Lokogoma Abuja for ₦50,000,000.</p>
+                            <p>{property.content} in Apartment for sale {property.propertylocation} {property.city} for {property.price}.</p>
                             <Link href="https://wa.me/message/R3XZ3HBLHXWMG1" className={styles.link}>
                             <p className={styles.view} >Contact now for quick details on 2 bedroom flat</p>
                             </Link>

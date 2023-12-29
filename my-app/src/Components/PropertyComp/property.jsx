@@ -39,12 +39,10 @@ const Property = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const HandleView = (id) => {
-    router.push(`/properties/${id}`)
-    // console.log('testing id');
-
-    // router.push(`/properties/detailsId`)
-  }
+  // const HandleView = (id) => {
+  //   router.push(`/property/${id}`)
+    
+  // }
 
   useEffect(() => {
     getRequest("RealEstate/GetAllRealEstatesAsync").then((data) => setProperty(data.data.data.slice(0, 7))).catch((err) => console.log(err))
@@ -266,7 +264,8 @@ const Property = () => {
                
             </div>
       {property.map((datum) => (
-  <div key={datum.id} onClick={() => HandleView(datum.id)} style={{ cursor: 'pointer' }} className={styles.propertyItem}>
+  <div key={datum.id} style={{ cursor: 'pointer' }} className={styles.propertyItem}>
+    <Link href={`/Property/${datum.id}`}>
     <div className={styles.maincontfour}>
       <div className={styles.contimg}>
         <div className={styles.imgcont}>
@@ -322,6 +321,7 @@ const Property = () => {
         <p>{datum.textSeven}</p>
       </div> */}
     </div>
+    </Link>
   </div>
 ))}
 
