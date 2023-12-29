@@ -69,7 +69,7 @@ const General = () => {
               <div className='h-16 md:h-20 lg:h-24 xl:h-20 text-gray-700 cursor-pointer'>
                 <p className='text-xs md:text-base lg:text-sm mt-3'>{datum.description}</p>
               </div>
-             <Link href={'/propertypage'}>
+             <Link href={'/Property/property'}>
               <div className='text-red-700 cursor-pointer flex justify-between items-center gap-2'>
                 <p className='text-xs md:text-base lg:text-xs xl:text-sm  '>See More Details</p>
                 <AiOutlineDoubleRight className='w-3 h-3 md:w-4 md:h-4 lg:w-3 lg:h-3' />

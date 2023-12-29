@@ -269,7 +269,7 @@ const Property = () => {
     <div className={styles.maincontfour}>
       <div className={styles.contimg}>
         <div className={styles.imgcont}>
-          <Image src={datum.imageUrl} width={100} height={100} alt='fade-img' className={styles.img} />
+          <Image src={datum.imageUrl} width={100} height={100} alt='fade-img' style={{ width: '100%', height: '100%' }} className={styles.img} />
         </div>
         <div className={styles.textcont}>
           <p className={styles.label}>{datum.title}</p>
@@ -297,28 +297,26 @@ const Property = () => {
           </div>
           <div className={styles.roomdiv}>
             <div className={styles.bedcontainer}>
-            <p>{datum.numberOfBedrooms}</p>
-             
-              <PiBedBold className={styles.icom} />
-            
+            <PiBedBold className={styles.icom} />
+            <p>{datum.numberOfBedrooms} Bedroom(s)</p>
             </div>
+
             <div className={styles.bedcontainer}>
-            <p>{datum.numberOfBathrooms}</p>
             <BiBath className={styles.icom} />
-              
+            <p>{datum.numberOfBathrooms} Bathroom(s)</p>
             </div>
-            {/* <div className={styles.bedcontainer}>
-            <p>{datum.numberOfFloors}</p>
-              <div className={styles.bedcont}>
-                <Image src={toilet} alt='bed-img' className={styles.room} />
-              </div>
-             
-            </div> */}
+            
+          </div>
+          <div>
+            <div >
+            <p>Number of {datum.numberOfFloors} Floor(s)</p>
+            </div>
+
           </div>
         </div>
       </div>
       {/* <div className={styles.lastcont}>
-        <p>{datum.textSeven}</p>
+        <p>Sponsored</p>
       </div> */}
     </div>
     </Link>

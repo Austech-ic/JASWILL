@@ -100,7 +100,7 @@ const Apartment = () => {
               <div className='mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
                 <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{datum.categories}</p>
               </div>
-              <Link href={'/propertypage'}>
+              <Link href={'/Property/property'}>
               <div className='text-red-700 cursor-pointer flex justify-between items-center gap-2'>
                 <p className='text-xs md:text-base lg:text-xs xl:text-sm  '>See More Details</p>
                 <AiOutlineDoubleRight className='w-3 h-3 md:w-4 md:h-4 lg:w-3 lg:h-3' />
