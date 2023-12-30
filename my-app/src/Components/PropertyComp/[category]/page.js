@@ -131,7 +131,7 @@ import { getRequest } from '@/library/request'
                             <p>{property.numberOfBathrooms} Toilet(s)</p>
                             <p>{property.numberOfFloors} Floors(s)</p>
                             <p>Property {property.type}</p>
-                            <p>Updated 16 Oct 2022, Added 12 Oct 2022</p>
+                            <p>{property.createdOn}</p>
                         </div>
                     </div>
 
@@ -139,9 +139,9 @@ import { getRequest } from '@/library/request'
                         <p className={styles.textone}>Full Description</p>
 
                         <div className={styles.textcont}>
-                            <p>{property.content} in Apartment for sale {property.propertylocation} {property.city} for {property.price}.</p>
+                            <p>{property.content} in Apartment for sale in  {property.propertylocation} {property.city}.</p>
                             <Link href="https://wa.me/message/R3XZ3HBLHXWMG1" className={styles.link}>
-                            <p className={styles.view} >Contact now for quick details on 2 bedroom flat</p>
+                            <p className={styles.view} >Contact now for quick details on the property</p>
                             </Link>
                         </div>
 
@@ -149,13 +149,13 @@ import { getRequest } from '@/library/request'
 
                     <div className={styles.contextone}>
                         <div className={styles.textcont}>
-                            <p>Sale 50,000,000</p>
+                            {/* <p>Sale 50,000,000</p> */}
 
-                            <p>Agency 10%</p>
-                            <p>Agreement 10%</p>
-                            <p>Caution 30k</p>
-                            <p>Service charge 120k per month ( for cleaning, waste, and security)</p>
-                            <p className={styles.bold}>Total package 51,230,000</p>
+                            <p>Agency Fee {property.agency}</p>
+                            <p>Agreement Fee {property.agreement}</p>
+                            <p>Caution Fee {property.caution}</p>
+                            <p>Service charge {property.serviceCharge}</p>
+                            <p className={styles.bold}>Total package {property.total}</p>
 
                         </div>
                     </div>

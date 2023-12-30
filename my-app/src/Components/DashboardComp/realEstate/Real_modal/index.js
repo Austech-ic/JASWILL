@@ -1,0 +1,665 @@
+import React,{ useState } from 'react'
+import styles from '../realestate.module.css'
+import { HiHome,HiOutlineDocumentText } from 'react-icons/hi'
+import {AiOutlineHome,AiOutlineInbox,AiFillFileAdd,AiFillSetting, AiOutlinePlus} from 'react-icons/ai'
+import { MdCreate, MdOutlineCreateNewFolder,MdIncompleteCircle, MdOutlineSaveAlt, MdSaveAlt } from 'react-icons/md'
+import { FaSave } from 'react-icons/fa'
+import Image from 'next/image'
+import {useRouter} from "next/router";
+import { useToast } from '@chakra-ui/react';
+import axios from 'axios';
+import  {createRealEstate} from '@/library/request'
+import Button from '@/Components/Button/button'
+// import RealModal from '../../DashboardComp/realEstate/Real_modal/index'
+// import Successpage from '../Blog/Success/successpage'
+
+
+const Index = ({ onClose }) => {
+    const [showRealModal, setShowRealModal] = useState(false);
+    const [counter, setCounter] = useState(1)
+  
+  
+    const handleOpenModal = () => {
+      setShowRealModal(true);
+     
+    };
+    
+  
+    
+   
+    // const handleCloseModal = () => {
+    //   setShowRealModal(false);
+    // };
+  
+    const toast = useToast();
+    const router = useRouter();
+  
+    const [ImageUrl, setImageUrl] = useState(null);
+    const [image, setImage] = useState(null);
+    const [titleError, setTitleError] = useState('');
+    const [imageError, setImageError] = useState('');
+    const [descriptionError, setDescriptionError] = useState('');
+    const [contentError, setContentError] = useState('');
+    const [cityError, setCityError] = useState('');
+    const [priceError, setPriceError] = useState('');
+    const [agencyError, setAgencyError] = useState('');
+    const [agreementError, setAgreementError] = useState('');
+    const [cautionError, setCautionError] = useState('');
+    const [serviceChargeError, setServiceChargeError] = useState('');
+    const [totalError, setTotalError] = useState('');
+    const [typeError, setTypeError] = useState('');
+    const [locationError, setLocationError] = useState('');
+    const [bedroomError, setBedroomError] = useState('');
+    const [bathroomError, setBathroomError] = useState('');
+    const [floorError, setFloorError] = useState('');
+   
+  
+  
+    const [formData, setFormData] = useState({
+      title: '',
+      description: '',
+      content:'',
+      type: '',
+      city: '',
+      price: '',
+      agency: '',
+      agreement: '',
+      caution: '',
+      servicecharge: '',
+      total: '',
+      propertylocation: '',
+      numberofbedrooms: '',
+      numberofbathrooms: '',
+      numberoffloors: '',
+     
+    });
+  
+    const handleFileUpload = (event) => {
+      const file = event.target.files[0];
+      setImageUrl(file);
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        image: file,
+      }));
+    };
+  
+    const handleImageUpload = (e) => {
+      const file = e.target.files?.[0];
+      setImageUrl(file);
+  
+      if (file) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setImage(reader.result);
+          setImageError('');
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+  
+    const setFormDataAndClearError = (key, value) => {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [key]: value,
+      }));
+    
+      // Check if the input value is empty and update the corresponding error state
+      if (value.trim() === '') {
+        switch (key) {
+          case 'title':
+            setTitleError('Please enter a title.');
+            break;
+          case 'image':
+            setImageError('Please upload an image.');
+            break;
+          case 'description':
+            setDescriptionError('Please enter a description.');
+            break;
+            case 'content':
+              setContentError('Please enter a content.');
+            break;
+            case 'city':
+              setCityError('Please enter city.');
+            break;
+            case 'propertylocation':
+              setLocationError('Please enter a location.');
+            break;
+            case 'numberofbedrooms':
+              setBedroomError('Please enter number of bedrooms.');
+            break;
+            case 'numberofbathrooms':
+              setBathroomError('Please enter number of bathrooms.');
+            break;
+            case 'numberoffloors':
+              setFloorError('Please enter number of floors.');
+            break;
+            case 'type':
+              setTypeError('Please enter type.');
+            break;
+            case 'price':
+              setPriceError('Please enter price.');
+            break;
+            case 'agency':
+              setAgencyError('Please enter agency fee %.');
+            break;
+            case 'agreement':
+              setAgreementError('Please enter agency fee %.');
+            break;
+            case 'caution':
+              setCautionError('Please enter caution fee %.');
+            break;
+            case 'servicecharge':
+              setServiceChargeError('Please enter service charge.');
+            break;
+            case 'total':
+              setCautionError('Please enter overall fees.');
+            break;
+  
+  
+          default:
+            break;
+        }
+      } else {
+        // Clear the corresponding error message if the input is not empty
+        switch (key) {
+          case 'title':
+            setTitleError('');
+            break;
+          case 'image':
+            setImageError('');
+            break;
+          case 'description':
+            setDescriptionError('');
+            break;
+            case 'content':
+              setContentError('');
+              break;
+              case 'city':
+                setCityError('');
+                break;
+                case 'propertylocation':
+                  setLocationError('');
+                break;
+                case 'numberofbedrooms':
+                  setBedroomError('');
+                break;
+                case 'numberofbathrooms':
+                  setBathroomError('');
+                break;
+                case 'numberoffloors':
+                  setFloorError('');
+                break;
+                case 'type':
+                  setTypeError('');
+                break;
+                case 'price':
+                  setPriceError('');
+                break;
+                case 'agency':
+                  setAgencyError('');
+                break;
+                case 'agreement':
+                  setAgreementError('');
+                break;
+                
+                case 'caution':
+                  setCautionError('');
+                break;
+                case 'servicecharge':
+                  setServiceChargeError('');
+                break;
+                case 'total':
+                  setTotalError('');
+                break;
+          // ... other cases for different input fields
+          default:
+            break;
+        }
+      }
+    };
+    
+    
+  
+    const handleSave = (e) => {
+      e.preventDefault();
+      setTitleError('');
+      setImageError('');
+      setDescriptionError('');
+      setContentError(''),
+      setCityError(''),
+      setPriceError(''),
+      setAgencyError(''),
+      setAgreementError(''),
+      setCautionError(''),
+      setServiceChargeError(''),
+      setTotalError(''),
+      setTypeError(''),
+      setLocationError(''),
+      setBedroomError(''),
+      setBathroomError(''),
+      setFloorError('')
+  
+  
+        
+      if (!formData.title) {
+        setTitleError('Please enter a title.');
+      }
+  
+      if (!ImageUrl) {
+        setImageError('Please upload an image.');
+      }
+  
+      if (!formData.description) {
+        setDescriptionError('Please enter a description.');
+      }
+      if (!formData.content) {
+        setContentError('Please enter a content.');
+      }
+      if (!formData.city) {
+        setCityError('Please enter city.');
+      }
+      if (!formData.price) {
+        setPriceError('Please enter price.');
+      }
+      if (!formData.agency) {
+        setAgencyError('Please enter agency %.');
+      }
+      if (!formData.agreement) {
+        setAgreementError('Please enter agreement %.');
+      }
+      if (!formData.caution) {
+        setCautionError('Please enter caution fee.');
+      }
+      if (!formData.servicecharge) {
+        setServiceChargeError('Please enter service charge.');
+      }
+      if (!formData.total) {
+        setTotalError('Please enter overall sum in total.');
+      }
+      if (!formData.propertylocation) {
+        setLocationError('Please enter a location.');
+      }
+      if (!formData.numberofbedrooms) {
+        setBedroomError('Please enter number of bedrooms.');
+      }
+      if (!formData.numberofbathrooms) {
+        setBathroomError('Please enter number of bathrooms.');
+      }
+      if (!formData. numberoffloors) {
+        setFloorError('Please enter number of floors.');
+      }
+      if (!formData.type) {
+        setTypeError('Please enter type.');
+      }
+  
+  
+      if (!formData.title ||
+         !ImageUrl || 
+         !formData.description ||
+         !formData.content ||
+         !formData.city ||
+         !formData.price ||
+         !formData.agency ||
+         !formData.agreement ||
+         !formData.caution ||
+         !formData.servicecharge ||
+         !formData.total ||
+         !formData.propertylocation ||
+         !formData.numberofbedrooms ||
+         !formData.numberofbathrooms ||
+         !formData.numberoffloors ||
+         !formData.type) {
+        return;
+      }
+      
+  
+      const formValues = new FormData();
+      formValues.append('ImageUrl', ImageUrl);
+      formValues.append('Title', formData.title);
+      formValues.append('Description', formData.description);
+      formValues.append('Content', formData.content);
+      formValues.append('City', formData.city);
+      formValues.append('Price', formData.price);
+      formValues.append('Agency', formData.agency);
+      formValues.append('Agreement', formData.agreement);
+      formValues.append('Caution', formData.caution);
+      formValues.append('ServiceCharge', formData.servicecharge);
+      formValues.append('Total', formData.total);
+      formValues.append('PropertyLocation', formData.propertylocation);
+      formValues.append('NumberOfBedrooms', formData.numberofbedrooms);
+      formValues.append('NumberOfBathrooms', formData.numberofbathrooms);
+      formValues.append('NumberOfFloors', formData.numberoffloors);
+      formValues.append('Type', formData.type);
+     
+  
+      try {
+        createRealEstate('RealEstate/CreateRealEstate', formValues).then((response) => {
+          toast({
+            title: 'A Property have been created successfully',
+            description: 'You added new property.',
+            status: 'success',
+            position: 'top',
+            duration: 3000,
+            isClosable: true,
+          });
+  
+          router.push('/success');
+  
+          
+        }).catch((error) => console.log(error));
+      } catch (error) {
+        console.error('Upload failed!', error);
+      }
+    };
+    
+    
+  
+    const showMediaInGallery = () => {
+      if (ImageUrl) {
+        return (
+          <div className="mt-3">
+            <Image
+              width={50}
+              height={50}
+              src={image || ''}
+              alt="Selected Thumbnail"
+              className={styles.image}
+            />
+          </div>
+        );
+      }
+    };
+  
+  return (
+    <div>
+         <form>
+     <div className={styles.subcont}>
+        <div className={styles.contone}>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Title*</label>
+          {titleError && <div className={styles.errorMessage}>{titleError}</div>}
+          <input
+           placeholder='Title'
+           className={styles.input}
+           value={formData.title}
+           required
+           onChange={(e) => setFormDataAndClearError('title', e.target.value)}
+           
+            />
+         </div>
+
+         <div className={styles.divcont}>
+         <label className={styles.label}>Description*</label>
+         {descriptionError && <div className={styles.errorMessage}>{descriptionError}</div>}
+              <textarea
+                rows="4"
+                cols="50"
+                className={styles.textarea}
+                value={formData.description}
+                required
+                onChange={(e) => setFormDataAndClearError('description', e.target.value)}
+              />
+         </div>
+
+         <div className={styles.divcont}>
+          <label className={styles.label}>Content*</label>
+          {contentError && <div className={styles.errorMessage}>{contentError}</div>}
+          <textarea rows="4" 
+          cols="50" 
+          className={styles.textareas}
+          value={formData.content}
+          required
+          onChange={(e) => setFormDataAndClearError('content', e.target.value)}
+          />
+         </div>
+
+         
+         <div className={styles.divcont}>
+              <label htmlFor="file-upload" className={styles.upload}>
+                {showMediaInGallery()}
+                <input
+                  type="file"
+                  onChange={handleImageUpload}
+                  accept="image/*"
+                  style={{ display: 'block' }}
+                  id="file-upload"
+                />
+              </label>
+              {imageError && <div className={styles.errorMessage}>{imageError}</div>}
+            </div>
+         
+
+
+
+         <div className={styles.divcont}>
+          <label className={styles.label}>City*</label>
+          {cityError && <div className={styles.errorMessage}>{cityError}</div>}
+          <input placeholder='city'
+           className={styles.input}
+           value={formData.city}
+           required
+           onChange={(e) => setFormDataAndClearError('city', e.target.value)}
+            />
+         </div>
+
+         
+
+         <div className={styles.divcont}>
+          <label className={styles.label}>Property Location*</label>
+          {locationError && <div className={styles.errorMessage}>{locationError}</div>}
+          <input 
+          placeholder='property Location'
+           className={styles.input}
+           value={formData.propertylocation}
+           required
+           onChange={(e) => setFormDataAndClearError('propertylocation', e.target.value)}
+            />
+         </div>
+        
+
+         <div className={styles.twocont}>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Number of bedrooms*</label>
+          {bedroomError && <div className={styles.errorMessage}>{bedroomError}</div>}
+          <input 
+          placeholder='Number of bedrooms'
+           className={styles.input} 
+           value={formData.numberofbedrooms}
+           required
+           onChange={(e) => setFormDataAndClearError('numberofbedrooms', e.target.value)}
+           />
+         </div>
+
+         
+         </div>
+         <div className={styles.twocont}>
+         
+         <div className={styles.divcont}>
+          <label className={styles.label}>Number of bathrooms*</label>
+          {bathroomError && <div className={styles.errorMessage}>{bathroomError}</div>}
+          <input placeholder='Number of bathrooms'
+           className={styles.input}
+           value={formData.numberofbathrooms}
+                required
+                onChange={(e) => setFormDataAndClearError('numberofbathrooms', e.target.value)}
+                 />
+         </div>
+         </div>
+         <div className={styles.twocont}>
+         
+         <div className={styles.divcont}>
+          <label className={styles.label}>Number of floors*</label>
+          {floorError && <div className={styles.errorMessage}>{floorError}</div>}
+          <input 
+          placeholder='Number of floors'
+           className={styles.input}
+           value={formData.numberoffloors}
+                required
+                onChange={(e) => setFormDataAndClearError('numberoffloors', e.target.value)}
+                 />
+         </div>
+         </div>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Type*</label>
+          {typeError && <div className={styles.errorMessage}>{typeError}</div>}
+          <input placeholder='For Sale'
+           className={styles.input}
+           value={formData.type}
+                required
+                onChange={(e) => setFormDataAndClearError('type', e.target.value)}
+                 />
+         </div>
+
+         <div className={styles.divcont}>
+          <label className={styles.label}>Price*</label>
+          {priceError && <div className={styles.errorMessage}>{priceError}</div>}
+          <input placeholder='Amount'
+           className={styles.input}
+           value={formData.price}
+           required
+           onChange={(e) => setFormDataAndClearError('price', e.target.value)}
+            />
+         </div>
+
+         <div className={styles.divcont}>
+          <label className={styles.label}>Agency Fee*</label>
+          {agencyError && <div className={styles.errorMessage}>{agencyError}</div>}
+          <input placeholder='Agency fee'
+           className={styles.input}
+           value={formData.agency}
+           required
+           onChange={(e) => setFormDataAndClearError('agency', e.target.value)}
+            />
+         </div>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Agreement Fee*</label>
+          {agreementError && <div className={styles.errorMessage}>{agreementError}</div>}
+          <input placeholder='Agreement fee'
+           className={styles.input}
+           value={formData.agreement}
+           required
+           onChange={(e) => setFormDataAndClearError('agreement', e.target.value)}
+            />
+         </div>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Caution Fee*</label>
+          {cautionError && <div className={styles.errorMessage}>{cautionError}</div>}
+          <input placeholder='Caution fee'
+           className={styles.input}
+           value={formData.caution}
+           required
+           onChange={(e) => setFormDataAndClearError('caution', e.target.value)}
+            />
+         </div>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Service Charge*</label>
+          {serviceChargeError && <div className={styles.errorMessage}>{serviceChargeError}</div>}
+          <input placeholder='Service Charge'
+           className={styles.input}
+           value={formData.servicecharge}
+           required
+           onChange={(e) => setFormDataAndClearError('servicecharge', e.target.value)}
+            />
+         </div>
+         <div className={styles.divcont}>
+          <label className={styles.label}>Total Fees*</label>
+          {totalError && <div className={styles.errorMessage}>{totalError}</div>}
+          <input placeholder='Total Fees'
+           className={styles.input}
+           value={formData.total}
+           required
+           onChange={(e) => setFormDataAndClearError('total', e.target.value)}
+            />
+         </div>
+      
+
+         {/* <div className={styles.divcont}>
+          <label className={styles.label}>Features*</label>
+          <div className={styles.radiocont}>
+        <input type="checkbox" id="wifi" value="wifi" name="features" /> 
+        <label htmlFor="wifi">Wifi</label>
+        <input type="checkbox" id="parking" value="Parking" name="features" />
+    <label htmlFor="parking">Parking</label>
+
+    <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" />
+    <label htmlFor="swimmingPool">Swimming Pool</label>
+
+    <input type="checkbox" id="balcon" value="balcon" name="features" />
+
+    <label htmlFor="balcon">Balcony</label>   
+      </div>
+      <div className={styles.radiocont}>
+
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
+        <label>Garden</label>
+
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
+        <label>Security</label>
+
+        <input type="checkbox" id="swimmingPool" 
+        value="Swimming Pool" name="features"/> 
+        <label>Fitness Center</label>
+
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features"/> 
+        <label>Balcony </label>      
+      </div>
+
+      <div className={styles.radiocont}>
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
+        <label>Air Condition</label>
+        
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
+        <label>Central Heating</label>
+
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" />
+        <label> Laundry Room</label>
+      </div>
+
+      <div className={styles.radiocont}>
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
+        <label>Pets Allow</label>
+
+        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
+        <label>Spa & Massage</label>
+               
+      </div>
+        
+        
+         </div> */}
+         
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <div className={styles.contwo}>
+        <div className={styles.divconts}>
+        <label className={styles.label}>Publish*</label>
+          <div className={styles.buttonconts}>
+          {/* <button className={styles.buttonone}>
+            <FaSave />
+            Save & exit</button> */}
+            <button className={styles.buttontwo} onClick={handleSave}>
+          <MdSaveAlt />
+            Save</button>
+         </div>
+        </div>
+        <div className={styles.divconts}>
+        <label className={styles.label}>Moderation Status*</label>
+        <input placeholder='Approved' className={styles.input} />
+        </div>
+        </div>
+      </div>
+     </form>
+    </div>
+  )
+}
+
+export default Index
