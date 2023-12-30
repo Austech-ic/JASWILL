@@ -176,7 +176,7 @@ const Page = () => {
             <div className={styles.sub}>
                 <div className={styles.iconcont}>
                     <p>{datum.icon}</p>
-                    <p>{datum.type}</p>
+                    <p>{datum.price}</p>
                 </div>
                 <div className={styles.iconcont}>
                     <p>{datum.icontwo}</p>

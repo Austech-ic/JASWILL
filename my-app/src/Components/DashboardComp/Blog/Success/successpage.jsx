@@ -5,6 +5,7 @@ import logo from '../.../../../../../../public/brand/bg.png'
 import { useRouter } from 'next/router';
 import { getRequest } from '@/library/request'
 import { deleteRequest } from '@/library/request'
+import { putRequest } from '@/library/request'
 import { AiFillDelete } from 'react-icons/ai';
 import Button from '@/Components/Button/button';
 import axios from "axios"
@@ -72,7 +73,7 @@ const Successpage = ({counter}) => {
   const handleDelete = async (id) => {
    
       // Delete the item from the server
-       deleteRequest(`Blog/DeleteBlog?id=${id}`).then((data) => {
+       putRequest(`Blog/DeleteBlog/${id}`).then((data) => {
         setBlog((prevBlog) => prevBlog.filter((item) => item.id !== id));
         console.log(data);
        }).catch((err) => console.log(err));

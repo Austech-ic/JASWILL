@@ -183,7 +183,7 @@ const Page = () => {
       <div className={styles.cont}>
         {blog.map((item) => (
           <div key={item.id} className={styles.subcont}>
-          <Link href={`/blog/${item.id}`}>
+          <Link href={`/Blog/${item.id}`}>
               <div className={styles.blog}>
                 <div className={styles.textdiv}>
                   <p className={styles.text}>{item.title}</p>

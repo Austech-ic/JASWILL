@@ -66,9 +66,11 @@ const Page = ({id}) => {
           <div className={styles.subcont}>
 
             <div className={styles.blog}>
+            <div className='w-full'>
             <div className={styles.imgdiv}>
                 <Image src={blog.imageUrl} width={1000} height={500} style={{ width: '100%', height: '100%' }} alt="pic" />
               </div>
+            </div>
               <div className={styles.textdiv}>
                 <p className={styles.text}>{blog.title}</p>
                 <p className={styles.textone}>{blog.desccription}
@@ -89,7 +91,8 @@ const Page = ({id}) => {
               <div>
                   {/* Display existing comments */}
                   {comments.map((comment, index) => (
-                    <p className='mt-3' key={index}>{comment}</p>
+                   
+                    <p className='mt-1 text-xs md:text-lg lg:text-xs xl:text-sm' key={index}>Comment: {comment}</p>
                   ))}
                   {/* Comment input and send button */}
                   {showCommentInput && (
