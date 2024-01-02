@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import styles from '../realestate.module.css'
+import styles from './modal.module.css'
 import { HiHome,HiOutlineDocumentText } from 'react-icons/hi'
 import {AiOutlineHome,AiOutlineInbox,AiFillFileAdd,AiFillSetting, AiOutlinePlus} from 'react-icons/ai'
 import { MdCreate, MdOutlineCreateNewFolder,MdIncompleteCircle, MdOutlineSaveAlt, MdSaveAlt } from 'react-icons/md'
@@ -10,27 +10,12 @@ import { useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import  {createRealEstate} from '@/library/request'
 import Button from '@/Components/Button/button'
-// import RealModal from '../../DashboardComp/realEstate/Real_modal/index'
-// import Successpage from '../Blog/Success/successpage'
 
 
-const Index = ({ onClose }) => {
-    const [showRealModal, setShowRealModal] = useState(false);
-    const [counter, setCounter] = useState(1)
+
+const Index = ({ handleClose, show,children, setCounter  }) => {
   
-  
-    const handleOpenModal = () => {
-      setShowRealModal(true);
-     
-    };
-    
-  
-    
-   
-    // const handleCloseModal = () => {
-    //   setShowRealModal(false);
-    // };
-  
+    const showHideClassName = show ? styles.displayBlock : styles.displayNone;
     const toast = useToast();
     const router = useRouter();
   
@@ -339,12 +324,35 @@ const Index = ({ onClose }) => {
             description: 'You added new property.',
             status: 'success',
             position: 'top',
-            duration: 3000,
+            duration: 1000,
             isClosable: true,
           });
   
-          router.push('/success');
+          setCounter((prev) => prev + 1);
+        handleClose();
   
+
+        // Clear all form fields after successful save
+      setFormData({
+        title: '',
+        description: '',
+        content: '',
+        type: '',
+        city: '',
+        price: '',
+        agency: '',
+        agreement: '',
+        caution: '',
+        servicecharge: '',
+        total: '',
+        propertylocation: '',
+        numberofbedrooms: '',
+        numberofbathrooms: '',
+        numberoffloors: '',
+      });
+
+      setImageUrl(null);
+      setImage(null);
           
         }).catch((error) => console.log(error));
       } catch (error) {
@@ -371,8 +379,10 @@ const Index = ({ onClose }) => {
     };
   
   return (
-    <div>
-         <form>
+    <div className={`${styles.modal} ${showHideClassName}`}>
+       <section className={styles.modalMain}>
+       {children}
+        <form>
      <div className={styles.subcont}>
         <div className={styles.contone}>
          <div className={styles.divcont}>
@@ -406,7 +416,7 @@ const Index = ({ onClose }) => {
           {contentError && <div className={styles.errorMessage}>{contentError}</div>}
           <textarea rows="4" 
           cols="50" 
-          className={styles.textareas}
+          className={styles.textarea}
           value={formData.content}
           required
           onChange={(e) => setFormDataAndClearError('content', e.target.value)}
@@ -456,8 +466,6 @@ const Index = ({ onClose }) => {
             />
          </div>
         
-
-         <div className={styles.twocont}>
          <div className={styles.divcont}>
           <label className={styles.label}>Number of bedrooms*</label>
           {bedroomError && <div className={styles.errorMessage}>{bedroomError}</div>}
@@ -470,10 +478,7 @@ const Index = ({ onClose }) => {
            />
          </div>
 
-         
-         </div>
-         <div className={styles.twocont}>
-         
+        
          <div className={styles.divcont}>
           <label className={styles.label}>Number of bathrooms*</label>
           {bathroomError && <div className={styles.errorMessage}>{bathroomError}</div>}
@@ -484,9 +489,8 @@ const Index = ({ onClose }) => {
                 onChange={(e) => setFormDataAndClearError('numberofbathrooms', e.target.value)}
                  />
          </div>
-         </div>
-         <div className={styles.twocont}>
-         
+       
+       
          <div className={styles.divcont}>
           <label className={styles.label}>Number of floors*</label>
           {floorError && <div className={styles.errorMessage}>{floorError}</div>}
@@ -497,7 +501,6 @@ const Index = ({ onClose }) => {
                 required
                 onChange={(e) => setFormDataAndClearError('numberoffloors', e.target.value)}
                  />
-         </div>
          </div>
          <div className={styles.divcont}>
           <label className={styles.label}>Type*</label>
@@ -658,6 +661,7 @@ const Index = ({ onClose }) => {
         </div>
       </div>
      </form>
+       </section>
     </div>
   )
 }

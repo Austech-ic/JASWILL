@@ -3,6 +3,7 @@ import styles from './success.module.css'
 import Image from 'next/image';
 import logo from '../.../../../../../../public/brand/bg.png'
 import { useRouter } from 'next/router';
+import { useToast } from '@chakra-ui/react';
 import { getRequest } from '@/library/request'
 import { deleteRequest } from '@/library/request'
 import { putRequest } from '@/library/request'
@@ -14,6 +15,7 @@ const Successpage = ({counter}) => {
 
   const [blog, setBlog] = useState([]);
 
+  const toast = useToast();
   const router = useRouter();
   const { id, title, description, image } = router.query;
 
@@ -74,6 +76,14 @@ const Successpage = ({counter}) => {
    
       // Delete the item from the server
        putRequest(`Blog/DeleteBlog/${id}`).then((data) => {
+        toast({
+          title: 'Blog Deleted Successfully',
+          description: 'You recently deleted a blog.',
+          status: 'success',
+          position: 'top',
+          duration: 1000,
+          isClosable: true,
+        });
         setBlog((prevBlog) => prevBlog.filter((item) => item.id !== id));
         console.log(data);
        }).catch((err) => console.log(err));
@@ -94,57 +104,59 @@ getRequest("Blog/GetAllBlogsAsync").then((data)=> setBlog(data.data.data)).catch
     
 <div className='bg-white px-[30px] py-[50px]'>
   <table className='table-auto w-full'>
-    <thead className='h-[10vh] '>
+    <thead className='h-[10vh] gap-5'>
       <tr className='py-[70px]'>
   
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+      <th className=' w-3/12 md:w-1/12 text-xs md:text-lg lg:text-sm'> {/* Adjust the width as needed */}
           <p className='text-center'>Id</p>
         </th>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+        <th className=' sm:w-4/12 md:w-1/12 text-xs md:text-lg lg:text-sm'> {/* Adjust the width as needed */}
           <p className='text-center'>Image</p>
         </th>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+        <th className=' w-2/12 md:w-1/12 text-xs md:text-lg lg:text-sm' > {/* Adjust the width as needed */}
           <p className='text-center'>Name</p>
         </th>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+       
+        <th className=' w-2/12 md:w-1/12 text-xs md:text-lg lg:text-sm' > {/* Adjust the width as needed */}
           <p className='text-center'>Date</p>
         </th>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+       
+        <th className=' w-3/12 md:w-1/12  text-xs md:text-lg lg:text-sm'> {/* Adjust the width as needed */}
           <p className='text-center'>Desc</p>
         </th>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
+        <th className=' w-3/12 md:w-1/12  text-xs md:text-lg lg:text-sm'> {/* Adjust the width as needed */}
           <p className='text-center'>Author</p>
         </th>
-        <th className='w-1/5'> {/* Adjust the width as needed */}
-          <p className='text-center'>Operation</p>
+        <th className=' w-2/12 md:w-1/12 text-xs md:text-lg lg:text-sm'> {/* Adjust the width as needed */}
+          <p className='text-center'>Del</p>
         </th>
       </tr>
     </thead>
     <tbody >
     {blog.map((item) => (
-  <tr key={item.id} className='h-[10vh]'>
+  <tr key={item.id} className='h-[10vh] gap-1'>
   <td className='text-center'>
-    <p>{item.id}</p>
+    <p className='text-xs md:text-lg lg:text-sm'>{item.id}</p>
   </td>
-  <td className='text-center'>
-    <div className='h-[3rem] w-[10rem]'>
+  <td className=''>
+    <div className=' md:flex h-[1rem] md:h-[3rem] w-[3rem] md:w-[10rem] text-center'>
       {/* Assuming 'logo' is the variable for your image source */}
-      <Image src={item.imageUrl} width={100} height={100} alt='pic' className='w-full h-full object-cover' />
+      <Image src={item.imageUrl} width={100} height={100} alt='pic' className='w-full h-full object-contain md:object-none' />
     </div>
   </td>
   <td className='text-center'>
-  <p>{truncateTitle(item.title, 5)}</p>
+  <p className='text-xs md:text-lg lg:text-sm'>{truncateTitle(item.title, 5)}</p>
 </td>
   <td className='text-center'>
-  <p>{formatAndTruncateDate(item.createdOn, 5)}</p>
-</td>
-
-  <td className='text-center'>
-  <p>{truncateDescription(item.desccription, 5)}</p>
+  <p className='text-xs md:text-lg lg:text-sm'>{formatAndTruncateDate(item.createdOn, 5)}</p>
 </td>
 
   <td className='text-center'>
-    <p>Admin</p>
+  <p className='text-xs md:text-lg lg:text-sm'>{truncateDescription(item.desccription, 5)}</p>
+</td>
+
+  <td className='text-center'>
+    <p className='text-xs md:text-lg lg:text-sm'>Admin</p>
   </td>
   <td className='text-center mx-auto'>
 

@@ -13,6 +13,7 @@ import { AiFillWeiboCircle, AiOutlineUser } from 'react-icons/ai'
 import {TbWorld} from 'react-icons/tb'
 import axios from 'axios';
 
+import Dropdown from '../../DashboardComp/dashboardheader/Dropdown/dropdown'
 
 const DashboardHeader = () => {
   const userName = 'John Doe'
@@ -22,7 +23,7 @@ const DashboardHeader = () => {
   const handleLogout = async () => {
     try {
       // Make a request to your logout API endpoint
-      await axios.get('https://jaswillrealestate.onrender.com/api/Login/Logout');
+      await axios.get('https://jaswillrealestate.onrender.com/api/Admin/Logout');
   
       // Assuming the API call is successful, you can redirect the user to the sign-in page
       window.location.href = '/signin'; // Replace '/signin' with the actual path of your sign-in page
@@ -46,19 +47,15 @@ const DashboardHeader = () => {
      <div className={styles.conthree}>
       <Link href={`/`}>
       <div className={styles.divone}>
-        <TbWorld  className={styles.icon}/>
-        <p>View Website</p>
+        <TbWorld color='#0B113C' className={styles.icon}/>
+        <p className='text-blue'>View Website</p>
         </div>
       </Link>
       <div className={styles.divone}>
         
-        <BiUserCircle className={styles.icon} />
-       <p>Profile</p>
+      <Dropdown />
        </div>
-       <div className={styles.divtwo} onClick={handleLogout}>
-        <BiLogOutCircle className={styles.icon} />
-       <p>Logout</p>
-       </div>
+     
      </div>
     </div>
   )

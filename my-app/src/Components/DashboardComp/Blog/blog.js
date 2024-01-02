@@ -11,12 +11,10 @@ const Blog = () => {
   const [counter, setCounter] = useState(1)
 
   const handleOpenModal = () => {
-    setShowModal(true);
+    setShowModal(!showModal);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+  
 
   return (
     <div className={styles.main}>
@@ -26,7 +24,7 @@ const Blog = () => {
       </div>
       <Button onClick={handleOpenModal} />
       <div>
-        <Modal setCounter={setCounter} show={showModal} handleClose={handleCloseModal}/>
+        <Modal setCounter={setCounter} show={showModal} handleClose={handleOpenModal}/>
       </div>
       <Success counter={counter} />
       
