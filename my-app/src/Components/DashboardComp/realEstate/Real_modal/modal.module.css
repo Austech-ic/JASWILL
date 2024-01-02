@@ -163,8 +163,8 @@ display: flex;
   text-align: center;
 }
 .image{
- width: fit-content;
- height: auto;
+ /* width: fit-content;
+ height: auto; */
 }
 .errorMessage{
   color: red;
@@ -412,7 +412,7 @@ height: 18vh;
   
 }
 .modal {
-  height: 280vh;
+  height: 295vh;
 }
 
 
@@ -474,6 +474,6 @@ height: 15vh;
   
 }
 .modal {
-  height: 225vh;
+  height: 223vh;
 }
 }

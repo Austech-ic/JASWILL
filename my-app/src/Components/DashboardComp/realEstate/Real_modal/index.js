@@ -366,7 +366,9 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       if (ImageUrl) {
         return (
           <div className="mt-3">
+            
             <Image
+             style={{ maxWidth: '100%', maxHeight: '100%' }}
               width={50}
               height={50}
               src={image || ''}

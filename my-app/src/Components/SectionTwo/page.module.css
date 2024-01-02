@@ -37,6 +37,8 @@
     justify-content: flex-end;
     /* border: 1px solid red; */
     color: white;
+    width: 200px;
+    height: 200px;
      /* color: #800000; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,6 +118,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    /* background-color: rebeccapurple; */
 }
 /* .carouselcont{
     visibility: hidden;
@@ -148,11 +151,13 @@
     display: grid;
     grid-template-columns: 2fr 2fr ;
     grid-template-rows: 2fr ;
-    gap: 30px;
+    gap: 40px;
     padding: 50px 0;
 }
 .subcont{
     /* min-height: 45vh; */
+    width: 250px;
+    height: 250px;
 }
 .subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 45vh;
@@ -212,11 +217,13 @@
     display: grid;
     grid-template-columns:2fr 2fr ;
     grid-template-rows: 2fr;
-    gap: 20px;
+    gap: 40px;
     padding: 50px 0;
 }
 .subcont{
     min-height: 70vh;
+    width: 300px;
+    height: 300px;
 }
 .subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 70vh;
