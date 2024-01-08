@@ -17,13 +17,33 @@ export const createBlogPost = async (url,payload) => {
 }
 
 
+
 export const getRequest = async(url)=>{
 return await axios.get(url)
 }
 
-export const postRequest = async (url, payload)=>{
-    return await axios.post(url, payload).data
-}
+// request.js
+export const postRequest = async (url, data) => {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Add any additional headers if needed
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error: ${error.message}`);
+    }
+  };
+  
 
 export const deleteRequest = async(url)=>{
     return await axios.delete(url)

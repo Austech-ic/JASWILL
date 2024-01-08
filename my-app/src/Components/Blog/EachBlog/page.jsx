@@ -52,6 +52,24 @@ const Page = ({id}) => {
       setComment('');
       setShowCommentInput(false);
     };
+
+    // const handleCommentSend = () => {
+    //   // Check if the comment is not empty before sending
+    //   if (comment.trim() === '') {
+    //     return;
+    //   }
+    
+    //   // Make a POST request to the endpoint with the comment data
+    //   postRequest(`Comment/CreateComment/${id}/${userId}`, { comment: comment })
+    //     .then((response) => {
+    //       // Assuming the server responds with the new comment data
+    //       const newComment = response.data.data;
+    //       setComments((prevComments) => [...prevComments, newComment]);
+    //       setComment('');
+    //       setShowCommentInput(false);
+    //     })
+    //     .catch((error) => console.log(error));
+    // };
     
 
   return (

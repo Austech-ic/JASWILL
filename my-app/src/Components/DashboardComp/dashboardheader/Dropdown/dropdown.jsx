@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, {useEffect,useState} from 'react';
 import { Link } from "react-router-dom";
 // import me from '../images/me.jpeg'
 import { MdEventRepeat, MdOutlineKeyboardArrowRight, MdKeyboardArrowDown } from 'react-icons/md';
 import { AiOutlineTeam, AiFillSetting, AiOutlineLogout} from 'react-icons/ai';
 import { FaUserCircle } from "react-icons/fa";
 import axios from 'axios';
+import { getRequest } from '@/library/request'
 import { BiLogOut, BiLogOutCircle, BiNotification, BiSolidToggleRight, BiUserCircle } from 'react-icons/bi'
 
-const Dropdown = () => {
+const Dropdown = ({counter}) => {
+   const [details, setDetails] = useState([]);
+  const [id, setId] = useState(1); // Set the initial value of id
+
+
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -25,6 +32,14 @@ const Dropdown = () => {
           console.error('Logout failed:', error);
         }
       };
+
+       useEffect(() => {
+    getRequest(`Admin/GetAdminUserNameAndEmail/${id}`)
+      .then((data) => setDetails(data.data.data))
+      .catch((err) => console.log(err));
+  }, [counter, id]); // Include id in the dependencies array
+
+
     
   return (
     <div className="relative flex justify-end">
@@ -41,7 +56,7 @@ const Dropdown = () => {
                 {/* <img  src={me} alt='pic' className="h-6 w-6 lg:h-8 lg:w-8 xl:h-9 xl:w-9 rounded-full" /> */}
                <p id="dropdown-menu-button"
                  onClick={toggleDropdown} 
-                 className="text-sm  md:text-large xl:text-large">John Doe</p>
+                 className="text-sm  md:text-large xl:text-large"> {details.userName}</p>
                {/* <MdKeyboardArrowDown /> */}
               </button>
             </span>
@@ -58,7 +73,7 @@ const Dropdown = () => {
                     role="menuitem"
                   >
                     <FaUserCircle />
-                   <p className="text-sm  md:text-large xl:text-large">johndoe@gmail.com</p>
+                   <p className="text-sm  md:text-large xl:text-large">{details.email}</p>
                   </a>
                   <a
                     href="#"

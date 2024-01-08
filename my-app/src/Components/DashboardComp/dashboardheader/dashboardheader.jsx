@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, {useEffect,useState} from 'react';
 import Image from 'next/image'
 import logone from '../../../../public/bg.png'
 import Link from 'next/link'
@@ -11,12 +11,13 @@ import { MdOutlineKeyboardArrowDown, MdWeb } from 'react-icons/md'
 import styles from './dashboardheader.module.css'
 import { AiFillWeiboCircle, AiOutlineUser } from 'react-icons/ai'
 import {TbWorld} from 'react-icons/tb'
+import { getRequest } from '@/library/request'
 import axios from 'axios';
 
 import Dropdown from '../../DashboardComp/dashboardheader/Dropdown/dropdown'
 
 const DashboardHeader = () => {
-  const userName = 'John Doe'
+ 
 
 
 
@@ -32,7 +33,7 @@ const DashboardHeader = () => {
       console.error('Logout failed:', error);
     }
   };
-
+ 
   
   return (
       
