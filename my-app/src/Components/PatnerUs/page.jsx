@@ -72,7 +72,7 @@ const Page = () => {
                   <label htmlFor="" className={styles.labeltext}>Date of Registration</label>
                   <input type="text" className={styles.input} />
                 </div>
-                {/* <p>hello</p> */}
+              
                 <div className={styles.divconts}>
                  
                   <div className="">

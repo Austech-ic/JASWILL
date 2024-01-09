@@ -13,7 +13,7 @@ import Image from 'next/image';
 import { MdArrowBackIosNew } from "react-icons/md";
 
 
-const page = ({counter}) => {
+const Page = ({counter}) => {
   const [property, setProperty] = useState([]);
 
   const toast = useToast();
@@ -193,4 +193,4 @@ console.log(property)
   )
 }
 
-export default page
+export default Page
