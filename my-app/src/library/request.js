@@ -3,6 +3,48 @@ import axios from "axios";
 axios.defaults.baseURL = "https://jaswillrealestate.onrender.com/api/"
 
 
+export const resetPassword = async (url,payload) => {
+  try {
+    const response = await axios.post(url, payload);
+    return response.data;
+  } catch (error) {
+    console.error('Error initiating password reset:', error);
+    throw new Error('Failed to initiate password reset.');
+  }
+};
+
+
+export const forgetPassword = async (url,payload) => {
+    
+  try {
+    const response = await axios.post(url, payload);
+    return response.data;
+  } catch (error) {
+    console.error('Error initiating password reset:', error);
+    throw new Error('Failed to initiate password reset.');
+  }
+};
+
+
+export const sendActivationCode = async (endpoint, data) => {
+  try {
+    // Make an API request to send activation code
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    // Assuming the response is in JSON format
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error('Error sending activation code:', error);
+    throw new Error('Failed to send activation code.');
+  }
+};
 
 
 export const createBlogPost = async (url,payload) => {

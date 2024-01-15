@@ -10,6 +10,8 @@ export default function App({ Component, pageProps }) {
 
   const Layout = isAdminPage ? AdminLayout : MainLayout;
 
+  
+
 
 
 return (

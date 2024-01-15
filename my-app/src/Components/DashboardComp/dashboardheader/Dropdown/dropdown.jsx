@@ -9,7 +9,7 @@ import { getRequest } from '@/library/request'
 import { BiLogOut, BiLogOutCircle, BiNotification, BiSolidToggleRight, BiUserCircle } from 'react-icons/bi'
 
 const Dropdown = ({counter}) => {
-   const [details, setDetails] = useState([]);
+  const [details, setDetails] = useState({ userName: '', email: '' });
   const [id, setId] = useState(1); // Set the initial value of id
 
 
@@ -20,24 +20,45 @@ const Dropdown = ({counter}) => {
     const toggleDropdown = () => {
       setIsOpen(!isOpen);
     };
+    // logout
     const handleLogout = async () => {
-        try {
-          // Make a request to your logout API endpoint
-          await axios.get('https://jaswillrealestate.onrender.com/api/Admin/Logout');
-      
-          // Assuming the API call is successful, you can redirect the user to the sign-in page
-          window.location.href = '/signin'; // Replace '/signin' with the actual path of your sign-in page
-        } catch (error) {
-          // Handle errors, e.g., show an error message to the user
-          console.error('Logout failed:', error);
-        }
-      };
+      try {
+        // Make a request to your logout API endpoint
+        await axios.get('https://jaswillrealestate.onrender.com/api/Admin/Logout');
+    
+        // Replace the current history entry with the login page's URL
+        window.history.replaceState(null, null, '/signin');
+    
+        // Redirect the user to the sign-in page
+        window.location.href = '/signin'; // Replace '/signin' with the actual path of your sign-in page
+      } catch (error) {
+        // Handle errors, e.g., show an error message to the user
+        console.error('Logout failed:', error);
+      }
+    };
+    
+    
 
-       useEffect(() => {
-    getRequest(`Admin/GetAdminUserNameAndEmail/${id}`)
-      .then((data) => setDetails(data.data.data))
-      .catch((err) => console.log(err));
-  }, [counter, id]); // Include id in the dependencies array
+      useEffect(() => {
+        // Fetch user details after successful login
+        const fetchUserDetails = async () => {
+          try {
+            const id = getUserId(); // Replace with the actual function to get user ID after login
+            const response = await getRequest(`Admin/GetAdminUserNameAndEmail/${id}`);
+            const userData = response.data.data;
+            setDetails(userData);
+          } catch (err) {
+            console.log(err);
+          }
+        };
+    
+        fetchUserDetails();
+      }, [counter]); // Fetch details when the counter changes (e.g., after login)
+    
+      const getUserId = () => {
+        // Replace with the actual function to get user ID after login
+        return 1; // Default value, update as per your logic
+      };
 
 
     
