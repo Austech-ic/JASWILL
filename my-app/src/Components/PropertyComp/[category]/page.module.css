@@ -22,18 +22,22 @@
     font-size: 0.7rem;
     line-height: 1.5rem;
     color: #ABABAB;
+    
 }
 .divcont{
     font-size:0.7rem;
     line-height: 1.2rem;
+    /* border: 1px solid red; */
+    background-color:#020830;
 }
 .label{
     font-size:0.8rem;
     line-height: 1.2rem; 
 }
 .divone{
-    background-color:#020830;
+    /* background-color:#020830; */
     color:white;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
    gap: 20px;
@@ -135,7 +139,7 @@
         padding: 20px 0;
     }
     .divone{
-        background-color:#020830;
+        /* background-color:#020830; */
         color:white;
         display: flex;
         flex-direction: row;

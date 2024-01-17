@@ -11,6 +11,7 @@ import { items } from "./data"
 import { isNotFoundError } from 'next/dist/client/components/not-found'
 import { useRouter } from 'next/router';
 import { getRequest } from '@/library/request'
+import Footer from '@/Components/Footer/footer'
 
 
 
@@ -69,11 +70,11 @@ import { getRequest } from '@/library/request'
                     <p>Home</p>
                 </Link>
                 <RxSlash />
-                <Link href={`/properties`} className={styles.link}>
+                <Link href={`/Property/property`} className={styles.link}>
                     <p>Property for sale in {property.city}</p>
                 </Link>
                 <RxSlash />
-                <Link href={`/properties/detailsId`} className={styles.link}>
+                <Link href={`/Property/detailsId`} className={styles.link}>
                     <p>Property for sale in {property.propertylocation}</p>
                 </Link>
             </div>
@@ -98,7 +99,7 @@ import { getRequest } from '@/library/request'
                         </div>
                     </div>
                     <div className={styles.imgcont}>
-                        <Image src={property.imageUrl} width={1000} height={1000} className={styles.img} alt='inside-img' />
+                        <Image src={property.imageUrl} width={1000} height={1000} className={styles.img} alt='Property-Image' />
                     </div>
                     <div className={styles.contone}>
                         {
@@ -164,6 +165,7 @@ import { getRequest } from '@/library/request'
 
             </div>
         </div>
+        <Footer />
         </Fragment>
     )
 }

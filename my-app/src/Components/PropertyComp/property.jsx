@@ -32,222 +32,28 @@ import { BiBath } from "react-icons/bi";
 
 const Property = () => {
   const [property, setProperty] = useState([]);
- 
   const router = useRouter();
 
   const ITEMS_PER_PAGE = 4;
-
   const [currentPage, setCurrentPage] = useState(1);
 
-  // const HandleView = (id) => {
-  //   router.push(`/property/${id}`)
-    
-  // }
-
   useEffect(() => {
-    getRequest("RealEstate/GetAllRealEstatesAsync").then((data) => setProperty(data.data.data.slice(0, 7))).catch((err) => console.log(err))
-  }, [])
-  console.log(property)
+    getRequest('RealEstate/GetAllRealEstatesAsync')
+      .then((data) => setProperty(data.data.data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
+  const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+  const currentItems = property.slice(indexOfFirstItem, indexOfLastItem);
+
+  const MAX_PAGES = 10;
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(Math.min(Math.max(pageNumber, 1), MAX_PAGES));
+  };
 
 
-
-  const details = [
-    {
-      id:1,
-      label:"4 BEDROOM HOUSE FOR SALE",
-      pic:Inside,
-      location:Location,
-      textone:"Lokogma, Abuja",
-      textwo:"1,669 kilometers",
-      texthree:"Available",
-      price:"#50,000",
-      icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-      textfive:"Uploaded 16 Oct 2022",
-      imageOne:bed,
-      textFour:"5 Beds",
-      imageTwo:bath,
-      textFive:"6 Baths",
-      imageThree:toilet,
-      textsix:"6 Toilets",
-      textSeven:"Premium",
-       },
-       {
-        id:2,
-        label:"4 BEDROOM HOUSE FOR SALE",
-        pic:Fade,
-        location:Location,
-        textone:"Lugbe, Abuja",
-        textwo:"1,669 kilometers",
-        texthree:"Available",
-        price:"#50,000",
-        icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-        textfive:"Uploaded 16 Oct 2022",
-        imageOne:bed,
-        textFour:"5 Beds",
-        imageTwo:bath,
-        textFive:"6 Baths",
-        imageThree:toilet,
-        textsix:"6 Toilets",
-        textSeven:"Sponsored",
-         },
-         {
-          id:3,
-          label:"4 BEDROOM HOUSE FOR SALE",
-          pic:show,
-          location:Location,
-          textone:"Maitaima, Abuja",
-          textwo:"1,669 kilometers",
-          texthree:"Available",
-          price:"#50,000",
-          icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-          textfive:"Uploaded 16 Oct 2022",
-          imageOne:bed,
-          textFour:"5 Beds",
-          imageTwo:bath,
-          textFive:"6 Baths",
-          imageThree:toilet,
-          textsix:"6 Toilets",
-          textSeven:"Premium",
-           },
-           {
-            id:4,
-            label:"4 BEDROOM HOUSE FOR SALE",
-            pic:show,
-            location:Location,
-            textone:"Kubwa, Abuja",
-            textwo:"1,669 kilometers",
-            texthree:"Available",
-            price:"#50,000",
-            icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-            textfive:"Uploaded 16 Oct 2022",
-            imageOne:bed,
-            textFour:"5 Beds",
-            imageTwo:bath,
-            textFive:"6 Baths",
-            imageThree:toilet,
-            textsix:"6 Toilets",
-            textSeven:"Premium",
-             },
-             {
-              id:5,
-              label:"4 BEDROOM HOUSE FOR SALE",
-              pic:show,
-              location:Location,
-              textone:"Apo, Abuja",
-              textwo:"1,669 kilometers",
-              texthree:"Available",
-              price:"#50,000",
-              icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-              textfive:"Uploaded 16 Oct 2022",
-              imageOne:bed,
-              textFour:"5 Beds",
-              imageTwo:bath,
-              textFive:"6 Baths",
-              imageThree:toilet,
-              textsix:"6 Toilets",
-              textSeven:"Premium",
-               }, 
-               {
-                id:6,
-                label:"4 BEDROOM HOUSE FOR SALE",
-                pic:show,
-                location:Location,
-                textone:"Dutse, Abuja",
-                textwo:"1,669 kilometers",
-                texthree:"Available",
-                price:"#50,000",
-                icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-                textfive:"Uploaded 16 Oct 2022",
-                imageOne:bed,
-                textFour:"5 Beds",
-                imageTwo:bath,
-                textFive:"6 Baths",
-                imageThree:toilet,
-                textsix:"6 Toilets",
-                textSeven:"Premium",
-                 },
-                 {
-                  id:7,
-                  label:"4 BEDROOM HOUSE FOR SALE",
-                  pic:show,
-                  location:Location,
-                  textone:"Buari, Abuja",
-                  textwo:"1,669 kilometers",
-                  texthree:"Available",
-                  price:"#50,000",
-                  icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-                  textfive:"Uploaded 16 Oct 2022",
-                  imageOne:bed,
-                  textFour:"5 Beds",
-                  imageTwo:bath,
-                  textFive:"6 Baths",
-                  imageThree:toilet,
-                  textsix:"6 Toilets",
-                  textSeven:"Premium",
-                   },
-                   {
-                    id:8,
-                    label:"4 BEDROOM HOUSE FOR SALE",
-                    pic:show,
-                    location:Location,
-                    textone:"Zuba, Abuja",
-                    textwo:"1,669 kilometers",
-                    texthree:"Available",
-                    price:"#50,000",
-                    icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-                    textfive:"Uploaded 16 Oct 2022",
-                    imageOne:bed,
-                    textFour:"5 Beds",
-                    imageTwo:bath,
-                    textFive:"6 Baths",
-                    imageThree:toilet,
-                    textsix:"6 Toilets",
-                    textSeven:"Premium",
-                     },
-                     {
-                      id:9,
-                      label:"4 BEDROOM HOUSE FOR SALE",
-                      pic:show,
-                      location:Location,
-                      textone:"Central Area, Abuja",
-                      textwo:"1,669 kilometers",
-                      texthree:"Available",
-                      price:"#50,000",
-                      icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-                      textfive:"Uploaded 16 Oct 2022",
-                      imageOne:bed,
-                      textFour:"5 Beds",
-                      imageTwo:bath,
-                      textFive:"6 Baths",
-                      imageThree:toilet,
-                      textsix:"6 Toilets",
-                      textSeven:"Premium",
-                       },
-                       {
-                        id:10,
-                        label:"4 BEDROOM HOUSE FOR SALE",
-                        pic:show,
-                        location:Location,
-                        textone:"Karu, Abuja",
-                        textwo:"1,669 kilometers",
-                        texthree:"Available",
-                        price:"#50,000",
-                        icon:<BiSolidCloudUpload color='#76C2AF' className={styles.icons}/>,
-                        textfive:"Uploaded 16 Oct 2022",
-                        imageOne:bed,
-                        textFour:"5 Beds",
-                        imageTwo:bath,
-                        textFive:"6 Baths",
-                        imageThree:toilet,
-                        textsix:"6 Toilets",
-                        textSeven:"Premium",
-                         }
-  ]
-
-
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const paginatedDetails = details.slice(startIndex, endIndex);
 
   return (
     <Fragment>
@@ -263,7 +69,7 @@ const Property = () => {
                 </Link>
                
             </div>
-      {property.map((datum) => (
+       {currentItems.map((datum) => (
   <div key={datum.id} style={{ cursor: 'pointer' }} className={styles.propertyItem}>
     <Link href={`/Property/${datum.id}`}>
     <div className={styles.maincontfour}>
@@ -323,48 +129,19 @@ const Property = () => {
   </div>
 ))}
 
-        <div className={styles.contfour}>
-          {paginatedDetails.map((datum) => (
-            <div key={datum.id} onClick={() => HandleView(datum.id)} style={{ cursor: 'pointer' }}>
-              {/* Your existing code for rendering property details */}
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.subfive}>
-          <p>Page {currentPage}</p>
-          {details.length > ITEMS_PER_PAGE && (
-            <div className={styles.paginationButtons}>
-              
-              <div className={styles.iconcont}>
-            <MdOutlineKeyboardDoubleArrowLeft
-            onClick={() => setCurrentPage((prevPage) => Math.max(prevPage - 1, 1))}
-            disabled={currentPage === 1}
-             className={styles.icons} />
-          </div>
-              {Array.from({ length: Math.ceil(details.length / ITEMS_PER_PAGE) }, (_, index) => index + 1).map(
-                (pageNumber) => (
-                  <button
-                    key={pageNumber}
-                    onClick={() => setCurrentPage(pageNumber)}
-                    className={pageNumber === currentPage ? styles.activePage : ''}
-                  >
-                    {pageNumber}
-                  </button>
-                )
-              )}
-               <div className={styles.iconcont}>
-            <MdOutlineKeyboardDoubleArrowRight
-            onClick={() => setCurrentPage((prevPage) => Math.min(prevPage + 1, Math.ceil(details.length / ITEMS_PER_PAGE)))}
-            disabled={currentPage === Math.ceil(details.length / ITEMS_PER_PAGE)}
-             className={styles.icons}  />
-          </div>
-            
-            </div>
-          )}
-        </div>
       
-        
+
+<div className={styles.subfive}>
+          <div className={styles.paginationButtons}>
+            <div className={styles.iconcont} onClick={() => paginate(currentPage - 1)}>
+              <MdOutlineKeyboardDoubleArrowLeft className={styles.icons} />
+            </div>
+            <p>Page {currentPage}</p>
+            <div className={styles.iconcont} onClick={() => paginate(currentPage + 1)}>
+              <MdOutlineKeyboardDoubleArrowRight className={styles.icons} />
+            </div>
+          </div>
+        </div>
       </div>
      
     </Fragment>

@@ -3,9 +3,11 @@ import styles from './page.module.css'
 import Office from '../SectionThree/office'
 import General from '../SectionThree/general'
 import Apartment from './apartment'
-
+import { getRequest } from '@/library/request'
 
 const Page = () => {
+  const [property, setProperty] = useState([]);
+
     const [showAll, setShowAll] = useState(false);
     const [showAdventure, setShowAdventure] = useState(false);
     const [showArt, setShowArt] = useState(false);
@@ -66,6 +68,8 @@ const Page = () => {
       setShowSpa(false);
       setShowSight(true);
     };
+
+    
   
     return (
       <section className='px-10 md:py-10 md:px-20 lg:px-20 xl:px-24' id='properties' data-aos="flip-down">
