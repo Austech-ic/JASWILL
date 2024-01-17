@@ -37,8 +37,8 @@
     justify-content: flex-end;
     /* border: 1px solid red; */
     color: white;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
      /* color: #800000; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -156,8 +156,8 @@
 }
 .subcont{
     /* min-height: 45vh; */
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
 }
 .subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 45vh;
@@ -222,8 +222,8 @@
 }
 .subcont{
     min-height: 70vh;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
 }
 .subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 70vh;
@@ -298,7 +298,10 @@
 }
 .subcont{
     min-height: 60vh;
+    width: 300px;
+    height: 300px;
 }
+
 .subcont.one, .subcont.two, .subcont.three, .subcont.four, .subcont.five{
     min-height: 60vh;
 }
