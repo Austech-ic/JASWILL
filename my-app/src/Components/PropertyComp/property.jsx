@@ -64,7 +64,7 @@ const Property = () => {
                     <p>Home</p>
                 </Link>
                 <RxSlash />
-                <Link href={`/properties`} className={styles.link}>
+                <Link href={`/Property/property`} className={styles.link}>
                     <p>Property for sale in Abuja</p>
                 </Link>
                
