@@ -1,5 +1,5 @@
 .main {
-    padding: 60px 20px 60px 20px;
+    padding: 40px 20px 60px 20px;
     /* background-color: red; */
 }
 
@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     gap: 1px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     line-height: 1.5rem;
     color: #ABABAB;
     
@@ -97,7 +97,7 @@
     border-radius: 5px;
 }
 .cont:hover{
-    border: 2px solid #034758;
+    border: 2px solid white;
     border-radius: 5px;
 }
 .imgs{
@@ -125,9 +125,20 @@
 .bold{
     font-weight: 600;
 }
+@media (min-width:391px) {
+    .subone {
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        color: #ABABAB;
+        
+    }
+}
 @media (min-width:768px) {
     .main {
-        padding: 60px 40px 60px 40px;
+        padding: 50px 40px 60px 40px;
     }
     .subone {
         font-size: 1.3rem;
@@ -213,7 +224,7 @@
 
 @media (min-width:1024px) {
     .main {
-        padding: 50px 100px 50px 100px;
+        padding: 50px 100px 70px 100px;
     }
     .subone {
         font-size: 0.9rem;
@@ -253,7 +264,7 @@
 
 @media (min-width:1280px) {
     .main {
-        padding: 70px 130px 70px 130px;
+        padding: 60px 130px 90px 130px;
     }
     .subone {
         font-size: 1rem;
