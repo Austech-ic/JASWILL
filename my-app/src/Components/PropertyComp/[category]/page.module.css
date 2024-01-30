@@ -28,7 +28,9 @@
     font-size:0.7rem;
     line-height: 1.2rem;
     /* border: 1px solid red; */
+     border-radius: 20px;
     background-color:#020830;
+   
 }
 .label{
     font-size:0.8rem;
@@ -47,8 +49,8 @@
     /* background-color: red; */
 }
 .img{
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     border-radius: 0;
 }
 .contone{

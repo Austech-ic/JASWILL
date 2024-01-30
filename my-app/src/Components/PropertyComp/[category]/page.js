@@ -99,7 +99,11 @@ import Footer from '@/Components/Footer/footer'
                         </div>
                     </div>
                     <div className={styles.imgcont}>
-                        <Image src={property.imageUrl} width={1000} height={1000} className={styles.img} alt='Property-Image' />
+                        <Image src={property.imageUrl}
+                         width={1000}
+                         height={500}
+                         style={{ width: '100%', height: '100%' }}
+                          alt='Property-Image' />
                     </div>
                     <div className={styles.contone}>
                         {
