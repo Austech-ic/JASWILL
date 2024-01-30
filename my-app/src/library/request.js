@@ -59,6 +59,16 @@ export const createBlogPost = async (url,payload) => {
 
     // console.log(process.env.NEXT_PUBLIC_BASE_URL)
 }
+export const signUp = async (url,payload) => {
+    
+  const response = await axios.post(url,payload, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      }} )
+  return response.data
+
+  console.log(process.env.NEXT_PUBLIC_BASE_URL)
+}
 
 
 

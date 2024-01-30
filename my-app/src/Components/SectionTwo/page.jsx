@@ -64,6 +64,10 @@ const Page = () => {
   }, [])
   console.log(property)
 
+  if (!property) {
+    return <div>Loading...</div>; // Add a loading state while fetching data
+  }
+
 
   const handleSlide = (direction) => {
     const newOffset = offset + (direction === 'left' ? -1 : 1);
