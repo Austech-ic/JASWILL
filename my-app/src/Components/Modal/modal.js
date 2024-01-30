@@ -54,31 +54,30 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
     setTitleError('');
     setImageError('');
     setDescriptionError('');
-      
+  
     if (!formData.title) {
       setTitleError('Please enter a title.');
     }
-
+  
     if (!ImageUrl) {
       setImageError('Please upload an image.');
     }
-
+  
     if (!formData.desccription) {
       setDescriptionError('Please enter a description.');
     }
-
+  
     // If any of the requirements is not met, return without saving
     if (!formData.title || !ImageUrl || !formData.desccription) {
       return;
     }
-    
-
+  
     const formValues = new FormData();
     formValues.append('ImageUrl', ImageUrl);
     formValues.append('Title', formData.title);
     formValues.append('Desccription', formData.desccription);
-    formValues.append('CreatedOn', formData.createdOn); // Include the createdOn field
-
+    formValues.append('CreatedOn', formData.createdOn);
+  
     try {
       createBlogPost('Blog/CreateBlog', formValues).then((response) => {
         toast({
@@ -91,11 +90,20 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
         });
         setCounter((prev) => prev + 1);
         handleClose();
+        // Clear the form data after saving
+        setFormData({
+          title: '',
+          desccription: '',
+          createdOn: format(new Date(), "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+        });
+        setImageUrl(null);
+        setImage(null);
       }).catch((error) => console.log(error));
     } catch (error) {
       console.error('Upload failed!', error);
     }
   };
+  
 
   const showMediaInGallery = () => {
     if (ImageUrl) {

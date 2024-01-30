@@ -77,7 +77,7 @@ const Dropdown = ({counter}) => {
                 {/* <img  src={me} alt='pic' className="h-6 w-6 lg:h-8 lg:w-8 xl:h-9 xl:w-9 rounded-full" /> */}
                <p id="dropdown-menu-button"
                  onClick={toggleDropdown} 
-                 className="text-sm  md:text-large xl:text-large"> {details.userName}</p>
+                 className="text-sm  md:text-large xl:text-large"> admin@gmail.com</p>
                {/* <MdKeyboardArrowDown /> */}
               </button>
             </span>
@@ -94,7 +94,7 @@ const Dropdown = ({counter}) => {
                     role="menuitem"
                   >
                     <FaUserCircle />
-                   <p className="text-sm  md:text-large xl:text-large">{details.email}</p>
+                   <p className="text-sm  md:text-large xl:text-large">Admin</p>
                   </a>
                   <a
                     href="#"

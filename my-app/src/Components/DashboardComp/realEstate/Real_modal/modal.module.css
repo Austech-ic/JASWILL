@@ -178,7 +178,7 @@ display: flex;
   /* background-color: white; */
   display: none;
   border-radius: 10px;
-  height: 255vh;
+  /* max-height: 350vh; */
   overflow: hidden;
   padding: 10px 0;
 }
@@ -200,28 +200,52 @@ display: flex;
 .displayNone {
   display: none;
 }
+@media (min-width: 360px) {
+  .modal {
+    height: 270vh;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+}
 
 @media (min-width:375px) {
 .modal {
-  height: 280vh;
+  height: 290vh;
   overflow: hidden;
   padding: 10px 0;
 }
 }
-@media (min-width:380px) {
-.modal {
-  height: 230vh;
-  overflow: hidden;
-  padding: 10px 0;
+
+@media (min-width: 390px) {
+  .modal {
+    height: 240vh;
+    overflow: hidden;
+    padding: 10px 0;
+  }
 }
-}
+
 @media (min-width:412px) {
 .modal {
-  height: 210vh;
+  height: 225vh;
   overflow: hidden;
   padding: 10px 0;
 }
 }
+@media (min-width:430px) {
+  .modal {
+    max-height: 270vh;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  }
+  @media (min-width:540px) {
+    .modal {
+      height: 270vh;
+      overflow: hidden;
+      padding: 10px 0;
+    }
+    }
+ 
 
 @media (min-width:768px) {
   .main{
@@ -312,7 +336,7 @@ display: flex;
   width: 100%;
 }
 .modal {
-  height: 235vh;
+max-height: 250vh;
 }
 
 
@@ -320,12 +344,12 @@ display: flex;
 
 @media (min-width:820px) {
 .modal {
-  height: 205vh;
+  max-height: 220vh;
 }
 }
 @media (min-width:912px) {
 .modal {
-  height: 185vh;
+  max-height: 190vh;
 }
 }
 
@@ -412,7 +436,7 @@ height: 18vh;
   
 }
 .modal {
-  height: 295vh;
+  min-height: 300vh;
 }
 
 
@@ -474,6 +498,8 @@ height: 15vh;
   
 }
 .modal {
-  height: 223vh;
+  min-height: 230vh;
 }
+
+
 }

@@ -34,10 +34,19 @@
 .picont{
 width: 10%;
 }
+
 .picimg{
     width: 100%;
     height: auto;
 }
+/* .picimgs{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+justify-content: center;
+align-items: center;
+} */
 .img{
     width: 100%;
     height: auto;
@@ -60,6 +69,17 @@ width: 10%;
     gap: 10px;
     padding:20px 30px;
 }
+.contones{
+    border: 1px solid #BBCAFF;
+    background-color: #F6F8FF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding:20px 30px;
+}
 .label{
     font-size: 1.2;
     line-height: 2rem;
@@ -73,11 +93,20 @@ width: 10%;
     font-weight: bold;
     line-height: 1.5rem;
 }
+.labelheads{
+    font-weight: bold;
+    line-height: 1.5rem;
+}
 .labels{
     font-size: 1.2;
     line-height: 2rem;
 }
 .texts{
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+}
+.textss{
     font-size: 0.8rem;
     line-height: 1.4rem;
     font-weight: 300;
@@ -112,7 +141,19 @@ width: 10%;
         font-size: 1.5rem;
         line-height:2rem;
     }
+     .labelheads{
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height:2rem;
+    }
+    .textss{
+        font-size: 1.3rem;
+        line-height:2.5rem;
+    }
     .picont{
+        width: 7%;
+        }
+         .piconts{
         width: 7%;
         }
     .texts{
@@ -186,6 +227,9 @@ width: 10%;
     .picont{
         width: 15%;
         }
+        .piconts{
+        width: 15%;
+        }
     .contone{
         flex: 1;
         /* background-color: re; */
@@ -201,7 +245,7 @@ width: 10%;
     }
     .labelhead{
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         line-height: 2rem;
     }
     .text{
@@ -209,10 +253,21 @@ width: 10%;
         line-height: 2rem;
         
     }
+     .labelheads{
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+   
    
     .texts{
         font-size: 0.8rem;
         line-height: 1.8rem;
+        /* width: 70%; */
+    }
+     .textss{
+        font-size: 1rem;
+        line-height: 1rem;
         /* width: 70%; */
     }
 }
@@ -227,13 +282,23 @@ width: 10%;
         
     }
     .texts{
-        font-size: 1rem;
-        line-height: 2.1rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        /* width: 70%; */
+    }
+    .textss{
+        font-size: 1.3rem;
+        line-height: 1.5rem;
         /* width: 70%; */
     }
     .labelhead{
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .labelheads{
+        font-weight: bold;
+        font-size: 1.5rem;
         line-height: 2rem;
     }
     .head{
@@ -247,10 +312,16 @@ width: 10%;
     .picont{
         width: 12%;
         }
+        .piconts{
+        width: 12%;
+        }
 }
 
 @media (min-width:1440px) {
     .picont{
+        width: 9%;
+        }
+        .piconts{
         width: 9%;
         }
 }

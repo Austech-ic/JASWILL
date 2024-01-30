@@ -24,6 +24,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
     const [titleError, setTitleError] = useState('');
     const [imageError, setImageError] = useState('');
     const [descriptionError, setDescriptionError] = useState('');
+    const [categoryNameError, setCategoryNameError] = useState('');
     const [contentError, setContentError] = useState('');
     const [cityError, setCityError] = useState('');
     const [priceError, setPriceError] = useState('');
@@ -43,6 +44,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
     const [formData, setFormData] = useState({
       title: '',
       description: '',
+      categoryname: '',
       content:'',
       type: '',
       city: '',
@@ -100,6 +102,9 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
           case 'description':
             setDescriptionError('Please enter a description.');
             break;
+            case 'categoryname':
+            setCategoryNameError('Please enter category.');
+            break;
             case 'content':
               setContentError('Please enter a content.');
             break;
@@ -156,6 +161,9 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
           case 'description':
             setDescriptionError('');
             break;
+          case 'categoryname':
+            setCategoryNameError('');
+            break;
             case 'content':
               setContentError('');
               break;
@@ -209,6 +217,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       e.preventDefault();
       setTitleError('');
       setImageError('');
+      setCategoryNameError('');
       setDescriptionError('');
       setContentError(''),
       setCityError(''),
@@ -236,6 +245,9 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
   
       if (!formData.description) {
         setDescriptionError('Please enter a description.');
+      }
+      if (!formData.categoryname) {
+        setCategoryNameError('Please enter a category.');
       }
       if (!formData.content) {
         setContentError('Please enter a content.');
@@ -281,6 +293,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       if (!formData.title ||
          !ImageUrl || 
          !formData.description ||
+         !formData.categoryname ||
          !formData.content ||
          !formData.city ||
          !formData.price ||
@@ -302,6 +315,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       formValues.append('ImageUrl', ImageUrl);
       formValues.append('Title', formData.title);
       formValues.append('Description', formData.description);
+      formValues.append('CategoryName', formData.categoryname);
       formValues.append('Content', formData.content);
       formValues.append('City', formData.city);
       formValues.append('Price', formData.price);
@@ -336,6 +350,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       setFormData({
         title: '',
         description: '',
+        categoryname: '',
         content: '',
         type: '',
         city: '',
@@ -453,9 +468,6 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            onChange={(e) => setFormDataAndClearError('city', e.target.value)}
             />
          </div>
-
-         
-
          <div className={styles.divcont}>
           <label className={styles.label}>Property Location*</label>
           {locationError && <div className={styles.errorMessage}>{locationError}</div>}
@@ -467,6 +479,21 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            onChange={(e) => setFormDataAndClearError('propertylocation', e.target.value)}
             />
          </div>
+
+         <div className={styles.divcont}>
+          <label className={styles.label}>Category*</label>
+          {categoryNameError && <div className={styles.errorMessage}>{categoryNameError}</div>}
+          <input placeholder='Category Name'
+           className={styles.input}
+           value={formData.categoryname}
+           required
+           onChange={(e) => setFormDataAndClearError('categoryname', e.target.value)}
+            />
+         </div>
+
+         
+
+         
         
          <div className={styles.divcont}>
           <label className={styles.label}>Number of bedrooms*</label>
@@ -507,12 +534,15 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
          <div className={styles.divcont}>
           <label className={styles.label}>Type*</label>
           {typeError && <div className={styles.errorMessage}>{typeError}</div>}
-          <input placeholder='For Sale'
-           className={styles.input}
-           value={formData.type}
-                required
-                onChange={(e) => setFormDataAndClearError('type', e.target.value)}
-                 />
+          <select  
+          value={formData.type}
+          required
+          onChange={(e) => setFormDataAndClearError('type', e.target.value)}
+          className={styles.input}>
+            <option>For Sale</option>
+            <option>For Rent</option>
+          </select>
+          
          </div>
 
          <div className={styles.divcont}>
