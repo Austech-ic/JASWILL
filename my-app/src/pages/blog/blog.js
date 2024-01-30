@@ -9,7 +9,6 @@ const Blogprat = () => {
   return (
     <div>
       <EachBlog />
-      {/* <p>add </p> */}
     </div>
   )
 }
