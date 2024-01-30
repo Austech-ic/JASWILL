@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import EachBlog from '../../Components/Blog/EachBlog/page'
+import SingleBlog from '../../Components/Blog/[category]/page'
 
 const BlogPost = () => {
   const router = useRouter();
@@ -11,7 +12,7 @@ const BlogPost = () => {
     return null;
   }
 
-  return < EachBlog id={id} />;
+  return <SingleBlog id={id} />;
 };
 
 export default BlogPost;

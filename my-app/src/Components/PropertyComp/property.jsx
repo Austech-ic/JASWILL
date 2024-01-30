@@ -64,9 +64,9 @@ const Property = () => {
                     <p>Home</p>
                 </Link>
                 <RxSlash />
-                <Link href={`/Property/property`} className={styles.link}>
-                    <p>Property for sale in Abuja</p>
-                </Link>
+                {/* <Link href={`/Property/property`} className={styles.link}>
+                    <p>Property for sale in {property.city}</p>
+                </Link> */}
                
             </div>
        {currentItems.map((datum) => (
