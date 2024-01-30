@@ -20,6 +20,36 @@ import Footer from '@/Components/Footer/footer'
 
     const [property, setProperty] = useState([]);
 
+    const Description =[
+        {
+            id:1,
+            
+        }
+    ]
+
+
+    const details = [
+        {
+            id: 1,
+            pic: Inside,
+        },
+        {
+            id: 2,
+            pic: Inside,
+        },
+        {
+            id: 3,
+            pic: Inside,
+        },
+        {
+            id: 4,
+            pic: Inside,
+        },
+        {
+            id: 5,
+            pic: Inside,
+        }
+    ]
 
 
     useEffect(() => {
