@@ -110,7 +110,7 @@ const Apartment = () => {
                 <p className='text-xs md:text-base lg:text-xs xl:text-base'>{datum.description}</p>
               </div>
               <div className='mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
-                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>#{datum.price} per person per month</p>
+                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{datum.price} per person per month</p>
               </div>
               <Link href={'/Property/property'}>
               <div className='text-red-700 cursor-pointer flex justify-between items-center gap-2'>

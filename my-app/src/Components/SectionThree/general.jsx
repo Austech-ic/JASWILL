@@ -12,8 +12,14 @@ import Link from 'next/link';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import axios from 'axios';
+import { getRequest } from '@/library/request'
+
+
 
 const General = () => {
+  const [property, setProperty] = useState([]);
+  
   const details = [
     {
       id: 1,

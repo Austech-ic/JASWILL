@@ -1,6 +1,8 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://jaswillrealestate.onrender.com/api/"
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+console.log("Base URL:", process.env.NEXT_PUBLIC_BASE_URL);
+
 
 
 export const resetPassword = async (url,payload) => {
