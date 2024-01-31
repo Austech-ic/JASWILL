@@ -11,12 +11,7 @@ const Page = () => {
   const [property, setProperty] = useState([]);
 
     const [showAll, setShowAll] = useState(false);
-    const [showAdventure, setShowAdventure] = useState(false);
-    const [showArt, setShowArt] = useState(false);
-    const [showFood, setShowFood] = useState(false);
-    const [showSpa, setShowSpa] = useState(false);
-    const [showSight, setShowSight] = useState(false);
-
+    
 
     const [apartments, setApartments] = useState([]);
     const [filteredApartments, setFilteredApartments] = useState([]);
@@ -67,60 +62,9 @@ const Page = () => {
   };
 
 
-    const handleAllClick = () => {
-      setShowAll(true);
-      setShowAdventure(false);
-      setShowArt(false);
-      setShowFood(false);
-      setShowSpa(false);
-      setShowSight(false);
-    };
   
-    const handleAdventureClick = () => {
-      setShowAll(false);
-      setShowAdventure(true);
-      setShowArt(false);
-      setShowFood(false);
-      setShowSpa(false);
-      setShowSight(false);
-    };
+    
   
-    const handleArtClick = () => {
-      setShowAll(false);
-      setShowAdventure(false);
-      setShowArt(true);
-      setShowFood(false);
-      setShowSpa(false);
-      setShowSight(false);
-    };
-  
-    const handleFoodDrinkClick = () => {
-      setShowAll(false);
-      setShowAdventure(false);
-      setShowArt(false);
-      setShowFood(true);
-      setShowSpa(false);
-      setShowSight(false);
-    };
-  
-    const handleSpaWellnessClick = () => {
-      setShowAll(false);
-      setShowAdventure(false);
-      setShowArt(false);
-      setShowFood(false);
-      setShowSpa(true);
-      setShowSight(false);
-    };
-  
-    const handleSightAttractionClick = () => {
-      setShowAll(false);
-      setShowAdventure(false);
-      setShowArt(false);
-      setShowFood(false);
-      setShowSpa(false);
-      setShowSight(true);
-    };
-
     
   
     return (
@@ -147,9 +91,11 @@ const Page = () => {
     </div>
   </div>
 
+  <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
   {filteredApartments.map((apartment, index) => ( 
-   <General className='flex flex-row' apartment={apartment} index={index} />
+   <General apartment={apartment} index={index} />
 ))}
+  </div>
   
          
         </div>
