@@ -75,7 +75,7 @@ const Page = () => {
           </div>
           <div className='overflow-x-auto '>
     <div >
-      <div style={{ cursor: 'pointer' }} className='flex items-center cursor-pointer p-5' >
+      <div style={{ cursor: 'pointer' }} className='flex justify-around items-center cursor-pointer p-5' >
       {apartments?.map((apartment, index) => (
           <div onClick={() => handleCategoryChange(apartment.categoryName)} style={{ cursor: 'pointer' }} className='flex-grow-1'>
             <p className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base  hover:text-white transition duration-300 ${
@@ -91,7 +91,7 @@ const Page = () => {
     </div>
   </div>
 
-  <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
+  <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
   {filteredApartments.map((apartment, index) => ( 
    <General apartment={apartment} index={index} />
 ))}
