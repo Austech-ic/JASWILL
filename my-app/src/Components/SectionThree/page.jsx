@@ -1,9 +1,11 @@
-import { useState }  from 'react'
+import { useState, useEffect }  from 'react'
 import styles from './page.module.css'
 import Office from '../SectionThree/office'
 import General from '../SectionThree/general'
 import Apartment from './apartment'
 import { getRequest } from '@/library/request'
+import axios from 'axios'
+
 
 const Page = () => {
   const [property, setProperty] = useState([]);
@@ -14,7 +16,57 @@ const Page = () => {
     const [showFood, setShowFood] = useState(false);
     const [showSpa, setShowSpa] = useState(false);
     const [showSight, setShowSight] = useState(false);
-  
+
+
+    const [apartments, setApartments] = useState([]);
+    const [filteredApartments, setFilteredApartments] = useState([]);
+    const [category, setCategory] = useState('');
+
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch('https://jaswillrealestate.onrender.com/api/Category/GetAllCategory');
+        const data = await response.json();
+        console.log('Fetched apartments:', data);
+        if (data.success && Array.isArray(data.data)) {
+          setApartments(data.data);
+          setFilteredApartments(data.data);
+        } else {
+          console.error('Error: Fetched data is not an array');
+        }
+      } catch (error) {
+        console.error('Error fetching apartments:', error);
+      }
+    })();
+  }, []);
+
+
+
+  // const fetchApartments = async () => {
+  //   try {
+  //     const response = await fetch('https://jaswillrealestate.onrender.com/api/Category/GetAllCategory');
+  //     const data = await response?.json();
+  //     setApartments(data);
+  //     setFilteredApartments(data);
+  //   } catch (error) {
+  //     console.error('Error fetching apartments:', error);
+  //   }
+  // };
+
+
+  const handleCategoryChange = (selectedCategory) => {
+    // const selectedCategory =target?.value;
+    setCategory(selectedCategory);
+    if (selectedCategory === '') {
+      setFilteredApartments(apartments);
+    } else {
+      const filtered = apartments.filter(apartment => apartment.categoryName === selectedCategory);
+      setFilteredApartments(filtered);
+    }
+  };
+
+
     const handleAllClick = () => {
       setShowAll(true);
       setShowAdventure(false);
@@ -72,118 +124,34 @@ const Page = () => {
     
   
     return (
-      <section className='px-10 md:py-10 md:px-20 lg:px-20 xl:px-24' id='properties' data-aos="flip-down">
+      <section className=' px-10 md:py-10 md:px-20 lg:px-20 xl:px-24' id='properties' data-aos="flip-down">
         <div>
           <div className='mt-5'>
             <p className='text-center py-2 text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-medium'>Explore By Property Type</p>
           </div>
-          <div className='overflow-x-auto'>
-    <div className='flex justify-between items-center cursor-pointer p-5'>
-      <div className='flex-grow-1'>
-        <p
-          className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base  hover:text-white transition duration-300 ${
+          <div className='overflow-x-auto '>
+    <div >
+      <div style={{ cursor: 'pointer' }} className='flex items-center cursor-pointer p-5' >
+      {apartments?.map((apartment, index) => (
+          <div onClick={() => handleCategoryChange(apartment.categoryName)} style={{ cursor: 'pointer' }} className='flex-grow-1'>
+            <p className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base  hover:text-white transition duration-300 ${
             showAll ? 'bg-maroon text-white' : ''
-          }`}
-          onClick={handleAllClick}
-        >
-          All
-        </p>
+          }`} key={index}>
+            {apartment.categoryName}
+          </p>
+            </div>
+        ))}
+        
       </div>
-      <div className='flex-grow-1'>
-        <p
-          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
-            showAdventure ? 'bg-maroon text-white' : ''
-          }`}
-          onClick={handleAdventureClick}
-        >
-         Apartment
-        </p>
-      </div>
-      <div className='flex-grow-1'>
-        <p
-          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
-            showArt ? 'bg-maroon text-white' : ''
-          }`}
-          onClick={handleArtClick}
-        >
-          Vila
-        </p>
-      </div>
-      <div className='flex-grow-1'>
-        <p
-          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
-            showFood ? 'bg-maroon text-white' : ''
-          }`}
-          onClick={handleFoodDrinkClick}
-        >
-          Studio
-        </p>
-      </div>
-      <div className='flex-grow-1'>
-        <p
-          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
-            showSpa ? 'bg-maroon text-white' : ''
-          }`}
-          onClick={handleSpaWellnessClick}
-        >
-          Office
-        </p>
-      </div>
-      <div className='flex-grow-1'>
-        <p
-          className={`p-2 w-24 text-center md:w-28 hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base hover:text-white transition duration-300 ${
-            showSight ? 'bg-maroon text-white' : ''
-          }`}
-          onClick={handleSightAttractionClick}
-        >
-        Gym
-        </p>
-      </div>
+      
     </div>
   </div>
+
+  {filteredApartments.map((apartment, index) => ( 
+   <General className='flex flex-row' apartment={apartment} index={index} />
+))}
   
-          {showAll && (
-            <div>
-              {/* Render the card component for "All" option here */}
-              <General />
-            </div>
-          )}
-          {showAdventure && (
-            <div>
-              {/* Render the card component for "Adventures" option here */}
-              <Apartment  />
-            </div>
-          )}
-          {showArt && (
-            <div>
-              {/* Render the card component for "Art & Culture" option here */}
-              <Office />
-            </div>
-          )}
-          {showFood && (
-            <div>
-              {/* Render the card component for "Food and Drink" option here */}
-              <Office />
-            </div>
-          )}
-          {showSpa && (
-            <div>
-              {/* Render the card component for "Spas & Wellness" option here */}
-              <Office />
-            </div>
-          )}
-          {showSight && (
-            <div>
-              {/* Render the card component for "Sights & Attractions" option here */}
-              <Office />
-            </div>
-          )}
-          {!showAll && !showAdventure && !showArt && !showFood && !showSpa && !showSight && (
-            <div>
-              {/* Render the default component here */}
-              <Office />
-            </div>
-          )}
+         
         </div>
       </section>
     );

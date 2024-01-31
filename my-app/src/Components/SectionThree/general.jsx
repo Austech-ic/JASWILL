@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import one from '../../../public/one.webp'
 import two from '../../../public/two.webp'
 import three from '../../../public/three.webp'
@@ -17,7 +17,7 @@ import { getRequest } from '@/library/request'
 
 
 
-const General = () => {
+const General = ({apartment,index}) => {
   const [property, setProperty] = useState([]);
   
   const details = [
@@ -57,23 +57,26 @@ const General = () => {
   ];
 
   return (
-    <section className='pb-10 pt-5 md:pt-10 '>
-      <div className='w-full grid shadow-2xl md:grid-cols-2 lg:grid-cols-4'>
-        {details.map((datum) => (
-          <div key={datum.id} className='p-5 w-full '>
+    <section className='pb-10 pt-5 md:pt-10 bg-yellow-500'>
+      <div key={index} className=' grid shadow-2xl md:grid-cols-2 lg:grid-cols-4 bg-red-100'>
+      
+          <div  className='p-5 w-full '>
             <div className='relative bg-red-700'>
               <div className='h-48 w-full'>
-                <Image src={datum.picture} alt='pic' className='h-full w-full object-cover' />
+                <Image src={apartment.image} width={100} height={100} alt='pic' className='h-full w-full object-cover' />
               </div>
               
             </div>
             <div className=' py-1 px-2 flex flex-col justify-between items-start'>
              
               <div className='h-18 text-xl mt-2 cursor-pointer font-bold md:text-2xl'>
-                <p>{datum.label}</p>
+                <p>{apartment.title}</p>
               </div>
               <div className='h-16 md:h-20 lg:h-24 xl:h-20 text-gray-700 cursor-pointer'>
-                <p className='text-xs md:text-base lg:text-sm mt-3'>{datum.description}</p>
+                <p className='text-xs md:text-base lg:text-sm mt-3'>{apartment.description}</p>
+              </div>
+              <div className='mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
+                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{apartment.amount} per person per month</p>
               </div>
              <Link href={'/Property/property'}>
               <div className='text-red-700 cursor-pointer flex justify-between items-center gap-2'>
@@ -83,7 +86,7 @@ const General = () => {
               </Link>
             </div>
           </div>
-        ))}
+      
       </div>
       
     </section>
