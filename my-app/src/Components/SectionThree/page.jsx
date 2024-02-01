@@ -21,34 +21,37 @@ const Page = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch('https://jaswillrealestate.onrender.com/api/Category/GetAllCategory');
-        const data = await response.json();
-        console.log('Fetched apartments:', data);
-        if (data.success && Array.isArray(data.data)) {
-          setApartments(data.data);
-          setFilteredApartments(data.data);
-        } else {
-          console.error('Error: Fetched data is not an array');
-        }
+        
+       const response = await getRequest("RealEstate/GetAllRealEstatesAsync")
+       console.log('Fetched apartments:', response);
+       if (response.data.success && Array.isArray(response.data.data)) {
+        setApartments(response.data.data);
+        setFilteredApartments(response.data.data);
+      } else {
+        console.error('Error: Fetched data is not an array');
+      }
+        // const response = await fetch('https://jaswillrealestate.onrender.com/api/Category/GetAllCategory');
+        // const data = await response.json();
+        // console.log('Fetched apartments:', data);
+        // if (data.success && Array.isArray(data.data)) {
+        //   setApartments(data.data);
+        //   setFilteredApartments(data.data);
+        // } else {
+        //   console.error('Error: Fetched data is not an array');
+        // }
       } catch (error) {
         console.error('Error fetching apartments:', error);
       }
     })();
-  }, []);
-
-
-
-  // const fetchApartments = async () => {
-  //   try {
-  //     const response = await fetch('https://jaswillrealestate.onrender.com/api/Category/GetAllCategory');
-  //     const data = await response?.json();
-  //     setApartments(data);
-  //     setFilteredApartments(data);
-  //   } catch (error) {
-  //     console.error('Error fetching apartments:', error);
-  //   }
-  // };
-
+  //   getRequest("RealEstate/GetAllRealEstatesAsync")
+  //   .then(data => {
+  //     setProperty(data.data.data.slice(0, 4))
+  //     console.log('Data received:', data);
+  // })
+  //   .catch((err) => console.log(err))
+  }, [])
+  
+ 
 
   const handleCategoryChange = (selectedCategory) => {
     // const selectedCategory =target?.value;
@@ -63,7 +66,7 @@ const Page = () => {
 
 
   
-    
+  
   
     
   
@@ -77,7 +80,7 @@ const Page = () => {
     <div >
       <div style={{ cursor: 'pointer' }} className='flex justify-around items-center cursor-pointer p-5' >
       {apartments?.map((apartment, index) => (
-          <div onClick={() => handleCategoryChange(apartment.categoryName)} style={{ cursor: 'pointer' }} className='flex-grow-1'>
+          <div key={apartment.id} onClick={() => handleCategoryChange(apartment.categoryName)} style={{ cursor: 'pointer' }} className='flex-grow-1'>
             <p className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-sm md:text-xl lg:text-base  hover:text-white transition duration-300 ${
             showAll ? 'bg-maroon text-white' : ''
           }`} key={index}>
@@ -93,7 +96,7 @@ const Page = () => {
 
   <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
   {filteredApartments.map((apartment, index) => ( 
-   <General apartment={apartment} index={index} />
+   <General key={apartment.id} apartment={apartment} index={index} />
 ))}
   </div>
   

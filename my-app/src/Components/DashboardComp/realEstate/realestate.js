@@ -25,6 +25,7 @@ const RealEstate = () => {
         <p>Dashboard / Real Estate / Properties</p>
       </div>
 
+      
       <Button onClick={openModal} />
       <div className=''>
         <RealModal className='' setCounter={setCounter} show={isModalOpen} handleClose={openModal}/>
