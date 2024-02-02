@@ -8,7 +8,7 @@ const Button = ({ onClick }) => {
         <div className={styles.subcont}>
     <button onClick={onClick} className={styles.button}>
     <IoMdAdd className={styles.icon} />
-        Create Property</button>
+        Create Category</button>
    
   </div>
     </div>
