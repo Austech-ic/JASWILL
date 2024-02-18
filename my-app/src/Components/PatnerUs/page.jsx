@@ -1,107 +1,91 @@
 import React,{ useState } from 'react'
 import styles from './page.module.css'
 import Image from 'next/image';
+import emailjs from 'emailjs-com';
 
 const Page = () => {
 
+  const [message, setMessage] = useState('');
+  const [isFormDisabled, setIsFormDisabled] = useState(false);
+  const [isOpacityTimeoutSet, setIsOpacityTimeoutSet] = useState(false);
 
-  const [selectedMedia, setSelectedMedia] = useState(null);
-
-  const handleFileUpload = (event) => {
-    const file = event.target.files[0];
-    setSelectedMedia(file); // Update state with the selected file
-  };
-
-  const showMediaInGallery = () => {
-    // Show the selected image inside the div when the "Choose File" label is clicked
-    if (selectedMedia) {
-      return (
-        <div className="mt-3">
-          <Image
-          width={200}
-          height={200}
-            src={URL.createObjectURL(selectedMedia)}
-            alt="Selected Thumbnail"
-            className={styles.image}
-          />
-        </div>
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+    try {
+      setIsFormDisabled(true); // Disable form elements
+      setIsOpacityTimeoutSet(true); // Set the flag to indicate timeout is set
+      const response = await emailjs.sendForm(
+        'service_hlkaktj',
+        'template_z9zhrlw',
+        event.target,
+        'lqnnLPAg7hkIv7Dj8'
       );
+
+      if (response.status === 200) {
+        setMessage('Message sent successfully.');
+        event.target.reset(); // Reset form fields after successful submission
+      } else {
+        setMessage('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setMessage('Failed to send message. Please try again later.');
+    } finally {
+      setIsFormDisabled(false); // Re-enable form elements
+      setTimeout(() => {
+        setIsOpacityTimeoutSet(false); // Clear the flag after 10 seconds
+      }, 10000);
     }
   };
+
+  
   return (
     <div className={styles.main}>
         <div>
             <p className={styles.label}>Partner With Us</p>
             <p className={styles.text}>We boast a great number of partners and affiliate marketers who are achieving huge financial results for themselves on a monthly basis. Want to make real estate your side gig? We will support you every step of the way. Kindly fill out the form below:</p>
-            <div className={styles.formcont}>
-              <form action="" >
-                <div className={styles.form}>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Full Name</label>
-                  <input type="text" placeholder='Name' className={styles.input} />
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Address</label>
-                  <input type="text" placeholder='(Street, City, State, Postal Code, Country)' className={styles.input} />
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Type of Partner</label>
-                  <input type="text" placeholder='Individual/Company' className={styles.input} />
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Email</label>
-                  <input type="email" placeholder='Email' className={styles.input} />
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Phone</label>
-                  <input type="text" placeholder='+234-3333-333-333' className={styles.input}/>
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Bank Name</label>
-                  <input type="text" className={styles.input} />
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Account Name</label>
-                  <input type="text" className={styles.input}/>
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Account Number</label>
-                  <input type="text" className={styles.input} />
-                </div>
-                <div className={styles.divcont}>
-                  <label htmlFor="" className={styles.labeltext}>Date of Registration</label>
-                  <input type="text" className={styles.input} />
-                </div>
-              
-                <div className={styles.divconts}>
-                 
-                  <div className="">
-                  {showMediaInGallery()}
-          <input
-            type="file"
-            onChange={handleFileUpload}
-            accept=""
-            style={{ display: 'block' }}
-            id="file-upload"
-          />
-                    {/* <label
-                      htmlFor="file-upload"
-                      className="flex justify-center items-center gap-6 bg-transparent text-gray-700 rounded-xl h-20 w-40 text-sm md:text-max outline-dotted outline-gray-400"
-                    >
-                      Upload Video
-                    </label> */}
-                  </div>
-                </div>
-                </div>
-                <div className={styles.buttoncont}>
-                  <button>
-                    Submit
-                  </button>
-                </div>
-              </form>
+            <div className={styles.formcont} style={{ opacity: isOpacityTimeoutSet ? 0.5 : 1, pointerEvents: isOpacityTimeoutSet ? 'none' : 'auto' }}>
+         
+          <form onSubmit={handleSubmit}>
+          <div className={styles.form}>
+            <div className={styles.divcont}>
+              <label htmlFor="full_name" className={styles.labeltext}>Full Name</label>
+              <input type="text" id="full_name" name="full_name" placeholder='Name' className={styles.input} />
+            </div>
+            <div className={styles.divcont}>
+              <label htmlFor="address" className={styles.labeltext}>Address</label>
+              <input type="text" id="address" name="address" placeholder='(Street, City, State, Postal Code, Country)' className={styles.input} />
+            </div>
+            <div className={styles.divcont}>
+              <label htmlFor="partner_type" className={styles.labeltext}>Type of Partner</label>
+              <input type="text" id="partner_type" name="partner_type" placeholder='Individual/Company' className={styles.input} />
+            </div>
+            <div className={styles.divcont}>
+              <label htmlFor="email" className={styles.labeltext}>Email</label>
+              <input type="email" id="email" name="email" placeholder='Email' className={styles.input} />
+            </div>
+            <div className={styles.divcont}>
+              <label htmlFor="phone" className={styles.labeltext}>Phone</label>
+              <input type="text" id="phone" name="phone" placeholder='+234-3333-333-333' className={styles.input}/>
+            </div>
+            <div className={styles.divcont}>
+              <label htmlFor="registration_date" className={styles.labeltext}>Date of Registration</label>
+              <input type="text" id="registration_date" name="registration_date" className={styles.input} />
+            </div>
+          </div>
+          <div className={styles.buttoncont}>
+          <button type="submit" disabled={message !== ''}>Submit</button>
+        </div>
+        {message && <p>{message}</p>}
+        </form>
+        
+        </div>
+
+
             </div>
         </div>
-    </div>
+   
   )
 }
 
