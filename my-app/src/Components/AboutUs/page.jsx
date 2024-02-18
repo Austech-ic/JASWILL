@@ -48,12 +48,12 @@ const page = () => {
              title:"Prosper T.Nwankwo (MBA)",
             position:"Managing Director"
         },
-        {
-            id: 3,
-            pic:austech,
-            title:"Austin Okekwu",
-            position:"Managing Director"
-        },
+        // {
+        //     id: 3,
+        //     pic:austech,
+        //     title:"Austin Okekwu",
+        //     position:"Managing Director"
+        // },
     ]
     return (
         <div className={styles.main}>
@@ -88,7 +88,7 @@ const page = () => {
 
                 </div>
                 <div>
-                <p className='text-center text-lg md:text-2xl lg:text-xl xl:text-3xl font-bold'>Boards Of Directors</p>
+                <p className='text-center text-lg md:text-2xl lg:text-xl xl:text-3xl font-bold'>Management Team</p>
                 </div>
                 <div className='py-2 flex flex-col lg:flex-row justify-center items-center gap-y-10 lg:gap-x-10 xl:gap-x-14'>
                    

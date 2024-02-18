@@ -82,9 +82,9 @@ const Page = () => {
     return (
       <div className={styles.main} data-aos="flip-right">
       <div className={styles.submain}>
-        <p className={styles.label}>Display Latest & Featured Properties</p>
+        <p className={styles.label}>Invest Today In The FCT, Abuja-Nigeria</p>
         <p className={styles.textwo}>
-          Get started by choosing from one of our pre-built page templates to showcase your properties
+        Choose your preferred plot size and building prototype based on your budget.
         </p>
       </div>
       <div className={styles.carouselcont}>
