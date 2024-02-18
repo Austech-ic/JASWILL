@@ -91,10 +91,12 @@ ref={scrollTriggerRef}
                 </div>
                 <div className='flex gap-4 items-center'>
                 <FaWhatsapp className='text-maroon w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[20px] lg:h-[20px]' />
-          
+                <Link href="https://wa.me/message/R3XZ3HBLHXWMG1" className={styles.link}>
                 <div onClick={handleAddressClick} className='hover:text-maroon hover:underline cursor-pointer'>
                     <p className='text-xs md:text-2xl lg:text-sm'>Send us a message on whatsapp</p>
                 </div>
+                </Link>
+                
          
         </div>
                 
