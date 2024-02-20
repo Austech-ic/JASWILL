@@ -18,6 +18,7 @@ import Carosel from '../Components/Carosel/page'
 import Blog from '../Components/Blog/page'
 import Message from '../Components/MessageComp/page'
 import LayoutContainer from "../../src/Components/util/layout"
+import Subsection from '../Components/subsection/page'
 
 
 
@@ -49,7 +50,8 @@ const Home = () => {
           <SectionOne />
           <SectionTwo />
           <Services />
-          <SectionThree />
+          <Subsection />
+          {/* <SectionThree /> */}
           <AboutUs />
           <Career />
           <Testimonies />

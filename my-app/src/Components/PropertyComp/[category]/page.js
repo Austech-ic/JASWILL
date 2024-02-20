@@ -12,7 +12,12 @@ import { isNotFoundError } from 'next/dist/client/components/not-found'
 import { useRouter } from 'next/router';
 import { getRequest } from '@/library/request'
 import Footer from '@/Components/Footer/footer'
-
+import one from '../../../../public/aok.jpeg'
+import aoe from '../../../../public/aoe.jpeg'
+import two from '../../../../public/aob.jpeg'
+import three from '../../../../public/aoc.jpeg'
+import four from '../../../../public/aoo.jpeg'
+import five from '../../../../public/ao.jpeg'
 
 
 
@@ -51,6 +56,21 @@ import Footer from '@/Components/Footer/footer'
         }
     ]
 
+    const info = [
+        {
+          id: 1,
+          pic: one,
+          label: "JIKWOYI",
+          desc: "180SQM",
+          location: "Lugbe",
+          city: "Abuja",
+          price: "#9,000,000",
+          beds: "3",
+          toilet: "3",
+          floor: "1"
+        },
+       
+      ]
 
     useEffect(() => {
         getRequest(`RealEstate/GetRealEstateById/${id}`)
@@ -91,8 +111,7 @@ import Footer from '@/Components/Footer/footer'
                                 <p>,</p>
                             <p>{property.city}</p>
                             </div>
-                            {/* <p>1,669 kilometers</p>
-                            <p className={styles.view}>view similar properties in this area</p> */}
+                            
                         </div>
                         <div className={styles.innerdivtwo}>
                             <p className={styles.label}>{property.price}</p>
@@ -154,8 +173,7 @@ import Footer from '@/Components/Footer/footer'
 
                     <div className={styles.contextone}>
                         <div className={styles.textcont}>
-                            {/* <p>Sale 50,000,000</p> */}
-
+                           
                             <p>Agency Fee {property.agency}</p>
                             <p>Agreement Fee {property.agreement}</p>
                             <p>Caution Fee {property.caution}</p>
@@ -169,6 +187,9 @@ import Footer from '@/Components/Footer/footer'
 
             </div>
         </div>
+
+
+        
         <Footer />
         </Fragment>
     )
