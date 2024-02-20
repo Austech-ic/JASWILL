@@ -16,7 +16,8 @@ module.exports = {
         maroon:'#800000',
         blue:'#000080',
         white:'#FFFFFF',
-        black:' #000000'
+        black:' #000000',
+        jojo: '#800080',
       }
     },
   },

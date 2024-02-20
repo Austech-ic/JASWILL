@@ -47,7 +47,7 @@ const Page = () => {
           }`} 
       onClick={handleAllClick}
       >
-       Apartment
+       All
       </p>
         </div>
         <div style={{ cursor: 'pointer' }} className='flex-grow-1'>

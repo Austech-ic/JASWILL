@@ -100,8 +100,8 @@ const Apartment = () => {
               <div className='h-6 md:h-6 w-full lg:h-8  cursor-pointer font-bold  '>
                 <p className='text-base md:text-xl lg:text-lg xl:text-xl'>{datum.label}</p>
               </div>
-              <div className='h-[30px] md:h-[50px] lg:h-[40px] xl:h-[50px] text-gray-700 cursor-pointer mt-4 '>
-                <p className='text-xs md:text-base lg:text-xs xl:text-base '>{datum.description}</p>
+              <div className='h-[30px] md:h-[60px] lg:h-[70px] xl:h-[50px] text-gray-700 cursor-pointer mt-4 '>
+                <p className='text-xs md:text-xl lg:text-sm'>{datum.description}</p>
               </div>
               <div className='mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
                 <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{datum.price} per year</p>
