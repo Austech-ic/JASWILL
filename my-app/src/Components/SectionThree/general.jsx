@@ -78,7 +78,7 @@ const General = ({apartment,index}) => {
                 <p className='text-xs md:text-base lg:text-sm mt-3'>{apartment.content}</p>
               </div>
               <div className=' mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
-                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{apartment.price} per month</p>
+                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{apartment.price} per year</p>
               </div>
              <Link href={'/Property/property'}>
               <div className=' text-red-700 cursor-pointer flex justify-between items-center gap-2'>

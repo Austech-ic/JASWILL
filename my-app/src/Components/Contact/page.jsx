@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './pages.module.css'
 import contact from '../../../public/contact-us.webp'
+import jas from '../../../public/jas.jpeg'
 import { IoIosMenu,IoMdCall } from 'react-icons/io';
 import {FaWhatsappSquare} from 'react-icons/fa'
 import { FaLocationDot } from "react-icons/fa6";
@@ -55,7 +56,7 @@ ref={scrollTriggerRef}
     >
         <div className='flex flex-col gap-x-8 xl:gap-2 lg:flex-row' id='contact'>
             <div className={styles.subone}>
-                <Image src={contact} alt='contact-img' className={styles.img} />
+                <Image src={jas} alt='contact-img' className={styles.img} />
             </div>
             <div className='flex flex-col gap-4 lg:gap-4 xl:gap-8'>
                 <p className='text-maroon text-xl md:text-4xl pt-8 md:pt-16 lg:text-3xl lg:pt-10'>Contact Us</p> 

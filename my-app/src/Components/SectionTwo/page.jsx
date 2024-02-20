@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import styles from './page.module.css'
-import one from '../../../public/one.webp'
-import two from '../../../public/two.webp'
-import three from '../../../public/officetwo.webp'
+import aoc from '../../../public/aoc.jpeg'
+import two from '../../../public/ao.jpeg'
+import three from '../../../public/aob.jpeg'
 import four from '../../../public/blog.png'
 import Image from 'next/image'
 import { FaBed, FaShower } from 'react-icons/fa'
@@ -22,6 +22,58 @@ import { getRequest } from '@/library/request'
 
 const Page = () => {
   const [property, setProperty] = useState([]);
+
+  const details = [
+    {
+      id: 1,
+      label: "JIKWOYI",
+      desc: "For Rent",
+      content: "180SQM",
+      price: "#9,000,000",
+      backgroundImgClass: "one" // Use 'one' class for background image
+    },
+    {
+      id: 2,
+      label: "JIKWOYI",
+      desc: "For Rent",
+      content: "250SQM",
+      price: "#1,200,000",
+      backgroundImgClass: "two" // Use 'two' class for background image
+    },
+    {
+      id: 3,
+      label: "JIKWOYI",
+      desc: "For Rent",
+      content: "250SQM",
+      price: "#1,200,000",
+      backgroundImgClass: "three" // Use 'two' class for background image
+    },
+    {
+      id: 4,
+      label: "JIKWOYI",
+      desc: "For Rent",
+      content: "350SQM",
+      price: "#1,500,000",
+      backgroundImgClass: "four" // Use 'two' class for background image
+    },
+    {
+      id: 5,
+      label: "JIKWOYI",
+      desc: "For Rent",
+      content: "400SQM",
+      price: "#1,700,000",
+      backgroundImgClass: "five" // Use 'two' class for background image
+    },
+    {
+      id: 6,
+      label: "JIKWOYI",
+      desc: "For Rent",
+      content: "500SQM",
+      price: "#2,700,000",
+      backgroundImgClass: "six" // Use 'two' class for background image
+    },
+];
+
 
    
 
@@ -69,11 +121,19 @@ const Page = () => {
   }
 
 
+  // const handleSlide = (direction) => {
+  //   const newOffset = offset + (direction === 'left' ? -1 : 1);
+  
+  //   // Ensure the offset stays within bounds
+  //   if (newOffset >= 0 && newOffset <= property.length - visibleCards) {
+  //     setOffset(newOffset);
+  //   }
+  // };
   const handleSlide = (direction) => {
     const newOffset = offset + (direction === 'left' ? -1 : 1);
   
     // Ensure the offset stays within bounds
-    if (newOffset >= 0 && newOffset <= property.length - visibleCards) {
+    if (newOffset >= 0 && newOffset <= details.length - visibleCards) {
       setOffset(newOffset);
     }
   };
@@ -89,9 +149,9 @@ const Page = () => {
       </div>
       <div className={styles.carouselcont}>
         <div onClick={() => handleSlide('left')}>
-          <BsArrowLeft />
+          <BsArrowLeft className={styles.arrow} />
         </div>
-        <div className={styles.cont}>
+        {/* <div className={styles.cont}>
           {property.slice(offset, offset + visibleCards).map((datum, index) => (
             <div
               key={index}
@@ -103,30 +163,54 @@ const Page = () => {
               <p className={styles.caption}>{datum.description}</p>
               <div className={styles.sub}>
                 <div className={styles.iconcont}>
-                  <p>{datum.icon}</p>
                   <p>{datum.price}</p>
                 </div>
-                <div className={styles.iconcont}>
-                  <p>{datum.icontwo}</p>
-                  <p>{datum.typetwo}</p>
-                </div>
-                <div className={styles.iconcont}>
-                  <p>{datum.iconthree}</p>
-                  <p>{datum.typethree}</p>
-                </div>
+               
+                
               </div>
             </div>
           ))}
-          {/* Empty cards for the remaining space if there are less than 3 images */}
+          
           {property.length < 3 &&
             Array.from({ length: 3 - property.length }).map((_, index) => (
               <div key={property.length + index} className={styles.emptyCard}>
-                {/* Add your empty card styling/content here */}
               </div>
             ))}
+        </div> */}
+
+<div className={styles.cont}>
+  {details.slice(offset, offset + visibleCards).map((datum, index) => (
+    <div
+    key={index}
+    className={`${styles.subcont} ${styles[datum.backgroundImgClass]}`} // Dynamically apply background image class
+    style={{ backgroundImage: `url(${require(`../../../public/${datum.backgroundImgClass}.jpeg`)})` }} // Dynamically set background image URL
+  >
+      <p className={styles.bold}>{datum.label}</p>
+      <p className={styles.caption}>{datum.desc}</p>
+      <p className={styles.caption}>{datum.content}</p>
+      <div className={styles.sub}>
+        <div className={styles.iconcont}>
+          <p>{datum.price}</p>
         </div>
+      </div>
+    </div>
+  ))}
+  
+  {/* {property.length < 3 &&
+    Array.from({ length: 3 - property.length }).map((_, index) => (
+      <div key={property.length + index} className={styles.emptyCard}></div>
+    ))} */}
+    {details.length < 3 &&
+    Array.from({ length: 3 - details.length }).map((_, index) => (
+      <div key={details.length + index} className={styles.emptyCard}></div>
+    ))}
+</div>
+
+
+
+      
         <div onClick={() => handleSlide('right')}>
-          <BsArrowRight />
+          <BsArrowRight className={styles.arrow} />
         </div>
       </div>
     </div>
