@@ -48,7 +48,7 @@
    /* background-color: yellow; */
 }
 .picont{
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,14 @@ border-radius: 100%;
         padding: 10px;
     }
     .subcont{
-        height: 40vh;
+        height: 50vh;
+    }
+    .picont{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
     
 }
