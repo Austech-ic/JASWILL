@@ -217,7 +217,7 @@ const Property = () => {
                     <div className={styles.contimg}>
 
                       <div className={styles.imgcont}>
-                        <Image src={datum.pic} width={100} height={100} alt='fade-img' style={{ width: '100%', height: '100%' }} className={styles.img} />
+                        <Image src={datum.pic}  alt='fade-img' style={{ width: '50rem',height: '30vh', objectFit: 'fit' }} className='' />
                       </div>
 
                       <div className={styles.textcont}>
