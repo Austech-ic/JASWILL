@@ -9,6 +9,11 @@ import female from '../../../public/side.png'
 import Image from 'next/image';
 import Review from '../Rev/page'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import gben from '../../../public/gben2.jpeg'
+import zain from '../../../public/zain.jpeg'
+import pat from '../../../public/pat2.jpeg'
+import tony from '../../../public/to.jpeg'
+import uc from '../../../public/uc.jpeg'
 
 
 const Page = () => {
@@ -16,9 +21,9 @@ const Page = () => {
     const details = [
         {
             id: 1,
-            pic: female,
-            label: "Miss Joy",
-            text: "This app makes house hunting so easy, for me it's so understabdable.",
+            pic: gben,
+            label: "Dr Gbenga",
+            text: "The entire land acquistion process was smooth.I recommend them.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
@@ -31,9 +36,9 @@ const Page = () => {
         },
         {
             id: 2,
-            pic: female,
-            label: "Mr Ben",
-            text: "This app makes house hunting so easy, for me it's so understabdable.",
+            pic: zain,
+            label: "Barr Zainab",
+            text: "I highly recommend Jaswill properties to anyone in search of their dream home.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
@@ -46,9 +51,9 @@ const Page = () => {
         },
         {
             id: 3,
-            pic: female,
-            label: "Miss Taiwo",
-            text: "Our business encompasses different stages of the real estate development matrix, but focuses more on land development, building development, and building operations.",
+            pic: pat,
+            label: "Miss Patricia",
+            text: "Jaswill has a dedicated team who understood my preferences.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
@@ -61,9 +66,9 @@ const Page = () => {
         },
         {
             id: 4,
-            pic: female,
-            label: "Mrs Johnson",
-            text: "This app makes house hunting so easy, for me it's so understabdable.",
+            pic: tony,
+            label: "Mr Tony",
+            text: "They exceeded my exceptations, delivering quality service with proffessionalism.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
@@ -75,23 +80,9 @@ const Page = () => {
         },
         {
             id: 5,
-            pic: female,
-            label: "Mr Olu",
-            text: "This app makes house hunting so easy, for me it's so understabdable.",
-            rate:[
-                {icon: <AiFillStar size={25} className='text-maroon' /> },
-                {icon: <AiFillStar size={25} className='text-maroon' /> },
-                {icon: <AiFillStar size={25} className='text-maroon' /> },
-                {icon: <AiFillStar size={25} className='text-maroon' /> },
-                {icon: <AiFillStar size={25} className='text-maroon' /> },
-
-            ]
-        },
-        {
-            id: 6,
-            pic: female,
-            label: "Mr John",
-            text: "This app makes house hunting so easy, for me it's so understabdable.", text: "This app makes house hunting so easy, for me it's so understabdable.",
+            pic: uc,
+            label: "Mr Ucheckwu",
+            text: "This company offers an exceptional experience.I wholeheartedly recommend them.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
@@ -121,7 +112,8 @@ const Page = () => {
                         <div key={datum.id} className={styles.subcont}>
                             {/* Your content for each slide */}
                             <div className={styles.picont}>
-                                <Image src={datum.pic} alt="pic-img" className={styles.pic} />
+                                <Image src={datum.pic} alt="pic-img"  width={100} height={100}  
+                                style={{ width: '50rem',height: '20vh', objectFit: 'fit', borderRadius:'100%' }} className=''/>
                             </div>
                             <div>
                                 <p className={styles.label}>{datum.label}</p>

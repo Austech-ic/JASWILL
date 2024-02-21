@@ -27,15 +27,15 @@ const Page = () => {
     {
       id: 1,
       label: "JIKWOYI",
-      desc: "For Rent",
+      desc: "For Sale",
       content: "180SQM",
-      price: "#9,000,000",
+      price: "#900,000",
       backgroundImgClass: "one" // Use 'one' class for background image
     },
     {
       id: 2,
       label: "JIKWOYI",
-      desc: "For Rent",
+      desc: "For Sale",
       content: "250SQM",
       price: "#1,200,000",
       backgroundImgClass: "two" // Use 'two' class for background image
@@ -43,7 +43,7 @@ const Page = () => {
     {
       id: 3,
       label: "JIKWOYI",
-      desc: "For Rent",
+      desc: "For Sale",
       content: "250SQM",
       price: "#1,200,000",
       backgroundImgClass: "three" // Use 'two' class for background image
@@ -51,7 +51,7 @@ const Page = () => {
     {
       id: 4,
       label: "JIKWOYI",
-      desc: "For Rent",
+      desc: "For Sale",
       content: "350SQM",
       price: "#1,500,000",
       backgroundImgClass: "four" // Use 'two' class for background image
@@ -59,7 +59,7 @@ const Page = () => {
     {
       id: 5,
       label: "JIKWOYI",
-      desc: "For Rent",
+      desc: "For Sale",
       content: "400SQM",
       price: "#1,700,000",
       backgroundImgClass: "five" // Use 'two' class for background image
@@ -67,10 +67,42 @@ const Page = () => {
     {
       id: 6,
       label: "JIKWOYI",
-      desc: "For Rent",
+      desc: "For Sale",
       content: "500SQM",
       price: "#2,700,000",
       backgroundImgClass: "six" // Use 'two' class for background image
+    },
+    {
+      id: 7,
+      label: "Guzape 2",
+      desc: "For Sale",
+      content: "250SQM",
+      price: "#8,000,000",
+      backgroundImgClass: "seven" // Use 'two' class for background image
+    },
+    {
+      id: 8,
+      label: "Guzape 2",
+      desc: "For Sale",
+      content: "350SQM",
+      price: "#11,000,000",
+      backgroundImgClass: "eight" // Use 'two' class for background image
+    },
+    {
+      id: 9,
+      label: "Guzape 2",
+      desc: "For Sale",
+      content: "500SQM",
+      price: "#13,500,000",
+      backgroundImgClass: "nine" // Use 'two' class for background image
+    },
+    {
+      id: 10,
+      label: "Guzape 2",
+      desc: "For Sale",
+      content: "600SQM",
+      price: "#15,000,000",
+      backgroundImgClass: "ten" // Use 'two' class for background image
     },
 ];
 

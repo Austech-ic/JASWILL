@@ -55,8 +55,8 @@
     /* padding:0 20px;  */
 }
 .text{
-    font-size:1.0rem;
-    line-height: 1.0rem;
+    font-size:0.9rem;
+    line-height: 1.2rem;
     font: bold;
     color: black;
 }
@@ -165,7 +165,7 @@
     }
     .text{
         font-size: 2rem;
-        line-height: 1rem;
+        line-height: 2.2rem;
         font: bold;
         /* background-color: red; */
         padding: 20px 0 0 0;
@@ -242,8 +242,8 @@
        margin-top: 30px;
     }
     .text{
-        font-size: 1.4rem;
-        line-height: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
         font: bold;
     }
     .textone{
@@ -292,8 +292,8 @@
        
     }
     .text{
-        font-size: 1.5rem;
-        line-height: 1rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
         font: bold;
     }
     .textone{

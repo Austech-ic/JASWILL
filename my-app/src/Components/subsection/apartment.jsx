@@ -12,8 +12,17 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import axios from 'axios';
 import { getRequest } from '@/library/request'
+import aok from '../../../public/aok.jpeg'
+import aoe from '../../../public/aoe.jpeg'
+import aob from '../../../public/aob.jpeg'
 import aoc from '../../../public/aoc.jpeg'
-import two from '../../../public/ao.jpeg'
+import aoo from '../../../public/aoo.jpeg'
+import ao from '../../../public/ao.jpeg'
+import go from '../../../public/go.jpeg'
+import goo from '../../../public/goo.jpeg'
+import goe from '../../../public/goe.jpeg'
+import goc from '../../../public/goc.jpeg'
+
 // import three from '../../../public/aob.jpeg'
 
 
@@ -24,7 +33,7 @@ const Apartment = () => {
   const details = [
     {
       id: 1,
-      picture:aoc,
+      picture:aok,
       label: ' Duplex',
       description: "2 Bedroom Terraced Duplex + Attached BQ",
       price: "#9,000,000",
@@ -32,7 +41,7 @@ const Apartment = () => {
     },
     {
       id: 2,
-      picture: officeone,
+      picture: aoe,
       // categories: "Mini Work Space",
       label: 'Duplex',
       description: "4 Bedroom Terraced Duplex",
@@ -41,7 +50,7 @@ const Apartment = () => {
     },
     {
       id: 3,
-      picture: officethree,
+      picture: aob,
       // categories: "Small Office",
       label: 'Bungalow',
       description: "2 Bedroom Semidetached Bungalow",
@@ -50,7 +59,7 @@ const Apartment = () => {
     },
     {
       id: 4,
-      picture: four,
+      picture: aoc,
       // categories: "Big Workspace",
       label: 'Penthouse',
       description: "4 Bedroom Semidetached Penthouse",
@@ -59,7 +68,7 @@ const Apartment = () => {
     },
     {
         id: 5,
-        picture: four,
+        picture: aoo,
         // categories: "Big Workspace",
         label: 'Bungalow',
         description: "3 Bedroom Fully Detached Bungalow + a Detached BQ",
@@ -68,11 +77,47 @@ const Apartment = () => {
       },
       {
         id: 6,
-        picture: four,
+        picture: ao,
         // categories: "Big Workspace",
         label: 'Duplex',
         description: "4 Bedroom Fully Detached  Duplex + Detached BQ",
         price: "#2,700,000",
+        // review: <Review />
+      },
+      {
+        id: 7,
+        picture: go,
+        // categories: "Big Workspace",
+        label: 'Terrace Duplex',
+        description: "4 Bedroom Terrace Duplex",
+        price: "#8,000,000",
+        // review: <Review />
+      },
+      {
+        id: 8,
+        picture: goo,
+        // categories: "Big Workspace",
+        label: 'Semidetached Duplex',
+        description: "5 Bedroom Semidetached Duplex + Attached BQ",
+        price: "#11,000,000",
+        // review: <Review />
+      },
+      {
+        id: 9,
+        picture: goe,
+        // categories: "Big Workspace",
+        label: 'Detached Duplex',
+        description: "4 Bedroom Detached Duplex + Attached BQ",
+        price: "#13,500,000",
+        // review: <Review />
+      },
+      {
+        id: 10,
+        picture: goc,
+        // categories: "Big Workspace",
+        label: 'Detached Duplex',
+        description: "4 Bedroom Detached Duplex + Detached BQ",
+        price: "#15,000,000",
         // review: <Review />
       },
   
@@ -86,25 +131,30 @@ const Apartment = () => {
 
   return (
     <section className='pb-10 pt-5 md:pt-10 '>
-      <div className='shadow-2xl grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-5 md:p-10'>
+      <div className='shadow-2xl grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 p-5 md:p-10'>
       {details.map((datum) => (
           <div key={datum.id} className='p-5 w-full drop-shadow-2xl bg-gray-100'>
-            <div className='relative'>
-              <div className='h-48 w-full'>
-                <Image src={datum.picture} width={100} height={100} alt='fade-img' style={{ width: '100%', height: '100%' }} className='h-full w-full object-cover' />
-              </div>
+           <div className='relative'>
+  <div className='h-48 w-full flex items-center justify-center'>
+    <Image 
+      src={datum.picture} 
+      alt='fade-img' 
+      layout="fill" // Use layout="fill" to fill the container
+      objectFit="cover" // Use object-fit to fill the container without distortion
+    />
+  </div>
+</div>
+
+            <div className=' py-3 px-2 flex flex-col justify-between items-start gap-3 '>
               
-            </div>
-            <div className=' py-3 px-2 flex flex-col justify-between items-start '>
-              
-              <div className='h-6 md:h-6 w-full lg:h-8  cursor-pointer font-bold  '>
+              <div className='h-6 md:h-[6vh] w-full cursor-pointer font-bold  '>
                 <p className='text-base md:text-xl lg:text-lg xl:text-xl'>{datum.label}</p>
               </div>
-              <div className='h-[30px] md:h-[60px] lg:h-[70px] xl:h-[50px] text-gray-700 cursor-pointer mt-4 '>
-                <p className='text-xs md:text-xl lg:text-sm'>{datum.description}</p>
+              <div className='h-[40px] md:h-[95px] lg:h-[60px] xl:h-[65px] text-gray-700 cursor-pointer '>
+                <p className='text-xs md:text-lg lg:text-sm'>{datum.description}</p>
               </div>
-              <div className='mt-1 h-8 md:h-10 lg:h-12 xl:h-14  w-full'>
-                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{datum.price} per year</p>
+              <div className=' h-4 md:h-6 w-full'>
+                <p className='text-maroon text-xs md:text-base lg:text-xs xl:text-sm font-bold '>{datum.price}</p>
               </div>
               <Link href={'/Property/property'}>
               <div className='text-red-700 cursor-pointer flex justify-between items-center gap-2'>

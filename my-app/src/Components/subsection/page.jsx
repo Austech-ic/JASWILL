@@ -64,7 +64,7 @@ const Page = () => {
             showArt 
           }`} 
           onClick={handleArtClick} >
-      Event Center
+     Hall
       </p>
         </div>
         <div style={{ cursor: 'pointer' }} className='flex-grow-1'>
