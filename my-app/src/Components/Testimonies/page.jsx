@@ -68,7 +68,7 @@ const Page = () => {
             id: 4,
             pic: tony,
             label: "Mr Tony",
-            text: "They exceeded my exceptations, delivering quality service with proffessionalism.",
+            text: "They exceeded my exceptations, delivering quality service with professionalism.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
@@ -81,7 +81,7 @@ const Page = () => {
         {
             id: 5,
             pic: uc,
-            label: "Mr Ucheckwu",
+            label: "Mr Uchechukwu",
             text: "This company offers an exceptional experience.I wholeheartedly recommend them.",
             rate:[
                 {icon: <AiFillStar size={25} className='text-maroon' /> },
