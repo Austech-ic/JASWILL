@@ -152,8 +152,6 @@ import five from '../../../../public/ao.jpeg'
 
                         <div className={styles.textcont}>
                             <p>{property.numberOfBedrooms} Bedroom(s)</p>
-                            <p>{property.numberOfBathrooms} Toilet(s)</p>
-                            <p>{property.numberOfFloors} Floors(s)</p>
                             <p>Property {property.type}</p>
                             <p>{property.createdOn}</p>
                         </div>
@@ -171,7 +169,7 @@ import five from '../../../../public/ao.jpeg'
 
                     </div>
 
-                    <div className={styles.contextone}>
+                    {/* <div className={styles.contextone}>
                         <div className={styles.textcont}>
                            
                             <p>Agency Fee {property.agency}</p>
@@ -181,7 +179,7 @@ import five from '../../../../public/ao.jpeg'
                             <p className={styles.bold}>Total package {property.total}</p>
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 

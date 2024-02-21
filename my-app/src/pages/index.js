@@ -40,7 +40,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className=' overflow-x-auto'>
+    <main className=' overflow-hidden'>
       {loading ? (
         <Loading />
       ) : (
