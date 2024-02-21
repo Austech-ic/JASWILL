@@ -32,10 +32,14 @@ import two from '../../../public/aob.jpeg'
 import three from '../../../public/aoc.jpeg'
 import four from '../../../public/aoo.jpeg'
 import five from '../../../public/ao.jpeg'
-
+import Loading from '../loading';
 
 
 const Property = () => {
+
+  const [loading, setLoading] = useState(false); // State variable for loader visibility
+  const [currentPage, setCurrentPage] = useState(1);
+
   const details = [
     {
       id: 1,
@@ -114,7 +118,7 @@ const Property = () => {
   const router = useRouter();
 
   const ITEMS_PER_PAGE = 4;
-  const [currentPage, setCurrentPage] = useState(1);
+  
 
   useEffect(() => {
     getRequest('RealEstate/GetAllRealEstatesAsync')
@@ -130,14 +134,23 @@ const Property = () => {
   const MAX_PAGES = 10;
 
   const paginate = (pageNumber) => {
-    setCurrentPage(Math.min(Math.max(pageNumber, 1), MAX_PAGES));
+    setLoading(true); // Show loader when pagination button is clicked
+    // Simulate asynchronous operation (fetching data, etc.)
+    setTimeout(() => {
+      setCurrentPage(Math.min(Math.max(pageNumber, 1), MAX_PAGES));
+      setLoading(false); // Hide loader once next page is ready
+    }, 1000); // Adjust delay time according to your need
   };
 
 
 
   return (
     <Fragment>
-      <CustomFilter />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+         <CustomFilter />
       <div className={styles.main}>
         <div className={styles.subone}>
           <Link href={`/`} className={styles.link}>
@@ -286,6 +299,9 @@ const Property = () => {
           </div>
         </div>
       </div>
+        </>
+      )}
+     
 
     </Fragment>
   )
