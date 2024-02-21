@@ -42,13 +42,13 @@ const Page = () => {
     <div style={{ cursor: 'pointer' }} className='flex justify-around items-center cursor-pointer p-5' >
     
     <div style={{ cursor: 'pointer' }} className='flex-grow-1'>
-        <p className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-xs md:text-xl lg:text-base  hover:text-white transition duration-300 ${
+        {/* <p className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-xs md:text-xl lg:text-base  hover:text-white transition duration-300 ${
             showAll 
           }`} 
       onClick={handleAllClick}
       >
        All
-      </p>
+      </p> */}
         </div>
         <div style={{ cursor: 'pointer' }} className='flex-grow-1'>
         <p className={`p-2 w-24 text-center md:w-28  hover:bg-maroon rounded-sm text-xs md:text-xl lg:text-base  hover:text-white transition duration-300 ${

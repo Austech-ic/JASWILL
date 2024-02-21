@@ -32,6 +32,10 @@ import two from '../../../public/aob.jpeg'
 import three from '../../../public/aoc.jpeg'
 import four from '../../../public/aoo.jpeg'
 import five from '../../../public/ao.jpeg'
+import six from '../../../public/go.jpeg'
+import seven from '../../../public/goo.jpeg'
+import eight from '../../../public/goe.jpeg'
+import nine from '../../../public/goc.jpeg'
 import Loading from '../loading';
 
 
@@ -45,73 +49,121 @@ const Property = () => {
       id: 1,
       pic: one,
       label: "JIKWOYI",
-      desc: "180SQM",
-      location: "Lugbe",
+      desc: "2 Bedroom Terraced Duplex + Attached BQ (180SQM)",
+      location: "Jikwoyi",
       city: "Abuja",
       price: "#9,000,000",
-      beds: "3",
-      toilet: "3",
-      floor: "1"
+      beds: "2",
+      // toilet: "3",
+      // floor: "1"
     },
     {
       id: 2,
       pic: aoe,
       label: "JIKWOYI",
-      desc: "250SQM",
-      location: "Lugbe",
+      desc: "4 Bedroom Terraced Duplex (250SQM)",
+      location: "Jikwoyi",
       city: "Abuja",
       price: "#1,200,000",
-      beds: "3",
-      toilet: "3",
-      floor: "1"
+      beds: "4",
+      // toilet: "3",
+      // floor: "1"
     },
     {
       id: 3,
       pic: two,
       label: "JIKWOYI",
-      desc: "250SQM",
-      location: "Lugbe",
+      desc: "2 Bedroom Semidetached Bungalow (250SQM)",
+      location: "Jikwoyi",
       city: "Abuja",
       price: "#1,200,000",
-      beds: "3",
-      toilet: "3",
-      floor: "1"
+      beds: "2",
+      // toilet: "3",
+      // floor: "1"
     },
     {
       id: 4,
       pic: three,
       label: "JIKWOYI",
-      desc: "350SQM",
-      location: "Lugbe",
+      desc: "4 Bedroom Semidetached Penthouse (350SQM)",
+      location: "Jikwoyi",
       city: "Abuja",
       price: "#1,500,000",
-      beds: "3",
-      toilet: "3",
-      floor: "1"
+      beds: "4",
+      // toilet: "3",
+      // floor: "1"
     },
     {
       id: 5,
       pic: four,
       label: "JIKWOYI",
-      desc: "400SQM",
-      location: "Lugbe",
+      desc: "3 Bedroom Fully Detached Bungalow + a Detached BQ (400SQM)",
+      location: "Jikwoyi",
       city: "Abuja",
       price: "#1,700,000",
       beds: "3",
-      toilet: "3",
-      floor: "1"
+      // toilet: "3",
+      // floor: "1"
     },
     {
       id: 6,
       pic: five,
       label: "JIKWOYI",
-      desc: "500SQM",
-      location: "Apo",
+      desc: "4 Bedroom Fully Detached Duplex + Detached BQ (500SQM)",
+      location: "Jikwoyi",
       city: "Abuja",
       price: "#2,700,000",
-      beds: "3",
-      toilet: "3",
-      floor: "1"
+      beds: "4",
+      // toilet: "3",
+      // floor: "1"
+    },
+    {
+      id: 7,
+      pic: six,
+      label: "Guzape 2",
+      desc: "4 Bedroom Terrace Duplex (250SQM)",
+      location: "Guzape 2",
+      city: "Abuja",
+      price: "#8,000,000",
+      beds: "4",
+      // toilet: "3",
+      // floor: "1"
+    },
+    {
+      id: 8,
+      pic: seven,
+      label: "Guzape 2",
+      desc: "5 Bedroom Semidetached Duplex + Attached BQ (350SQM)",
+      location: "Guzape 2",
+      city: "Abuja",
+      price: "#11,000,000",
+      beds: "5",
+      // toilet: "3",
+      // floor: "1"
+    },
+    {
+      id: 9,
+      pic: eight,
+      label: "Guzape 2",
+      desc: "4 Bedroom Detached Duplex + Attached BQ (500SQM)",
+      location: "Guzape 2",
+      city: "Abuja",
+      price: "#13,500,000",
+      beds: "4",
+      // toilet: "3",
+      // floor: "1"
+    },
+    {
+      id: 10,
+      pic: nine,
+      label: "Guzape 2",
+      desc: "4 Bedroom Detached Duplex + Detached BQ (600SQM)",
+      location: "Guzape 2",
+      city: "Abuja",
+      price: "#15,000,000",
+      beds: "4",
+      // toilet: "3",
+      // floor: "1"
     }
   ]
   const [property, setProperty] = useState([]);
@@ -263,18 +315,18 @@ const Property = () => {
                             <p>{datum.beds} Bedroom(s)</p>
                           </div>
 
-                          <div className={styles.bedcontainer}>
+                          {/* <div className={styles.bedcontainer}>
                             <BiBath className={styles.icom} />
                             <p>{datum.toilet} Bathroom(s)</p>
-                          </div>
+                          </div> */}
 
                         </div>
-                        <div>
+                        {/* <div>
                           <div >
                             <p>Number of Floor(s) : {datum.floor}</p>
                           </div>
 
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     </div>
