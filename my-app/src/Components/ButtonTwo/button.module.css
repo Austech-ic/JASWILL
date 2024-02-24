@@ -43,7 +43,7 @@
     .subcont{
         padding: 10px;
         border-radius: 5px;
-      
+        width: 50%;
     } 
     .button{
         font-size: 0.8rem;

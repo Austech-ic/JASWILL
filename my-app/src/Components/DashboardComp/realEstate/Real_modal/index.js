@@ -25,7 +25,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
     const [imageError, setImageError] = useState('');
     const [descriptionError, setDescriptionError] = useState('');
     const [categoryIdError, setCategoryIdError] = useState('');
-    const [categoryNameError, setCategoryNameError] = useState('');
+    const [categoryError, setCategoryError] = useState('');
     const [contentError, setContentError] = useState('');
     const [cityError, setCityError] = useState('');
     const [priceError, setPriceError] = useState('');
@@ -45,7 +45,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
     const [formData, setFormData] = useState({
       title: '',
       description: '',
-      categoryname: '',
+      category: '',
       categoryid: '',
       content:'',
       type: '',
@@ -104,8 +104,8 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
           case 'description':
             setDescriptionError('Please enter a description.');
             break;
-            case 'categoryname':
-            setCategoryNameError('Please enter category.');
+            case 'category':
+            setCategoryError('Please enter category.');
             break;
             case 'categoryid':
             setCategoryIdError('Please enter category.');
@@ -166,8 +166,8 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
           case 'description':
             setDescriptionError('');
             break;
-          case 'categoryname':
-            setCategoryNameError('');
+          case 'category':
+            setCategoryError('');
             break;
             case 'categoryid':
               setCategoryIdError('');
@@ -225,7 +225,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       e.preventDefault();
       setTitleError('');
       setImageError('');
-      setCategoryNameError('');
+      setCategoryError('');
       setCategoryIdError('');
       setDescriptionError('');
       setContentError(''),
@@ -255,8 +255,8 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       if (!formData.description) {
         setDescriptionError('Please enter a description.');
       }
-      if (!formData.categoryname) {
-        setCategoryNameError('Please enter a category.');
+      if (!formData.category) {
+        setCategoryError('Please enter a category.');
       }
       if (!formData.categoryid) {
         setCategoryIdError('Please enter category id.');
@@ -305,7 +305,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       if (!formData.title ||
          !ImageUrl || 
          !formData.description ||
-         !formData.categoryname ||
+         !formData.category ||
          !formData.categoryid ||
          !formData.content ||
          !formData.city ||
@@ -328,7 +328,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       formValues.append('ImageUrl', ImageUrl);
       formValues.append('Title', formData.title);
       formValues.append('Description', formData.description);
-      formValues.append('CategoryName', formData.categoryname);
+      formValues.append('Category', formData.category);
       formValues.append('CategoryId', formData.categoryid);
       formValues.append('Content', formData.content);
       formValues.append('City', formData.city);
@@ -364,7 +364,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
       setFormData({
         title: '',
         description: '',
-        categoryname: '',
+        category: '',
         categoryid: '',
         content: '',
         type: '',
@@ -495,72 +495,21 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            onChange={(e) => setFormDataAndClearError('propertylocation', e.target.value)}
             />
          </div>
-{/* 
+
+
+
          <div className={styles.divcont}>
-          <label className={styles.label}>Category*</label>
-          {categoryNameError && <div className={styles.errorMessage}>{categoryNameError}</div>}
+          <label className={styles.label}>Property Category*</label>
+          {categoryError && <div className={styles.errorMessage}>{categoryError}</div>}
           <select  
-         value={formData.categoryname}
+          value={formData.category}
           required
-          onChange={(e) => setFormDataAndClearError('categoryname', e.target.value)}
+          onChange={(e) => setFormDataAndClearError('category', e.target.value)}
           className={styles.input}>
-            <option></option>
-            <option>Apartment</option>
-            <option>Office</option>
-            <option>Gym</option>
-            <option>Hall</option>
+             <option></option>
           </select>
+          
          </div>
-         <div className={styles.divcont}>
-          <label className={styles.label}>CategoryId*</label>
-          {categoryIdError && <div className={styles.errorMessage}>{categoryIdError}</div>}
-          <input placeholder='CategoryId'
-           className={styles.input}
-           value={formData.categoryid}
-           required
-           onChange={(e) => setFormDataAndClearError('categoryid', e.target.value)}
-            />
-         </div> */}
-
-        
-         {/* <div className={styles.divcont}>
-          <label className={styles.label}>Number of bedrooms*</label>
-          {bedroomError && <div className={styles.errorMessage}>{bedroomError}</div>}
-          <input 
-          placeholder='Number of bedrooms'
-           className={styles.input} 
-           value={formData.numberofbedrooms}
-           required
-           onChange={(e) => setFormDataAndClearError('numberofbedrooms', e.target.value)}
-           />
-         </div> */}
-
-        
-         {/* <div className={styles.divcont}>
-          <label className={styles.label}>Number of bathrooms*</label>
-          {bathroomError && <div className={styles.errorMessage}>{bathroomError}</div>}
-          <input placeholder='Number of bathrooms'
-           className={styles.input}
-           value={formData.numberofbathrooms}
-                required
-                onChange={(e) => setFormDataAndClearError('numberofbathrooms', e.target.value)}
-                 />
-         </div> */}
-       
-       
-         {/* <div className={styles.divcont}>
-          <label className={styles.label}>Number of floors*</label>
-          {floorError && <div className={styles.errorMessage}>{floorError}</div>}
-          <input 
-          placeholder='Number of floors'
-           className={styles.input}
-           value={formData.numberoffloors}
-                required
-                onChange={(e) => setFormDataAndClearError('numberoffloors', e.target.value)}
-                 />
-         </div> */}
-
-
 
          <div className={styles.divcont}>
           <label className={styles.label}>Type*</label>
@@ -572,7 +521,6 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
           className={styles.input}>
              <option></option>
             <option>For Sale</option>
-            <option>For Rent</option>
           </select>
           
          </div>

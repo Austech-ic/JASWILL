@@ -5,7 +5,13 @@ import { HiOutlineDocumentText, HiOutlineTemplate } from 'react-icons/hi'
 import { MdPublic, MdOutlineFax } from 'react-icons/md'
 import { IoMdAddCircleOutline } from 'react-icons/io'
 import Link from 'next/link';
+import { MdContactPhone } from "react-icons/md";
 import styles from './sidebar.module.css'
+import { RiServiceLine } from 'react-icons/ri';
+import { FaTools } from 'react-icons/fa';
+import { TbListDetails } from "react-icons/tb";
+import { MdDesignServices } from "react-icons/md";
+import { BiSolidCategoryAlt } from "react-icons/bi";
 
 
 const Sidebar = ({ closeMenu }) => {
@@ -26,41 +32,63 @@ const Sidebar = ({ closeMenu }) => {
     },
     {
       id: 2,
+      icon: <BiSolidCategoryAlt className={styles.icon} />,
+      title: "Property Category",
+      link: "/admin/category",
+      path: "/admin/category",
+    },
+    {
+      id: 3,
       icon: <AiOutlineInbox className={styles.icon} />,
       title: "Property",
       link: "/admin/real_estate",
       path: "/admin/real_estate",
     },
+   
     {
-      id: 3,
+      id: 4,
       icon: <BiMessageSquareCheck className={styles.icon} />,
       title: "Blog",
       link: "/admin/blog",
       path: "/admin/blog",
     },
     {
-      id: 4,
+      id: 5,
       icon: <HiOutlineDocumentText className={styles.icon} />,
       title: "Testimonial",
       link: "/admin/testimonial",
       path: "/admin/testimonial",
     },
     {
-      id: 5,
-      icon: <HiOutlineDocumentText className={styles.icon} />,
+      id: 6,
+      icon: <MdDesignServices className={styles.icon} />,
       title: "Services",
       link: "/admin/testimonial",
       path: "/admin/testimonial",
     },
     {
-      id: 6,
+      id: 7,
+      icon: <MdContactPhone className={styles.icon} />,
+      title: "Contact",
+      link: "/admin/testimonial",
+      path: "/admin/testimonial",
+    },
+    {
+      id: 8,
+      icon: <TbListDetails className={styles.icon} />,
+      title: "About",
+      link: "/admin/testimonial",
+      path: "/admin/testimonial",
+    },
+    {
+      id: 8,
       icon: <HiOutlineTemplate className={styles.icon} />,
       title: "Account",
       link: "/admin//account",
       path: "/admin/account",
     },
     {
-      id: 7,
+      id: 9,
       icon: <MdPublic className={styles.icon} />,
       title: "Static Blocks",
       link: "/admin/static_block",
@@ -75,7 +103,7 @@ const Sidebar = ({ closeMenu }) => {
     //   path: "/admin/media",
     // },
     {
-      id: 9,
+      id: 10,
       icon: <AiFillSetting className={styles.icons} />,
       title: "Setings",
       link: "/admin/settings",
