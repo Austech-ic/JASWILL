@@ -113,46 +113,8 @@ const Page = ({ id }) => {
               <div className={styles.textdiv}>
                 <p className={styles.text}>{blog.title}</p>
                 <p className={styles.textone}>{blog.desccription}</p>
-                <p className={styles.textone}>{blog.createdOn}</p>
-                <div className='flex items-center gap-3'>
-                  <div className='flex items-center'>
-                    {likesCount > 0 && <span>{likesCount}</span>}
-                    {isLiked ? (
-                      <AiFillHeart className={styles.icon} color='red' onClick={handleLikeClick} />
-                    ) : (
-                      <AiOutlineHeart className={styles.icon} onClick={handleLikeClick} />
-                    )}
-                  </div>
-                  <FaComment onClick={handleCommentIconClick} className={styles.icon} />
-                </div>
-                <div>
-                  {comments.map((comment) => (
-                    <div key={comment.id} className='mt-1 text-xs md:text-lg lg:text-xs xl:text-sm'>
-                      <p>{comment.userName}: {comment.comment}</p>
-                    </div>
-                  ))}
-                  {showCommentInput && (
-                    <div className='flex gap-2 mt-3'>
-                      <input
-                        type='text'
-                        value={userName}
-                        onChange={handleUserNameChange}
-                        className='outline-none border border-red-400 rounded-lg p-1 text-sm'
-                        placeholder='Your Name'
-                      />
-                      <input
-                        type='text'
-                        value={comment}
-                        onChange={handleCommentChange}
-                        className='outline-none border border-red-400 rounded-lg p-1 text-sm'
-                        placeholder='Type your comment'
-                      />
-                      <button onClick={handleCommentSend}>
-                        <IoMdSend color='red' />
-                      </button>
-                    </div>
-                  )}
-                </div>
+                <p className={styles.textones}>{blog.createdOn}</p>
+                
               </div>
             </div>
           </div>

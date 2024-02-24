@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import styles from './testimonialcomp.module.css'
 import { HiHome,HiOutlineDocumentText,HiOutlineTemplate } from 'react-icons/hi'
-import Button from '@/Components/Button/button';
 import TestModal from '../../TestimonyModal/testmodal';
-
+import TestmonialSuccesspage from './TestmonialSuccess/testmonialsuccesspage';
+import TestimonialButton from '../../DashboardComp/Testimonial/TestimonialButton/page'
 
 const TestimonialComp = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const [counter, setCounter] = useState(1)
+
   const handleOpenModal = () => {
-    setShowModal(true);
+    setShowModal(!showModal);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+ 
  
   return (
     <div className={styles.main}>
@@ -23,10 +23,12 @@ const TestimonialComp = () => {
         <HiHome />
         <p>Dashboard / Testimonial</p>
       </div>
-      <Button onClick={handleOpenModal} />
+      <TestimonialButton onClick={handleOpenModal} />
       <div>
-        <TestModal show={showModal} handleClose={handleCloseModal}/>
+        <TestModal setCounter={setCounter} show={showModal} handleClose={handleOpenModal}/>
       </div>
+      <TestmonialSuccesspage counter={counter} />
+
    </div>
   )
 }

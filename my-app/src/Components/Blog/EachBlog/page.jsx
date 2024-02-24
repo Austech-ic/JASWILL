@@ -114,7 +114,7 @@ const Page = ({ id }) => {
                 <p className={styles.text}>{blog.title}</p>
                 <p className={styles.textone}>{blog.desccription}</p>
                 <p className={styles.textone}>{blog.createdOn}</p>
-                <div className='flex items-center gap-3'>
+                {/* <div className='flex items-center gap-3'>
                   <div className='flex items-center'>
                     {likesCount > 0 && <span>{likesCount}</span>}
                     {isLiked ? (
@@ -124,8 +124,8 @@ const Page = ({ id }) => {
                     )}
                   </div>
                   <FaComment onClick={handleCommentIconClick} className={styles.icon} />
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   {comments.map((comment) => (
                     <div key={comment.id} className='mt-1 text-xs md:text-lg lg:text-xs xl:text-sm'>
                       <p>{comment.userName}: {comment.comment}</p>
@@ -152,7 +152,7 @@ const Page = ({ id }) => {
                       </button>
                     </div>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

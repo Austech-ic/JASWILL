@@ -4,6 +4,7 @@ import { HiHome } from 'react-icons/hi';
 import Button from '../../Button/button';
 import Success from './Success/successpage'
 import Modal from '../../Modal/modal';
+import BlogButton from '../../DashboardComp/Blog/BlogButton/page'
 
 const Blog = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +23,7 @@ const Blog = () => {
         <HiHome />
         <p>Dashboard / Blog</p>
       </div>
-      <Button onClick={handleOpenModal} />
+      <BlogButton  onClick={handleOpenModal} />
       <div>
         <Modal setCounter={setCounter} show={showModal} handleClose={handleOpenModal}/>
       </div>

@@ -99,6 +99,9 @@
   .errorMessage{
     color: red;
   }
+  .opaque {
+    opacity: 0.5; /* Adjust the opacity value as needed */
+  }
   
 
   @media (min-width:768px) {

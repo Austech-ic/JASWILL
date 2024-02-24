@@ -10,6 +10,11 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
 const Modal = ({ handleClose, show, children, setCounter }) => {
+  const [message, setMessage] = useState('');
+  const [isFormDisabled, setIsFormDisabled] = useState(false);
+  const [isOpacityTimeoutSet, setIsOpacityTimeoutSet] = useState(false);
+
+
   const toast = useToast();
   const router = useRouter();
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
@@ -79,6 +84,9 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
     formValues.append('CreatedOn', formData.createdOn);
   
     try {
+      setIsFormDisabled(true); // Disable form elements
+      setIsOpacityTimeoutSet(true); // Set the flag to indicate timeout is set
+
       createBlogPost('Blog/CreateBlog', formValues).then((response) => {
         toast({
           title: 'Blog Created Successfully',
@@ -101,7 +109,13 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
       }).catch((error) => console.log(error));
     } catch (error) {
       console.error('Upload failed!', error);
+    } finally {
+      setIsFormDisabled(false); // Re-enable form elements
+      setTimeout(() => {
+        setIsOpacityTimeoutSet(false); // Clear the flag after 10 seconds
+      }, 10000);
     }
+
   };
   
 
@@ -122,7 +136,8 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
   };
 
   return (
-    <div className={`${styles.modal} ${showHideClassName}`}>
+    <div className={`${styles.modal} ${showHideClassName} ${isOpacityTimeoutSet ? styles.opaque : ''}`}>
+
       <section className={styles.modalMain}>
         {children}
         <form>
@@ -167,7 +182,9 @@ const Modal = ({ handleClose, show, children, setCounter }) => {
             </div>
 
             <div className={styles.buttonconts}>
-              <button className={styles.buttontwo} onClick={handleSave}>
+              <button 
+              type="submit" disabled={message !== ''} 
+              className={styles.buttontwo} onClick={handleSave}>
                 <MdSaveAlt />
                 Save
               </button>

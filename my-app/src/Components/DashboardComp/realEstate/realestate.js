@@ -33,15 +33,15 @@ const RealEstate = () => {
         <p>Dashboard / Real Estate / Properties</p>
       </div>
 
-      <div className='flex justify-between items-center'>
-        <ButtonTwo onClick={openNewModal} />
+      <div>
+        {/* <ButtonTwo onClick={openNewModal} /> */}
         <Button onClick={openModal} />
       </div>
       <div className=''>
         <RealModal className='' setCounter={setCounter} show={isModalOpen} handleClose={openModal} />
       </div>
-      <CatModal show={isNewModalOpen} handleClose={openNewModal} />
-      <CatSuccess counter={counter} />
+      {/* <CatModal show={isNewModalOpen} handleClose={openNewModal} />
+      <CatSuccess counter={counter} /> */}
       <Real_success counter={counter} />
      
     </div>

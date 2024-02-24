@@ -64,10 +64,14 @@
     font: bold;
     color: black;
 }
-.textone{
+.textone,.textones{
     font-size: 0.8rem;
     line-height: 1rem;
     padding: 5px 0;
+    
+}
+.textones{
+    color: #800000;
 }
 .textsee{
     font-size: 0.8rem;
@@ -162,7 +166,7 @@
         line-height: 2rem;
         font: bold;
     }
-    .textone{
+    .textone,.textones{
         font-size: 1.5rem;
         line-height: 2.1rem;
         padding: 10px 0 20px 0;
@@ -256,7 +260,7 @@
         line-height: 2rem;
         font: bold;
     }
-    .textone{
+    .textone,.textones{
         font-size: 0.9rem;
         line-height: 1.5rem;
         padding: 4px 0 10px 0;
@@ -313,7 +317,7 @@
         font: bold;
         padding: 10px 0;
     }
-    .textone{
+    .textone,.textones{
         font-size: 1rem;
         line-height: 1.7rem;
         padding: 3px 0 10px 0;

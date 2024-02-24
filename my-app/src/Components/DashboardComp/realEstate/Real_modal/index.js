@@ -495,7 +495,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            onChange={(e) => setFormDataAndClearError('propertylocation', e.target.value)}
             />
          </div>
-
+{/* 
          <div className={styles.divcont}>
           <label className={styles.label}>Category*</label>
           {categoryNameError && <div className={styles.errorMessage}>{categoryNameError}</div>}
@@ -520,10 +520,10 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            required
            onChange={(e) => setFormDataAndClearError('categoryid', e.target.value)}
             />
-         </div>
+         </div> */}
 
         
-         <div className={styles.divcont}>
+         {/* <div className={styles.divcont}>
           <label className={styles.label}>Number of bedrooms*</label>
           {bedroomError && <div className={styles.errorMessage}>{bedroomError}</div>}
           <input 
@@ -533,10 +533,10 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            required
            onChange={(e) => setFormDataAndClearError('numberofbedrooms', e.target.value)}
            />
-         </div>
+         </div> */}
 
         
-         <div className={styles.divcont}>
+         {/* <div className={styles.divcont}>
           <label className={styles.label}>Number of bathrooms*</label>
           {bathroomError && <div className={styles.errorMessage}>{bathroomError}</div>}
           <input placeholder='Number of bathrooms'
@@ -545,10 +545,10 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
                 required
                 onChange={(e) => setFormDataAndClearError('numberofbathrooms', e.target.value)}
                  />
-         </div>
+         </div> */}
        
        
-         <div className={styles.divcont}>
+         {/* <div className={styles.divcont}>
           <label className={styles.label}>Number of floors*</label>
           {floorError && <div className={styles.errorMessage}>{floorError}</div>}
           <input 
@@ -558,7 +558,10 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
                 required
                 onChange={(e) => setFormDataAndClearError('numberoffloors', e.target.value)}
                  />
-         </div>
+         </div> */}
+
+
+
          <div className={styles.divcont}>
           <label className={styles.label}>Type*</label>
           {typeError && <div className={styles.errorMessage}>{typeError}</div>}
@@ -585,7 +588,7 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
             />
          </div>
 
-         <div className={styles.divcont}>
+         {/* <div className={styles.divcont}>
           <label className={styles.label}>Agency Fee*</label>
           {agencyError && <div className={styles.errorMessage}>{agencyError}</div>}
           <input placeholder='Agency fee'
@@ -634,67 +637,8 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
            required
            onChange={(e) => setFormDataAndClearError('total', e.target.value)}
             />
-         </div>
-      
-
-         {/* <div className={styles.divcont}>
-          <label className={styles.label}>Features*</label>
-          <div className={styles.radiocont}>
-        <input type="checkbox" id="wifi" value="wifi" name="features" /> 
-        <label htmlFor="wifi">Wifi</label>
-        <input type="checkbox" id="parking" value="Parking" name="features" />
-    <label htmlFor="parking">Parking</label>
-
-    <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" />
-    <label htmlFor="swimmingPool">Swimming Pool</label>
-
-    <input type="checkbox" id="balcon" value="balcon" name="features" />
-
-    <label htmlFor="balcon">Balcony</label>   
-      </div>
-      <div className={styles.radiocont}>
-
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
-        <label>Garden</label>
-
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
-        <label>Security</label>
-
-        <input type="checkbox" id="swimmingPool" 
-        value="Swimming Pool" name="features"/> 
-        <label>Fitness Center</label>
-
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features"/> 
-        <label>Balcony </label>      
-      </div>
-
-      <div className={styles.radiocont}>
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
-        <label>Air Condition</label>
-        
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
-        <label>Central Heating</label>
-
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" />
-        <label> Laundry Room</label>
-      </div>
-
-      <div className={styles.radiocont}>
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
-        <label>Pets Allow</label>
-
-        <input type="checkbox" id="swimmingPool" value="Swimming Pool" name="features" /> 
-        <label>Spa & Massage</label>
-               
-      </div>
-        
-        
          </div> */}
-         
-
-
-
-
+      
 
 
         </div>
@@ -715,10 +659,10 @@ const Index = ({ handleClose, show,children, setCounter  }) => {
             Save</button>
          </div>
         </div>
-        <div className={styles.divconts}>
+        {/* <div className={styles.divconts}>
         <label className={styles.label}>Moderation Status*</label>
         <input placeholder='Approved' className={styles.input} />
-        </div>
+        </div> */}
         </div>
       </div>
      </form>

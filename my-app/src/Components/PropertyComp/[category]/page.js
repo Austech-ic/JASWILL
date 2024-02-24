@@ -25,36 +25,7 @@ import five from '../../../../public/ao.jpeg'
 
     const [property, setProperty] = useState([]);
 
-    const Description =[
-        {
-            id:1,
-            
-        }
-    ]
-
-
-    const details = [
-        {
-            id: 1,
-            pic: Inside,
-        },
-        {
-            id: 2,
-            pic: Inside,
-        },
-        {
-            id: 3,
-            pic: Inside,
-        },
-        {
-            id: 4,
-            pic: Inside,
-        },
-        {
-            id: 5,
-            pic: Inside,
-        }
-    ]
+    
 
     const info = [
         {
@@ -124,7 +95,7 @@ import five from '../../../../public/ao.jpeg'
                          style={{ width: '100%', height: '100%' }}
                           alt='Property-Image' />
                     </div>
-                    <div className={styles.contone}>
+                    {/* <div className={styles.contone}>
                         {
                             details.map((datum => (
                                 <div key={datum.id} className={styles.cont} >
@@ -132,14 +103,14 @@ import five from '../../../../public/ao.jpeg'
                                 </div>
                             )))
                         }
-                    </div>
+                    </div> */}
                 </div>
                
 
                 <div className={styles.contwo}>
                     <p className={styles.text}>Safety Tips</p>
                     <ul className={styles.list}>
-                        <li className={styles.listsub}>Do not make any upfront payment as inspection fee or upfront payment for rent before seeing this property or seeing the agent you contacted physically. PropertyPro.ng is not liable for monetary transactions between you and the agents.</li>
+                        <li className={styles.listsub}>Do not make any upfront payment as inspection fee or upfront payment before seeing this property or seeing the agent you contacted physically. PropertyPro.ng is not liable for monetary transactions between you and the agents.</li>
                         <li className={styles.listsub}>
                             The contact agent on properties listed on PropertyPro.ng does not represent PropertyPro.ng. PropertyPro.ng will not mandate agents to ask for fees upfront.
                         </li>
@@ -185,6 +156,8 @@ import five from '../../../../public/ao.jpeg'
 
             </div>
         </div>
+
+        
 
 
         
