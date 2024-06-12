@@ -19,7 +19,7 @@ const page = () => {
         {
             id: 1,
             pic:eye,
-            label: "VISION STATEMENT",
+            label: "VISION STATEMENT.",
             type: "To be the most reliable and respected real estate company in Nigeria and beyond, leading with innovation and the fear of God."
         },
         {
