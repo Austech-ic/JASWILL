@@ -4,14 +4,14 @@ import { HiHome } from 'react-icons/hi';
 import { AiFillDelete } from 'react-icons/ai';
 import ButtonTwo from '@/Components/ButtonTwo/button';
 import CatModal from '../../DashboardComp/Category/Cat_Modal/index'
-import CatSuccess from '../../DashboardComp/Category/Cat_success/page.jsx'
+import CatSuccess from '../../DashboardComp/Category/Cat_success/page'
 
 
 const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isNewModalOpen, setIsNewModalOpen] = useState(false);
   const [counter, setCounter] = useState(1)
-x
+
 
   const openModal = () => {
     setIsModalOpen(!isModalOpen);
