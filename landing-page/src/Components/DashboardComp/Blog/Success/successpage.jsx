@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import styles from './success.module.css'
 import Image from 'next/image';
-import logo from '../.../../../../../../public/brand/bg.png'
+import logo from '../../../../../public/brand/bg.png'
 import { useRouter } from 'next/router';
 import { useToast } from '@chakra-ui/react';
 import { getRequest } from '@/library/request'

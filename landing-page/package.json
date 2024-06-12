@@ -17,6 +17,7 @@
     "date-fns": "^2.25.0",
     "emailjs-com": "^3.2.0",
     "embla-carousel": "^8.0.0-rc14",
+    "formik": "^2.4.6",
     "keen-slider": "^6.8.6",
     "next": "13.5.4",
     "next-auth": "^4.24.5",
@@ -29,6 +30,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "uuid": "^9.0.1",
+    "yup": "^1.4.0",
     "zustand": "^4.3.8"
   },
   "devDependencies": {

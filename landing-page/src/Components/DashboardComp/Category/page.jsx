@@ -3,8 +3,8 @@ import styles from './cat.module.css'
 import { HiHome } from 'react-icons/hi';
 import { AiFillDelete } from 'react-icons/ai';
 import ButtonTwo from '@/Components/ButtonTwo/button';
-import CatModal from '../../DashboardComp/Category/Cat_Modal/index'
-import CatSuccess from '../../DashboardComp/Category/Cat_success/page'
+import CatModal from './Cat_Modal/index'
+import CatSuccess from './Cat_success/page'
 
 
 const Page = () => {

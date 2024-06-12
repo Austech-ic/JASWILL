@@ -4,7 +4,7 @@ import { HiHome } from 'react-icons/hi';
 import Button from '../../Button/button';
 import Success from './Success/successpage'
 import Modal from '../../Modal/modal';
-import BlogButton from '../../DashboardComp/Blog/BlogButton/page'
+import BlogButton from './BlogButton/page'
 
 const Blog = () => {
   const [showModal, setShowModal] = useState(false);

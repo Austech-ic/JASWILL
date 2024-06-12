@@ -3,7 +3,7 @@ import styles from './testimonialcomp.module.css'
 import { HiHome,HiOutlineDocumentText,HiOutlineTemplate } from 'react-icons/hi'
 import TestModal from '../../TestimonyModal/testmodal';
 import TestmonialSuccesspage from './TestmonialSuccess/testmonialsuccesspage';
-import TestimonialButton from '../../DashboardComp/Testimonial/TestimonialButton/page'
+import TestimonialButton from './TestimonialButton/page'
 
 const TestimonialComp = () => {
 

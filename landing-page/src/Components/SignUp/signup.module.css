@@ -1,3 +1,13 @@
+
+.container{
+    min-height: 100vh;
+    width: 100vw;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
 .head{
     background-image: url(../../../public//Mak.png);
     background-repeat: no-repeat;
@@ -5,26 +15,19 @@
    /* background-size: 50%; */
     color: white;
 }
-.container{
-  
-    min-height: 100vh;
-    width: 100vw;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .cont{
     width: 80%;
 }
 .subcontainer{
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     border-radius: 20px;
     width: 80%;
     min-height: 50vh;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 /* .subcontainer:hover {
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
@@ -35,13 +38,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-   padding: 20px 0;
+   padding: 20px 0 0 0 ;
+   /* background-color: red; */
 }
 .div{
     display: flex;
     flex-direction: column;
     gap: 2px;
-    /* background-color: red; */
 }
 .subrem{
     display: flex;
@@ -51,11 +54,11 @@
 }
 .rem{
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: center;
     gap: 50px;
-    height: 4vh;
-  
+    /* background-color: red; */
+    height: 5vh;
 }
 .input {
     /* height: 3vh; */
@@ -70,13 +73,12 @@
     color: black;
 }
 .input:focus-visible{
-    background-color: rgb(232, 226, 226);
+    background-color: transparent;
     padding: 7px 10px;
     border-radius: 10px;
-    color: black;
-    border: none;
+    color: gray;
+    border: 1px solid #000080;
 }
-
 .inputs{
     /* height: 3vh; */
     border-radius: 10px;
@@ -91,100 +93,113 @@
     align-items: center;
     color: black;
 }
-.inputs:focus-within{
-    background-color: rgb(232, 226, 226);
+.inputs:focus-visible{
+    background-color: transparent;
     padding: 7px 10px;
     border-radius: 10px;
-    color: black;
-    
-    border: none;
+    color: gray;
+    border: 1px solid #000080;
 }
-.label{
-    font-size: small;
-    font-weight: 500;
-    color: black;
-}
+
 .classinput{
     width: 90%;
     border: none;
     outline: none;
     background-color: transparent;
+    
+}
+.up{
+    font-weight: 500;
+    font-size: x-small;
 }
 
 .button{
     background-color: #800000;
     border: none;
     width: 100%;
-    /* height: 4vh; */
     border-radius: 10px;
     color: white;
-    font-size: 0.7rem;
-    line-height: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     padding: 5px 5px;
-    /* margin-top: -5px; */
+    
 }
+.button:disabled {
+    background-color: #380c0c;
+    cursor: not-allowed;
+  }
 
 .authcont{
     background-color: transparent;
     width: 100%;
     border-radius: 10px;
-    font-weight: 500;
     border: 1px solid #000080;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
-    padding: 8px 0;
     gap: 10px;
-    /* margin-top: -10px; */
+    padding: 8px 0;
+    font-weight: 500;
+    color: black;
+
 }
 .last{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-size: 0.7rem;
+    line-height: 1rem;
+   
 }
 .acc{
     color: gray; 
     font-size: x-small;
 }
 .sign{
-   color: #6375F0; 
+   color: #000080; 
    font-size: x-small;
    font-weight: bold;
+  
+}
+.link{
+    text-decoration: none;
 }
 .first{
     font-weight: bold;
     font-size: 1rem;
-    line-height: 1.3rem;
+    line-height: 1rem;
     text-align: center;
-    padding: 2px 0;
+    padding: 5px 0;
     color: black;
+   
+
 }
 .second{
     color: gray; 
     font-size: 0.7rem;
     text-align: center;
+    margin-top: -10px;
+    padding: 10px 0;
+    line-height: 1rem;
 }
 .label{
     font-size: small;
     font-weight: 500;
+    color: black;
 }
-.link{
-    text-decoration: none;
+.per{
+    color: #000080;
+    font-weight: bold;
 }
 .eye{
     color: #000080;
- }
- .up{
-    font-weight: bolder;
-    font-size: x-small;
-    color: black;
 }
 .icon{
     width: 12px;
     height: 12px;
 }
+
 
 
 
@@ -205,7 +220,7 @@
     /* background-color: antiquewhite; */
     border-radius: 20px;
     width: 70%;
-    height: 70vh;
+    /* height: 80vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,12 +236,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-   padding: 20px 0;
+   padding: 20px 0 10px 0;
 }
 .div{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
+    
 }
 .subrem{
     display: flex;
@@ -236,11 +252,11 @@
 }
 .rem{
     display: flex;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
     /* background-color: red; */
-    height: 4vh;
+    /* height: 6vh; */
     /* background-color: red; */
     margin-top: -10px;
 }
@@ -248,73 +264,62 @@
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
     padding: 12px 10px;
-    background-color: transparent;
     margin-top: 5px;
     font-size: 1.4rem;
     line-height: 2rem;
 }
-.input:focus-within{
-    /* background-color: #f0c3c3; */
-    padding: 15px 10px;
-    border-radius: 10px;
-    /* color: gray; */
-    
-    border: none;
+.input:focus-visible{
+    padding: 12px 10px;   
 }
-.inputs:focus-within{
-    padding: 15px 10px;
-}
+
+
 .inputs {
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
     padding: 12px 10px;
-    background-color: transparent;
+    font-size: 1.4rem;
+    line-height: 2rem;
     margin-top: 5px;
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
-    line-height: 2rem;
 }
 .classinput{
     width: 90%;
     border: none;
     outline: none;
-    font-size: 1.4rem;
+     font-size: 1.4rem;
     line-height: 2rem;
     background-color: transparent;
+    
 }
 .button{
     /* background-color: #000080; */
     border: none;
     width: 100%;
-    font-weight: bolder;
-    /* height: 4vh; */
-    border-radius: 10px;
+    border-radius: 12px;
     color: white;
-    font-size: larger;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     padding: 10px 5px;
-    margin-top: -5px;
 }
 .authcont{
     background-color: transparent;
     width: 100%;
     border-radius: 10px;
-    font-weight: 500;
-    padding: 3px 0px;
+    font-size: large;
     border: 1px solid #000080;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
-    padding: 15px 0;
+    font-weight: 500;
+    padding: 10px 0;
+    /* margin-top: -10px; */
 }
 .up{
-    font-weight: bolder;
+    font-weight: 500;
     font-size: large;
 }
 .last{
@@ -333,21 +338,22 @@
 .sign{
    color: #000080; 
    font-size: 1.3rem;
-    line-height: 2rem;
+   line-height: 2rem;
 }
 .first{
     font-size: 1.7rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
 }
 .second{
     color: gray; 
-    font-size: medium;
+    font-size: large;
     text-align: center;
     font-size: 1.3rem;
     line-height: 2rem;
 }
 .label{
-    font-size:1.5rem;
+    font-size:1.2rem;
     line-height: 2rem;
     font-weight: 500;
 }
@@ -356,22 +362,11 @@
     height: 20px;
 }
 
-
-
  }
 
 
  @media (min-width: 1024px) { 
-    .head{
-        background-image: url(../../../public//Mak.png);
-        background-repeat: no-repeat;
-        /* background-size: cover; */
-       /* background-position: right; */
-       background-position-x: right;
-       background-position-y: top;
-       background-size: 40%;
-        
-    }
+    
   
 .container{
     /* background-color: #77C3FD; */
@@ -381,11 +376,22 @@
     justify-content: flex-start;
     /* justify-content: center; */
     align-items: center;
-    padding:20px 30px 50px 30px;
+    padding:40px 30px;
+  
+    
+}
+.head{
+    background-image: url(../../../public//Mak.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+   /* background-position: right; */
+   background-position-x: right;
+   background-position-y: top;
+   background-size: 40%;
     
 }
 .cont{
-    width: 80%;
+    width: 100%;
 }
 .subcontainer{
     background-color: transparent;
@@ -396,7 +402,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 70px;
     
 }
 .classform{
@@ -405,12 +411,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-   padding: 20px 0;
 }
 .div{
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
 }
 .subrem{
     display: flex;
@@ -420,45 +425,40 @@
 }
 .rem{
     display: flex;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
     /* background-color: red; */
-    height: 4vh;
+    /* height: 6vh; */
     /* background-color: red; */
-    margin-top: -10px;
+    /* margin-top: -10px; */
 }
 .input {
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
+   
     padding: 12px 10px;
-    background-color: transparent;
+    
     margin-top: 5px;
     font-size: 0.8rem;
     line-height: 1rem;
-    color: black;
 }
-.input:focus-within{
-    padding: 12px 10px;
+.input:focus-visible{
+    padding: 12px 10px;   
 }
-.inputs:focus-within{
-    padding: 12px 10px;
-}
+
 .inputs {
     /* height: 3vh; */
     border-radius: 10px;
     outline: none;
-    border: 1px solid #000080;
     padding: 12px 10px;
-    background-color: transparent;
     margin-top: 5px;
     display: flex;
     align-items: center;
     color: black;
     font-size: 0.8rem;
-    line-height: 2rem;
+    line-height: 1rem;
 }
 .classinput{
     width: 90%;
@@ -474,26 +474,28 @@
     width: 100%;
     /* height: 4vh; */
     border-radius: 10px;
-    font-weight: bold;
     color: white;
-    font-size: medium;
+    font-size: 1rem;
+    line-height: 1.5rem;
     padding: 8px 5px;
-    margin-top: -5px;
 }
-.buttontwo{
+.authcont{
     background-color: transparent;
     width: 100%;
-    /* height: 4vh; */
     border-radius: 10px;
-    border-width: 1px;
-    font-size: medium;
-    font-weight: bold;
-    padding: 15px 5px;
-    margin-top: -5px;
-    color:rgb(58, 57, 57);
-    font-weight: bold;
-    border-color: #000080;
+    font-weight: 500;
+    border: 1px solid #000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
 }
+.up{
+    font-weight: 500;
+    font-size: large;
+}
+
 .last{
     display: flex;
     justify-content: center;
@@ -502,30 +504,25 @@
 }
 .acc{
     color: gray; 
-    font-size: small;
+    font-size: medium;
 }
 .sign{
    color: #000080; 
-   font-size: small;
+   font-size: medium;
 }
 .first{
     font-size: 1.3rem;
     line-height: 1.5rem;
+    text-align: center;
 }
 .second{
     color: gray; 
-    font-size: small;
+    font-size: medium;
     text-align: center;
+    margin-top: -10px;
 }
 .label{
     font-size: medium;
-    font-weight: 500;
-}
-.up{
-    font-weight: bolder;
-    font-size: medium;
-}
-.authcont{
     font-weight: 500;
 }
 .icon{
@@ -545,6 +542,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        padding:10px 80px;
         
     }
     .cont{
@@ -558,7 +556,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 70px;
+      
     }
     .classform{
         /* background-color: red; */
@@ -566,7 +564,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-       padding: 20px 0;
+       
     }
     .div{
         display: flex;
@@ -581,11 +579,11 @@
     }
     .rem{
         display: flex;
-        /* justify-content: flex-start; */
+        justify-content: flex-start;
         align-items: center;
         gap: 50px;
         /* background-color: red; */
-        height: 4vh;
+        /* height: 4vh; */
         /* background-color: red; */
         margin-top: -10px;
     }
@@ -609,22 +607,16 @@
         background-color: transparent;
         margin-top: 5px;
         display: flex;
-        align-items: center;
         font-size: 1rem;
-        line-height: 1rem;
-    }
-    .input:focus-within{
-        padding: 12px 10px;
-    }
-    .inputs:focus-within{
-        padding: 12px 10px;
+    line-height: 1rem;
+        align-items: center;
     }
     .classinput{
         width: 90%;
         border: none;
         outline: none;
         font-size: 1rem;
-        line-height: 1rem;
+    line-height: 1rem;
         background-color: transparent;
     }
     .button{
@@ -633,26 +625,13 @@
         width: 100%;
         /* height: 4vh; */
         border-radius: 10px;
-        font-weight: bold;
         color: white;
-        font-size: medium;
+        font-size: 1.2rem;
+    line-height: 1.5rem;
         padding: 10px 5px;
         margin-top: -5px;
     }
-    .buttontwo{
-        background-color: transparent;
-        width: 100%;
-        /* height: 4vh; */
-        border-radius: 10px;
-        border-width: 1px;
-        font-size: medium;
-        font-weight: bold;
-        padding: 15px 5px;
-        margin-top: -5px;
-        color:rgb(58, 57, 57);
-        font-weight: bold;
-        border-color: #000080;
-    }
+   
     .last{
         display: flex;
         justify-content: center;
@@ -669,7 +648,7 @@
     }
     .first{
         font-size: 1.5rem;
-        line-height: 1.8rem;
+        line-height: 1.3rem;
     }
     .second{
         color: gray; 
@@ -680,10 +659,24 @@
         font-size: medium;
         font-weight: 500;
     }
+    .authcont{
+        background-color: transparent;
+        width: 100%;
+        border-radius: 10px;
+        font-size: medium;
+        font-weight: 500;
+        border: 1px solid #000080;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    
+    }
     .icon{
         width: 18px;
         height: 18px;
     }
+    
     
      }
 

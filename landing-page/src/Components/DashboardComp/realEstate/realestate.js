@@ -6,8 +6,8 @@ import ButtonTwo from '@/Components/ButtonTwo/button';
 import Button from '@/Components/Button/button';
 import CatModal from '../Category/Cat_Modal/index'
 import CatSuccess from '../Category/Cat_success/page'
-import RealModal from '../../DashboardComp/realEstate/Real_modal/index';
-import Real_success from '../../DashboardComp/realEstate/Real_success/page'
+import RealModal from './Real_modal/index';
+import Real_success from './Real_success/page'
 
 const RealEstate = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

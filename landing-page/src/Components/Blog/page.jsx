@@ -9,7 +9,7 @@ import { FaComment } from 'react-icons/fa'
 import { FcLike } from 'react-icons/fc'
 import { BiComment, BiHeart } from 'react-icons/bi'
 import { BsStar, BsStarFill } from 'react-icons/bs'
-import Blogreview from '../Blog/Blogreview/page'
+import Blogreview from './Blogreview/page'
 import { IoMdSend } from "react-icons/io";
 import { getRequest } from '@/library/request'
 import Image from 'next/image'

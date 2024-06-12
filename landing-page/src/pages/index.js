@@ -17,7 +17,7 @@ import Career from '../Components/Career/page'
 import Carosel from '../Components/Carosel/page'
 import Blog from '../Components/Blog/page'
 import Message from '../Components/MessageComp/page'
-import LayoutContainer from "../../src/Components/util/layout"
+import LayoutContainer from "../Components/util/layout"
 import Subsection from '../Components/subsection/page'
 
 
